@@ -1,0 +1,593 @@
+{
+  "$comment": [
+    "One photograph for the head of every genre's page, chosen once and shipped with the app.",
+    "",
+    "WHY IT IS PINNED AND NOT SEARCHED. A search run at build time is a different set of pictures",
+    "every time somebody runs it, and a search run in the app is a network round trip in front of a",
+    "reader who has just pressed a genre. The id is the choice; the query beside it is only the",
+    "record of how the choice was found, and re-running the generator with the same ids fetches the",
+    "same thirty-six photographs.",
+    "",
+    "THE LICENCE. Every one of these is under the Pexels License: free to use, commercial included,",
+    "no attribution required, and redistribution as part of a work is allowed - which is what",
+    "shipping them in Assets is. What the licence forbids is not done here: the photographs are not",
+    "resold unaltered, nothing implies a photographer endorses this, and nobody in them is shown in",
+    "a bad light. The photographer is recorded anyway, in 'by' and 'page', because the credit costs",
+    "one line and is the decent thing.",
+    "",
+    "SHAPE. The head BLEEDS: the photograph is drawn across the whole band, at whatever shape the",
+    "band is, which runs from about six to one on a narrow pane to eleven on a wide monitor. So",
+    "these are cut at six - the narrow end of that range and deliberately the floor rather than the",
+    "middle. Losing width off a band this long costs nothing, because one end is under the genre's",
+    "colour and the other is past where anybody is looking; losing height costs the subject.",
+    "",
+    "WHAT SURVIVES A BAND THIS WIDE, which is the whole of choosing one. A picture with its subject",
+    "in the middle and air around it is a good photograph and a bad head: the colour covers the left",
+    "of it and the right half is empty. What works is a picture that is filled end to end - a wall of",
+    "boomboxes, a row of arcade cabinets, tiers of an opera house, a crowd, a rig of lights. Six of",
+    "these were re-picked for exactly that after being seen at the real width, and the 'why' beside",
+    "each says which and against what.",
+    "",
+    "WHERE THE BAND IS TAKEN FROM. An entry says it one of two ways and never both.",
+    "",
+    "'frame' is a placement made by hand: 'across' and 'down' are where the window's middle sits over",
+    "the source (0 the left/top edge, 1 the right/foot), and 'height' is how tall the window is against",
+    "the source's own height, which IS the magnification - the largest it can be is the window whose",
+    "width is the whole picture, and there is nothing past that. Made in the app rather than by typing:",
+    "  dotnet run --project RPM.Desktop -f net10.0-desktop -- --place-genres",
+    "opens the genre page's own head, to scale, with the photograph in it and the six-to-one cut beneath;",
+    "drag to move, scroll to zoom, Save writes back here.",
+    "",
+    "'focus' is what an entry has before anybody has placed it, and the only lever it leaves: where down",
+    "the source the band is taken from, 0 at the top and 1 at the foot, 0.42 a shade above the middle -",
+    "which is where a horizon and a face both tend to sit. A focus cut keeps the source's full WIDTH, so",
+    "where the subject sits left to right is the photograph's own; that is what 'frame' is for.",
+    "",
+    "Run scripts/gen_genre_photos.py after editing this. It rewrites Assets/GenrePhotos whole and",
+    "regenerates GenrePhotos.Data.cs; a genre taken out of here disappears from both."
+  ],
+  "shape": 6.0,
+  "width": 1824,
+  "quality": 84,
+  "photos": [
+    {
+      "genre": "Rock",
+      "query": "electric guitar concert stage",
+      "id": 11963130,
+      "why": "A singer silhouetted against the lighting rig, arms out, the stage going away either side. The Rickenbacker close-up was a better photograph of a guitar and left the end of the band empty.",
+      "alt": "Energetic rock band performance with striking stage lights and silhouettes.",
+      "by": "Dustin Tray",
+      "page": "https://www.pexels.com/photo/rock-artist-s-live-performance-11963130/",
+      "source": "https://images.pexels.com/photos/11963130/pexels-photo-11963130.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.4002,
+        "down": 0.5299,
+        "height": 0.3
+      },
+      "flip": true
+    },
+    {
+      "genre": "Indie",
+      "query": "indie band rehearsal warm light",
+      "id": 8512413,
+      "why": "A whole band on a small stage under pink light. Two players lit blue was tighter and better composed, and a head this wide wants the room used.",
+      "alt": "Live band performing on a small indoor stage with vibrant lighting, featuring various musicians and instruments.",
+      "by": "Big Bag Films",
+      "page": "https://www.pexels.com/photo/band-playing-on-small-stage-8512413/",
+      "source": "https://images.pexels.com/photos/8512413/pexels-photo-8512413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2438,
+        "down": 0.346,
+        "height": 0.2918
+      }
+    },
+    {
+      "genre": "Pop",
+      "query": "pop concert arena stage crowd lights",
+      "id": 3025096,
+      "why": "An arena from the gods, the crowd sweeping the whole width of it under magenta. Two were tried before it: gold streamers over a crowd, which at this shape was a mess of yellow streaks, and the same arena lit flat red, which went one colour under the shelf's own crimson. This one fills the band end to end and still has a second colour in it.",
+      "alt": "Vibrant crowd enjoying a live concert in a bustling Manila arena at night.",
+      "by": "Thomas Lineweaver",
+      "page": "https://www.pexels.com/photo/photo-of-people-at-a-concert-3025096/",
+      "source": "https://images.pexels.com/photos/3025096/pexels-photo-3025096.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3669,
+        "down": 0.4261,
+        "height": 0.2501
+      }
+    },
+    {
+      "genre": "Disco",
+      "query": "disco ball mirror ball lights",
+      "id": 6983054,
+      "why": "Mirror balls filling the frame, sparkle thrown across all of it. The single ball glowing out of black was the better photograph and left two thirds of a band this wide as black.",
+      "alt": "Cluster of disco balls casting shimmering reflections, embodying retro and festive vibes.",
+      "by": "KoolShooters",
+      "page": "https://www.pexels.com/photo/photograph-of-disco-balls-6983054/",
+      "source": "https://images.pexels.com/photos/6983054/pexels-photo-6983054.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.4852,
+        "down": 0.3088,
+        "height": 0.2501
+      }
+    },
+    {
+      "genre": "Funk",
+      "query": "bass guitar player funk",
+      "id": 36219462,
+      "why": "A bass, warm wood against blue. Funk is the bass player's genre and the picture says so without a caption.",
+      "alt": "Detailed close-up of a musician playing a vintage bass guitar during a live performance.",
+      "by": "Ryan Carignan",
+      "page": "https://www.pexels.com/photo/close-up-of-a-bass-guitarist-performing-live-36219462/",
+      "source": "https://images.pexels.com/photos/36219462/pexels-photo-36219462.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.4429,
+        "down": 0.4291,
+        "height": 0.2786
+      },
+      "flip": true
+    },
+    {
+      "genre": "Soul",
+      "query": "vintage microphone singer warm light",
+      "id": 9002827,
+      "why": "A singer leaning into a silver ribbon mic, mid-phrase. The warmest face in the set.",
+      "alt": "Close-up of a woman singing into a vintage microphone, captured with warm lighting.",
+      "by": "Yan Krukau",
+      "page": "https://www.pexels.com/photo/close-up-of-a-woman-singing-with-a-vintage-microphone-9002827/",
+      "source": "https://images.pexels.com/photos/9002827/pexels-photo-9002827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2822,
+        "down": 0.5189,
+        "height": 0.359
+      }
+    },
+    {
+      "genre": "R&B",
+      "query": "singer microphone recording studio moody",
+      "id": 7586649,
+      "why": "A singer at the mic under red, eyes shut. Late, close, and lit for one person.",
+      "alt": "A captivating portrait of a female singer with closed eyes performing in a dimly lit recording studio.",
+      "by": "Los Muertos Crew",
+      "page": "https://www.pexels.com/photo/a-woman-at-a-recording-studio-7586649/",
+      "source": "https://images.pexels.com/photos/7586649/pexels-photo-7586649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.4593,
+        "down": 0.4093,
+        "height": 0.2704
+      }
+    },
+    {
+      "genre": "Rap",
+      "query": "rapper microphone studio",
+      "id": 7971866,
+      "why": "A figure against flat magenta. Graphic rather than documentary, so it holds at any size.",
+      "alt": "A vibrant rapper energetically performing on an indoor stage under bright lights.",
+      "by": "cottonbro studio",
+      "page": "https://www.pexels.com/photo/rapper-on-stage-with-microphone-7971866/",
+      "source": "https://images.pexels.com/photos/7971866/pexels-photo-7971866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.221,
+        "down": 0.2008,
+        "height": 0.2501
+      }
+    },
+    {
+      "genre": "Trap",
+      "query": "neon night city car lights",
+      "id": 16789398,
+      "why": "A neon street at night with a car in it. The genre's own iconography, and no people to lose in the crop.",
+      "alt": "Black van navigating through vibrant Tokyo street illuminated with neon lights at dusk.",
+      "by": "Alan W",
+      "page": "https://www.pexels.com/photo/black-toyota-noah-driving-down-the-street-in-tokyo-16789398/",
+      "source": "https://images.pexels.com/photos/16789398/pexels-photo-16789398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3224,
+        "down": 0.3806,
+        "height": 0.3389
+      }
+    },
+    {
+      "genre": "Old School Hip Hop",
+      "query": "boombox graffiti street",
+      "id": 14458214,
+      "why": "A wall of boomboxes on shelves. Every earlier pick was one machine carried by one person, which at this shape is a torso and a pair of jeans.",
+      "alt": "A nostalgic display of vintage cassette tapes and radios arranged on wooden shelves.",
+      "by": "Erwin Salas",
+      "page": "https://www.pexels.com/photo/view-of-shelves-with-vintage-cassette-players-and-cassette-tapes-14458214/",
+      "source": "https://images.pexels.com/photos/14458214/pexels-photo-14458214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3113,
+        "down": 0.4775,
+        "height": 0.2972
+      }
+    },
+    {
+      "genre": "Hip-Hop / Rap",
+      "query": "graffiti wall street art",
+      "id": 36132757,
+      "why": "A wall gone over and over in colour, with the building still showing through it. The first choice was a weathered wall that came out grey at the size a head is drawn.",
+      "alt": "Vibrant graffiti art on an aged urban wall featuring a barred window, showcasing street art creativity.",
+      "by": "Magda Ehlers",
+      "page": "https://www.pexels.com/photo/colorful-urban-graffiti-wall-with-window-bars-36132757/",
+      "source": "https://images.pexels.com/photos/36132757/pexels-photo-36132757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3543,
+        "down": 0.3332,
+        "height": 0.3227
+      }
+    },
+    {
+      "genre": "House",
+      "query": "dj mixer club night",
+      "id": 9005448,
+      "why": "Hands on the mixer through blue smoke. The hands, not the DJ, which is the difference between house and a portrait.",
+      "alt": "DJ mixing music at a vibrant nightlife event. Captured with colorful lights.",
+      "by": "Yan Krukau",
+      "page": "https://www.pexels.com/photo/man-with-hairy-hands-playing-audio-mixer-9005448/",
+      "source": "https://images.pexels.com/photos/9005448/pexels-photo-9005448.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.4373,
+        "down": 0.6138,
+        "height": 0.2501
+      }
+    },
+    {
+      "genre": "Techno",
+      "query": "warehouse rave laser lights",
+      "id": 12560346,
+      "focus": 0.42,
+      "why": "Green and blue beams over a floor of silhouettes. The lasers-on-black frame was better looking and nearly empty an inch tall.",
+      "alt": "Silhouette of a crowd enjoying a nightclub concert with vivid laser lights.",
+      "by": "Jonathan Cooper",
+      "page": "https://www.pexels.com/photo/silhouette-of-people-at-a-concert-12560346/",
+      "source": "https://images.pexels.com/photos/12560346/pexels-photo-12560346.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "genre": "Club",
+      "query": "nightclub crowd lights",
+      "id": 5610120,
+      "why": "Lasers over a full floor, pink and violet. Where techno is the light, this is the room.",
+      "alt": "Energetic dance floor illuminated by colorful laser lights and silhouettes at a vibrant nightclub party.",
+      "by": "ismail cem aycan",
+      "page": "https://www.pexels.com/photo/people-dancing-on-the-stage-5610120/",
+      "source": "https://images.pexels.com/photos/5610120/pexels-photo-5610120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3191,
+        "down": 0.44,
+        "height": 0.3392
+      }
+    },
+    {
+      "genre": "Electronic / Dance",
+      "query": "festival stage lights crowd night",
+      "id": 9534913,
+      "why": "A festival stage in green LED with the field in front of it. The scale is the point.",
+      "alt": "Vibrant music concert with DJ and crowd at night, showcasing lively atmosphere and dazzling lights.",
+      "by": "Deane Bayas",
+      "page": "https://www.pexels.com/photo/view-of-a-concert-9534913/",
+      "source": "https://images.pexels.com/photos/9534913/pexels-photo-9534913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2542,
+        "down": 0.36,
+        "height": 0.1618
+      }
+    },
+    {
+      "genre": "Jazz",
+      "query": "saxophone jazz club dim light",
+      "id": 9002001,
+      "why": "Hands on the keys of a saxophone in gold light. Warm, close, and unmistakable.",
+      "alt": "Close-up of a musician's hands playing a saxophone under colorful stage lights.",
+      "by": "Yan Krukau",
+      "page": "https://www.pexels.com/photo/a-close-up-shot-of-a-man-playing-a-saxophone-9002001/",
+      "source": "https://images.pexels.com/photos/9002001/pexels-photo-9002001.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2798,
+        "down": 0.4698,
+        "height": 0.2799
+      }
+    },
+    {
+      "genre": "Blues",
+      "query": "blues guitar bar neon",
+      "id": 10177855,
+      "why": "A man playing alone in a red-lit bar hung with frames. The whole genre is that room.",
+      "alt": "A musician plays electric guitar in a bar under neon lights, creating a punk atmosphere.",
+      "by": "cottonbro studio",
+      "page": "https://www.pexels.com/photo/a-man-playing-guitar-in-the-bar-10177855/",
+      "source": "https://images.pexels.com/photos/10177855/pexels-photo-10177855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.4416,
+        "down": 0.5988,
+        "height": 0.2793
+      }
+    },
+    {
+      "genre": "Country",
+      "query": "acoustic guitar barn field sunset",
+      "id": 9588941,
+      "why": "An acoustic guitar lying in long grass, end to end. The silhouette against a sunset was the stronger picture and blew out to a pale wash across half a band.",
+      "alt": "Close-up of an acoustic guitar placed on dry grass, capturing a serene, rustic vibe.",
+      "by": "Wilawan Pantukang",
+      "page": "https://www.pexels.com/photo/photo-of-a-guitar-on-the-ground-9588941/",
+      "source": "https://images.pexels.com/photos/9588941/pexels-photo-9588941.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.5,
+        "down": 0.7048,
+        "height": 0.2501
+      },
+      "flip": true
+    },
+    {
+      "genre": "Folk",
+      "query": "acoustic guitar campfire forest",
+      "id": 4572220,
+      "why": "Three people and two guitars in the back of a van under fairy lights. Folk is who is there, not who is on stage.",
+      "alt": "A group of friends in the back of a van, playing guitar and enjoying twilight outdoors.",
+      "by": "ArtHouse Studio",
+      "page": "https://www.pexels.com/photo/two-women-sitting-next-to-a-man-playing-a-guitar-in-the-trunk-of-a-car-4572220/",
+      "source": "https://images.pexels.com/photos/4572220/pexels-photo-4572220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3516,
+        "down": 0.4423,
+        "height": 0.2499
+      }
+    },
+    {
+      "genre": "Classical",
+      "query": "orchestra concert hall",
+      "id": 37377494,
+      "why": "A concert hall from the circle, the orchestra small and warm at the bottom of it.",
+      "alt": "A large audience enjoys a symphony orchestra performance at the iconic Sydney Opera House.",
+      "by": "Talha Resitoglu",
+      "page": "https://www.pexels.com/photo/sydney-opera-house-concert-hall-full-house-37377494/",
+      "source": "https://images.pexels.com/photos/37377494/pexels-photo-37377494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2781,
+        "down": 0.4424,
+        "height": 0.2501
+      }
+    },
+    {
+      "genre": "Neo-Classical",
+      "query": "grand piano empty hall light",
+      "id": 10376543,
+      "why": "A grand piano left in a derelict hall with the light coming through. The genre's own melancholy, exactly.",
+      "alt": "A broken grand piano in a dilapidated building in Rozdil, Lviv, Ukraine.",
+      "by": "Alexander Zvir",
+      "page": "https://www.pexels.com/photo/broken-grand-piano-inside-the-abandoned-building-10376543/",
+      "source": "https://images.pexels.com/photos/10376543/pexels-photo-10376543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2331,
+        "down": 0.8073,
+        "height": 0.248
+      }
+    },
+    {
+      "genre": "Opera",
+      "query": "opera house theatre stage curtain",
+      "id": 5468933,
+      "why": "The auditorium of an opera house, red and gold tier on tier.",
+      "alt": "Stunning view of the historic La Scala Opera House theater in Milan, Italy.",
+      "by": "Alexandro D'Elia",
+      "page": "https://www.pexels.com/photo/a-photo-of-la-scala-opera-house-5468933/",
+      "source": "https://images.pexels.com/photos/5468933/pexels-photo-5468933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3224,
+        "down": 0.5769,
+        "height": 0.2799
+      }
+    },
+    {
+      "genre": "Metal",
+      "query": "heavy metal concert stage fire",
+      "id": 12995468,
+      "why": "Fire jets across a stage front. Chosen over the foundry pictures the query kept returning, which are the other kind of metal.",
+      "alt": "Energetic live DJ performance with vibrant flames and dramatic lighting on stage.",
+      "by": "Jack Davis",
+      "page": "https://www.pexels.com/photo/man-in-black-t-shirt-standing-on-stage-with-blue-lights-12995468/",
+      "source": "https://images.pexels.com/photos/12995468/pexels-photo-12995468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.4391,
+        "down": 0.5998,
+        "height": 0.1528
+      }
+    },
+    {
+      "genre": "Punk",
+      "query": "punk concert crowd mosh pit",
+      "id": 11308670,
+      "why": "A crowd with fists up under pink and blue. Shot from inside it rather than from the desk.",
+      "alt": "Energetic crowd at a live music festival in A Coruña, Spain, at night.",
+      "by": "Tanhauser Vázquez R.",
+      "page": "https://www.pexels.com/photo/back-view-of-a-man-with-a-cigarette-in-hand-having-fun-at-a-concert-11308670/",
+      "source": "https://images.pexels.com/photos/11308670/pexels-photo-11308670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3362,
+        "down": 0.6379,
+        "height": 0.3317
+      }
+    },
+    {
+      "genre": "Noise",
+      "query": "dark abstract static texture",
+      "id": 29041985,
+      "why": "A dark rippled surface and nothing else. The one shelf that should not show an instrument.",
+      "alt": "Close-up view of dark sand ripples creating a unique abstract texture pattern.",
+      "by": "Diego Fraga",
+      "page": "https://www.pexels.com/photo/dark-sand-ripple-texture-close-up-29041985/",
+      "source": "https://images.pexels.com/photos/29041985/pexels-photo-29041985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.5,
+        "down": 0.5295,
+        "height": 0.2501
+      }
+    },
+    {
+      "genre": "Avant-Garde",
+      "query": "abstract art installation gallery",
+      "id": 6727760,
+      "why": "Nested squares of light in a white gallery. Reads as a made thing at any size.",
+      "alt": "Intriguing geometric light installation in a minimal gallery setting.",
+      "by": "David Yu",
+      "page": "https://www.pexels.com/photo/geometric-art-displayed-in-museum-6727760/",
+      "source": "https://images.pexels.com/photos/6727760/pexels-photo-6727760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3373,
+        "down": 0.5036,
+        "height": 0.2901
+      },
+      "flip": true
+    },
+    {
+      "genre": "Reggae",
+      "query": "jamaica beach palm trees sunset",
+      "id": 9548239,
+      "why": "Palms against a low sun. The warm end of the set, and the only landscape in it.",
+      "alt": "Golden sunset over a tropical beach lined with coconut trees, casting warm glow.",
+      "by": "Rafael Cerqueira",
+      "page": "https://www.pexels.com/photo/trees-in-the-shore-during-sunset-9548239/",
+      "source": "https://images.pexels.com/photos/9548239/pexels-photo-9548239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.4898,
+        "down": 0.4628,
+        "height": 0.2501
+      },
+      "flip": true
+    },
+    {
+      "genre": "Latin",
+      "query": "salsa dancers colorful",
+      "id": 28184034,
+      "why": "A street carnival in full costume. The most colour of any picture here.",
+      "alt": "Vibrant dancers celebrate Afro-Costa Rican heritage during a colorful street parade in Limón, Costa Rica.",
+      "by": "Mario Spencer",
+      "page": "https://www.pexels.com/photo/grand-gala-parade-2024-en-limon-28184034/",
+      "source": "https://images.pexels.com/photos/28184034/pexels-photo-28184034.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3952,
+        "down": 0.4278,
+        "height": 0.2221
+      },
+      "flip": true
+    },
+    {
+      "genre": "World",
+      "query": "traditional drums musicians",
+      "id": 28928758,
+      "why": "Drummers in red and teal robes, mid-strike.",
+      "alt": "Vibrant African dancers with tribal drums showcase rich cultural traditions.",
+      "by": "Safari  Consoler",
+      "page": "https://www.pexels.com/photo/traditional-african-drum-dance-performance-28928758/",
+      "source": "https://images.pexels.com/photos/28928758/pexels-photo-28928758.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2905,
+        "down": 0.4955,
+        "height": 0.3549
+      },
+      "flip": true
+    },
+    {
+      "genre": "Religious",
+      "query": "church choir stained glass",
+      "id": 33363190,
+      "why": "An organ under a rose window, gold. Architecture rather than worshippers, which keeps it about the music.",
+      "alt": "Ornate pipe organ and stained glass window inside a grand church interior, showcasing architectural elegance.",
+      "by": "Đào Thân",
+      "page": "https://www.pexels.com/photo/intricate-church-architecture-with-stained-glass-33363190/",
+      "source": "https://images.pexels.com/photos/33363190/pexels-photo-33363190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2854,
+        "down": 0.6452,
+        "height": 0.2501
+      }
+    },
+    {
+      "genre": "Soundtrack",
+      "query": "cinema film projector reel",
+      "id": 19374140,
+      "focus": 0.42,
+      "why": "Three projectors standing on an orange wall like exhibits. Styled, and the most designed picture in the set.",
+      "alt": "A cozy retro cinema room showcasing vintage film projectors and comfortable seating.",
+      "by": "Sami TÜRK",
+      "page": "https://www.pexels.com/photo/sofas-and-vintage-film-projectors-in-a-room-19374140/",
+      "source": "https://images.pexels.com/photos/19374140/pexels-photo-19374140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "genre": "Video Game",
+      "query": "arcade machines neon",
+      "id": 36484265,
+      "why": "An arcade floor in neon with the machines going away from the camera.",
+      "alt": "Explore a lively arcade filled with colorful neon lights and various gaming machines.",
+      "by": "Moo  Lens",
+      "page": "https://www.pexels.com/photo/vibrant-neon-arcade-machines-in-action-36484265/",
+      "source": "https://images.pexels.com/photos/36484265/pexels-photo-36484265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3208,
+        "down": 0.4473,
+        "height": 0.3397
+      }
+    },
+    {
+      "genre": "Musical",
+      "query": "theatre stage broadway lights",
+      "id": 11534855,
+      "why": "A music hall's neon frontage at night, the sign running down the right of the band. Two marquees were tried before it and both spelled a word the colour then covered the front of, which reads as a misprint rather than a theatre.",
+      "alt": "Iconic Radio City Music Hall with neon lights at night in New York City.",
+      "by": "Alfred GF",
+      "page": "https://www.pexels.com/photo/bright-lights-of-radio-city-music-hall-at-night-11534855/",
+      "source": "https://images.pexels.com/photos/11534855/pexels-photo-11534855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2393,
+        "down": 0.6134,
+        "height": 0.3381
+      }
+    },
+    {
+      "genre": "Spoken Word",
+      "query": "vintage microphone poetry stage",
+      "id": 8198622,
+      "why": "A silver vintage mic on a stand with the room behind it out of focus. Nobody at it, which is the invitation.",
+      "alt": "Close-up of a vintage microphone with a musician playing keyboard in the background, creating a musical atmosphere.",
+      "by": "RDNE Stock project",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-microphone-8198622/",
+      "source": "https://images.pexels.com/photos/8198622/pexels-photo-8198622.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.3624,
+        "down": 0.3177,
+        "height": 0.3148
+      }
+    },
+    {
+      "genre": "Other / Unknown",
+      "query": "vinyl records crate",
+      "id": 6827324,
+      "why": "A crate of records with the dividers showing. What the shelf is for: everything nobody filed.",
+      "alt": "Assorted vinyl records in a wooden crate highlighting 'Slim Whitman Sings' album.",
+      "by": "Tima Miroshnichenko",
+      "page": "https://www.pexels.com/photo/photo-of-vinyl-records-6827324/",
+      "source": "https://images.pexels.com/photos/6827324/pexels-photo-6827324.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2493,
+        "down": 0.4943,
+        "height": 0.3251
+      }
+    },
+    {
+      "genre": "Other",
+      "query": "vinyl record turntable",
+      "id": 5764288,
+      "why": "A stylus down on a black record. The plainest picture in the set, for the plainest shelf.",
+      "alt": "Close-up of a vintage vinyl record spinning on a turntable.",
+      "by": "Miguel Á. Padriñán",
+      "page": "https://www.pexels.com/photo/photo-of-playing-vinyl-record-5764288/",
+      "source": "https://images.pexels.com/photos/5764288/pexels-photo-5764288.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "frame": {
+        "across": 0.2874,
+        "down": 0.6066,
+        "height": 0.3572
+      }
+    }
+  ]
+}

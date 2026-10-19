@@ -1,0 +1,387 @@
+{
+  "$comment": "The genres wall's lettering and its dress: one typeface, one palette colour and one finish per shelf. Read by scripts/gen_wordmarks.py, which downloads each face, cuts the shelf's name out of it as outlines, resolves the palette entry against Assets/RpmPalette.xaml, and writes RPM.Desktop/Presentation/Main/Genres/GenreWordmarks.Data.cs. NO FONT IS SHIPPED: what the app carries is the finished letterforms as vector paths, so a shelf's name is one face's drawing at any size and the app links none of the thirty-five. Every face here is under the SIL Open Font License, which permits exactly this. 'genre' must be one of the shelves in subgenres.json, or GenreWall.Unclassified ('Other'). 'font' is a Google Fonts family, or any family named alongside a 'url' to the file itself. 'axes' pins a variable face to one instance. 'case' is upper, title or as-is. 'tracking' is letter-spacing in ems. 'lines' breaks a long name by hand, because a wordmark is set, not wrapped. 'palette' names one of the app's ten accent colours and is the ONLY place a colour may come from — thirty-six shelves share ten colours on purpose, the way the artists wall shares them, and what tells two shelves of one colour apart is the face and the finish. 'finish' is glass for the shelves that want the picture sharp under a tint, frost for the ones that want it under a haze.",
+  "tracking_default": 0.0,
+  "genres": [
+    {
+      "genre": "Rock",
+      "font": "Permanent Marker",
+      "case": "upper",
+      "tracking": 0.02,
+      "why": "Written rather than set: a marker on a flight case, a poster, the back of a hand. Two faces were tried before it and both were TYPE — a shadowed slab that came out as grain at the size the wall sets a name, and a poster grotesque that was clean and said nothing. Rock is the one shelf on this wall that should not look typeset.",
+      "palette": "vermilion",
+      "finish": "frost"
+    },
+    {
+      "genre": "Indie",
+      "font": "Syne",
+      "axes": {
+        "wght": 800
+      },
+      "case": "upper",
+      "tracking": 0.05,
+      "why": "A wide, slightly wrong grotesque drawn for an art centre: the letters do not quite behave, which is the whole of what the word means.",
+      "palette": "forest",
+      "finish": "frost"
+    },
+    {
+      "genre": "Pop",
+      "font": "Bagel Fat One",
+      "case": "upper",
+      "tracking": 0.01,
+      "why": "Fat, glossy and inline, like something moulded rather than drawn.",
+      "palette": "crimson",
+      "finish": "glass"
+    },
+    {
+      "genre": "Disco",
+      "font": "Monoton",
+      "case": "upper",
+      "tracking": 0.04,
+      "why": "Inline stripes running through every stroke, which is the seventies marquee and the mirrorball at once.",
+      "palette": "red",
+      "finish": "glass"
+    },
+    {
+      "genre": "Funk",
+      "font": "Rampart One",
+      "case": "upper",
+      "tracking": 0.01,
+      "why": "Letters standing up off the card on their own shadow.",
+      "palette": "gold",
+      "finish": "glass"
+    },
+    {
+      "genre": "Soul",
+      "font": "Ruslan Display",
+      "case": "upper",
+      "tracking": 0.02,
+      "why": "An ornate display face with a swelling curve in every stroke.",
+      "palette": "rust",
+      "finish": "frost"
+    },
+    {
+      "genre": "R&B",
+      "font": "Italiana",
+      "case": "upper",
+      "tracking": 0.22,
+      "why": "Thin, elegant, widely spaced: the fashion-magazine masthead modern R&B sleeves borrow.",
+      "palette": "red",
+      "finish": "glass"
+    },
+    {
+      "genre": "Rap",
+      "font": "Sedgwick Ave",
+      "case": "upper",
+      "tracking": 0.0,
+      "why": "A marker hand, which is where the word was written first.",
+      "palette": "gold",
+      "finish": "glass"
+    },
+    {
+      "genre": "Trap",
+      "font": "Pirata One",
+      "case": "upper",
+      "tracking": 0.02,
+      "why": "Blackletter cut narrow and sharp, which is the mixtape cover and the chain.",
+      "palette": "forest",
+      "finish": "glass"
+    },
+    {
+      "genre": "Old School Hip Hop",
+      "font": "Bungee",
+      "case": "upper",
+      "tracking": 0.0,
+      "lines": [
+        "Old School",
+        "Hip Hop"
+      ],
+      "why": "Drawn from New York shop signage, which is the street this music is named after. Subway cyan, off the Wild Style and Beat Street bills rather than off a record.",
+      "palette": "vermilion",
+      "finish": "glass"
+    },
+    {
+      "genre": "Hip-Hop / Rap",
+      "font": "ChunkFive",
+      "case": "upper",
+      "tracking": 0.02,
+      "lines": [
+        "Hip-Hop /",
+        "Rap"
+      ],
+      "why": "A heavy woodtype slab, and the one face here that is not Google's: The League of Moveable Type publishes it under the same open licence, which is what a face has to be for its outlines to be cut into this app.",
+      "url": "https://raw.githubusercontent.com/theleagueof/chunk/master/ChunkFive-Regular.otf",
+      "palette": "rust",
+      "finish": "glass"
+    },
+    {
+      "genre": "House",
+      "font": "Wallpoet",
+      "case": "upper",
+      "tracking": 0.06,
+      "why": "A segmented display: the readout on a mixer, a clock radio, the front of a rack. House is the one shelf whose whole sound came out of machines with panels on them, and the face is that panel rather than a picture of a record.",
+      "palette": "lime",
+      "finish": "glass"
+    },
+    {
+      "genre": "Techno",
+      "font": "Tourney",
+      "case": "upper",
+      "tracking": 0.06,
+      "why": "Squared letters drawn as outlines with a seam down them, machined rather than written.",
+      "axes": {
+        "wght": 700
+      },
+      "palette": "azure",
+      "finish": "glass"
+    },
+    {
+      "genre": "Club",
+      "font": "Audiowide",
+      "case": "upper",
+      "tracking": 0.05,
+      "why": "Rounded neon tubing bent into letters. Its predecessor was a face made of light bulbs, which is a better idea and a worse sign: at the size a card draws a name, on a colour this bright, the bulbs stopped joining up into letters.",
+      "palette": "crimson",
+      "finish": "glass"
+    },
+    {
+      "genre": "Electronic / Dance",
+      "font": "Orbitron",
+      "case": "upper",
+      "tracking": 0.06,
+      "lines": [
+        "Electronic /",
+        "Dance"
+      ],
+      "why": "A squared techno face drawn for machines.",
+      "palette": "azure",
+      "finish": "glass",
+      "axes": {
+        "wght": 700
+      }
+    },
+    {
+      "genre": "Jazz",
+      "font": "Limelight",
+      "case": "upper",
+      "tracking": 0.05,
+      "why": "A deco face off a 1920s bill, which is where this music was first advertised.",
+      "palette": "rust",
+      "finish": "frost"
+    },
+    {
+      "genre": "Blues",
+      "font": "Ultra",
+      "case": "upper",
+      "tracking": 0.02,
+      "why": "The fattest slab there is: the medicine-show bill and the juke joint.",
+      "palette": "azure",
+      "finish": "frost"
+    },
+    {
+      "genre": "Country",
+      "font": "Rye",
+      "case": "upper",
+      "tracking": 0.02,
+      "why": "Woodtype with spurs on it, straight off a Nashville poster.",
+      "palette": "vermilion",
+      "finish": "frost"
+    },
+    {
+      "genre": "Folk",
+      "font": "Caveat Brush",
+      "case": "title",
+      "tracking": 0.0,
+      "why": "A brush hand, because these songs were written down before they were printed.",
+      "palette": "lime",
+      "finish": "frost"
+    },
+    {
+      "genre": "Classical",
+      "font": "Cinzel Decorative",
+      "axes": {
+        "wght": 700
+      },
+      "case": "upper",
+      "tracking": 0.08,
+      "why": "Roman inscriptional caps with the serifs flowered out, cut in stone and then gilded.",
+      "palette": "gold",
+      "finish": "frost"
+    },
+    {
+      "genre": "Neo-Classical",
+      "font": "Gilda Display",
+      "case": "upper",
+      "tracking": 0.12,
+      "lines": [
+        "Neo-",
+        "Classical"
+      ],
+      "why": "A fine high-contrast serif with nothing warm in it.",
+      "palette": "azure",
+      "finish": "frost"
+    },
+    {
+      "genre": "Opera",
+      "font": "Bodoni Moda",
+      "axes": {
+        "wght": 700
+      },
+      "case": "upper",
+      "tracking": 0.08,
+      "why": "The most theatrical didone there is, and Italian, which opera is.",
+      "palette": "vermilion",
+      "finish": "frost"
+    },
+    {
+      "genre": "Metal",
+      "font": "Metal Mania",
+      "case": "upper",
+      "tracking": 0.0,
+      "why": "The carved, spiked band logo, unmistakably.",
+      "palette": "red",
+      "finish": "frost"
+    },
+    {
+      "genre": "Punk",
+      "font": "Rubik Distressed",
+      "case": "upper",
+      "tracking": 0.02,
+      "why": "Photocopied to pieces, which is how the sleeves were made.",
+      "palette": "crimson",
+      "finish": "frost"
+    },
+    {
+      "genre": "Noise",
+      "font": "Rubik Glitch",
+      "case": "upper",
+      "tracking": 0.02,
+      "why": "Letters coming apart on the scan. Flat grey, because noise has no key.",
+      "palette": "forest",
+      "finish": "frost"
+    },
+    {
+      "genre": "Avant-Garde",
+      "font": "Rubik Iso",
+      "case": "upper",
+      "tracking": 0.05,
+      "lines": [
+        "Avant-",
+        "Garde"
+      ],
+      "why": "Letters drawn as impossible solids, seen from a corner that does not exist.",
+      "palette": "red",
+      "finish": "glass"
+    },
+    {
+      "genre": "Reggae",
+      "font": "Shrikhand",
+      "case": "upper",
+      "tracking": 0.01,
+      "why": "Bold, leaning and swollen, the way dancehall lettering leans.",
+      "palette": "lime",
+      "finish": "frost"
+    },
+    {
+      "genre": "Latin",
+      "font": "Yellowtail",
+      "case": "title",
+      "tracking": 0.0,
+      "why": "A brush script with speed in it.",
+      "palette": "vermilion",
+      "finish": "frost"
+    },
+    {
+      "genre": "World",
+      "font": "Rakkas",
+      "case": "upper",
+      "tracking": 0.05,
+      "why": "A Latin drawn by an Arabic type designer, with the movement of a brush still in it.",
+      "palette": "rust",
+      "finish": "frost"
+    },
+    {
+      "genre": "Religious",
+      "font": "UnifrakturMaguntia",
+      "case": "title",
+      "tracking": 0.01,
+      "why": "Blackletter, which is what the hymn book is set in.",
+      "palette": "gold",
+      "finish": "frost"
+    },
+    {
+      "genre": "Soundtrack",
+      "font": "Big Shoulders Stencil Display",
+      "case": "upper",
+      "tracking": 0.06,
+      "why": "Condensed stencil caps, off the clapperboard and the flight case.",
+      "axes": {
+        "wght": 700
+      },
+      "palette": "azure",
+      "finish": "frost"
+    },
+    {
+      "genre": "Video Game",
+      "font": "Press Start 2P",
+      "case": "upper",
+      "tracking": 0.0,
+      "lines": [
+        "Video",
+        "Game"
+      ],
+      "why": "An eight-by-eight bitmap face, cut as outlines so the pixels stay square at any size.",
+      "palette": "lime",
+      "finish": "glass"
+    },
+    {
+      "genre": "Musical",
+      "font": "Fascinate Inline",
+      "case": "upper",
+      "tracking": 0.04,
+      "why": "A deco face with a line running through every stroke, which is the marquee.",
+      "palette": "rust",
+      "finish": "glass"
+    },
+    {
+      "genre": "Spoken Word",
+      "font": "Special Elite",
+      "case": "upper",
+      "tracking": 0.04,
+      "lines": [
+        "Spoken",
+        "Word"
+      ],
+      "why": "A typewriter with a worn ribbon: the page these were read off.",
+      "palette": "forest",
+      "finish": "frost"
+    },
+    {
+      "genre": "Other / Unknown",
+      "font": "Archivo",
+      "axes": {
+        "wght": 600
+      },
+      "case": "upper",
+      "tracking": 0.05,
+      "lines": [
+        "Other /",
+        "Unknown"
+      ],
+      "why": "A plain grotesque, deliberately: this shelf is the absence of a shelf and should not be dressed up.",
+      "palette": "gold",
+      "finish": "frost"
+    },
+    {
+      "genre": "Other",
+      "font": "Archivo",
+      "axes": {
+        "wght": 600
+      },
+      "case": "upper",
+      "tracking": 0.05,
+      "why": "The wall's own word for music it cannot file.",
+      "palette": "lime",
+      "finish": "frost"
+    }
+  ]
+}

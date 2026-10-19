@@ -1,0 +1,595 @@
+{
+  "$comment": "The shelves RPM files records under, and the styles that hang off them. Single source: RPM.Core/Metadata/Subgenres.cs and Genres.All are generated from this by scripts/gen_subgenres.py and are never hand-edited. Order is the order things are offered in, so it is deliberate. A name under more than one shelf is offered under each and is matched to none of them, because a style belonging to three shelves names no one of them. 'blocked' are words that fall out of splitting a tag and must never be read as a style; they bind the style lookup only, and several are perfectly good shelf words. A blocked word that folds onto a real style costs that style its key: it is still offered in the picker and is not matched out of a tag, which is what 'alternative & punk' does to Alternative Punk and is deliberate.",
+  "unknown": "Other / Unknown",
+  "shelves": [
+    {
+      "genre": "Rock",
+      "subgenres": [
+        "Singer-Songwriter",
+        "Rock and Roll",
+        "Rockabilly",
+        "Surf Rock",
+        "Merseybeat",
+        "Classic Rock",
+        "Hard Rock",
+        "Soft Rock",
+        "Pop Rock",
+        "Power Pop",
+        "Art Rock",
+        "Progressive Rock",
+        "Symphonic Rock",
+        "Psychedelic Rock",
+        "Acid Rock",
+        "Space Rock",
+        "Krautrock",
+        "Blues Rock",
+        "Roots Rock",
+        "Southern Rock",
+        "Heartland Rock",
+        "Arena Rock",
+        "AOR",
+        "Glam Rock",
+        "Garage Rock",
+        "Garage Rock Revival",
+        "Piano Rock",
+        "Acoustic Rock",
+        "Folk Rock",
+        "Country Rock",
+        "New Wave",
+        "New Romantic",
+        "Alternative Rock",
+        "Grunge",
+        "Post-Grunge",
+        "Noise Rock",
+        "Experimental Rock",
+        "Post-Rock",
+        "Industrial Rock",
+        "Rap Rock",
+        "Funk Rock",
+        "Dance-Rock",
+        "Gothic Rock",
+        "Pub Rock"
+      ]
+    },
+    {
+      "genre": "Indie",
+      "subgenres": [
+        "Indie Rock",
+        "Indie Pop",
+        "Indietronica",
+        "Dream Pop",
+        "Shoegaze",
+        "Slowcore",
+        "Lo-fi",
+        "Bedroom Pop",
+        "Jangle Pop",
+        "Chamber Pop",
+        "Britpop",
+        "Post-Punk Revival",
+        "Neo-Psychedelia"
+      ]
+    },
+    {
+      "genre": "Pop",
+      "subgenres": [
+        "Dance-Pop",
+        "Synth-Pop",
+        "Electropop",
+        "Art Pop",
+        "Progressive Pop",
+        "Psychedelic Pop",
+        "Baroque Pop",
+        "Bubblegum Pop",
+        "Bubblegum Bass",
+        "Hyperpop",
+        "Teen Pop",
+        "Traditional Pop",
+        "Easy Listening",
+        "Ballad",
+        "Sophisti-Pop",
+        "Alternative Pop",
+        "Europop",
+        "Nederpop",
+        "Chanson Française",
+        "J-Pop",
+        "K-Pop",
+        "City Pop",
+        "Adult Contemporary",
+        "Schlager"
+      ]
+    },
+    {
+      "genre": "Disco",
+      "subgenres": [
+        "Nu Disco",
+        "Italo-Disco",
+        "Euro-Disco",
+        "Electro-Disco",
+        "Post-Disco",
+        "Hi-NRG"
+      ]
+    },
+    {
+      "genre": "Funk",
+      "subgenres": [
+        "P-Funk",
+        "Jazz-Funk",
+        "Synth Funk",
+        "Boogie",
+        "Minneapolis Sound",
+        "Go-Go"
+      ]
+    },
+    {
+      "genre": "Soul",
+      "subgenres": [
+        "Singer-Songwriter",
+        "Motown",
+        "Neo-Soul",
+        "Northern Soul",
+        "Southern Soul",
+        "Deep Soul",
+        "Smooth Soul",
+        "Psychedelic Soul",
+        "Pop Soul",
+        "Blue-Eyed Soul",
+        "Philly Soul",
+        "Doo-Wop"
+      ]
+    },
+    {
+      "genre": "R&B",
+      "subgenres": [
+        "Contemporary R&B",
+        "Alternative R&B",
+        "New Jack Swing",
+        "Quiet Storm",
+        "Trap Soul",
+        "Rhythm and Blues"
+      ]
+    },
+    {
+      "genre": "Rap",
+      "subgenres": [
+        "Pop Rap",
+        "Cloud Rap",
+        "Gangsta Rap",
+        "Jazz Rap",
+        "Emo Rap",
+        "Drill",
+        "Grime"
+      ]
+    },
+    {
+      "genre": "Trap",
+      "subgenres": [
+        "Plugg",
+        "Rage",
+        "Phonk"
+      ]
+    },
+    {
+      "genre": "Old School Hip Hop",
+      "subgenres": [
+        "Boom Bap",
+        "Golden Age Hip Hop",
+        "Turntablism",
+        "Miami Bass"
+      ]
+    },
+    {
+      "genre": "Hip-Hop / Rap",
+      "subgenres": [
+        "East Coast Hip Hop",
+        "West Coast Hip Hop",
+        "Southern Hip Hop",
+        "Hardcore Hip Hop",
+        "Conscious Hip Hop",
+        "Political Hip Hop",
+        "Experimental Hip Hop",
+        "Industrial Hip Hop",
+        "Alternative Hip Hop",
+        "G-Funk",
+        "Crunk"
+      ]
+    },
+    {
+      "genre": "House",
+      "subgenres": [
+        "Deep House",
+        "Tech House",
+        "Progressive House",
+        "Electro House",
+        "Future House",
+        "French House",
+        "Garage House",
+        "Tribal House",
+        "Acid House",
+        "Chicago House",
+        "Afro House",
+        "Euro House"
+      ]
+    },
+    {
+      "genre": "Techno",
+      "subgenres": [
+        "Detroit Techno",
+        "Minimal Techno",
+        "Acid Techno",
+        "Ambient Techno",
+        "Hard Techno",
+        "Industrial Techno"
+      ]
+    },
+    {
+      "genre": "Club",
+      "subgenres": [
+        "Deconstructed Club",
+        "Jersey Club",
+        "Future Rave",
+        "Electroclash",
+        "Big Room"
+      ]
+    },
+    {
+      "genre": "Electronic / Dance",
+      "subgenres": [
+        "Electronica",
+        "Electro",
+        "Trance",
+        "Psytrance",
+        "Eurodance",
+        "Italo Dance",
+        "Alternative Dance",
+        "Ambient",
+        "Dark Ambient",
+        "New Age",
+        "Progressive Electronic",
+        "IDM",
+        "Leftfield",
+        "Downtempo",
+        "Trip Hop",
+        "Chillout",
+        "Chillwave",
+        "Synthwave",
+        "Dark Wave",
+        "Ethereal Wave",
+        "Minimal Wave",
+        "Witch House",
+        "Vaporwave",
+        "Vaportrap",
+        "Future Funk",
+        "Folktronica",
+        "Drum and Bass",
+        "Jungle",
+        "Breakbeat",
+        "Dubstep",
+        "Post-Dubstep",
+        "UK Garage",
+        "Speed Garage",
+        "Hardstyle",
+        "Industrial",
+        "Post-Industrial",
+        "Future Bass",
+        "Lo-fi Beats"
+      ]
+    },
+    {
+      "genre": "Jazz",
+      "subgenres": [
+        "Vocal Jazz",
+        "Smooth Jazz",
+        "Soul Jazz",
+        "Jazz Fusion",
+        "Cool Jazz",
+        "Bebop",
+        "Hard Bop",
+        "Free Jazz",
+        "Modal Jazz",
+        "Avant-Garde Jazz",
+        "Acid Jazz",
+        "Big Band",
+        "Swing",
+        "Latin Jazz",
+        "Jazz Pop",
+        "Gypsy Jazz",
+        "Ragtime"
+      ]
+    },
+    {
+      "genre": "Blues",
+      "subgenres": [
+        "Electric Blues",
+        "British Blues",
+        "Delta Blues",
+        "Chicago Blues",
+        "Country Blues",
+        "Punk Blues",
+        "Jump Blues",
+        "Texas Blues",
+        "Piedmont Blues"
+      ]
+    },
+    {
+      "genre": "Country",
+      "subgenres": [
+        "Country Pop",
+        "Alternative Country",
+        "Americana",
+        "Bluegrass",
+        "Outlaw Country",
+        "Honky Tonk",
+        "Gothic Country",
+        "Western Swing",
+        "Bro-Country",
+        "Bakersfield Sound"
+      ]
+    },
+    {
+      "genre": "Folk",
+      "subgenres": [
+        "Singer-Songwriter",
+        "Contemporary Folk",
+        "Traditional Folk",
+        "Folk Pop",
+        "Neo Folk",
+        "Alternative Folk",
+        "Anti-Folk",
+        "Freak Folk",
+        "Celtic Folk",
+        "Indie Folk",
+        "Folk Revival"
+      ]
+    },
+    {
+      "genre": "Classical",
+      "subgenres": [
+        "Early Music",
+        "Baroque",
+        "Classical Period",
+        "Romantic Classical",
+        "Contemporary Classical",
+        "Orchestral",
+        "Chamber Music",
+        "Choral",
+        "Solo Piano",
+        "Minimalism",
+        "Medieval",
+        "Renaissance",
+        "Impressionist"
+      ]
+    },
+    {
+      "genre": "Neo-Classical",
+      "subgenres": [
+        "Modern Classical",
+        "Post-Minimalism",
+        "Ambient Classical"
+      ]
+    },
+    {
+      "genre": "Opera",
+      "subgenres": [
+        "Grand Opera",
+        "Opera Buffa",
+        "Bel Canto",
+        "Operetta"
+      ]
+    },
+    {
+      "genre": "Metal",
+      "subgenres": [
+        "Heavy Metal",
+        "Alternative Metal",
+        "Industrial Metal",
+        "Nu Metal",
+        "Thrash Metal",
+        "Speed Metal",
+        "Death Metal",
+        "Deathcore",
+        "Black Metal",
+        "Doom Metal",
+        "Sludge Metal",
+        "Post-Metal",
+        "Power Metal",
+        "Glam Metal",
+        "Pop Metal",
+        "Metalcore",
+        "Symphonic Metal",
+        "Progressive Metal",
+        "Folk Metal",
+        "Djent",
+        "Gothic Metal"
+      ]
+    },
+    {
+      "genre": "Punk",
+      "subgenres": [
+        "Punk Rock",
+        "Proto-Punk",
+        "Post-Punk",
+        "Hardcore Punk",
+        "Post-Hardcore",
+        "Pop Punk",
+        "Emo",
+        "Ska Punk",
+        "Folk Punk",
+        "Alternative Punk",
+        "Electropunk",
+        "Powerviolence",
+        "Garage Punk",
+        "Skate Punk",
+        "Crust Punk",
+        "Street Punk",
+        "Riot Grrrl",
+        "Screamo"
+      ]
+    },
+    {
+      "genre": "Noise",
+      "subgenres": [
+        "Harsh Noise",
+        "Power Electronics",
+        "Japanoise",
+        "Noisecore",
+        "Drone",
+        "Glitch"
+      ]
+    },
+    {
+      "genre": "Avant-Garde",
+      "subgenres": [
+        "Musique Concrete",
+        "Electroacoustic",
+        "Free Improvisation",
+        "Sound Collage",
+        "Avant-Prog",
+        "Spectral Music",
+        "Fluxus"
+      ]
+    },
+    {
+      "genre": "Reggae",
+      "subgenres": [
+        "Roots Reggae",
+        "Dub",
+        "Dancehall",
+        "Ska",
+        "Rocksteady",
+        "Ragga",
+        "Lovers Rock",
+        "Reggae Fusion",
+        "Two-Tone",
+        "Nyabinghi"
+      ]
+    },
+    {
+      "genre": "Latin",
+      "subgenres": [
+        "Reggaeton",
+        "Trap Latino",
+        "Latin Pop",
+        "Latin Rock",
+        "Salsa",
+        "Bachata",
+        "Merengue",
+        "Cumbia",
+        "Samba",
+        "Bossa Nova",
+        "MPB",
+        "Tango",
+        "Mariachi",
+        "Norteño",
+        "Banda",
+        "Son Cubano",
+        "Vallenato"
+      ]
+    },
+    {
+      "genre": "World",
+      "subgenres": [
+        "Afrobeat",
+        "Afrobeats",
+        "Highlife",
+        "Soukous",
+        "Rai",
+        "Klezmer",
+        "Flamenco",
+        "Fado",
+        "Celtic",
+        "Balkan Brass",
+        "Filmi",
+        "Bhangra",
+        "Desert Blues",
+        "Ethio-Jazz"
+      ]
+    },
+    {
+      "genre": "Religious",
+      "subgenres": [
+        "Gospel",
+        "Southern Gospel",
+        "Gospel Soul",
+        "Contemporary Christian",
+        "Worship",
+        "Christian Rock",
+        "Spirituals",
+        "Sacred Choral",
+        "Gregorian Chant",
+        "Traditional Gospel",
+        "Contemporary Gospel",
+        "Christian Hip-Hop",
+        "Gospel Blues",
+        "Hymns",
+        "Nasheed"
+      ]
+    },
+    {
+      "genre": "Soundtrack",
+      "subgenres": [
+        "Film Score",
+        "Television Score",
+        "Anime Soundtrack",
+        "Trailer Music",
+        "Original Cast Recording",
+        "Orchestral Score",
+        "Synth Score"
+      ]
+    },
+    {
+      "genre": "Video Game",
+      "subgenres": [
+        "Chiptune",
+        "Video Game Score",
+        "Rhythm Game"
+      ]
+    },
+    {
+      "genre": "Musical",
+      "subgenres": [
+        "Show Tunes",
+        "Broadway",
+        "West End",
+        "Film Musical"
+      ]
+    },
+    {
+      "genre": "Spoken Word",
+      "subgenres": [
+        "Audiobook",
+        "Poetry",
+        "Comedy",
+        "Interview",
+        "Field Recording",
+        "Podcast",
+        "Storytelling",
+        "ASMR"
+      ]
+    },
+    {
+      "genre": "Other / Unknown",
+      "subgenres": []
+    }
+  ],
+  "blocked": [
+    "& country",
+    "world",
+    "international",
+    "rap & hip-hop",
+    "alternative & punk",
+    "general classic pop-rock",
+    "electronic dance",
+    "edm",
+    "dance",
+    "hip-hop",
+    "game",
+    "score",
+    "10s pop",
+    "experimental",
+    "progressive",
+    "psychedelic",
+    "gothic",
+    "glam",
+    "instrumental"
+  ]
+}

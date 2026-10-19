@@ -17,7 +17,7 @@ The repos:
 
 | Repo | Contains |
 | --- | --- |
-| [`rpm`](https://github.com/rpmrpmrpm/rpm) | Start here. Discussions, the API contract and the UI strings shared by all apps. |
+| [`rpm`](https://github.com/rpmrpmrpm/rpm) | Start here. Discussions, the UI strings and the generators shared by all apps. |
 | [`rpm-desktop`](https://github.com/rpmrpmrpm/rpm-desktop) | The desktop app (C#, .NET, Uno Platform) and the shared libraries `RPM.Core` and `RPM.Fingerprint`. |
 | [`rpm-apple`](https://github.com/rpmrpmrpm/rpm-apple) | The iPhone and Apple TV apps (Swift, SwiftUI). |
 | [`rpm-android`](https://github.com/rpmrpmrpm/rpm-android) | The Android phone and Android TV apps (Kotlin, Jetpack Compose). |
@@ -108,6 +108,21 @@ body why the change is needed if that is not obvious.
 ### Changing UI text
 
 1. Edit `strings.json`. Each key has the text in every language and a `comment` for translators.
-2. Run `python3 gen_locales.py`. It writes the string files of every app and fails if a key is
-   missing in a language.
-3. Open a pull request here. After it is merged, the generated files are updated in the app repos.
+2. Run `python3 scripts/gen_locales.py`. It writes the string files of every app and fails if a
+   key is missing in a language.
+3. Open a pull request here, and one in each app repo with its regenerated string files.
+
+### Generators
+
+The scripts in `scripts/` write files into the apps (strings, credits, genre and playlist tables,
+palettes, wordmarks). They expect the repos checked out side by side:
+
+```
+rpm/            this repo
+rpm-desktop/
+rpm-apple/
+rpm-android/
+```
+
+`scripts/workspace.py` finds each app folder in the right repo. Set `RPM_WORKSPACE` to use another
+parent folder.

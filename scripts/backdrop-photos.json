@@ -1,0 +1,19 @@
+{
+  "$comment": [
+    "Photographs the desktop backdrops are made from. Each is coloured and lit by the script named",
+    "in 'script', which reads this file, and gen_credits.py lists each photographer on the credits",
+    "screen. The Pexels License asks for no credit; one is given anyway."
+  ],
+  "photos": [
+    {
+      "file": "background-sheet-music.jpg",
+      "backdrop": "Sheet music",
+      "script": "make_sheet_music.py",
+      "id": 104084,
+      "alt": "Detailed view of sheet music featuring musical notations and symbols.",
+      "by": "Richard Revel",
+      "page": "https://www.pexels.com/photo/musical-notes-104084/",
+      "source": "https://images.pexels.com/photos/104084/pexels-photo-104084.jpeg"
+    }
+  ]
+}

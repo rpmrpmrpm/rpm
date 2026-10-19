@@ -5,9 +5,9 @@ rules on UI text, comments and commit sign-off apply to every change.
 
 ## This repo
 
-The shared parts of rpm: `strings.json` (all UI text), the script that generates each app's string
-files from it, and the API contract as example JSON. The apps live in `rpm-desktop`, `rpm-apple` and
-`rpm-android`.
+The shared parts of rpm: `scripts/strings.json` (all UI text), the shared data tables and the
+generators that write files into the apps. The apps live in `rpm-desktop`, `rpm-apple` and
+`rpm-android`, checked out next to this repo; `scripts/workspace.py` finds them.
 
 ## Comments
 

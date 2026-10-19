@@ -1,0 +1,1199 @@
+{
+  "$comment": "Everything RPM ships that somebody else made, and everything it asks. Read by scripts/gen_credits.py, which writes RPM.Desktop/Presentation/About/Credits.Data.cs and RPM.iOS/Modules/RPMKit/Sources/RPMKit/CreditsData.swift, and copies scripts/licenses/*.txt into both heads. NEITHER TABLE IS HAND-EDITED. 'heads' says which head actually ships or calls the thing, and an entry missing from a head is missing from that head's screen: the phone carries no ffmpeg, no ONNX and no SQLite, and saying otherwise on its About screen would be a false statement about what is on the device. 'use' is the key of a string in scripts/strings.json; gen_credits.py fails if it is not there, so a new entry cannot ship with an untranslated line. 'license' names keys of the 'licenses' map below. 'source' is where the exact source of the shipped version is; '{version}' in it is replaced with the entry's version, and an entry under an LGPL licence must have one. 'version_from' names a key in scripts/tool-versions.txt and stands in for 'version' on the tools built or fetched from the versions there, so those versions are written in one place. Two sections are not listed here at all: the wordmark typefaces are generated from scripts/wordmarks.json and the photographs from scripts/genre-photos.json and scripts/playlist-photos.json, because those files are already the source for the assets themselves and a second copy here would drift.",
+  "licenses": {
+    "MIT": {
+      "name": "MIT License",
+      "file": "MIT.txt",
+      "url": "https://spdx.org/licenses/MIT.html"
+    },
+    "Apache-2.0": {
+      "name": "Apache License 2.0",
+      "file": "Apache-2.0.txt",
+      "url": "https://spdx.org/licenses/Apache-2.0.html"
+    },
+    "BSD-3-Clause": {
+      "name": "BSD 3-Clause License",
+      "file": "BSD-3-Clause.txt",
+      "url": "https://spdx.org/licenses/BSD-3-Clause.html"
+    },
+    "LGPL-2.0-or-later": {
+      "name": "GNU Library General Public License v2 or later",
+      "file": "LGPL-2.0-or-later.txt",
+      "url": "https://spdx.org/licenses/LGPL-2.0-or-later.html"
+    },
+    "LGPL-2.1-or-later": {
+      "name": "GNU Lesser General Public License v2.1 or later",
+      "file": "LGPL-2.1-or-later.txt",
+      "url": "https://spdx.org/licenses/LGPL-2.1-or-later.html"
+    },
+    "Zlib": {
+      "name": "zlib License",
+      "file": "Zlib.txt",
+      "url": "https://spdx.org/licenses/Zlib.html"
+    },
+    "LGPL-2.0-only": {
+      "name": "GNU Library General Public License v2",
+      "file": "LGPL-2.0-only.txt",
+      "url": "https://spdx.org/licenses/LGPL-2.0-only.html"
+    },
+    "LGPL-2.1-only": {
+      "name": "GNU Lesser General Public License v2.1",
+      "file": "LGPL-2.1-only.txt",
+      "url": "https://spdx.org/licenses/LGPL-2.1-only.html"
+    },
+    "OFL-1.1": {
+      "name": "SIL Open Font License 1.1",
+      "file": "OFL-1.1.txt",
+      "url": "https://openfontlicense.org"
+    },
+    "CC-BY-SA-4.0": {
+      "name": "Creative Commons Attribution-ShareAlike 4.0",
+      "file": "CC-BY-SA-4.0.txt",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "CC0-1.0": {
+      "name": "Creative Commons Zero 1.0",
+      "file": "CC0-1.0.txt",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "blessing": {
+      "name": "SQLite Blessing (public domain)",
+      "file": "blessing.txt",
+      "url": "https://sqlite.org/copyright.html"
+    },
+    "HarfBuzz": {
+      "name": "Old MIT License",
+      "file": "HarfBuzz.txt",
+      "url": "https://github.com/harfbuzz/harfbuzz/blob/main/COPYING"
+    },
+    "MS-PL": {
+      "name": "Microsoft Public License",
+      "file": "MS-PL.txt",
+      "url": "https://spdx.org/licenses/MS-PL.html"
+    },
+    "FTL": {
+      "name": "FreeType License",
+      "file": "FTL.txt",
+      "url": "https://spdx.org/licenses/FTL.html"
+    },
+    "IJG": {
+      "name": "Independent JPEG Group License",
+      "file": "IJG.txt",
+      "url": "https://spdx.org/licenses/IJG.html"
+    },
+    "Unicode-3.0": {
+      "name": "Unicode License v3",
+      "file": "Unicode-3.0.txt",
+      "url": "https://spdx.org/licenses/Unicode-3.0.html"
+    },
+    "SkiaNotices": {
+      "name": "Skia third-party notices",
+      "file": "SkiaSharp-THIRD-PARTY-NOTICES.txt",
+      "url": "https://rpmrpmrpm.com/licenses/SkiaSharp-THIRD-PARTY-NOTICES.txt",
+      "notices": true
+    },
+    "OnnxNotices": {
+      "name": "ONNX Runtime third-party notices",
+      "file": "OnnxRuntime-THIRD-PARTY-NOTICES.txt",
+      "url": "https://rpmrpmrpm.com/licenses/OnnxRuntime-THIRD-PARTY-NOTICES.txt",
+      "notices": true
+    },
+    "$comment-terms": "Below this line the licence is a published set of terms rather than a text anybody may redistribute, so the screen links to it instead of carrying it. A 'file' is what separates the two. A licence with \"notices\": true is the third case: an aggregate notices document that the licences inside a native library require to travel with it, so it ships, and that is far too long to read in a dialog, so the screen links to the copy on rpmrpmrpm.com. It needs both a file and a url.",
+    "FontAwesomePro": {
+      "name": "Font Awesome Pro License",
+      "url": "https://fontawesome.com/license"
+    },
+    "Pexels": {
+      "name": "Pexels License",
+      "url": "https://www.pexels.com/license/"
+    },
+    "DirectML": {
+      "name": "Microsoft Software License Terms, DirectML",
+      "url": "https://www.nuget.org/packages/Microsoft.AI.DirectML/1.15.2/License"
+    },
+    "VcRuntime": {
+      "name": "Microsoft Software License Terms, Visual C++ Runtime",
+      "url": "https://visualstudio.microsoft.com/license-terms/vs2022-cruntime/"
+    },
+    "Terms": {
+      "name": "Terms of use",
+      "url": ""
+    }
+  },
+  "sections": [
+    {
+      "id": "Built",
+      "title": "Credits_Section_Built",
+      "entries": [
+        {
+          "id": "Dotnet",
+          "name": ".NET",
+          "version": "10",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) .NET Foundation and Contributors",
+          "url": "https://dotnet.microsoft.com",
+          "use": "Credits_Dotnet_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Uno",
+          "name": "Uno Platform",
+          "version": "6.8.0-dev.60",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright (C) 2015-2026 Uno Platform Inc.",
+          "url": "https://platform.uno",
+          "use": "Credits_Uno_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Icu",
+          "name": "ICU",
+          "version": "77.1",
+          "license": [
+            "Unicode-3.0"
+          ],
+          "copyright": "Copyright © 1991-2023 Unicode, Inc.",
+          "url": "https://icu.unicode.org",
+          "use": "Credits_Icu_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "WindowsAppSdk",
+          "name": "Windows App SDK",
+          "version": "2.2.0",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) Microsoft Corporation",
+          "url": "https://github.com/microsoft/WindowsAppSDK",
+          "use": "Credits_WindowsAppSdk_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Win2D",
+          "name": "Win2D",
+          "version": "1.3.2",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) Microsoft Corporation",
+          "url": "https://github.com/microsoft/Win2D",
+          "use": "Credits_Win2D_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Skia",
+          "name": "Skia",
+          "license": [
+            "BSD-3-Clause",
+            "SkiaNotices"
+          ],
+          "copyright": "Copyright (c) 2011 Google Inc.",
+          "url": "https://skia.org",
+          "use": "Credits_Skia_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "SkiaSharp",
+          "name": "SkiaSharp",
+          "version": "3.119.2",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) Microsoft Corporation",
+          "url": "https://github.com/mono/SkiaSharp",
+          "use": "Credits_SkiaSharp_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "FreeType",
+          "name": "FreeType",
+          "license": [
+            "FTL"
+          ],
+          "copyright": "Copyright 1996-2002, 2006 by David Turner, Robert Wilhelm, and Werner Lemberg",
+          "url": "https://freetype.org",
+          "detail": "inside Skia",
+          "use": "Credits_FreeType_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "LibjpegTurbo",
+          "name": "libjpeg-turbo",
+          "license": [
+            "IJG"
+          ],
+          "copyright": "Copyright (C) 1991-1998 Thomas G. Lane, and the libjpeg-turbo contributors",
+          "url": "https://libjpeg-turbo.org",
+          "detail": "inside Skia",
+          "use": "Credits_LibjpegTurbo_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "HarfBuzz",
+          "name": "HarfBuzz",
+          "version": "8.3.1",
+          "license": [
+            "HarfBuzz"
+          ],
+          "url": "https://harfbuzz.github.io",
+          "use": "Credits_HarfBuzz_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "HarfBuzzSharp",
+          "name": "HarfBuzzSharp",
+          "version": "8.3.1.3",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) Microsoft Corporation",
+          "url": "https://github.com/mono/SkiaSharp",
+          "use": "Credits_HarfBuzzSharp_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Sqlite",
+          "name": "SQLite",
+          "version": "3.50",
+          "license": [
+            "blessing"
+          ],
+          "url": "https://sqlite.org",
+          "use": "Credits_Sqlite_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "SqlitePclRaw",
+          "name": "SQLitePCLRaw",
+          "version": "2.1.12",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright 2014-2024 SourceGear, LLC",
+          "url": "https://github.com/ericsink/SQLitePCL.raw",
+          "use": "Credits_SqlitePclRaw_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "MicrosoftDataSqlite",
+          "name": "Microsoft.Data.Sqlite",
+          "version": "10.0.5",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) Microsoft Corporation",
+          "url": "https://learn.microsoft.com/dotnet/standard/data/sqlite/",
+          "use": "Credits_MicrosoftDataSqlite_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "TagLibSharp",
+          "name": "TagLib#",
+          "version": "2.3.0",
+          "license": [
+            "LGPL-2.1-only"
+          ],
+          "copyright": "Copyright (c) 2006-2007 Brian Nickel. Copyright (c) 2009-2020 Other contributors",
+          "url": "https://github.com/mono/taglib-sharp",
+          "source": "https://github.com/mono/taglib-sharp/tree/TaglibSharp-{version}.0",
+          "use": "Credits_TagLibSharp_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "OnnxRuntime",
+          "name": "ONNX Runtime",
+          "version": "1.20.1",
+          "license": [
+            "MIT",
+            "OnnxNotices"
+          ],
+          "copyright": "Copyright (c) Microsoft Corporation",
+          "url": "https://onnxruntime.ai",
+          "use": "Credits_OnnxRuntime_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "DirectMl",
+          "name": "DirectML",
+          "version": "1.15.2",
+          "license": [
+            "DirectML"
+          ],
+          "copyright": "Copyright (c) Microsoft Corporation",
+          "url": "https://github.com/microsoft/DirectML",
+          "use": "Credits_DirectMl_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "VcRuntime",
+          "name": "Microsoft Visual C++ Runtime",
+          "version": "14",
+          "license": [
+            "VcRuntime"
+          ],
+          "copyright": "Copyright (c) Microsoft Corporation",
+          "url": "https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist",
+          "use": "Credits_VcRuntime_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "MicrosoftExtensions",
+          "name": "Microsoft.Extensions",
+          "version": "9.0.8",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) .NET Foundation and Contributors",
+          "url": "https://github.com/dotnet/runtime",
+          "use": "Credits_MicrosoftExtensions_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Velopack",
+          "name": "Velopack",
+          "version": "0.0.1298",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) Velopack Ltd.",
+          "url": "https://velopack.io",
+          "use": "Credits_Velopack_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "SvgSkia",
+          "name": "Svg.Skia",
+          "version": "3.0.6",
+          "license": [
+            "MIT",
+            "MS-PL"
+          ],
+          "copyright": "Copyright © Wiesław Šoltés 2025",
+          "url": "https://github.com/wieslawsoltes/Svg.Skia",
+          "detail": "with Svg.Model, Svg.Custom and ShimSkiaSharp",
+          "use": "Credits_SvgSkia_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "ExCss",
+          "name": "ExCSS",
+          "version": "4.3.1",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) 2024 Tyler Brinks",
+          "url": "https://github.com/TylerBrinks/ExCSS",
+          "use": "Credits_ExCss_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "CommunityToolkitMvvm",
+          "name": "CommunityToolkit.Mvvm",
+          "version": "8.4.2",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) .NET Foundation and Contributors",
+          "url": "https://github.com/CommunityToolkit/dotnet",
+          "use": "Credits_CommunityToolkitMvvm_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Refit",
+          "name": "Refit",
+          "version": "7.2.22",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) .NET Foundation and Contributors",
+          "url": "https://github.com/reactiveui/refit",
+          "use": "Credits_Refit_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "SystemReactive",
+          "name": "System.Reactive",
+          "version": "5.0.0",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) .NET Foundation and Contributors",
+          "url": "https://github.com/dotnet/reactive",
+          "use": "Credits_SystemReactive_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "SystemLinqAsync",
+          "name": "System.Linq.Async",
+          "version": "4.0.0",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright (c) .NET Foundation and Contributors",
+          "url": "https://github.com/dotnet/reactive",
+          "use": "Credits_SystemLinqAsync_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "CommonServiceLocator",
+          "name": "CommonServiceLocator",
+          "version": "2.0.5",
+          "license": [
+            "MS-PL"
+          ],
+          "copyright": "Copyright © Microsoft 2008",
+          "url": "https://github.com/unitycontainer/commonservicelocator",
+          "use": "Credits_CommonServiceLocator_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "CommonLogging",
+          "name": "Common.Logging",
+          "version": "3.4.1",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright (c) 2006-2019 the Common.Logging authors",
+          "url": "https://github.com/net-commons/common-logging",
+          "use": "Credits_CommonLogging_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "NuGetVersioning",
+          "name": "NuGet.Versioning",
+          "version": "6.14.0",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright (c) .NET Foundation and Contributors",
+          "url": "https://github.com/NuGet/NuGet.Client",
+          "use": "Credits_NuGetVersioning_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "DirectNAot",
+          "name": "DirectNAot",
+          "version": "1.6.1",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright © 2024-2026 Simon Mourier",
+          "url": "https://github.com/smourier/DirectNAot",
+          "use": "Credits_DirectNAot_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "WebView2Aot",
+          "name": "WebView2Aot",
+          "version": "1.5.0",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) 2026 Simon Mourier",
+          "url": "https://github.com/smourier/WebView2Aot",
+          "use": "Credits_WebView2Aot_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "WebView2",
+          "name": "Microsoft Edge WebView2",
+          "version": "1.0.3719.77",
+          "license": [
+            "BSD-3-Clause"
+          ],
+          "copyright": "Copyright (C) Microsoft Corporation",
+          "url": "https://developer.microsoft.com/microsoft-edge/webview2",
+          "use": "Credits_WebView2_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "TmdsDBus",
+          "name": "Tmds.DBus",
+          "version": "0.92.0",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) Tom Deseyn",
+          "url": "https://github.com/tmds/Tmds.DBus",
+          "use": "Credits_TmdsDBus_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "LibVlcSharp",
+          "name": "LibVLCSharp",
+          "version": "3.9.7.1",
+          "license": [
+            "LGPL-2.1-or-later"
+          ],
+          "copyright": "Copyright (c) VideoLAN",
+          "url": "https://code.videolan.org/videolan/LibVLCSharp",
+          "source": "https://github.com/videolan/LibVLCSharp/tree/{version}",
+          "use": "Credits_LibVlcSharp_Use",
+          "heads": [
+            "desktop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Speakers",
+      "title": "Credits_Section_Speakers",
+      "entries": [
+        {
+          "id": "Ffmpeg",
+          "name": "FFmpeg",
+          "version_from": "FFMPEG_VERSION",
+          "license": [
+            "LGPL-2.1-or-later"
+          ],
+          "copyright": "Copyright (c) 2000-2026 the FFmpeg developers",
+          "url": "https://ffmpeg.org",
+          "source": "https://ffmpeg.org/releases/ffmpeg-{version}.tar.xz",
+          "use": "Credits_Ffmpeg_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Lame",
+          "name": "LAME",
+          "version_from": "LAME_VERSION",
+          "license": [
+            "LGPL-2.0-or-later"
+          ],
+          "copyright": "Copyright (c) 1999 Mark Taylor and the LAME developers",
+          "url": "https://lame.sourceforge.io",
+          "source": "https://downloads.sourceforge.net/project/lame/lame/{version}/lame-{version}.tar.gz",
+          "use": "Credits_Lame_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Zlib",
+          "name": "zlib",
+          "version_from": "ZLIB_VERSION",
+          "license": [
+            "Zlib"
+          ],
+          "copyright": "Copyright (C) 1995-2024 Jean-loup Gailly and Mark Adler",
+          "url": "https://zlib.net",
+          "source": "https://github.com/madler/zlib/releases/tag/v{version}",
+          "use": "Credits_Zlib_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "OpenAlSoft",
+          "name": "OpenAL Soft",
+          "version": "1.23.1",
+          "license": [
+            "LGPL-2.0-only"
+          ],
+          "copyright": "Copyright (C) 1999-2007 by authors.",
+          "url": "https://openal-soft.org",
+          "source": "https://github.com/kcat/openal-soft/tree/{version}",
+          "use": "Credits_OpenAlSoft_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "SilkNet",
+          "name": "Silk.NET",
+          "version": "2.22.0",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) .NET Foundation and Contributors",
+          "url": "https://github.com/dotnet/Silk.NET",
+          "use": "Credits_SilkNet_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Chromaprint",
+          "name": "Chromaprint",
+          "version_from": "CHROMAPRINT_VERSION",
+          "license": [
+            "LGPL-2.1-only"
+          ],
+          "copyright": "Copyright (C) 2010-2016 Lukas Lalinsky",
+          "url": "https://acoustid.org/chromaprint",
+          "source": "https://github.com/acoustid/chromaprint/tree/v{version}",
+          "use": "Credits_Chromaprint_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "FfmpegFpcalc",
+          "name": "FFmpeg",
+          "version_from": "FPCALC_FFMPEG_VERSION",
+          "license": [
+            "LGPL-2.1-or-later"
+          ],
+          "copyright": "Copyright (c) 2000-2025 the FFmpeg developers",
+          "url": "https://ffmpeg.org",
+          "source": "https://ffmpeg.org/releases/ffmpeg-{version}.tar.gz",
+          "detail": "inside fpcalc",
+          "use": "Credits_FfmpegFpcalc_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Angle",
+          "name": "ANGLE",
+          "license": [
+            "BSD-3-Clause"
+          ],
+          "copyright": "Copyright 2018 The ANGLE Project Authors.",
+          "url": "https://chromium.googlesource.com/angle/angle",
+          "use": "Credits_Angle_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Sharpcaster",
+          "name": "Sharpcaster",
+          "version": "3.0.0",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) 2016 Teemu Tapanila",
+          "url": "https://github.com/Tapanila/SharpCaster",
+          "use": "Credits_Sharpcaster_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Protobuf",
+          "name": "Protocol Buffers",
+          "version": "3.32.0",
+          "license": [
+            "BSD-3-Clause"
+          ],
+          "copyright": "Copyright 2008 Google Inc.",
+          "url": "https://protobuf.dev",
+          "use": "Credits_Protobuf_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Zeroconf",
+          "name": "Zeroconf",
+          "version": "3.7.16",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) Claire Novotny 2016-2024",
+          "url": "https://github.com/novotnyllc/Zeroconf",
+          "use": "Credits_Zeroconf_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "NetMdns",
+          "name": "net-mdns",
+          "version": "0.38.0",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) 2018-2019 Richard Schneider, jdomnitz",
+          "url": "https://github.com/jdomnitz/net-mdns",
+          "use": "Credits_NetMdns_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "NetDns",
+          "name": "net-dns",
+          "version": "3.1.2",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright © 2018-2019 Richard Schneider, 2023+ additions jdomnitz",
+          "url": "https://github.com/jdomnitz/net-dns",
+          "use": "Credits_NetDns_Use",
+          "heads": [
+            "desktop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Models",
+      "title": "Credits_Section_Models",
+      "entries": [
+        {
+          "id": "BeatThis",
+          "name": "Beat This!",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) 2024 Institute of Computational Perception, JKU Linz, Austria",
+          "url": "https://github.com/CPJKU/beat_this",
+          "use": "Credits_BeatThis_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "SKey",
+          "name": "S-KEY",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) 2019-present, Deezer SA.",
+          "url": "https://github.com/deezer/skey",
+          "use": "Credits_SKey_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Wav2Vec2",
+          "name": "wav2vec 2.0 (base, 960h)",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright (c) Meta Platforms, Inc. and affiliates",
+          "url": "https://huggingface.co/facebook/wav2vec2-base-960h",
+          "use": "Credits_Wav2Vec2_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "U2Net",
+          "name": "U^2-Net",
+          "license": [
+            "Apache-2.0"
+          ],
+          "url": "https://github.com/xuebinqin/U-2-Net",
+          "use": "Credits_U2Net_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "UltraFace",
+          "name": "UltraFace",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) 2019 linzai",
+          "url": "https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB",
+          "use": "Credits_UltraFace_Use",
+          "heads": [
+            "desktop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Lettering",
+      "title": "Credits_Section_Lettering",
+      "entries": [
+        {
+          "id": "Cabin",
+          "name": "Cabin",
+          "license": [
+            "OFL-1.1"
+          ],
+          "copyright": "Copyright 2018 The Cabin Project Authors. Designed by Pablo Impallari.",
+          "url": "https://github.com/impallari/Cabin",
+          "use": "Credits_Cabin_Use",
+          "heads": [
+            "desktop",
+            "iphone"
+          ]
+        },
+        {
+          "id": "Thiamine",
+          "name": "Thiamine",
+          "license": [
+            "CC0-1.0"
+          ],
+          "copyright": "Released in 2020 under CC0. Designed by Raymond Larabie.",
+          "url": "https://typodermicfonts.com",
+          "use": "Credits_Thiamine_Use",
+          "heads": [
+            "desktop",
+            "iphone"
+          ]
+        },
+        {
+          "id": "Doto",
+          "name": "Doto",
+          "license": [
+            "OFL-1.1"
+          ],
+          "copyright": "Copyright 2024 The Doto Project Authors",
+          "url": "https://github.com/oliverlalan/Doto",
+          "use": "Credits_Doto_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "FontAwesome",
+          "name": "Font Awesome",
+          "version": "5",
+          "license": [
+            "FontAwesomePro"
+          ],
+          "copyright": "Copyright (c) Fonticons, Inc.",
+          "url": "https://fontawesome.com",
+          "use": "Credits_FontAwesome_Use",
+          "heads": [
+            "desktop",
+            "iphone"
+          ]
+        },
+        {
+          "id": "OpenSans",
+          "name": "Open Sans",
+          "license": [
+            "OFL-1.1"
+          ],
+          "copyright": "Copyright 2020 The Open Sans Project Authors",
+          "url": "https://fonts.google.com/specimen/Open+Sans",
+          "use": "Credits_OpenSans_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "UnoFluentIcons",
+          "name": "Uno Fluent icons",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright (C) 2015-2026 Uno Platform Inc.",
+          "url": "https://github.com/unoplatform/uno.fonts",
+          "use": "Credits_UnoFluentIcons_Use",
+          "heads": [
+            "desktop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Wordmarks",
+      "title": "Credits_Section_Wordmarks",
+      "note": "Credits_Wordmarks_Note",
+      "generated": "wordmarks",
+      "entries": []
+    },
+    {
+      "id": "Photographs",
+      "title": "Credits_Section_Photographs",
+      "note": "Credits_Photographs_Note",
+      "generated": "photos",
+      "entries": []
+    },
+    {
+      "id": "Words",
+      "title": "Credits_Section_Words",
+      "entries": [
+        {
+          "id": "Vader",
+          "name": "VADER sentiment lexicon",
+          "license": [
+            "MIT"
+          ],
+          "copyright": "Copyright (c) 2016 C.J. Hutto",
+          "url": "https://github.com/cjhutto/vaderSentiment",
+          "use": "Credits_Vader_Use",
+          "heads": [
+            "desktop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Catalogues",
+      "title": "Credits_Section_Catalogues",
+      "note": "Credits_Catalogues_Note",
+      "entries": [
+        {
+          "id": "Sonovault",
+          "name": "SonoVault",
+          "license": [
+            "Terms"
+          ],
+          "license_url": "https://sonovault.now",
+          "url": "https://sonovault.now",
+          "use": "Credits_Sonovault_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "CoverArtArchive",
+          "name": "Cover Art Archive",
+          "license": [
+            "Terms"
+          ],
+          "license_url": "https://coverartarchive.org",
+          "url": "https://coverartarchive.org",
+          "use": "Credits_CoverArtArchive_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Wikipedia",
+          "name": "Wikipedia",
+          "license": [
+            "CC-BY-SA-4.0"
+          ],
+          "url": "https://www.wikipedia.org",
+          "use": "Credits_Wikipedia_Use",
+          "heads": [
+            "desktop",
+            "iphone"
+          ]
+        },
+        {
+          "id": "Wikidata",
+          "name": "Wikidata",
+          "license": [
+            "CC0-1.0"
+          ],
+          "url": "https://www.wikidata.org",
+          "use": "Credits_Wikidata_Use",
+          "heads": [
+            "desktop",
+            "iphone"
+          ]
+        },
+        {
+          "id": "Discogs",
+          "name": "Discogs",
+          "license": [
+            "Terms"
+          ],
+          "license_url": "https://www.discogs.com/developers",
+          "url": "https://www.discogs.com",
+          "use": "Credits_Discogs_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "AcoustId",
+          "name": "AcoustID",
+          "license": [
+            "Terms"
+          ],
+          "license_url": "https://acoustid.org/webservice",
+          "url": "https://acoustid.org",
+          "use": "Credits_AcoustId_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "Audd",
+          "name": "AudD",
+          "license": [
+            "Terms"
+          ],
+          "license_url": "https://audd.io/terms/",
+          "url": "https://audd.io",
+          "use": "Credits_Audd_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "LrcLib",
+          "name": "LRCLIB",
+          "license": [
+            "Terms"
+          ],
+          "license_url": "https://lrclib.net/docs",
+          "url": "https://lrclib.net",
+          "use": "Credits_LrcLib_Use",
+          "heads": [
+            "desktop",
+            "iphone"
+          ]
+        },
+        {
+          "id": "ListenBrainz",
+          "name": "ListenBrainz",
+          "license": [
+            "CC0-1.0"
+          ],
+          "url": "https://listenbrainz.org",
+          "use": "Credits_ListenBrainz_Use",
+          "heads": [
+            "desktop",
+            "iphone"
+          ]
+        },
+        {
+          "id": "Fanart",
+          "name": "fanart.tv",
+          "license": [
+            "Terms"
+          ],
+          "license_url": "https://fanart.tv/terms-of-service/",
+          "url": "https://fanart.tv",
+          "use": "Credits_Fanart_Use",
+          "heads": [
+            "desktop",
+            "iphone"
+          ]
+        },
+        {
+          "id": "TheAudioDb",
+          "name": "TheAudioDB",
+          "license": [
+            "Terms"
+          ],
+          "license_url": "https://www.theaudiodb.com/docs_terms_of_use.php",
+          "url": "https://www.theaudiodb.com",
+          "use": "Credits_TheAudioDb_Use",
+          "heads": [
+            "desktop",
+            "iphone"
+          ]
+        },
+        {
+          "id": "Pexels",
+          "name": "Pexels",
+          "license": [
+            "Pexels"
+          ],
+          "url": "https://www.pexels.com",
+          "use": "Credits_Pexels_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "RadioBrowser",
+          "name": "Radio Browser",
+          "license": [
+            "CC0-1.0"
+          ],
+          "url": "https://www.radio-browser.info",
+          "use": "Credits_RadioBrowser_Use",
+          "heads": [
+            "desktop",
+            "iphone"
+          ]
+        },
+        {
+          "id": "ITunes",
+          "name": "iTunes Search API",
+          "license": [
+            "Terms"
+          ],
+          "license_url": "https://performance-partners.apple.com/terms-of-service",
+          "url": "https://performance-partners.apple.com",
+          "use": "Credits_ITunes_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
+          "id": "GoogleCast",
+          "name": "Google Cast",
+          "license": [
+            "Terms"
+          ],
+          "license_url": "https://developers.google.com/cast/docs/terms",
+          "url": "https://developers.google.com/cast",
+          "use": "Credits_GoogleCast_Use",
+          "heads": [
+            "desktop"
+          ]
+        }
+      ]
+    }
+  ]
+}
