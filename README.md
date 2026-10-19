@@ -1,0 +1,37 @@
+# rpm
+
+rpm is a music player for your own music. It plays the files you have, on your computer, phone and
+TV, and can keep your library in the cloud so it is the same everywhere.
+
+The apps are open source under the [Mozilla Public License 2.0](LICENSE). Website:
+[rpmrpmrpm.com](https://rpmrpmrpm.com).
+
+## The repos
+
+| Repo | App | Language |
+| --- | --- | --- |
+| [`rpm-desktop`](https://github.com/rpmrpmrpm/rpm-desktop) | Windows, macOS and Linux | C#, .NET, Uno Platform |
+| [`rpm-apple`](https://github.com/rpmrpmrpm/rpm-apple) | iPhone and Apple TV | Swift, SwiftUI |
+| [`rpm-android`](https://github.com/rpmrpmrpm/rpm-android) | Android phone and Android TV | Kotlin, Jetpack Compose |
+| `rpm` (this repo) | Shared between the apps | |
+
+This repo holds what the apps share:
+
+- **Discussions**: ideas, questions and plans for all apps.
+- **`strings.json`**: every piece of text the apps show, in English, French, Spanish, German and
+  Simplified Chinese, with the script that generates each app's string files.
+- **The API contract**: the requests the apps send to the rpm server and the answers they get, as
+  example JSON. The server itself is not open source.
+
+## Contributing
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md). In short: ideas go to Discussions, bugs to the issues of
+the app's repo, and code to a pull request on the app's repo. Sign off your commits.
+
+Please follow the [code of conduct](CODE_OF_CONDUCT.md). Report security problems privately, as
+described in [SECURITY.md](SECURITY.md).
+
+## Name and logo
+
+The code licence does not cover the name "rpm", the logo or the app icons. See
+[TRADEMARKS.md](TRADEMARKS.md).
