@@ -21,6 +21,7 @@ This repo holds what the apps share:
 - **`strings.json`**: every piece of text the apps show, in English, French, Spanish, German and
   Simplified Chinese, with the script that generates each app's string files.
 - **The generators** that write those strings and the other shared tables into each app.
+- **`cast/`**: the web page a Chromecast shows when an app casts to it.
 
 The requests the apps send to the rpm server, and the answers they get, are kept as example JSON in
 `rpm-apple` (`RPM.iOS/Modules/RPMKit/Tests/RPMKitTests/Fixtures`). The server itself is not open

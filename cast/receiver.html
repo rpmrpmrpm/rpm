@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RPM</title>
+
+    <!--
+      RPM's Cast receiver.
+
+      It plays one thing: the live stream that the app publishes on the local network. The stream is
+      post-EQ and its length is not known. The receiver never changes the media. RPM's gapless
+      changeover swaps the decoder under a stream, and the speaker never sees the stream end. If this
+      page reloaded the media, it would put a gap in the music.
+
+      The receiver is here for what the stock receiver cannot do. Next and previous, pressed on the
+      speaker (or spoken to it), reach the app and do not arrive as an unclear stop. The app can
+      change the title on the screen when the track changes inside the stream. The device reports
+      what it can decode before the app chooses a surround encode.
+
+      ── what it looks like ──
+
+      The app's own full-screen player, Pegasus: the record half out of its sleeve in the middle of the
+      screen, what is playing written down the left of it, and a room behind both, lit by the
+      record's own colours. Everything on this page is a port of something in
+      RPM.Desktop/Presentation/Pegasus and RPM.Desktop/Presentation/Controls. The geometry comes from
+      PegasusLayout, the colours from RoomPalette and CoverColor, the record from RecordDisc and
+      VinylPressing, and the seek bar from SeekBar.xaml. Where a number appears below, it is the
+      app's number, and the comment says which.
+
+      There are two deliberate differences, because a television is not a monitor.
+
+      1. THE ROOM IS NOT THE SHADER. Pegasus paints its room in GL: six drifting lobes, five more
+         crossing them and four behind, all warped twice and swelling with the music (RoomSource.Glsl).
+         This page draws the same lobes frozen, in CSS. The lobe positions come from the same
+         arithmetic at one instant, in the same four colours that RoomPalette works out from the
+         sleeve. The layers drift slowly, using transforms only. A full-screen fragment program on a
+         device that also passes Dolby through to an amplifier can cause stuttering audio, and the
+         music is the job.
+
+      2. THE TYPE IS A TEN-FOOT SCALE. The proportions of the composition are exactly the app's. The
+         type, the transport and the seek bar are multiplied by --zoom, because a monitor at arm's
+         length and a television across a room need different fractions of the screen.
+
+      The app also has one thing that this page cannot have: the spectrum. It is drawn from live band
+      levels. The only way to read the audio on this page is to route the media element through
+      WebAudio, which decodes and downmixes, and would end AC-3 passthrough. So the bars are left
+      out and not faked.
+    -->
+
+    <script src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
+
+    <style>
+        /* The app's own font, loaded from the app's own domain, so that the television looks like the
+           player it is cast from and not like a web page. Only Cabin is used: Pegasus writes its
+           three lines in it. The wordmark on this page is an image, not type. */
+        @font-face {
+            font-family: "Cabin";
+            src: url("fonts/Cabin-Medium.ttf") format("truetype");
+            font-weight: 500;
+            font-display: block;
+        }
+        @font-face {
+            font-family: "Cabin";
+            src: url("fonts/Cabin-Bold.ttf") format("truetype");
+            font-weight: 700;
+            font-display: block;
+        }
+
+        :root {
+            /* ── the composition, at this screen's size ──
+               Every figure below is from PegasusLayout or Relayout and has the same name. The only
+               figure that is not from the app is --zoom. */
+
+            /* The cover's side: a fraction of the window's HEIGHT, limited by the window's width, so the
+               cover has the same size on a wide screen and on a square one. PegasusLayout.CoverFraction /
+               CoverMaxWidthFraction. */
+            /* A little under the app's 0.38. The words are at a ten-foot scale below the cover, so this is
+               the largest cover that still leaves room to put the COVER on the middle line, and not the
+               middle of the whole group. See liftTheCover. */
+            --side: min(34vh, 34vw);
+
+            /* The record is a little smaller than the sleeve, so that its arc is inside the frame's top
+               and bottom. It is pushed right until a quarter of it shows. Relayout / DiscOffsetFraction. */
+            --disc: calc(var(--side) * 0.96);
+            --out: calc(var(--side) * 0.312);
+
+            /* The record's shadow: the same soft halo, scaled past the disc and moved away from the light.
+               The light comes from the left and a little above. DiscHaloScale / DiscShadowThrowX / Y. The
+               host is the disc plus all the places the shadow can reach, so no square edge is cut. */
+            --halo: calc(var(--disc) * 1.06);
+            --throw-x: calc(var(--disc) * 0.025);
+            --throw-y: calc(var(--disc) * 0.015);
+            --reach: calc(var(--disc) * 0.055);
+            --host: calc(var(--disc) + var(--reach) * 2);
+
+            /* The words are centred under the cover. This is the app's DRAWN-IN composition
+               (PegasusView.Centred), which Pegasus shows when it does not draw the spectrum. The spread
+               composition writes down the left and leaves the right of the screen to the bars. Here there
+               are no bars, so it would be a column of words beside a large empty half.
+
+               Relayout's figure for this view: max(240, min(w * 0.56, side * 1.5)). In the app at
+               1624x1071 it gives 610 points for a 407-point cover, which is what the app draws. */
+            --col: max(240px, min(56vw, calc(var(--side) * 1.5)));
+
+            /* Not all of a television's edges are visible. A set that overscans cuts off a few per cent
+               of every side, and the page cannot know how much. So everything that is written stays
+               inside this area. The words' own inset is the app's 7.5% and is already outside it. */
+            --safe-x: 6vw;
+            --safe-y: 6vh;
+
+            /* The mark's inset. It is ONE length, where the safe area is two lengths. The safe area is a
+               share of each side. On a 16:9 screen, 6vw and 6vh are 115 points and 65 points, so a mark
+               in the corner would have twice as much space beside it as under it. That looks pushed in
+               from the right and not placed in the corner. The smaller of the two, used on both sides,
+               makes the two gaps equal. */
+            --mark-inset: min(6vw, 6vh);
+
+            /* How much bigger than the app the WORDS are drawn. A 27" monitor at arm's length covers
+               about twice the viewing angle of a 55" television across a room, so type that is right on
+               one is half the size it needs on the other. The proportions do not change: this multiplies
+               the app's own figures and does not replace them. */
+            --zoom: 1.6;
+
+            /* The CONTROLS are drawn at the app's own size, not at the size of the words. If they are
+               made larger, they stop looking like the app's transport: a play triangle at 32 points
+               becomes a shape and not a key, the seek line becomes a bar, and the row looks like
+               something to press on a screen that cannot be pressed. The controls only show state, and
+               state can be small. This is a separate figure so that the two sizes can be changed
+               independently. */
+            --ui: 1;
+
+            /* The title, and the two lines under it, in the app's proportions (0.60 and 0.45 of the
+               title). Relayout: clamp(side * 0.075, 16, 44), with the limits multiplied by --zoom. */
+            --title: clamp(calc(16px * var(--zoom)),
+                           calc(var(--side) * 0.075 * var(--zoom)),
+                           calc(44px * var(--zoom)));
+            --artist: calc(var(--title) * 0.60);
+            --album: calc(var(--title) * 0.45);
+
+            /* The countdown over the right end of the bar. It is the smallest type on the page and must
+               stay the smallest. It is set relative to the album line, not in points, so it can never be
+               larger than the name above it, whatever happens to the type scale. */
+            --remain: calc(var(--album) * 0.72);
+            --remain-box: calc(var(--remain) * 1.30);
+
+            /* The distance between the countdown and the bar. */
+            --remain-lift: calc(6px * var(--ui));
+
+            /* The room's four colours, worked out from the sleeve in the way that RoomPalette works them
+               out. These are the app's fallback colours (its blue on its near-black), used for a record
+               with no colour to give and for the time before there is a record. */
+            --ground: #030812;
+            --tint: #0371D0;
+            --glow: #05C7FF;
+            --shade: #9E29B8;
+
+            /* The sleeve's frame, which is the cover's dominant tone. A cover with no colour in it gets
+               the plain dark edge that the app uses (#12161E). */
+            --frame: #12161E;
+        }
+
+        /* The position is FIXED, not only hidden. A television remote sends arrow keys, and an arrow
+           key scrolls the scroll container that has focus. `overflow: hidden` does not stop this: it
+           removes the scrollbar, not the scrolling. The room's layers are made larger than the screen
+           on purpose, so that they can drift without showing an edge (see .fam). This gives the
+           document something to scroll, so the whole composition would move when the D-pad is used.
+           With the elements out of the scrolling flow, there is nothing to move. */
+        html, body {
+            position: fixed;
+            inset: 0;
+            margin: 0;
+            background: #000000;
+            color: #FFFFFF;
+            font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            overscroll-behavior: none;
+        }
+
+        /* Audio only: the SDK needs the element, but there is nothing to see. */
+        cast-media-player { display: none; }
+
+        /* ── the room ─────────────────────────────────────────────────────────────────────────────
+           Six soft figures in the sleeve's dominant tone and its accent, five smaller ones crossing
+           them in a counter-colour, and four smaller again behind both. All of it is on a near-black
+           mixed from the same hue, so the empty parts of the screen still belong to the record.
+
+           This is rpmRoom(), and these are its lobes. The positions are the shader's own orbit
+           arithmetic at one instant (see constellation() below), in the shader's own units. They are
+           written in vh because p is the plane scaled by the window's HEIGHT.
+
+           Each family is a PAIR of layers. The page crosses between them and does not swap them,
+           because a gradient cannot transition into another gradient. A change of record colour must
+           be a dissolve between two painted layers, or it is a cut.
+
+           The layers drift, and this has a cost. A layer that is painted once and then only
+           TRANSFORMED is given to the compositor and moved without being drawn again. A
+           backdrop-filter would instead recompute a full-screen gaussian blur on every frame. The
+           drift is slow, has a long period and uses transforms only. It is enough to stop a still
+           picture from staying on the same pixels of an OLED screen for an evening, and it is cheap
+           enough that the audio is not affected. */
+        #room {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;      /* the families are drawn larger than this on purpose, see .fam */
+            background: var(--ground);
+            transition: background-color 1200ms ease;
+        }
+
+        .fam {
+            position: absolute;
+            /* Larger than the screen, so that a layer can drift without showing an edge. */
+            inset: -12%;
+            will-change: transform;
+        }
+        .bank {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1100ms ease;
+        }
+        .bank.on { opacity: 1; }
+
+        /* The whole room is darkened before anything is written over it, because the figures are the
+           room and not the subject. rpmRoom's caller: col *= 0.62. */
+        #families { position: absolute; inset: 0; opacity: 0.62; }
+
+        /* Each family has its own drift. The periods do not divide into one another, so the three
+           families never return to the same positions together. The shader's warp is a distortion of
+           each pixel and this is not. What remains of it is that the picture is never twice in the
+           same place. */
+        #fam1 { animation: drift1 181s ease-in-out infinite alternate; }
+        #fam2 { animation: drift2 127s ease-in-out infinite alternate; }
+        #fam3 { animation: drift3  89s ease-in-out infinite alternate; }
+
+        @keyframes drift1 {
+            0%   { transform: translate3d(-1.6%,  1.1%, 0) scale(1.00); }
+            50%  { transform: translate3d( 1.9%, -1.4%, 0) scale(1.06); }
+            100% { transform: translate3d(-0.8%,  2.0%, 0) scale(1.02); }
+        }
+        @keyframes drift2 {
+            0%   { transform: translate3d( 2.2%, -1.5%, 0) scale(1.04); }
+            50%  { transform: translate3d(-2.4%,  1.8%, 0) scale(1.00); }
+            100% { transform: translate3d( 1.1%,  1.2%, 0) scale(1.07); }
+        }
+        @keyframes drift3 {
+            0%   { transform: translate3d(-2.8%, -1.0%, 0) scale(1.05); }
+            50%  { transform: translate3d( 2.6%,  1.6%, 0) scale(1.00); }
+            100% { transform: translate3d(-1.4%, -2.2%, 0) scale(1.04); }
+        }
+
+        /* No dimming down the left. The spread composition holds that side of the room back because
+           it writes there. In the drawn-in composition the words are under the cover and the whole
+           picture is lit evenly around them. The shader removes the dimming for this reason
+           (rpmRoom's caller: `lit` is mixed to 1 as uBare goes to 1). What is left is the vignette
+           below.
+
+           The corners get darker, so that the eye stays in the middle of the screen. The shader's
+           col *= 0.42 + 0.58 * vig, where vig is the product of the four edge distances. */
+        #vignette {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(115% 105% at 50% 50%,
+                rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, 0.34) 76%, rgba(0, 0, 0, 0.62) 100%);
+        }
+
+        /* ── the grain ───────────────────────────────────────────────────────────────────────────
+           A fine noise over everything, at the limit of what the eye can see. The shader dithers for
+           the same reason. A gradient that crosses a screen in a hundred steps must put each step on
+           an integer value, and the eye sees the edges between steps as rings. The noise is static
+           and is tiled from one small tile, so it costs one decode and nothing per frame. */
+        #grain {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+        }
+
+        /* ── the composition ─────────────────────────────────────────────────────────────────────
+           The record and the words under it, as ONE group, centred in the part of the screen that a
+           television really shows.
+
+           <b>The COVER is in the middle</b>, as it is in the app, and the words hang below it. A group
+           centred on its whole height would look like a picture pushed up the screen.
+
+           The layout uses a margin and does not pin the cover to 50%. --lift is the height of
+           everything under the cover, written from code. A flex box that centres a stack taller by
+           that amount puts the cover exactly on the middle line. This also gives a fallback at no
+           cost: if the whole group does not fit at that scale (a short window, or a long title that
+           wrapped), --lift becomes 0 and the group centres on itself. The transport can then never
+           go off the bottom of the screen. */
+        #stage {
+            position: absolute;
+            left: var(--safe-x);
+            right: var(--safe-x);
+            top: var(--safe-y);
+            bottom: var(--safe-y);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 700ms ease;
+        }
+
+        /* The record is behind and the sleeve is over it. --lift puts the cover on the middle line.
+           See #stage, and liftTheCover() for where the value comes from. */
+        #centre {
+            margin-top: var(--lift, 0px);
+            position: relative;
+            width: var(--side);
+            height: var(--side);
+            flex: none;
+            transition: opacity 700ms ease;
+        }
+
+        /* The record's host: the disc and all the places where its shadow can fall. If the host had
+           only the size of the disc, it would cut the halo with a square edge on the sides where the
+           halo is larger than the disc. */
+        #record {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: var(--host);
+            height: var(--host);
+            margin: calc(var(--host) / -2) 0 0 calc(var(--host) / -2);
+            transform: translateX(var(--out));
+        }
+
+        /* The halo. The light in this room comes from the LEFT and a little above. So the record does
+           not sit in a ring of its own shade: the shadow falls down and to the right, and the record
+           covers the half of it that falls on the lit side. This is the RadialGradientBrush in
+           RecordDisc.xaml, stop for stop, at the 0.55 opacity that Relayout uses. */
+        #halo {
+            position: absolute;
+            width: var(--halo);
+            height: var(--halo);
+            left: calc((var(--host) - var(--halo)) / 2 + var(--throw-x));
+            top: calc((var(--host) - var(--halo)) / 2 + var(--throw-y));
+            border-radius: 50%;
+            opacity: 0.55;
+            background: radial-gradient(closest-side circle,
+                rgba(0, 0, 0, 0.70) 0%,
+                rgba(0, 0, 0, 0.70) 86%,
+                rgba(0, 0, 0, 0.35) 94%,
+                rgba(0, 0, 0, 0.00) 100%);
+        }
+
+        /* The vinyl itself: the SAME pressing as the app, which is the render from
+           scripts/make_vinyl_table.py (real grooves, a real lead-in and its own run-out). It is
+           multiplied by the sleeve's colour on a canvas, exactly as VinylPressing does it. A sleeve
+           with no colour in it gives a black pressing, as a record is black. */
+        #vinyl {
+            position: absolute;
+            left: var(--reach);
+            top: var(--reach);
+            width: var(--disc);
+            height: var(--disc);
+        }
+
+        /* The label and the spindle through it. Neither can be seen here: the disc is offset by
+           0.312 of the sleeve's side and the label's radius is 0.158 of it, so all of the label is
+           behind the cover. Both are still drawn, because the record is the app's record and not a
+           picture of the visible quarter of one. For this reason NOTHING here turns. The label and
+           spindle are the only parts of RecordDisc that rotate, and a rotation that nobody can see
+           would cost a frame of work for no reason. */
+        #label {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: calc(var(--disc) * 0.33);
+            height: calc(var(--disc) * 0.33);
+            margin: calc(var(--disc) * -0.165) 0 0 calc(var(--disc) * -0.165);
+            border-radius: 50%;
+            background: #0A0A0A center/cover no-repeat;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+        }
+        /* The mark on the label, with the script's numbers: 0.52 of the label's width, with its
+           middle 0.34 of the label's radius above the centre. It is pressed and not printed: 0x40
+           white, which is the dim strength of the header's mark. */
+        #label svg {
+            position: absolute;
+            left: 24%;
+            top: 23%;
+            width: 52%;
+            fill: rgba(255, 255, 255, 0.25);
+        }
+        #label.art svg { opacity: 0; }
+        #spindle {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: calc(var(--disc) * 0.024);
+            height: calc(var(--disc) * 0.024);
+            margin: calc(var(--disc) * -0.012) 0 0 calc(var(--disc) * -0.012);
+            border-radius: 50%;
+            background: #0B111A;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.13);
+        }
+
+        /* The sleeve. Its frame has the cover's dominant colour. This joins the square to the room
+           around it, so that it does not float on the wash. The frame is part of the square (a
+           Border's Width is its outer size), so the picture inside is a little smaller than the
+           record behind it, as a real sleeve is.
+
+           The sleeve is OPAQUE and is not a wash over the room, because a record with no cover is
+           the one case where this square is all there is to see. */
+        #sleeve {
+            position: absolute;
+            inset: 0;
+            box-sizing: border-box;
+            border: max(1px, calc(var(--side) * 0.014)) solid var(--frame);
+            border-radius: calc(var(--side) * 0.012);
+            background: #0A0A0A;
+            transition: border-color 900ms ease;
+        }
+        #sleeve-inner {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+        }
+        /* Two layers, crossed between, and not one layer that is swapped. A cover cannot dissolve
+           into the next one from a single element: when its source changes, the old picture is
+           already gone. */
+        .cover {
+            position: absolute;
+            inset: 0;
+            background: center/cover no-repeat;
+            opacity: 0;
+            transition: opacity 900ms ease;
+        }
+        .cover.on { opacity: 1; }
+        /* A record with no picture shows a quiet square and not a hole. */
+        #noart {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 900ms ease;
+        }
+        #noart svg { width: 24%; fill: rgba(255, 255, 255, 0.85); }
+        #noart.hidden { opacity: 0; }
+
+        /* ── the words ───────────────────────────────────────────────────────────────────────────
+           Under the cover, centred on the record. */
+        #words {
+            /* The gap under the cover is the app's gap. Relayout, for the drawn-in view:
+               max(20, side * 0.08). */
+            margin-top: max(20px, calc(var(--side) * 0.08));
+            width: var(--col);
+            flex: none;
+            text-align: center;
+            transition: opacity 400ms ease, transform 400ms ease;
+        }
+
+        /* Each line is in a host that CLIPS it. A line that is too long for its column scrolls and is
+           not cut off with an ellipsis. Across a room there is time to read the whole title, and this
+           is the one place in the app where waiting a few seconds for the rest of the text is
+           acceptable. The line never trims. Trimming and scrolling are two answers to the same
+           question, and a line that has already lost its end has nothing left to scroll. */
+        .line {
+            overflow: hidden;
+            white-space: nowrap;
+            margin-bottom: 2px;
+        }
+
+        /* The TYPE IS SET ON THE LINE, not on the span inside it. This is required. The height of a
+           block comes from its line box, and the minimum height of a line box comes from the
+           strut, which is the font of the block itself. If the size were on the span, an empty span
+           would leave the line at the strut of the body font and not the album's. A track with no
+           album name would make the column under the cover shorter, the lift measured against it
+           would put the record in a different place, and the record would move between tracks. With
+           the size set here, every line is exactly as tall as its own type, whatever is in it
+           (including nothing), so the column is the same for every record. */
+        #title-line  { font-size: var(--title);  line-height: 1.14; }
+        #artist-line { font-size: var(--artist); line-height: 1.30; }
+        #album-line  { font-size: var(--album);  line-height: 1.34; }
+        /* A centred line that has to travel is not centred. It starts where reading starts. If it
+           were centred, its first word would be off the left edge before it moves. Marquee.Centred,
+           in one class. */
+        .line.walks { text-align: left; }
+        .line > span {
+            display: inline-block;
+            white-space: nowrap;
+            will-change: transform;
+            /* Aligned to the top and not the baseline. An inline-block sits ON the baseline, and the
+               space left under it for descenders makes the line box a little taller than the strut.
+               A line with words in it would then be one pixel taller than the same line empty, and
+               the column under the cover would change height with the record. Aligned to the top,
+               the line has only the height of its own type, whatever is in it. */
+            vertical-align: top;
+        }
+
+        /* Size and line height are inherited from the line above. Only the properties that cannot
+           change the box are set here. */
+        #title  { font-weight: 700; color: #FFFFFF; }
+        #artist { font-weight: 500; color: rgba(255, 255, 255, 0.70); }
+        #album  { font-weight: 500; color: rgba(255, 255, 255, 0.50); }
+
+        /* Marquee: ten seconds still, then a walk at reading pace, two seconds to read the end, and
+           a quicker run back. These are the figures of Marquee.cs, multiplied by --zoom because the
+           travel is in points a second and the type is bigger here. The keyframes are built for each
+           line, in code. A long title must take longer than a short one. If every line took the
+           same time, the long ones would be unreadable. */
+        /* ── the seek bar ────────────────────────────────────────────────────────────────────────
+           SeekBar.xaml: a translucent track, a solid white run for the part that has played, and a
+           3x14 white bar as a knob at the join. The countdown is above the right end of the line.
+
+           The gap above the bar is the app's: max(20, title * 1.15 - 10). */
+        #seek {
+            position: relative;
+            /* The gap is set by what the countdown needs, not by what the app's bar needs. The
+               countdown stands UP out of the bar. With the app's figure alone, the space it stood in
+               belonged to the album line above. It then looked like a second album line and not like
+               the number of the bar, and with a long album title it almost touched the title. So the
+               gap is the sum of three parts: the countdown's own box, the clearance between it and the
+               bar, and a clear space of two thirds of the title. The minimum is the app's figure,
+               which a bar with no countdown would use. */
+            margin-top: max(max(calc(20px * var(--ui)),
+                                calc(var(--title) * 1.15 - 10px * var(--ui))),
+                            calc(var(--remain-box) + var(--remain-lift) + var(--title) * 0.65));
+            height: calc(14px * var(--ui));
+            opacity: 0;
+            transition: opacity 700ms ease;
+        }
+        #seek.on { opacity: 1; }
+
+        #remain {
+            position: absolute;
+            right: 0;
+            top: calc(0px - var(--remain-box) - var(--remain-lift));
+            height: var(--remain-box);
+            line-height: var(--remain-box);
+            font-size: var(--remain);
+            color: rgba(255, 255, 255, 0.6);
+            font-variant-numeric: tabular-nums;
+        }
+        #bar {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: calc(14px * var(--ui));
+        }
+        #track, #elapsed-line {
+            position: absolute;
+            top: calc(5.5px * var(--ui));
+            left: 0;
+            height: calc(3px * var(--ui));
+            border-radius: calc(1.5px * var(--ui));
+        }
+        #track { right: 0; background: rgba(255, 255, 255, 0.20); }
+        #elapsed-line { width: 0; background: #FFFFFF; transition: width 900ms linear; }
+        #knob {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(3px * var(--ui));
+            height: calc(14px * var(--ui));
+            margin-left: calc(-1.5px * var(--ui));
+            border-radius: calc(1.5px * var(--ui));
+            background: #FFFFFF;
+            transition: left 900ms linear;
+        }
+
+        /* A live stream of unknown length has no bar to fill. The app never has this case, because it
+           always knows the length of the track. But a receiver that gets a LOAD with no duration
+           would otherwise show a run that never moves. */
+        body.live #track, body.live #elapsed-line, body.live #knob, body.live #remain { display: none; }
+
+        /* ── the transport ───────────────────────────────────────────────────────────────────────
+           The row of PegasusChrome: the heart on the left, the three keys centred on the column, and
+           the volume on the right. The sizes are the app's (36 square, 42 for the middle key, glyphs
+           of 16 and 20 points) multiplied by --zoom.
+
+           These show STATE and are not buttons: nothing on a television can be pressed, and what is
+           shown is what the speaker is doing. The three keys in the middle still work. Next and
+           previous are real here, on the remote and at the Assistant, because the receiver hands
+           them to the app and does not handle them itself (see the QUEUE_UPDATE interceptor).
+
+           The glyphs are drawn and not set in a font. The app uses Font Awesome. A shape that is two
+           rectangles and a triangle does not need a font file on a public web server. */
+        /* Sixteen under the bar, which is the app's margin.
+
+           The app DRAWS it at 16 + 42 + 16. This is a side effect and not a decision. The app's
+           column stacks the resting pair (the door and the play key that remain when the controls
+           are quiet) above the full row, and only one of the two is ever visible. So the visible
+           row is lower than it was placed, by a strip that is not there. Here there is one row, and
+           it is always the same row. Those eighty-nine points would also stop the cover from sitting
+           on the middle line at this type size. Copying the app's effect or putting the record in
+           the right place: the record's place is more important. */
+        #transport {
+            position: relative;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-top: calc(16px * var(--ui));
+            height: calc(42px * var(--ui));
+            opacity: 0;
+            transition: opacity 700ms ease;
+        }
+        #transport.on { opacity: 1; }
+
+        #left-keys { display: flex; align-items: center; gap: calc(2px * var(--ui)); }
+        #mid-keys {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: calc(10px * var(--ui));
+        }
+        #volume-group {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: calc(8px * var(--ui));
+        }
+
+        .key {
+            width: calc(36px * var(--ui));
+            height: calc(36px * var(--ui));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.90);
+            flex: none;
+        }
+        /* Every glyph is centred in its key by the same transform, and it is OUT OF FLOW. Two of
+           these keys hold two shapes each (the heart in two weights, and play and pause). If the
+           contents of a key were in flow, the key would change size when one shape replaced the
+           other. Out of flow, the key keeps its size, whatever is drawn in it. */
+        .key { position: relative; }
+        .key svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(16px * var(--ui));
+            height: calc(16px * var(--ui));
+            fill: currentColor;
+        }
+        /* Next is previous, reflected. It is part of the same transform, and not a second transform
+           that would replace the centring. */
+        #next svg { transform: translate(-50%, -50%) scaleX(-1); }
+        .key.big { width: calc(42px * var(--ui)); height: calc(42px * var(--ui)); }
+        .key.big svg { width: calc(20px * var(--ui)); height: calc(20px * var(--ui)); }
+
+        /* ── the ring ──
+           This shows which key the remote is on. Nothing here can be clicked, and there is no pointer
+           to hover with, so the only way a television can show "this one" is a mark that moves.
+
+           It is a ring and not a fill. The keys are bare glyphs on a picture that changes colour
+           all the time, and a filled disc under one of them would look like a hole in the room. This
+           is the same faint white that the app's keys show under a pointer, with an edge so that it
+           can be read across a room.
+
+           There is no ring until a key is pressed, and it goes away after a quiet period. The
+           picture is the main thing, and a highlight left on the screen for a whole album is
+           clutter. */
+        .key {
+            border-radius: 50%;
+            border: 1px solid transparent;
+            box-sizing: border-box;
+            transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+        }
+        body.remote .key.on {
+            background: rgba(255, 255, 255, 0.16);
+            border-color: rgba(255, 255, 255, 0.34);
+            color: #FFFFFF;
+        }
+
+        /* There is no way-out key here. In the app, that arrow leaves the full-screen player for the
+           collection. A television has nothing to leave to, so the key could do nothing and would
+           mean nothing.
+
+           The heart stays, and it is pressed like the other keys (see the ring). It writes through
+           the same call as the app's heart, LibraryService.SetTrackFavorite, so a song that is
+           loved from the sofa is loved on the line it came from. */
+
+        /* The heart is filled when the song is loved and hollow when it is not. It is the same mark
+           in two weights, as everywhere else in the app. It is hidden until the app has said which
+           applies. A hollow heart on every record would be a claim that is wrong half of the time,
+           and a key that cannot be pressed should not be offered. The app also sends nothing for a
+           record that the collection does not hold, which gives the same result: no heart. */
+        /* Hidden, and NOT taken out of the row. The answer arrives with the record, and the record
+           changes while this screen is shown. If the heart appeared and disappeared with `display`,
+           the left side of the transport would change size between tracks. The space stays, and
+           only the mark in it is removed. */
+        #favorite { visibility: hidden; }
+        body.knows-favorite #favorite { visibility: visible; }
+
+        /* Two weights of the same mark in the same place, crossfading. Play and pause below use the
+           same method for the same reason: the app writes the state while the record is on screen,
+           and a shape that appears where another shape was would flicker. */
+        #favorite svg, #play-pause svg { transition: opacity 220ms ease; }
+        #favorite .filled { opacity: 0; }
+        #favorite .hollow { opacity: 1; }
+        body.favorite #favorite .filled { opacity: 1; }
+        body.favorite #favorite .hollow { opacity: 0; }
+
+        /* Play and pause are two finished shapes in the same place, and only their opacity changes.
+           A morph is not possible: a clip-path cannot interpolate between none and a polygon, so
+           every change would be a slide followed by a snap. When the reported player state flickers,
+           that looks like an icon that cannot decide.
+
+           <b>The key shows what pressing it WILL DO, not what the speaker is doing.</b> While
+           playing, it shows the pause. While paused, it shows the play. This is the app's rule:
+           every play/pause button in RPM binds RPaMpModel.PlayPauseGlyph, which is \f04c while
+           playing. The same rule must apply here, because this key is pressed and not only read (see
+           the ring). If the rule were the other way round, the television would show a different
+           icon from the screen it is cast from, for the same state. */
+        #play-pause .play { opacity: 0; }
+        #play-pause .pause { opacity: 1; }
+        body.paused #play-pause .play { opacity: 1; }
+        body.paused #play-pause .pause { opacity: 0; }
+
+        /* Buffering is shown, because a speaker that is filling its buffer looks exactly like one
+           that has stopped working. */
+        body.buffering #play-pause { animation: pulse 1.2s ease-in-out infinite; }
+        @keyframes pulse { 50% { opacity: 0.35; } }
+
+        /* The volume is at the right end of the row, opposite the heart. It is drawn like the seek
+           bar: a 3pt line with a 3x14 bar as a knob. A circle beside the bar above it would look like
+           two different kinds of control for the same gesture. This is the SPEAKER's own volume, as
+           reported by the platform, so it moves when somebody turns it up in the room. */
+        #volume-glyph { color: rgba(255, 255, 255, 0.70); display: flex; }
+        #volume-glyph svg { width: calc(13px * var(--ui)); height: calc(13px * var(--ui)); fill: currentColor; }
+        #volume-bar {
+            position: relative;
+            width: calc(72px * var(--ui));
+            height: calc(14px * var(--ui));
+        }
+        #volume-track, #volume-fill {
+            position: absolute;
+            top: calc(5.5px * var(--ui));
+            left: 0;
+            height: calc(3px * var(--ui));
+            border-radius: calc(1.5px * var(--ui));
+        }
+        #volume-track { right: 0; background: rgba(255, 255, 255, 0.20); }
+        #volume-fill { width: 0; background: #FFFFFF; transition: width 260ms ease; }
+        #volume-knob {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(3px * var(--ui));
+            height: calc(14px * var(--ui));
+            margin-left: calc(-1.5px * var(--ui));
+            border-radius: calc(1.5px * var(--ui));
+            background: #FFFFFF;
+            transition: left 260ms ease;
+        }
+        /* A muted speaker is not a speaker at zero. The level is still what it was, and showing it as
+           silence would be a different fact. The line is dimmed instead. */
+        body.muted #volume-bar { opacity: 0.35; }
+
+        /* The volume is hidden for now. The code behind it is kept and is correct: the level comes
+           from SYSTEM_VOLUME_CHANGED, and `knows-volume` is still set. To show the volume again,
+           change this one rule.
+
+           The volume would be hidden here anyway until the device has reported it. The platform has
+           no way to ASK how loud a speaker is. It only sends an event when the level changes. A knob
+           drawn before then would show a number that nobody has given. See showVolume. */
+        #volume-group { display: none; }
+
+        /* On a narrow column, the volume and the keys in the middle would meet, so the volume is
+           hidden. It is the one of the three that can be left out. Relayout: column >= 230. */
+
+
+        /* Track change: the words move as a group, so a gapless changeover looks like one movement. */
+        #words.changing { opacity: 0; transform: translateY(1.5vh); }
+
+        /* ── the mark ────────────────────────────────────────────────────────────────────────────
+           The app's own mark, from Assets/Brand. It is in the corner while something is playing, and
+           alone in the middle of the screen when nothing is. */
+        /* ONE anchor and ONE property make the movement, and the property is `transform`.
+           Do not position the corner with `right`/`bottom` and the centre with `left`/`top`. Each
+           state would leave `auto` on the two edges that the other state uses, and `auto` does not
+           interpolate. The box would then jump to the middle of the screen, behind the sleeve, and
+           only the transform would ease. So the mark is always pinned at the centre, and the corner
+           is a transform away from it. `height` is never animated either, because animating the
+           height of an image causes a reflow on every frame. The mark has one size and it is scaled.
+
+           The corner figures: 77.5% is (1 + 0.55) / 2 of the mark's own box. This puts its scaled
+           edge exactly on --mark-inset, however wide the image is. */
+        #mark {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 4vh;
+            transform-origin: 50% 50%;
+            transform: translate(calc(50vw - var(--mark-inset) - 77.5%),
+                                 calc(50vh - var(--mark-inset) - 77.5%)) scale(0.55);
+            opacity: 0.45;
+            transition: transform 700ms ease, opacity 700ms ease;
+        }
+
+        /* Nothing is playing yet: the mark alone, centred, over the room. */
+        body.idle #stage { opacity: 0; }
+        body.idle #mark {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.9;
+        }
+
+        /* A refusal is shown on the screen. A receiver that cannot play what it was given would
+           otherwise stay on the mark for ever, and from the sofa that looks the same as a hang. */
+        #trouble {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: var(--safe-y);
+            padding: 0 var(--safe-x);
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 2.2vh;
+            line-height: 1.45;
+            color: rgba(255, 255, 255, 0.55);
+            margin: 0;
+            opacity: 0;
+            transition: opacity 500ms ease;
+        }
+        #trouble.on { opacity: 1; }
+        body.idle #trouble { bottom: auto; top: calc(50% + 2vh + 3.5vh); padding: 0 12vw; }
+
+        /* ── the screen off ──────────────────────────────────────────────────────────────────────
+           The app asks for this (see the `screen` message). It means what it says: the panel goes
+           black and stays black while the music plays on. It is for a television that nobody is
+           watching. A record is forty minutes of one still picture, and an OLED keeps what it is
+           shown.
+
+           Everything fades and is not hidden, so turning the screen on again shows the picture
+           returning and not a page loading. The drifts are PAUSED as well. A layer that moves behind
+           a black square makes the compositor work on every frame for something that nobody can
+           see. */
+        body.blackout #room,
+        body.blackout #vignette,
+        body.blackout #grain,
+        body.blackout #stage,
+        body.blackout #mark,
+        body.blackout #trouble {
+            opacity: 0;
+            transition: opacity 1200ms ease;
+        }
+        body.blackout .fam { animation-play-state: paused; }
+        body.blackout .line > span { animation-play-state: paused; }
+    </style>
+</head>
+<body class="idle">
+    <cast-media-player></cast-media-player>
+
+    <div id="room">
+        <div id="families">
+            <div class="fam" id="fam3"><div class="bank"></div><div class="bank"></div></div>
+            <div class="fam" id="fam1"><div class="bank"></div><div class="bank"></div></div>
+            <div class="fam" id="fam2"><div class="bank"></div><div class="bank"></div></div>
+        </div>
+    </div>
+    <div id="vignette"></div>
+    <div id="grain"></div>
+
+    <div id="stage">
+        <div id="centre">
+            <div id="record">
+                <div id="halo"></div>
+                <canvas id="vinyl"></canvas>
+                <div id="label">
+                    <!-- The rpm wordmark. It is the same path that the app's label is cut from. -->
+                    <svg viewBox="18 -143 507 195" xmlns="http://www.w3.org/2000/svg"><path d="M109 -143H102C85 -143 73 -136 66 -121V-140H18V0H67V-55C67 -81 76 -94 93 -94C98 -94 103 -94 109 -93ZM207 -34C189 -34 180 -46 180 -71C180 -94 189 -106 207 -106C226 -106 236 -94 236 -71C236 -46 226 -34 207 -34ZM218 3C259 3 284 -29 284 -69C284 -110 260 -143 216 -143C199 -143 187 -137 180 -126V-140H132V52H178V-14C186 -3 199 3 218 3ZM525 -96C525 -127 510 -143 480 -143C462 -143 448 -136 437 -123C427 -136 414 -143 399 -143C383 -143 369 -136 358 -122V-140H312V0H361V-79C361 -96 367 -104 378 -104C389 -104 395 -97 395 -83V0H442V-79C442 -96 448 -104 459 -104C470 -104 476 -97 476 -83V0H525Z"/></svg>
+                </div>
+                <div id="spindle"></div>
+            </div>
+
+            <div id="sleeve">
+                <div id="sleeve-inner">
+                    <div class="cover" id="coverA"></div>
+                    <div class="cover" id="coverB"></div>
+                    <div id="noart">
+                        <!-- A record with no picture: the app's compact-disc mark. -->
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 88c88.4 0 160 71.6 160 160s-71.6 160-160 160S96 344.4 96 256 167.6 96 256 96zm0 128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="words">
+            <div class="line" id="title-line"><span id="title">RPM</span></div>
+            <div class="line" id="artist-line"><span id="artist"></span></div>
+            <div class="line" id="album-line"><span id="album"></span></div>
+
+            <div id="seek">
+                <div id="remain"></div>
+                <div id="bar">
+                    <div id="track"></div>
+                    <div id="elapsed-line"></div>
+                    <div id="knob"></div>
+                </div>
+            </div>
+
+            <div id="transport">
+                <div id="left-keys">
+                    <div class="key" id="favorite">
+                        <svg class="filled" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+                        <svg class="hollow" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313 47 353.3 37.9 392.8 45.4C462 58.6 512 119 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg>
+                    </div>
+                </div>
+
+                <div id="mid-keys">
+                    <div class="key" id="prev">
+                        <!-- The step glyph. It is drawn once and flipped for the other key (see #next). In
+                             Font Awesome's pair, the bar TOUCHES the tip of the triangle. At a television's
+                             size, each side rounds differently, and the two shapes do not look like exact
+                             mirrors. A triangle and a bar with a real gap between them avoid this. -->
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4h3v16H4z"/>
+                            <path d="M21 4.6v14.8a.9.9 0 0 1-1.4.8L9 12.8a.9.9 0 0 1 0-1.6l10.6-7.4a.9.9 0 0 1 1.4.8z"/>
+                        </svg>
+                    </div>
+                    <div class="key big" id="play-pause">
+                        <svg class="play" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+                        <svg class="pause" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"/></svg>
+                    </div>
+                    <div class="key" id="next">
+                        <!-- The same path as the previous key, which #next svg mirrors. The two glyphs are
+                             exact reflections because they share one set of numbers. -->
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4h3v16H4z"/>
+                            <path d="M21 4.6v14.8a.9.9 0 0 1-1.4.8L9 12.8a.9.9 0 0 1 0-1.6l10.6-7.4a.9.9 0 0 1 1.4.8z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div id="volume-group">
+                    <div id="volume-glyph">
+                        <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M320 64c0-12.6-7.4-24-18.9-29.2s-25-3.1-34.4 5.3L131.8 160H64c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64h67.8L266.7 471.9c9.4 8.4 22.9 10.4 34.4 5.3S320 460.6 320 448V64zM412.6 181.5C401.9 174 387.2 176.6 379.7 187.3s-4.9 25.5 5.8 32.9C397.2 228.1 404 241.4 404 256s-6.8 27.9-18.5 35.8c-10.7 7.5-13.3 22.2-5.8 32.9s22.2 13.3 32.9 5.8C437.5 314.8 452 287.2 452 256s-14.5-58.8-39.4-74.5z"/></svg>
+                    </div>
+                    <div id="volume-bar">
+                        <div id="volume-track"></div>
+                        <div id="volume-fill"></div>
+                        <div id="volume-knob"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img id="mark" src="rpm-mark.png" alt="RPM">
+    <p id="trouble"></p>
+
+    <script>
+        /** Runs a piece of setup. If it fails, the failure is stored and not thrown, because nothing
+            here is worth ending the Cast session for. See on(). */
+        const setupFailures = [];
+        function safely(what, work) {
+            try { work(); } catch (e) { setupFailures.push(`${what}: ${(e && e.message) || e}`); }
+        }
+
+        /**
+         * Registers a player listener. If this is not possible, the receiver continues.
+         *
+         * An event name that the SDK does not have is `undefined` here, and addEventListener throws
+         * on it. That would stop the whole script at that line. Nothing after it would run,
+         * including context.start(), so the receiver would show only static HTML: a logo, a CSS
+         * animation and no Cast session. A missing listener is not a reason to accept this.
+         */
+        function on(type, handler) {
+            try {
+                if (!type) return false;
+                playerManager.addEventListener(type, handler);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        const NAMESPACE = 'urn:x-cast:com.rpmrpmrpm.control';
+        const PROTOCOL = 1;
+
+        const context = cast.framework.CastReceiverContext.getInstance();
+        const playerManager = context.getPlayerManager();
+
+        const el = {
+            body: document.body,
+            root: document.documentElement,
+            room: document.getElementById('room'),
+            fams: [document.getElementById('fam1'),
+                   document.getElementById('fam2'),
+                   document.getElementById('fam3')],
+            sleeve: document.getElementById('sleeve'),
+            covers: [document.getElementById('coverA'), document.getElementById('coverB')],
+            noart: document.getElementById('noart'),
+            label: document.getElementById('label'),
+            vinyl: document.getElementById('vinyl'),
+            words: document.getElementById('words'),
+            title: document.getElementById('title'),
+            artist: document.getElementById('artist'),
+            album: document.getElementById('album'),
+            lines: [document.getElementById('title-line'),
+                    document.getElementById('artist-line'),
+                    document.getElementById('album-line')],
+            seek: document.getElementById('seek'),
+            remain: document.getElementById('remain'),
+            elapsed: document.getElementById('elapsed-line'),
+            knob: document.getElementById('knob'),
+            transport: document.getElementById('transport'),
+            volumeFill: document.getElementById('volume-fill'),
+            volumeKnob: document.getElementById('volume-knob'),
+            trouble: document.getElementById('trouble'),
+        };
+
+        let coverTop = 0;     // which of the two cover layers is showing now
+
+        /**
+         * The track that the screen is showing, and the track that waits for its turn.
+         *
+         * A chained track is announced about ten seconds before it is heard. The app tells us when
+         * its decoder swaps, while the speaker is still playing what is already in the buffer. So a
+         * change carries the point in the stream where it happens, and it waits here until our own
+         * clock reaches that point. Otherwise the television would show the name of the next song
+         * over the end of this one.
+         */
+        let showing = null;
+        let pending = null;
+
+        /** Sends a message to the app. It is a broadcast: RPM is the only sender, and it can hold more
+            than one connection to this receiver after a reconnect. */
+        function tell(message) {
+            context.sendCustomMessage(NAMESPACE, undefined, message);
+        }
+
+        // ══ the colours of a sleeve ═══════════════════════════════════════════════════════════════
+        //
+        // This code is ported from the app, function for function, so that the record on the
+        // television has the same colour as the record on the screen that it is cast from.
+        // CoverColor.Dominant / Highlight / Palette read the cover. VinylHue.Choose decides whether
+        // the cover has a colour at all. RoomPalette works out the four colours of the room from
+        // the result. The important comments are in the C# code. This code is a transcription and
+        // must stay one.
+
+        /** The square of 48 by 48 pixels that every reading is taken from. */
+        function smallPixels(image) {
+            const size = 48;
+            const canvas = document.createElement('canvas');
+            canvas.width = canvas.height = size;
+            const ctx = canvas.getContext('2d', { willReadFrequently: true });
+            ctx.drawImage(image, 0, 0, size, size);
+            return ctx.getImageData(0, 0, size, size).data;
+        }
+
+        /** The coarse buckets that both readings share: 32 levels on each axis. `keep` removes the
+            pixels that this reading treats as background. */
+        function buckets(pixels, keep) {
+            const found = new Map();
+            for (let i = 0; i + 3 < pixels.length; i += 4) {
+                const r = pixels[i], g = pixels[i + 1], b = pixels[i + 2];
+                if (!keep(r, g, b)) continue;
+                const key = ((r >> 5) << 10) | ((g >> 5) << 5) | (b >> 5);
+                const have = found.get(key) || { count: 0, r: 0, g: 0, b: 0 };
+                have.count++; have.r += r; have.g += g; have.b += b;
+                found.set(key, have);
+            }
+            return [...found.values()];
+        }
+
+        const mean = v => [v.r / v.count, v.g / v.count, v.b / v.count];
+
+        /** Vivid, present and bright, so that a small amount of real colour scores higher than a large
+            area of dull colour. */
+        function score(v) {
+            const [r, g, b] = mean(v);
+            const max = Math.max(r, g, b), min = Math.min(r, g, b);
+            const sat = max <= 0 ? 0 : (max - min) / max;
+            return sat * Math.sqrt(v.count) * (max / 255);
+        }
+
+        /** The dominant colour: the biggest bucket. Near-white paper and near-black are removed, so
+            that a photo gets its colour from the subject and not from the wall behind it. */
+        function dominantOf(pixels) {
+            const found = buckets(pixels, (r, g, b) =>
+                Math.max(r, g, b) >= 24 && Math.min(r, g, b) <= 232);
+            if (!found.length) return null;
+            found.sort((a, b) => b.count - a.count);
+            return mean(found[0]);
+        }
+
+        /** The colours that a cover is made of, most telling first. No two of them are the same
+            colour. Distance is measured between DIRECTIONS, so a light red and a dark red count as
+            one colour. */
+        function paletteOf(pixels, count) {
+            const found = buckets(pixels, (r, g, b) =>
+                Math.max(r, g, b) >= 40 && Math.max(r, g, b) - Math.min(r, g, b) >= 24);
+            if (!found.length) return [];
+
+            const scored = found.map(v => ({ score: score(v), colour: mean(v) }));
+            scored.sort((a, b) => b.score - a.score);
+
+            const chosen = [];
+            for (const { colour } of scored) {
+                if (chosen.length >= count) break;
+                if (!chosen.some(taken => sameColour(taken, colour))) chosen.push(colour);
+            }
+            return chosen;
+        }
+
+        function unit(c) {
+            const len = Math.sqrt(c[0] * c[0] + c[1] * c[1] + c[2] * c[2]);
+            return len < 1e-4 ? [0, 0, 0] : [c[0] / len, c[1] / len, c[2] / len];
+        }
+        function sameColour(a, b) {
+            const x = unit(a), y = unit(b);
+            return Math.hypot(x[0] - y[0], x[1] - y[1], x[2] - y[2]) < 0.22;
+        }
+
+        /** VinylHue: below these limits a colour is a grey with rounding errors, or noise that looks
+            like a hue. */
+        const MIN_SATURATION = 0.18, MIN_BRIGHTNESS = 0.16;
+        function usableHue(c) {
+            if (!c) return false;
+            const max = Math.max(c[0], c[1], c[2]), min = Math.min(c[0], c[1], c[2]);
+            const sat = max <= 0 ? 0 : (max - min) / max;
+            return sat >= MIN_SATURATION && max / 255 >= MIN_BRIGHTNESS;
+        }
+
+        /** Everything a sleeve says about its own colour, in one pass over the one square: the hue
+            its record is pressed in, its dominant tone, its vivid accent and its third colour. */
+        function readSleeve(image) {
+            const pixels = smallPixels(image);
+            const vivid = paletteOf(pixels, 2);
+            const tint = dominantOf(pixels);
+            const glow = vivid.length > 0 ? vivid[0] : null;
+            const shade = vivid.length > 1 ? vivid[1] : null;
+            // The vivid highlight is preferred to the dominant tone. The dominant colour of a sleeve
+            // is often its background, and a record in the colour of the paper is not what people
+            // mean by "the colour of that album".
+            const hue = usableHue(glow) ? glow : (usableHue(tint) ? tint : null);
+            return { hue, tint, glow, shade };
+        }
+
+        // ── RoomPalette: the four colours of the room ───────────────────────────────────────────
+
+        const ROOM_FALLBACK = {
+            ground: [0.012, 0.030, 0.070],
+            tint: [0.012, 0.443, 0.816],
+            glow: [0.02, 0.78, 1.0],
+            shade: [0.62, 0.16, 0.72],
+        };
+
+        const clamp01 = v => Math.min(1, Math.max(0, v));
+
+        /** A colour moved away from its grey and set to a working brightness. The hue stays the same. */
+        function vividise(c, saturate, lift) {
+            const luma = c[0] * 0.2126 + c[1] * 0.7152 + c[2] * 0.0722;
+            let v = c.map(x => clamp01(luma + (x - luma) * saturate));
+            const peak = Math.max(v[0], v[1], v[2]);
+            if (peak > 1e-4) v = v.map(x => x * lift / peak);
+            return v.map(clamp01);
+        }
+
+        /** The standard hue rotation that keeps luma. It gives a counter-colour that still belongs to
+            the sleeve it came from, and is not taken from nowhere. */
+        function turnHue(c, degrees) {
+            const a = degrees * Math.PI / 180, k = Math.cos(a), s = Math.sin(a);
+            const m = [
+                [0.213 + k * 0.787 - s * 0.213, 0.715 - k * 0.715 - s * 0.715, 0.072 - k * 0.072 + s * 0.928],
+                [0.213 - k * 0.213 + s * 0.143, 0.715 + k * 0.285 + s * 0.140, 0.072 - k * 0.072 - s * 0.283],
+                [0.213 - k * 0.213 - s * 0.787, 0.715 - k * 0.715 + s * 0.715, 0.072 + k * 0.928 + s * 0.072],
+            ];
+            return m.map(row => clamp01(c[0] * row[0] + c[1] * row[1] + c[2] * row[2]));
+        }
+
+        function roomPalette(tint255, glow255, shade255) {
+            const to01 = c => c ? c.map(x => x / 255) : null;
+            const tint = to01(tint255), glow = to01(glow255), shade = to01(shade255);
+
+            // The accent is the better colour to have. The dominant colour replaces it, and each
+            // replaces the other when only one of them was found.
+            const base = tint || glow;
+            const accent = glow || base;
+            if (!base || !accent) return ROOM_FALLBACK;
+
+            let outTint = vividise(base, 1.35, 0.62);
+            let outGlow = vividise(accent, 1.5, 0.90);
+
+            let spare = shade && !sameColour(shade, base) && !sameColour(shade, accent) ? shade : null;
+
+            // Many sleeves have one colour. Their dominant tone and their accent have the same hue,
+            // and two families painted in them would look like one. The sleeve's own third colour is
+            // used first. A rotation is used only if there is no third colour, because a rotation
+            // makes a colour that is not anywhere on the record.
+            if (sameColour(outTint, outGlow)) {
+                if (spare) { outGlow = vividise(spare, 1.5, 0.90); spare = null; }
+                else { outGlow = vividise(turnHue(accent, 42), 1.5, 0.90); }
+            }
+
+            const outShade = spare
+                ? vividise(spare, 1.35, 0.76)
+                : vividise(turnHue(base, 152), 1.4, 0.74);
+
+            // The dark under the figures is the same hue, taken almost to black. The empty parts of
+            // the screen then still belong to the record, and never compete with it.
+            const lowered = vividise(base, 1.1, 0.16);
+            const ground = lowered.map((x, i) => x * 0.55 + ROOM_FALLBACK.ground[i] * 0.45);
+
+            return { ground, tint: outTint, glow: outGlow, shade: outShade };
+        }
+
+        const css = c => `rgb(${Math.round(c[0] * 255)}, ${Math.round(c[1] * 255)}, ${Math.round(c[2] * 255)})`;
+        const cssA = (c, a) => `rgba(${Math.round(c[0] * 255)}, ${Math.round(c[1] * 255)}, ${Math.round(c[2] * 255)}, ${a})`;
+        const mix = (a, b, t) => a.map((x, i) => x + (b[i] - x) * t);
+
+        // ── the room, painted ──────────────────────────────────────────────────────────────────
+        //
+        // This is the shader's own constellation at one instant. The lobe centres of each family come
+        // from the same expressions that rpmRoom uses: c = (cos(...)*k, sin(...)*k). The golden angle
+        // spreads the phases of the first family, so that no two lobes return to the same place at
+        // the same time. The radii are the shader's radii. All values are in the shader's units: p
+        // is the plane with its origin in the middle, scaled by the window's HEIGHT. This is why the
+        // results are in vh.
+        //
+        // The values are frozen at t = 0 and do not run. In the shader, TIME makes sure that the
+        // picture is never twice in the same place. The drifts in the CSS above do this at a much
+        // lower cost.
+        const T = 0;
+
+        function constellation(family) {
+            const lobes = [];
+            if (family === 1) {
+                for (let i = 0; i < 6; i++) {
+                    const a = T * (0.047 + i * 0.0115) + i * 2.39996;
+                    lobes.push({
+                        x: Math.cos(a + i * 1.3) * (0.46 + 0.20 * Math.sin(T * 0.031 + i)),
+                        y: Math.sin(a * 0.83 + i * 2.1) * 0.32,
+                        r: 0.20 + 0.055 * Math.sin(T * 0.21 + i * 1.7),
+                        // wash += mix(tint, glow, fract(i * 0.41 + 0.15))
+                        t: (i * 0.41 + 0.15) % 1,
+                    });
+                }
+            } else if (family === 2) {
+                for (let i = 0; i < 5; i++) {
+                    const a = T * (0.083 + i * 0.021) + i * 1.7;
+                    lobes.push({
+                        x: Math.cos(a * 1.21 + i * 2.7) * 0.62,
+                        y: Math.sin(a + i * 0.9) * 0.38,
+                        r: 0.145 + 0.045 * Math.sin(T * 0.37 + i * 2.3),
+                        // wash2 += mix(shade, glow, fract(i * 0.53 + 0.40))
+                        t: (i * 0.53 + 0.40) % 1,
+                    });
+                }
+            } else {
+                for (let i = 0; i < 4; i++) {
+                    const a = T * 1.3 * (0.095 + i * 0.026) + i * 2.9;
+                    lobes.push({
+                        x: Math.cos(a * 0.94 + i * 1.9) * 0.70,
+                        y: Math.sin(a * 1.37 + i * 2.6) * 0.42,
+                        r: 0.085 + 0.030 * Math.sin(T * 1.3 * 0.41 + i * 3.1),
+                        t: 0,   // one colour only, so the family reads as a third layer
+                    });
+                }
+            }
+            return lobes;
+        }
+
+        /**
+         * A family of lobes as one background, in the colours of this record.
+         *
+         * A lobe has no edge: r2 / (d2 + r2 * soft) never reaches zero. This lets six lobes blend
+         * into one another and not overlap like coins. A radial gradient must stop somewhere, so
+         * the gradient stops well outside the lobe. By then it has added almost nothing for the last
+         * third of its length.
+         *
+         * @param reach how far past its own radius a lobe is drawn. This is roughly the shader's
+         *              skirt, and it is wider for the families whose falloff is wider.
+         */
+        function familyPaint(lobes, from, to, reach, peak, ground) {
+            return lobes.map(lobe => {
+                // The colour is moved back toward the dark that the figures sit on.
+                //
+                // <b>This is the difference between the room and a bright sign.</b> RoomPalette
+                // lifts the colours of a sleeve strongly: saturate 1.35 and 1.5, brightness 0.62 and
+                // 0.90. The shader never paints these colours at full strength. It MIXES them into
+                // the ground along a long ramp (smoothstep(0.30, 1.75, field)), and it reaches the
+                // full colour only where several lobes overlap, which is a small part of any frame.
+                // A gradient painted at the lifted colour would show that peak everywhere, and the
+                // room would look fluorescent. The counter-colour is the worst case. For a gold
+                // sleeve it is a turn of 152 degrees into teal, and it would look like a green lamp
+                // and not like something seen faintly behind the music.
+                const colour = mix(ground, mix(from, to, lobe.t), 0.78);
+                const x = `calc(50% + ${(lobe.x * 100).toFixed(2)}vh)`;
+                const y = `calc(50% - ${(lobe.y * 100).toFixed(2)}vh)`;
+                const r = lobe.r * reach * 100;
+                return `radial-gradient(circle ${r.toFixed(2)}vh at ${x} ${y}, ` +
+                       `${cssA(colour, peak)} 0%, ` +
+                       `${cssA(colour, peak * 0.55)} 32%, ` +
+                       `${cssA(colour, peak * 0.18)} 62%, ` +
+                       `${cssA(colour, 0)} 100%)`;
+            }).join(', ');
+        }
+
+        /** Which bank of each family is showing. A change of record then crosses between banks and
+            does not cut. */
+        let bankTop = 0;
+
+        function paintRoom(palette) {
+            el.room.style.backgroundColor = css(palette.ground);
+
+            // The first family fills the room, the second crosses it, and the third is a light
+            // behind both. The strengths are the shader's ramps, each reduced to one number. A static
+            // layer can carry only one number. The ramps exist to stop several overlapping lobes from
+            // averaging into one colour, and here the lobes cannot overlap into anything other than
+            // what was painted.
+            // The strength of the third family matters most. It is drawn BEHIND the other two, and
+            // its glow follows the top end of the music (0.16 + air * 0.62). This page has no
+            // analysis, so `air` is zero, and the correct strength is 0.16. A higher strength would
+            // light the room in the one colour that the sleeve does not have.
+            const paints = [
+                familyPaint(constellation(1), palette.tint, palette.glow, 2.6, 0.70, palette.ground),
+                familyPaint(constellation(2), palette.shade, palette.glow, 3.0, 0.38, palette.ground),
+                familyPaint(constellation(3), palette.shade, palette.shade, 4.0, 0.16, palette.ground),
+            ];
+
+            const next = bankTop ^ 1;
+            el.fams.forEach((fam, i) => {
+                const banks = fam.children;
+                banks[next].style.backgroundImage = paints[i];
+                banks[next].classList.add('on');
+                banks[bankTop].classList.remove('on');
+            });
+            bankTop = next;
+        }
+
+        // ── the pressing ───────────────────────────────────────────────────────────────────────
+        //
+        // This is VinylPressing, on a canvas. There is one render, and it is tinted. The hue is
+        // normalised to UNIT LUMINANCE, so multiplying by it changes the colour of a pixel and not
+        // its brightness. The sweep of light across the disc, the grain of the grooves and the
+        // curve of the rim all remain, because they are brightness, and nothing here changes
+        // brightness.
+
+        const LUMA = [0.2126, 0.7152, 0.0722];
+        const PRESS_SATURATION = 0.88;   // how far a hue is applied, against leaving the vinyl black
+        const PRESS_CEILING = 3.2;       // the highest value that any one channel may reach
+
+        const neutral = new Image();
+        let neutralReady = false;
+        let pressed = null;              // the hue now on the canvas, so a repeat costs nothing
+
+        neutral.onload = () => { neutralReady = true; press(pressed, true); };
+        neutral.onerror = () => tell({ type: 'error', reason: 'vinyl-asset' });
+        neutral.src = 'vinyl-record.png';
+
+        function press(hue255, force) {
+            if (!neutralReady) { pressed = hue255; return; }
+            const key = hue255 ? hue255.map(Math.round).join(',') : 'black';
+            if (!force && press.showing === key) return;
+            press.showing = key;
+            pressed = hue255;
+
+            const size = neutral.naturalWidth || 768;
+            const canvas = el.vinyl;
+            canvas.width = canvas.height = size;
+            const ctx = canvas.getContext('2d', { willReadFrequently: true });
+            ctx.clearRect(0, 0, size, size);
+            ctx.drawImage(neutral, 0, 0);
+
+            const image = ctx.getImageData(0, 0, size, size);
+            const px = image.data;
+
+            let scale;
+            if (hue255) {
+                const r = hue255[0] / 255, g = hue255[1] / 255, b = hue255[2] / 255;
+                const brightness = r * LUMA[0] + g * LUMA[1] + b * LUMA[2];
+                if (brightness < 1e-6) { scale = null; }
+                else {
+                    scale = [r / brightness, g / brightness, b / brightness];
+                    // Pulled back TOWARDS neutral until nothing is over the ceiling. It is pulled
+                    // towards neutral and not scaled down, because scaling down would remove again the
+                    // brightness that unit luminance has just set.
+                    const peak = Math.max(scale[0], scale[1], scale[2]);
+                    if (peak > PRESS_CEILING)
+                        scale = scale.map(v => 1 + (v - 1) * ((PRESS_CEILING - 1) / (peak - 1)));
+                    scale = scale.map(v => 1 + (v - 1) * PRESS_SATURATION);
+                }
+            }
+
+            if (scale) {
+                for (let i = 0; i < px.length; i += 4) {
+                    px[i] = Math.min(255, px[i] * scale[0]);
+                    px[i + 1] = Math.min(255, px[i + 1] * scale[1]);
+                    px[i + 2] = Math.min(255, px[i + 2] * scale[2]);
+                }
+            } else {
+                // Black vinyl, and DESATURATED. The render is not neutral: its body is a blue-black.
+                // A tint multiplies this colour cast away, but a black pressing has no tint, so the
+                // cast would show. The pixels are therefore reduced to their luma.
+                for (let i = 0; i < px.length; i += 4) {
+                    const y = px[i] * LUMA[0] + px[i + 1] * LUMA[1] + px[i + 2] * LUMA[2];
+                    px[i] = px[i + 1] = px[i + 2] = y;
+                }
+            }
+
+            ctx.putImageData(image, 0, 0);
+        }
+
+        // ── the cover ──────────────────────────────────────────────────────────────────────────
+
+        /** The cover that is on the sleeve now, so that a second call with the same cover does nothing. */
+        let shownArt = null;
+
+        /**
+         * Shows a cover: on the sleeve as a picture, on the label of the record as the app does it,
+         * and in the room as light.
+         *
+         * The two cover layers cross-fade and do not cut. Nothing is changed until the picture can
+         * be drawn. If the incoming layer got a new image and was shown in the same moment that the
+         * outgoing layer was hidden, and the image was not ready to paint in that frame, then
+         * neither layer would show anything. The flat colour under the whole page would then be
+         * visible for a moment, on every track.
+         */
+        function swapTo(src, image) {
+            shownArt = src;
+            el.noart.classList.add('hidden');
+
+            const going = el.covers[coverTop];
+            const next = el.covers[coverTop ^ 1];
+            next.style.backgroundImage = `url("${src}")`;
+            next.classList.add('on');
+            going.classList.remove('on');
+            coverTop ^= 1;
+
+            el.label.style.backgroundImage = `url("${src}")`;
+            el.label.classList.add('art');
+
+            // Now the room, the record and the frame of the sleeve. Reading the pixels can fail: a
+            // cover fetched from the app's HTTP server taints the canvas unless the server answers
+            // with CORS, which CastServer does. A room in the app's blue is a better result than no
+            // room.
+            let sleeve = null;
+            try { sleeve = readSleeve(image); } catch (e) { sleeve = null; }
+
+            if (sleeve) {
+                paintRoom(roomPalette(sleeve.tint, sleeve.glow, sleeve.shade));
+                press(sleeve.hue);
+                // The frame is the dominant colour of the sleeve. If the sleeve has no colour, the
+                // frame is a plain dark edge.
+                el.root.style.setProperty('--frame',
+                    sleeve.tint ? `rgb(${sleeve.tint.map(Math.round).join(',')})` : '#12161E');
+            } else {
+                paintRoom(ROOM_FALLBACK);
+                press(null);
+                el.root.style.setProperty('--frame', '#12161E');
+            }
+        }
+
+        /**
+         * @param src   a URL on the app's machine, or the picture itself as a data URI.
+         * @param onFail called when the picture cannot be loaded at all. See the mixed-content note below.
+         */
+        function showArt(src, onFail) {
+            // No cover for this record. The sleeve goes back to the quiet square, the record is
+            // pressed black, and the room has the app's blue.
+            if (!src) {
+                if (shownArt === null) return;      // already showing nothing
+                shownArt = null;
+                el.noart.classList.remove('hidden');
+                el.covers.forEach(c => c.classList.remove('on'));
+                el.label.classList.remove('art');
+                el.label.style.backgroundImage = '';
+                paintRoom(ROOM_FALLBACK);
+                press(null);
+                el.root.style.setProperty('--frame', '#12161E');
+                return;
+            }
+
+            // The same picture again. The app names the URL of a cover after its contents, so this
+            // test is exact and not a guess: all the tracks of an album arrive with one URL. Doing
+            // nothing is the purpose here. Otherwise a picture would dissolve into itself once for
+            // each track, which is a flicker that shows nothing new.
+            if (src === shownArt) return;
+
+            // The app serves its artwork from the machine it runs on, over plain HTTP on the local
+            // network, but this page is HTTPS. A browser may refuse this as mixed content. Trying the
+            // URL costs nothing when it works, and it gives the full-resolution image. When it does
+            // not work, the app is asked for the bytes instead.
+            const probe = new Image();
+            // The request is anonymous so that the pixels can be READ. A picture drawn from another
+            // origin taints the canvas, and the palette of the whole room is read from a 48 by 48
+            // copy of the picture. CastServer answers every request with
+            // Access-Control-Allow-Origin, and a data: URI needs no permission at all.
+            if (!src.startsWith('data:')) probe.crossOrigin = 'anonymous';
+            probe.onerror = () => { if (onFail) onFail(); };
+            probe.onload = () => {
+                // decode() answers the exact question, "is this ready to paint", which is the
+                // purpose here. If decode() is missing or refuses, onload is close enough.
+                const go = () => swapTo(src, probe);
+                if (probe.decode) probe.decode().then(go, go);
+                else go();
+            };
+            probe.src = src;
+        }
+
+        // ── the words, and a line too long for its column ──────────────────────────────────────
+
+        /**
+         * Marquee.cs, as a keyframe.
+         *
+         * Ten seconds still, then a walk at reading pace, two seconds to read the end, and a quicker
+         * run back. The walk is in POINTS A SECOND, so a long title takes longer than a short one.
+         * If every line took the same time, the long ones would be unreadable.
+         *
+         * The keyframe is built for each line and is not declared once, because the distance is
+         * different for each line. A line that fits is left alone, because an animation on it would
+         * move it by zero and cost a frame a second.
+         */
+        const SCROLL_START_PAUSE = 10, SCROLL_END_PAUSE = 2;
+        const SCROLL_SPEED = 42, RETURN_SPEED = 130, TAIL_SLACK = 10;
+
+        /** One style sheet, rewritten completely at every change of record. If rules were only added,
+            there would be three more for each track, and a few hundred by the end of an evening, all
+            of them naming lines that no longer exist. */
+        let marqueeSheet = null;
+
+        /** The keyframe for one line, or an empty string when the line fits. An animation on a line
+            with nowhere to go would move it by zero and cost a frame a second. */
+        function walkFor(name, host, span, zoom) {
+            span.style.animation = 'none';
+            const travel = span.scrollWidth - host.clientWidth + TAIL_SLACK * zoom;
+
+            // The .walks class sets a travelling line to start at the left. Without it the line would
+            // stay centred. An inline-block wider than the box it is centred in hangs over BOTH ends,
+            // so its first word would be clipped before the walk began, and the walk would take the
+            // rest of the text further left. A line that has somewhere to go starts where reading
+            // starts.
+            host.classList.toggle('walks', travel > 0);
+            if (travel <= 0) return '';
+
+            const out = travel / (SCROLL_SPEED * zoom);
+            const back = travel / (RETURN_SPEED * zoom);
+            const total = SCROLL_START_PAUSE + out + SCROLL_END_PAUSE + back;
+            const at = s => (s / total * 100).toFixed(3) + '%';
+
+            span.style.animation = `${name} ${total.toFixed(2)}s linear infinite`;
+            return `@keyframes ${name} {
+                0%, ${at(SCROLL_START_PAUSE)} { transform: translateX(0); }
+                ${at(SCROLL_START_PAUSE + out)},
+                ${at(SCROLL_START_PAUSE + out + SCROLL_END_PAUSE)} { transform: translateX(${-travel}px); }
+                100% { transform: translateX(0); }
+            }`;
+        }
+
+        /**
+         * Puts the cover on the middle line of the screen.
+         *
+         * The stack under the cover (the gap, the three lines, the bar and the transport) is
+         * measured and not calculated. Two of its parts are type, and the height of type must be
+         * measured. A flex box that centres a column that is `words` taller than it really is puts
+         * the cover exactly in the middle. The lift is that height.
+         *
+         * The lift is zero when the stack does not fit. This is why the method is safe: the group
+         * then centres on its own height and the transport stays on the screen. A television is not
+         * a monitor, and there is no scrollbar to catch what goes off the screen.
+         */
+        function liftTheCover() {
+            const stage = document.getElementById('stage');
+            const cover = document.getElementById('centre');
+            if (!stage || !cover) return;
+
+            el.root.style.setProperty('--lift', '0px');
+
+            const room = stage.clientHeight;
+            const side = cover.offsetHeight;
+
+            // Everything under the cover, INCLUDING the gap above the words. The gap is part of what
+            // must be balanced, and a lift that left it out would put the cover one gap too high.
+            const gap = parseFloat(getComputedStyle(el.words).marginTop) || 0;
+            const below = el.words.offsetHeight + gap;
+
+            // side + below is the composition. The lift adds `below` again, and all of it must fit
+            // inside the safe area, or there is no room to move it.
+            el.root.style.setProperty('--lift', side + below * 2 <= room ? `${below}px` : '0px');
+        }
+
+        function fitLines() {
+            if (!marqueeSheet) {
+                marqueeSheet = document.createElement('style');
+                document.head.appendChild(marqueeSheet);
+            }
+
+            const zoom = parseFloat(getComputedStyle(el.root).getPropertyValue('--zoom')) || 1;
+
+            // The names belong to the LINE and not to the walk. A title that still overflows then
+            // keeps walking, and does not start its ten seconds again whenever a neighbour is measured.
+            marqueeSheet.textContent = [
+                walkFor('walk-title', el.lines[0], el.title, zoom),
+                walkFor('walk-artist', el.lines[1], el.artist, zoom),
+                walkFor('walk-album', el.lines[2], el.album, zoom),
+            ].join('\n');
+
+            // The lines make up the height of the stack, so this follows them and does not run on a
+            // separate clock.
+            liftTheCover();
+        }
+
+        window.addEventListener('resize', () => window.setTimeout(fitLines, 60));
+
+        // ── the clock ──────────────────────────────────────────────────────────────────────────
+
+        /** mm:ss, and h:mm:ss for the rare record that needs it. */
+        function clock(seconds) {
+            if (!isFinite(seconds) || seconds < 0) seconds = 0;
+            const s = Math.floor(seconds % 60);
+            const m = Math.floor(seconds / 60) % 60;
+            const h = Math.floor(seconds / 3600);
+            const mm = h > 0 && m < 10 ? `0${m}` : `${m}`;
+            return `${h > 0 ? h + ':' : ''}${mm}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        /**
+         * The position of the track that is playing.
+         *
+         * The receiver's own clock counts the STREAM, which runs without a break across every track
+         * in it. On its own it would go past the end of each song and never go back. The app sends
+         * an anchor with each track: where the track starts in the stream, and which position in the
+         * track that is. With the anchor, the position is: track position = anchor + the time that
+         * the stream has run since the anchor.
+         */
+        function streamTime() {
+            try {
+                const at = playerManager.getCurrentTimeSec();
+                return typeof at === 'number' && isFinite(at) ? at : 0;
+            } catch (e) {
+                return 0;
+            }
+        }
+
+        function tick() {
+            if (!showing) return;
+
+            const streamNow = streamTime();
+
+            // The track that is waiting: the speaker has now reached the changeover it belongs to.
+            if (pending && streamNow >= pending.streamAt) {
+                const next = pending;
+                pending = null;
+                paint(next);
+                return;
+            }
+
+            const elapsed = showing.trackAt + Math.max(0, streamNow - showing.streamAt);
+            const duration = showing.duration;
+            el.body.classList.toggle('live', !(duration > 0));
+
+            if (duration > 0) {
+                // The app's seek bar counts DOWN at its right end. It shows what is left of the record,
+                // which is what a person looking up wants to know. SeekBar.RemainText.
+                el.remain.textContent = '-' + clock(Math.max(0, duration - elapsed));
+                const through = Math.min(100, (elapsed / duration) * 100);
+                el.elapsed.style.width = `${through}%`;
+                el.knob.style.left = `${through}%`;
+            }
+        }
+
+        // ── what is playing ────────────────────────────────────────────────────────────────────
+
+        function paint(meta) {
+            showing = meta;
+            musicIsComing();
+            el.body.classList.remove('idle');
+            el.seek.classList.add('on');
+            el.transport.classList.add('on');
+            trouble('');
+
+            // Out, change, back in: one movement, so that the eye can follow it.
+            el.words.classList.add('changing');
+            window.setTimeout(() => {
+                el.title.textContent = meta.title || 'RPM';
+                el.artist.textContent = meta.artist || '';
+                el.album.textContent = meta.album || '';
+                el.words.classList.remove('changing');
+                fitLines();
+            }, 400);
+
+            if (meta.artData) showArt(meta.artData);
+            else showArt(meta.art, () => tell({ type: 'artfail' }));
+
+            tick();
+        }
+
+        /**
+         * A track that the app says is playing, or is about to play.
+         *
+         * A track anchored ahead of the stream position is an early announcement of the gapless
+         * changeover, and it waits. Any other track is shown now.
+         */
+        function show(meta) {
+            if (!meta) return;
+
+            const next = {
+                title: meta.title,
+                artist: meta.artist,
+                album: meta.album,
+                art: meta.art,
+                artData: meta.artData,
+                duration: meta.duration || 0,
+                trackAt: meta.trackAt || 0,
+                streamAt: meta.streamAt || 0,
+            };
+
+            const streamNow = streamTime();
+            if (showing && next.streamAt > streamNow + 0.5) pending = next;
+            else paint(next);
+        }
+
+        // ── what the room asks for ──────────────────────────────────────────────────────────────
+
+        // Next and previous do NOT arrive as QUEUE_NEXT and QUEUE_PREV. The receiver maps them to a
+        // QUEUE_UPDATE with a jump of +1 or -1, so this interceptor is the one that sees them.
+        // A listener on QUEUE_NEXT would compile and run, but it would never fire.
+        //
+        // Returning null declines the request. This is what we want: the app does the skipping, on
+        // its side, into the same stream. Handling it here would mean changing the media, and
+        // changing the media causes the gap in the music that this receiver exists to avoid.
+        safely('queue-interceptor', () => playerManager.setMessageInterceptor(
+            cast.framework.messages.MessageType.QUEUE_UPDATE,
+            request => {
+                if (request && request.jump > 0) tell({ type: 'next' });
+                else if (request && request.jump < 0) tell({ type: 'prev' });
+                return null;
+            }));
+
+        // The buttons that the Home app offers, and the commands that the Assistant accepts for us.
+        // There is no SEEK: the stream is live and there is nothing behind the playhead to seek
+        // into. RPM seeks by restarting the stream at the new offset, which does not involve the
+        // receiver.
+        safely('supported-commands', () => {
+            const commands = cast.framework.messages.Command;
+            playerManager.setSupportedMediaCommands(
+                commands.PAUSE |
+                commands.STREAM_VOLUME |
+                commands.STREAM_MUTE |
+                commands.QUEUE_NEXT |
+                commands.QUEUE_PREV);
+        });
+
+        // The metadata in the LOAD is the metadata of the first track. Every later track arrives on
+        // the control channel, because the track changes without the media changing.
+        safely('load-interceptor', () => playerManager.setMessageInterceptor(
+            cast.framework.messages.MessageType.LOAD,
+            request => {
+                // This code is wrapped in try/catch on purpose. If an interceptor throws, CAF treats
+                // it as a failed load. It answers the sender with LOAD_FAILED and never plays the
+                // media. Showing a title is not worth losing the music, so any error in here is
+                // reported and not thrown.
+                try {
+                    const media = request && request.media;
+                    const metadata = media && media.metadata;
+
+                    // The stream type arrives already decided, and it is not changed. Surround is
+                    // declared LIVE because that is the only way that the device plays AC-3 at all.
+                    // Tests on the device itself show that BUFFERED stays in "buffering" for ever,
+                    // and LIVE plays and shows Dolby Digital. Changing the type to BUFFERED here
+                    // would cause that stall.
+                    // A new stream is a new chance to say "it is playing", and a new chance to run out of
+                    // data. Neither claim carries over from the stream that it replaces.
+                    saidPlaying = false;
+                    starving = false;
+                    playingSince = 0;
+                    loadedAt = Date.now();
+                    musicIsComing();
+                    shownState = candidateState = null;
+
+                    const stream = media && media.streamType;
+                    tell({ type: 'load', contentType: media && media.contentType, streamType: stream });
+
+                    // NOTHING here may fetch media.contentId. It looks like a harmless test of whether
+                    // the address can be reached, but it is not. /stream/<id> is a live endpoint that
+                    // can be used once. It starts an encoder on the app's side, and the next connection
+                    // to it replaces the previous one. A test fetch would therefore use one whole
+                    // encode, and the player's own fetch, which is the one that matters, would arrive
+                    // second and start the track again.
+
+                    if (metadata) {
+                        show({
+                            title: metadata.title || metadata.songName,
+                            artist: metadata.artist,
+                            album: metadata.albumName,
+                            art: metadata.images && metadata.images.length ? metadata.images[0].url : null,
+                        });
+                    }
+                } catch (e) {
+                    tell({ type: 'error', reason: 'load-interceptor', detail: String((e && e.message) || e) });
+                }
+
+                return request;
+            }));
+
+        // Report whatever the player refuses, and why. When CAF cannot play a LOAD, it answers with
+        // a code and nothing else. The app would see only "would not play the stream", which is the
+        // same message for an unplayable codec, a stream that never arrived and a media element
+        // that gave up. The code tells these apart, and it costs one message.
+        on(cast.framework.events.EventType.ERROR, event => {
+            const code = event && event.detailedErrorCode;
+
+            let detail = '';
+            try {
+                detail = event && event.error
+                    ? (event.error.message || JSON.stringify(event.error)).slice(0, 300)
+                    : '';
+            } catch (e) {
+                detail = String((event && event.error) || '');
+            }
+
+            tell({ type: 'error', code: code, reason: event && event.reason, detail: detail });
+
+            // 104 means the player refuses the source completely, for example a container it will
+            // not accept, whatever the device can decode. It is worth showing on the screen: the app
+            // is about to send the same music in another format, and a silent mark would make this
+            // look like a fault and not like a fallback.
+            trouble(code === 104
+                ? 'This speaker will not play that format. Trying another'
+                : 'That stream could not be played');
+        });
+
+        function trouble(message) {
+            el.trouble.textContent = message || '';
+            el.trouble.classList.toggle('on', !!message);
+        }
+
+        // ── back to the mark ───────────────────────────────────────────────────────────────────
+        //
+        // The end of a stream does not mean that the music has ended. It also happens when the
+        // listener presses next, previous, or stop and then play. RPM answers all three by ending
+        // the stream that it is sending and starting another one, and the receiver sees the end of
+        // the first stream before it sees the start of the second. If the page acted on the end at
+        // once, it would empty the screen and move the mark to the middle, and the next track would
+        // move it back a moment later. A skip must not look like the app closing and opening again.
+        //
+        // So the end of a stream only PROPOSES the mark. Anything that says music is coming (a LOAD
+        // arriving, a record being painted) cancels the proposal, and the screen never changed.
+        // Only a silence that lasts longer than the wait is a stop.
+        const IDLE_AFTER_MS = 4000;
+        let idleTimer = 0;
+
+        /** Music is coming: the screen keeps what it is showing. */
+        function musicIsComing() {
+            if (!idleTimer) return;
+            window.clearTimeout(idleTimer);
+            idleTimer = 0;
+        }
+
+        function goIdle() {
+            idleTimer = 0;
+
+            // Ask at the moment that matters, and do not rely on what was true four seconds earlier.
+            // The proposal was made because a stream ended. Whether there is music in the room NOW is
+            // a different question, and this code answers it. A player that is playing or filling its
+            // buffer keeps its screen, whatever ended before this point.
+            const now = playerManager.getPlayerState();
+            if (now === cast.framework.messages.PlayerState.PLAYING
+                || now === cast.framework.messages.PlayerState.BUFFERING) return;
+
+            el.body.classList.add('idle');
+            el.seek.classList.remove('on');
+            el.transport.classList.remove('on');
+            showing = null;
+            pending = null;
+        }
+
+        on(cast.framework.events.EventType.MEDIA_FINISHED, event => {
+            // The reason for the end decides whether it matters. INTERRUPTED and SKIPPED mean that a
+            // new LOAD is taking the place of the old media. This is the changeover itself: the music
+            // is already playing when these arrive, and the LOAD that caused them has already
+            // cancelled every proposal. If the timer started on these, nothing would be left to
+            // cancel it, and the mark would move to the middle over a record that is playing.
+            const why = event && event.endedReason;
+            const EndedReason = cast.framework.messages.EndedReason;
+            if (why === EndedReason.INTERRUPTED || why === EndedReason.SKIPPED) return;
+
+            if (idleTimer) return;                 // already proposed, so do not restart the timer
+            idleTimer = window.setTimeout(goIdle, IDLE_AFTER_MS);
+        });
+
+        // What the speaker is doing, as the speaker reports it. A pause pressed in the room reaches
+        // the screen in the same way as it reaches the app, and neither has to guess.
+        const PlayerState = cast.framework.messages.PlayerState;
+
+        let saidPlaying = false;
+        let starving = false;
+        let playingSince = 0;
+
+        /** When the LOAD came in. The wait before the first sound can then be measured and not
+            guessed from the sofa. The whole surround start depends on this number. */
+        let loadedAt = 0;
+
+        /**
+         * How long the speaker must have been playing before a period of buffering counts as a gap.
+         *
+         * The value is short: it only has to cover the change into playback itself. When the
+         * receiver reports a gap in the music, the music really did stop, so a longer window would
+         * only hide real gaps. <b>These reports are believed.</b>
+         */
+        const SETTLE_MS = 500;
+
+        /**
+         * How long a transport state must stay the same before the screen shows it.
+         *
+         * A player under load does not report one state. It changes between them: PLAYING, a short
+         * BUFFERING, PLAYING again, and a stumble is often reported as PAUSED on the way. If the
+         * screen showed each change, the icon would change several times a second, and this would
+         * look like a fault in the app and not like a rough patch in the stream. The delay is long
+         * enough to ignore a flicker, and short enough that a pause pressed in the room still
+         * looks immediate.
+         */
+        const STATE_SETTLE_MS = 400;
+
+        let shownState = null;
+        let candidateState = null;
+        let candidateSince = 0;
+
+        function readState() {
+            const state = playerManager.getPlayerState();
+            const playing = state === PlayerState.PLAYING;
+
+            // Send this once, when sound really starts. "It loaded" and "it is playing" are different
+            // claims, and only the second one shows that a format works.
+            if (!saidPlaying && playing) {
+                saidPlaying = true;
+                tell({ type: 'playing', afterMs: loadedAt ? Date.now() - loadedAt : undefined });
+            }
+
+            // The time is measured from the last time that playback started, not the first, so a
+            // resume is treated in the same way as a start.
+            if (playing && !playingSince) playingSince = Date.now();
+            if (!playing && state !== PlayerState.BUFFERING) playingSince = 0;
+
+            // Buffering after steady playback means that this speaker has run out of data. This is a
+            // gap in the music, and it is the only reliable measurement of whether the app keeps
+            // enough audio ahead of us for this room. It is sent once for each gap and not once a
+            // second. Otherwise the app would increase its lead by a minute because of one bad moment.
+            const settled = playingSince && Date.now() - playingSince > SETTLE_MS;
+            const dry = state === PlayerState.BUFFERING && settled;
+            if (dry && !starving) tell({ type: 'starved', afterMs: Date.now() - playingSince });
+            starving = dry;
+
+            // The code above reads the raw state, because those are claims about what happened, and
+            // a flicker is still something that happened. Only the screen waits until a state is stable.
+            if (state !== candidateState) {
+                candidateState = state;
+                candidateSince = Date.now();
+            }
+
+            if (state !== shownState && Date.now() - candidateSince >= STATE_SETTLE_MS) {
+                shownState = state;
+                el.body.classList.toggle('paused', shownState === PlayerState.PAUSED);
+                el.body.classList.toggle('buffering', shownState === PlayerState.BUFFERING);
+            }
+        }
+
+        // No clock is reported from here, on purpose. The app already asks for a MEDIA_STATUS every
+        // second while the music plays, and it runs its own stopwatch between the answers. A second
+        // clock on this channel would be one more value written to the same playhead, with
+        // nothing to put the two in order.
+
+        [cast.framework.events.EventType.PLAYING,
+         cast.framework.events.EventType.PAUSE,
+         cast.framework.events.EventType.BUFFERING,
+         cast.framework.events.EventType.PLAYER_LOAD_COMPLETE].forEach(
+            type => on(type, readState));
+
+        // Once a second is enough for a clock that shows seconds. It is also what decides when the
+        // title of a chained track takes over.
+        window.setInterval(tick, 1000);
+
+        // The transport state is read more often than that, because the screen waits for it: a state
+        // must stay the same for STATE_SETTLE_MS before the screen shows it. If it were checked only
+        // once a second, a pause pressed in the room would take up to a second and a half to show.
+        window.setInterval(readState, 250);
+
+        // ── the remote ─────────────────────────────────────────────────────────────────────────
+        //
+        // The D-pad of a television arrives here as arrow keys. Two things would act on them: the
+        // page would scroll (prevented by the fixed position above), and the player's own key
+        // handling would scrub.
+        //
+        // <b>Scrubbing is the one gesture that this stream cannot answer.</b> The stream is live and
+        // can be used once. There is nothing behind the playhead to seek into, and /stream/<id>
+        // starts an encoder for whoever asks and cancels the previous fetch. A seek at the receiver
+        // would at best give a playhead that lies, and at worst restart the track. RPM seeks by
+        // starting the stream again at the new offset. This is done by the sender and must stay
+        // that way. It is also why SEEK is left out of setSupportedMediaCommands.
+        //
+        // So these keys are swallowed, in the CAPTURE phase, before anything else sees them. Pause,
+        // volume and next arrive as media commands and not as keys, so they are not affected.
+        //
+        // Mapping left and right to previous and next would work: tell({type:'prev'}) is one line,
+        // and the app already acts on it from the Home app. It is not done here on purpose,
+        // because arrows that skip a track would be a decision about the room and not a fix.
+        const SWALLOW = new Set([
+            'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown',
+            'PageUp', 'PageDown', 'Home', 'End', ' ', 'Spacebar',
+        ]);
+
+        /**
+         * The D-pad works the transport keys.
+         *
+         * The transport shows state, because nothing on a television can be pressed, but a row of
+         * keys that cannot be used would be misleading. So the D-pad works them: left and right move
+         * a ring along the keys in the middle, and OK presses the key that the ring is on. This is
+         * the gesture that the remote of the device is made for, and the arrows have no other use
+         * here.
+         *
+         * <b>Every press uses a path that already exists.</b> Next and previous send the same
+         * message as the Assistant's "next", so the app skips inside the stream it is already
+         * sending and the music does not stop. Play and pause make the receiver pause its OWN media
+         * element. CAF reports that as a pause at the speaker, and the app already handles a pause
+         * at the speaker (CastSink.RemotePaused). Nothing here is a new way to control the player.
+         * It is the remote using the existing ways.
+         *
+         * The way out and the heart are not in the ring. The first belongs to the app and means
+         * nothing in a room. The second would need the app to say whether this record is loved, and
+         * to be told back, which needs a message that does not exist.
+         */
+        /**
+         * The keys that the remote can move through, in the order in which they are drawn.
+         *
+         * The heart is in the list only while the app has said whether this record is loved. A key
+         * that cannot be pressed must not be a place where the ring stops, or left and right would
+         * move into a gap. The list is read on every move and is not fixed at the start, because
+         * the answer arrives with the record, and a record changes under this screen without any
+         * other event.
+         */
+        const RING_ALL = ['favorite', 'prev', 'play-pause', 'next'];
+        const RING = () => RING_ALL.filter(id =>
+            id !== 'favorite' || el.body.classList.contains('knows-favorite'));
+        let ringOn = 'play-pause';     // play and pause is the most likely key
+        let ringSeen = 0;             // when the last press was, so the ring can be hidden
+
+        /** How long the ring stays visible after the last press. It is long enough to press twice
+            without looking for it again, and short enough that the record is alone on the screen
+            the rest of the time. The app's own transport hides after five seconds, for the same reason. */
+        const RING_IDLE_MS = 6000;
+
+        function paintRing(up) {
+            el.body.classList.toggle('remote', up);
+            // This uses the WHOLE row and not only the keys the ring can reach. A heart that has just
+            // been hidden must also lose its mark.
+            RING_ALL.forEach(id =>
+                document.getElementById(id).classList.toggle('on', up && id === ringOn));
+        }
+
+        function wake() {
+            ringSeen = Date.now();
+            paintRing(true);
+        }
+
+        window.setInterval(() => {
+            if (ringSeen && Date.now() - ringSeen > RING_IDLE_MS) {
+                ringSeen = 0;
+                paintRing(false);
+            }
+        }, 500);
+
+        /** Moves the ring one key in the given direction, over the keys that exist now. */
+        function walkRing(step) {
+            const ring = RING();
+            const at = Math.max(0, ring.indexOf(ringOn));
+            ringOn = ring[(at + step + ring.length) % ring.length];
+        }
+
+        /** Presses the key that the ring is on.
+
+            The name is not `press` because the vinyl code above already has a function `press()`.
+            A second function declaration with the same name in the same scope silently REPLACES the
+            first. A function called `press` here would stop every cover change from tinting the
+            record, and would tell the app to skip the track instead. */
+        function pressRingKey() {
+            const key = ringOn;
+
+            if (key === 'next') { tell({ type: 'next' }); return; }
+            if (key === 'prev') { tell({ type: 'prev' }); return; }
+
+            // The heart is a REQUEST and not a claim. The app owns the value, writes it, and says what
+            // it wrote. If the mark were filled in here, it would be wrong whenever the write fails.
+            // A record played from outside the collection has no row to hold a mark, and only the
+            // app knows this.
+            if (key === 'favorite') { tell({ type: 'favorite' }); return; }
+
+            // Play and pause, at the speaker. The app hears this in the same way as a touch on the
+            // speaker's own surface. This is why it is not a message of ours.
+            try {
+                if (playerManager.getPlayerState() === PlayerState.PAUSED) playerManager.play();
+                else playerManager.pause();
+            } catch (e) {
+                tell({ type: 'error', reason: 'remote-play-pause', detail: String((e && e.message) || e) });
+            }
+        }
+
+        window.addEventListener('keydown', event => {
+            const key = event.key;
+
+            // OK, and the other names that a television uses for it. The code checks keyCode as well
+            // as key, because a remote is not a keyboard and older devices send only one of them.
+            const ok = key === 'Enter' || key === 'Select' || key === 'Accept'
+                    || event.keyCode === 13 || event.keyCode === 23;
+
+            if (ok) {
+                event.preventDefault();
+                event.stopPropagation();
+                // The FIRST press only shows the ring. Pressing OK on a screen with no ring is a press
+                // on nothing in particular, and skipping a track because of it would surprise people
+                // and make them stop using the remote.
+                if (ringSeen) pressRingKey();
+                wake();
+                return;
+            }
+
+            if (!SWALLOW.has(key)) return;
+            event.preventDefault();
+            event.stopPropagation();
+
+            // The ring is only used while something is playing. A ring on the mark alone has nothing
+            // to press.
+            if (!showing) return;
+
+            if (key === 'ArrowLeft' || key === 'ArrowRight') {
+                if (ringSeen) walkRing(key === 'ArrowRight' ? 1 : -1);
+                wake();
+            } else if (key === 'ArrowUp' || key === 'ArrowDown') {
+                // Up and down are the volume on every television, and the volume keys of the platform
+                // already do this. So here they only show the ring, and are not a second, weaker way
+                // to change the volume of the room.
+                wake();
+            }
+        }, true);
+
+        // ── how loud the room is ───────────────────────────────────────────────────────────────
+        //
+        // This is the SPEAKER's own volume, and not a number that the app keeps. It can be changed
+        // in the Home app, on a remote, or by voice, and the knob on this screen must show the
+        // level that really changes. The platform reports the volume, and reports when it changes.
+
+        /**
+         * <b>There is no getter.</b> CastReceiverContext has no getSystemVolume. The volume arrives
+         * as an event and only as an event (cast.framework.system.SYSTEM_VOLUME_CHANGED, with a
+         * SystemVolumeData that holds a level from 0 to 1 and a muted flag). Code that calls a
+         * method that does not exist fails silently inside a try, and the line would stay at zero
+         * on a speaker that is turned up to half.
+         *
+         * So the knob is hidden until the device has really reported a level, and is not drawn at a
+         * number that nobody gave us. The device reports as soon as anything changes the volume,
+         * including the app, because the slider in the app drives the speaker's own volume and so
+         * produces this event.
+         */
+        function showVolume(volume) {
+            if (!volume || typeof volume.level !== 'number') return;
+
+            const level = Math.max(0, Math.min(1, volume.level)) * 100;
+            el.volumeFill.style.width = `${level}%`;
+            el.volumeKnob.style.left = `${level}%`;
+            el.body.classList.add('knows-volume');
+            el.body.classList.toggle('muted', volume.muted === true);
+        }
+
+        safely('volume', () => context.addEventListener(
+            cast.framework.system.EventType.SYSTEM_VOLUME_CHANGED,
+            event => showVolume(event && event.data)));
+
+        // ── what the app asks for ───────────────────────────────────────────────────────────────
+
+        safely('control-channel', () => context.addCustomMessageListener(NAMESPACE, event => {
+            const message = event.data;
+            if (!message) return;
+
+            if (message.type === 'playing') {
+                return;   // our own message, sent back by the broadcast; nothing to do
+            }
+
+            if (message.type === 'meta') {
+                // The track changed inside a stream that did not stop. Only the screen changes. Touching
+                // the media here is what this receiver must avoid.
+                show(message);
+            } else if (message.type === 'art') {
+                // The app's answer about a cover that we could not fetch: the picture itself, or
+                // nothing, which means that this track has no cover. Both are answers and both are
+                // used. If the empty answer were ignored, the sleeve of the last record would stay
+                // visible over a song that has no cover of its own. See showArt.
+                showArt(message.data || null);
+            } else if (message.type === 'favorite') {
+                // What the app wrote, or that there is nothing to write. If `on` is absent, this record
+                // is not one that the collection holds, and the heart is hidden. It does not stay
+                // hollow over a song that it could not be pressed for.
+                const known = typeof message.on === 'boolean';
+                el.body.classList.toggle('knows-favorite', known);
+                el.body.classList.toggle('favorite', known && message.on);
+                // The ring must not stay on a key that has just been hidden.
+                if (!known && ringOn === 'favorite') ringOn = 'play-pause';
+                paintRing(!!ringSeen);
+            } else if (message.type === 'screen') {
+                // The picture, off or on. The music is not touched. This is for a television that
+                // nobody is watching, and it is not a pause.
+                el.body.classList.toggle('blackout', message.on === false);
+            }
+        }));
+
+        // ── staying awake ───────────────────────────────────────────────────────────────────────
+        //
+        // For the device, a television that plays audio and shows a still picture looks like a page
+        // that nobody has touched for ten minutes. The Shield then dims and sleeps, and the room
+        // goes dark with it. `disableIdleTimeout` does not help: it is the session timeout of CAF
+        // and has no effect on the panel.
+        //
+        // The screen wake lock is the documented way to say "something is happening here". It is
+        // held only while there is a picture worth keeping lit. When the screen is deliberately off
+        // (see the `screen` message), the lock is released, and the device may sleep. That is the
+        // purpose of turning the screen off.
+        //
+        // <b>A lock does not survive the page going away and coming back.</b> The platform releases
+        // it on its own, and the specification says so. This is why the lock is requested again on
+        // visibilitychange and is not taken once and trusted.
+        let wakeLock = null;
+
+        async function holdTheScreen(want) {
+            try {
+                if (!want) {
+                    if (wakeLock) { const held = wakeLock; wakeLock = null; await held.release(); }
+                    return;
+                }
+
+                if (wakeLock || document.visibilityState !== 'visible') return;
+                if (!navigator.wakeLock) return;
+
+                wakeLock = await navigator.wakeLock.request('screen');
+                // The platform can release the lock as well as us. A lock that has gone must not be
+                // remembered as held, or it is never requested again.
+                wakeLock.addEventListener('release', () => { wakeLock = null; });
+            } catch (e) {
+                // The request was refused, or the device does not implement it. This is reported once
+                // and is not a reason to stop: a screen that sleeps is a nuisance, and the music is the job.
+                wakeLock = null;
+                tell({ type: 'error', reason: 'wake-lock', detail: String((e && e.message) || e) });
+            }
+        }
+
+        /** Whether there is anything on the screen that is worth keeping lit. */
+        function wantTheScreen() {
+            return !el.body.classList.contains('blackout') && !el.body.classList.contains('idle');
+        }
+
+        document.addEventListener('visibilitychange', () => holdTheScreen(wantTheScreen()));
+        window.setInterval(() => holdTheScreen(wantTheScreen()), 5000);
+        holdTheScreen(true);
+
+        // Also report what the device says it is doing with the panel. This is the only way to tell
+        // a television that has gone to sleep from one that is showing something else. The state is
+        // reported and not acted on, because an audio receiver does NOT stop when its picture goes away.
+        [['standby', () => context.getStandbyState()],
+         ['visibility', () => context.getVisibilityState()]].forEach(([what, read]) => {
+            const type = what === 'standby'
+                ? cast.framework.system.EventType.STANDBY_CHANGED
+                : cast.framework.system.EventType.VISIBILITY_CHANGED;
+            safely(what, () => context.addEventListener(type, () => {
+                let state = 'unknown';
+                try { state = String(read()); } catch (e) { }
+                tell({ type: 'screenstate', what: what, state: state });
+                // Coming back from standby is a new page for the purpose of the lock.
+                holdTheScreen(wantTheScreen());
+            }));
+        });
+
+        // ── what this device can do ─────────────────────────────────────────────────────────────
+
+        // Sent once, on connect, so that the app can choose a format from what the hardware can
+        // decode and not from a setting that the listener has to guess. A speaker that cannot pass
+        // Dolby through should be sent stereo, and must be able to say so.
+        /**
+         * What the media pipeline will accept, as opposed to what the device can decode.
+         *
+         * These are two different questions, and the difference is where 5.1 goes wrong.
+         * canDisplayType asks the Cast platform, which knows that the device can pass Dolby through
+         * to an amplifier. The player that must hold the stream is a browser media element, and it
+         * answers separately. A device can answer yes to the first and no to the second. The result
+         * is a LOAD that fails for a codec that the hardware supports.
+         */
+        function playable() {
+            const probe = document.createElement('audio');
+            const types = {
+                'mp4-ac3': 'audio/mp4; codecs="ac-3"',
+                'mp4-eac3': 'audio/mp4; codecs="ec-3"',
+                'ts-ac3': 'video/mp2t; codecs="ac-3"',
+                'ac3': 'audio/ac3',
+                // Both names of the same container, because a device that answers for one of them may
+                // say nothing for the other. audio/x-matroska is the correct name for a file with no
+                // picture, and video/x-matroska is the name that everybody registers. We send the
+                // first. A yes for either means that the demuxer is there.
+                'mka-flac': 'audio/x-matroska; codecs="flac"',
+                'mkv-flac': 'video/x-matroska; codecs="flac"',
+                // Not a container that we send. It is asked so that "decodes FLAC but has no Matroska"
+                // can be told apart from "cannot decode FLAC" when a speaker rejects lossless.
+                'flac': 'audio/flac',
+                'mp3': 'audio/mpeg',
+            };
+
+            const answer = {};
+            for (const [name, type] of Object.entries(types)) {
+                try {
+                    const element = probe.canPlayType(type);      // "", "maybe" or "probably"
+                    const mse = window.MediaSource && window.MediaSource.isTypeSupported
+                        ? window.MediaSource.isTypeSupported(type)
+                        : null;
+                    answer[name] = `${element || 'no'}${mse === null ? '' : mse ? '+mse' : '-mse'}`;
+                } catch (e) {
+                    answer[name] = 'threw';
+                }
+            }
+            return answer;
+        }
+
+        function greet(senderId) {
+            // Nothing in here may stop the greeting from being sent. The app chooses a format from it,
+            // and a capability probe that throws would leave the app choosing without information.
+            let capabilities = {};
+            let plays = {};
+            try { capabilities = context.getDeviceCapabilities() || {}; } catch (e) { }
+            try { plays = playable(); } catch (e) { plays = { probe: 'threw' }; }
+
+            // Each call has its own try, and not one try for all of them. A platform that does not
+            // know one MIME string then still answers for the other four.
+            const decodes = (mime, codec) => {
+                try { return context.canDisplayType(mime, codec) === true; } catch (e) { return false; }
+            };
+
+            context.sendCustomMessage(NAMESPACE, senderId, {
+                type: 'hello',
+                v: PROTOCOL,
+                caps: {
+                    ac3: decodes('audio/mp4', 'ac-3'),
+                    eac3: decodes('audio/mp4', 'ec-3'),
+                    flac: decodes('audio/x-matroska', 'flac') || decodes('video/x-matroska', 'flac'),
+                    hiResAudio: capabilities.hi_res_audio_supported === true,
+
+                    // Left out when the device did not say, and not sent as false. The app reads a
+                    // missing answer as "it might have a screen" and keeps the blackout switch
+                    // available. False means a speaker, and turns the switch off.
+                    display: typeof capabilities.display_supported === 'boolean'
+                        ? capabilities.display_supported
+                        : undefined,
+                },
+                plays: plays,
+                setupFailures: setupFailures.length ? setupFailures : undefined,
+            });
+        }
+
+        context.addEventListener(
+            cast.framework.system.EventType.SENDER_CONNECTED,
+            event => greet(event.senderId));
+
+        // The room before there is a record in it: the app's blue on its near-black. It is painted
+        // now and not left to the first track, so that the mark stands in a room and not on a flat
+        // black rectangle.
+        paintRoom(ROOM_FALLBACK);
+
+        // The SDK gives up on an idle session by default. A speaker has no screen to time out and
+        // the stream is live, so this session is never idle in the sense that the SDK means.
+        // The receiver is started last, and it starts even if an earlier step failed. A receiver
+        // that does not start is a television that shows a logo for ever, which is worse than a
+        // receiver without a title card.
+        const options = new cast.framework.CastReceiverOptions();
+        safely('options', () => {
+            options.customNamespaces = { [NAMESPACE]: cast.framework.system.MessageType.JSON };
+            options.disableIdleTimeout = true;
+        });
+
+        context.start(options);
+    </script>
+</body>
+</html>
