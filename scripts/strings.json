@@ -13790,6 +13790,14 @@
     "zh-Hans": "电台",
     "comment": "Second line of a radio station entry in the home view's quick selection, under the station's name. Desktop and iPhone."
   },
+  "Home_QuickRadio": {
+    "en": "Radio",
+    "fr": "Radio",
+    "es": "Radio",
+    "de": "Radio",
+    "zh-Hans": "电台",
+    "comment": "Kind label on a song radio entry in the home view's quick selection, before the artist: 'Radio • Sting'. The entry is named after one of the songs played most; pressing it plays that song and keeps the queue filled with songs like it (the song menus' Start radio). Not internet radio."
+  },
   "Home_QuickKindJoin": {
     "en": "{0} • {1}",
     "fr": "{0} • {1}",
