@@ -9382,6 +9382,14 @@
     "zh-Hans": "已下载 {0}/{1} 个文件",
     "comment": "Status line after the cloud download finishes."
   },
+  "Queue_CatalogueFilled": {
+    "en": "Records filled in from the catalogue: {0}",
+    "fr": "Disques complétés depuis le catalogue : {0}",
+    "es": "Discos completados desde el catálogo: {0}",
+    "de": "Aus dem Katalog ergänzte Platten: {0}",
+    "zh-Hans": "已从目录补全的唱片：{0}",
+    "comment": "Import queue status line after the background catalogue fill; {0} is how many records got a genre, subgenre or year."
+  },
   "QueueDup_InLibrary": {
     "en": "The collection already holds this track, in a copy at least as good.",
     "fr": "La collection contient déjà cette piste, dans une copie au moins aussi bonne.",
@@ -10958,13 +10966,13 @@
     "zh-Hans": "从收藏中移除",
     "comment": "Track context-menu item: clear the favorite mark on this song."
   },
-  "Track_StartRadio": {
-    "en": "Start radio",
-    "fr": "Lancer la radio",
-    "es": "Iniciar radio",
-    "de": "Radio starten",
-    "zh-Hans": "开始电台",
-    "comment": "Track context-menu item (song menus, library table, playlist rows): plays this song now and keeps the queue filled with songs of a similar mood, era and genre to whichever song is playing. Not internet radio."
+  "Track_StartMixtape": {
+    "en": "Start mixtape",
+    "fr": "Lancer une mixtape",
+    "es": "Iniciar mixtape",
+    "de": "Mixtape starten",
+    "zh-Hans": "开始混音带",
+    "comment": "Track context-menu item (song menus, library table, playlist rows): plays this song now and keeps the queue filled with songs of a similar mood, genre and era from the collection. Called a mixtape, not a radio, so it is not mistaken for internet radio."
   },
   "Details_ReleaseType": {
     "en": "Release type",
@@ -11701,6 +11709,22 @@
     "de": "Eine Datei in der Warteschlange wird markiert, wenn eines dieser Tags fehlt. Der Import wird dadurch nicht blockiert.",
     "zh-Hans": "队列中的文件如果缺少其中任何一项，就会被标记。这不会阻止导入。",
     "comment": "Settings hint under the required tags checkboxes."
+  },
+  "Settings_CatalogueFill": {
+    "en": "Fill in missing genre and year when music is added",
+    "fr": "Compléter le genre et l'année manquants lors de l'ajout de musique",
+    "es": "Completar el género y el año que falten al añadir música",
+    "de": "Fehlendes Genre und Jahr beim Hinzufügen von Musik ergänzen",
+    "zh-Hans": "添加音乐时补全缺失的流派和年份",
+    "comment": "Settings > Collection, required tags card: toggle that looks each added record up in the catalogue and fills blank genre, subgenre and year in the import queue."
+  },
+  "Settings_CatalogueFillHint": {
+    "en": "rpm looks each record up in its catalogue and fills in the genre, subgenre and year where they are blank or not on rpm's genre list. Values that are already set are kept. Nothing is written to your files until you import.",
+    "fr": "rpm recherche chaque disque dans son catalogue et complète le genre, le sous-genre et l'année lorsqu'ils sont vides ou absents de la liste des genres de rpm. Les valeurs déjà renseignées sont conservées. Rien n'est écrit dans vos fichiers avant l'importation.",
+    "es": "rpm busca cada disco en su catálogo y completa el género, el subgénero y el año cuando están vacíos o no figuran en la lista de géneros de rpm. Los valores ya definidos se conservan. No se escribe nada en tus archivos hasta que importes.",
+    "de": "rpm sucht jede Platte in seinem Katalog und ergänzt Genre, Subgenre und Jahr, wo sie fehlen oder nicht in der Genreliste von rpm stehen. Bereits gesetzte Werte bleiben erhalten. Bis zum Import wird nichts in deine Dateien geschrieben.",
+    "zh-Hans": "rpm 会在其目录中查找每张唱片，并在流派、子流派和年份为空或不在 rpm 流派列表中时补全它们。已设置的值会保留。在你导入之前，不会写入任何文件。",
+    "comment": "Settings hint under the catalogue fill toggle."
   },
   "Queue_ChipDuplicates": {
     "en": "Hide duplicates",
@@ -13790,13 +13814,13 @@
     "zh-Hans": "电台",
     "comment": "Second line of a radio station entry in the home view's quick selection, under the station's name. Desktop and iPhone."
   },
-  "Home_QuickRadio": {
-    "en": "Radio",
-    "fr": "Radio",
-    "es": "Radio",
-    "de": "Radio",
-    "zh-Hans": "电台",
-    "comment": "Kind label on a song radio entry in the home view's quick selection, before the artist: 'Radio • Sting'. The entry is named after one of the songs played most; pressing it plays that song and keeps the queue filled with songs like it (the song menus' Start radio). Not internet radio."
+  "Home_QuickMixtape": {
+    "en": "Mixtape",
+    "fr": "Mixtape",
+    "es": "Mixtape",
+    "de": "Mixtape",
+    "zh-Hans": "混音带",
+    "comment": "Kind label on a mixtape entry in the home view's quick selection, before the artist: 'Mixtape • Sting'. The entry starts a mixtape (songs like this one, kept coming) on one of the songs played most. Called a mixtape, not a radio, so it is not mistaken for internet radio."
   },
   "Home_QuickKindJoin": {
     "en": "{0} • {1}",
@@ -18437,5 +18461,77 @@
     "de": "Mediathek neu laden",
     "zh-Hans": "重新载入资料库",
     "comment": "Android TV side menu: spoken name of the key at the top right that reads the collection from the cloud again."
+  },
+  "Tv_LegendMove": {
+    "en": "Move",
+    "fr": "Se déplacer",
+    "es": "Moverse",
+    "de": "Navigieren",
+    "zh-Hans": "移动",
+    "comment": "Shown on the Android TV app's key legend: a small card that appears for two seconds when a screen opens, listing what the remote's keys do there. Each entry is an icon of the key followed by this text. Next to the arrow keys: they move from item to item."
+  },
+  "Tv_LegendHoldMenu": {
+    "en": "Hold: menu",
+    "fr": "Maintenir : menu",
+    "es": "Mantener: menú",
+    "de": "Halten: Menü",
+    "zh-Hans": "长按：菜单",
+    "comment": "Shown on the Android TV app's key legend: a small card that appears for two seconds when a screen opens, listing what the remote's keys do there. Each entry is an icon of the key followed by this text. Next to the OK key: holding it opens the menu of the track or station it stands on."
+  },
+  "Tv_LegendTune": {
+    "en": "Tune in",
+    "fr": "Écouter",
+    "es": "Sintonizar",
+    "de": "Einschalten",
+    "zh-Hans": "收听",
+    "comment": "Shown on the Android TV app's key legend: a small card that appears for two seconds when a screen opens, listing what the remote's keys do there. Each entry is an icon of the key followed by this text. Next to the OK key on the radio screen: it starts the station it stands on."
+  },
+  "Tv_LegendHoldModes": {
+    "en": "Hold: radio modes",
+    "fr": "Maintenir : modes radio",
+    "es": "Mantener: modos de radio",
+    "de": "Halten: Radiomodi",
+    "zh-Hans": "长按：电台模式",
+    "comment": "Shown on the Android TV app's key legend: a small card that appears for two seconds when a screen opens, listing what the remote's keys do there. Each entry is an icon of the key followed by this text. Next to the Right key on the radio screen: holding it for two seconds opens the wheel of the radio's modes (Tuner, Search, Music, News, Local)."
+  },
+  "Tv_LegendLetters": {
+    "en": "Letters",
+    "fr": "Lettres",
+    "es": "Letras",
+    "de": "Buchstaben",
+    "zh-Hans": "字母",
+    "comment": "Shown on the Android TV app's key legend: a small card that appears for two seconds when a screen opens, listing what the remote's keys do there. Each entry is an icon of the key followed by this text. Next to an arrow key: it opens the alphabet, to jump to a letter."
+  },
+  "Tv_LegendTurn": {
+    "en": "Turn",
+    "fr": "Tourner",
+    "es": "Girar",
+    "de": "Drehen",
+    "zh-Hans": "转动",
+    "comment": "Shown on the Android TV app's key legend: a small card that appears for two seconds when a screen opens, listing what the remote's keys do there. Each entry is an icon of the key followed by this text. Next to the Left and Right keys on the album carousel: they turn it one record."
+  },
+  "Tv_SettingsKeyLegend": {
+    "en": "Remote key hints",
+    "fr": "Aide des touches",
+    "es": "Ayuda de los botones",
+    "de": "Tastenhinweise",
+    "zh-Hans": "遥控器按键提示",
+    "comment": "Row in the Android TV app's settings: whether a small card listing what the remote's keys do is shown for two seconds when a screen opens. The value is On or Off; OK switches it."
+  },
+  "Deck_QueueTip": {
+    "en": "Now playing queue",
+    "fr": "File de lecture",
+    "es": "Cola de reproducción",
+    "de": "Wiedergabeliste",
+    "zh-Hans": "播放队列",
+    "comment": "Player deck at the foot of the window: tooltip and accessible name of the key left of stop that opens the queue (the songs playing now and next) as a card above the deck."
+  },
+  "Deck_QueueEmpty": {
+    "en": "Nothing is queued. Play a record or a song and what comes next shows here.",
+    "fr": "Rien dans la file. Lancez un disque ou un morceau, et la suite s'affichera ici.",
+    "es": "No hay nada en cola. Reproduce un disco o una canción y lo que viene después aparecerá aquí.",
+    "de": "Nichts in der Warteschlange. Spiel ein Album oder einen Song ab, dann erscheint hier, was als Nächstes kommt.",
+    "zh-Hans": "队列中没有内容。播放一张专辑或一首歌，接下来要播放的内容会显示在这里。",
+    "comment": "Player deck: the queue card's text when nothing is queued."
   }
 }
