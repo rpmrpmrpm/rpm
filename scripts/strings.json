@@ -18533,5 +18533,21 @@
     "de": "Nichts in der Warteschlange. Spiel ein Album oder einen Song ab, dann erscheint hier, was als Nächstes kommt.",
     "zh-Hans": "队列中没有内容。播放一张专辑或一首歌，接下来要播放的内容会显示在这里。",
     "comment": "Player deck: the queue card's text when nothing is queued."
+  },
+  "Tv_QueueAfterUpNext": {
+    "en": "After that",
+    "fr": "Ensuite",
+    "es": "Después",
+    "de": "Danach",
+    "zh-Hans": "之后",
+    "comment": "Small heading in the TV player's Now playing drawer, where the list that was playing continues after the songs the person added (which are under an \"Up next\" heading)."
+  },
+  "Tv_QueueRearrangeHint": {
+    "en": "OK picks a song up, Up and Down carry it, OK puts it down.",
+    "fr": "OK prend un morceau, Haut et Bas le déplacent, OK le pose.",
+    "es": "OK toma una canción, Arriba y Abajo la mueven, OK la deja.",
+    "de": "OK nimmt einen Titel auf, Hoch und Runter verschieben ihn, OK legt ihn ab.",
+    "zh-Hans": "按 OK 拿起歌曲，上下键移动，再按 OK 放下。",
+    "comment": "Line under the title of the TV player's Now playing drawer while rearranging is on. OK, Up and Down are the TV remote's keys."
   }
 }
