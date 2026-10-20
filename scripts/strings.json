@@ -2096,6 +2096,22 @@
     "de": "Warte auf Anmeldung im Browser…",
     "zh-Hans": "正在等待浏览器中完成登录…"
   },
+  "Login_BrowserDoneTitle": {
+    "en": "Signed in",
+    "fr": "Connecté",
+    "es": "Sesión iniciada",
+    "de": "Angemeldet",
+    "zh-Hans": "已登录",
+    "comment": "Title of the page the browser shows after signing in with Apple or Google from rpm on Windows or Linux. The app serves this page itself."
+  },
+  "Login_BrowserDoneBody": {
+    "en": "You can close this tab and go back to rpm.",
+    "fr": "Vous pouvez fermer cet onglet et revenir à rpm.",
+    "es": "Puedes cerrar esta pestaña y volver a rpm.",
+    "de": "Du kannst diesen Tab schließen und zu rpm zurückkehren.",
+    "zh-Hans": "你可以关闭此标签页并返回 rpm。",
+    "comment": "Text under Login_BrowserDoneTitle on the same browser page."
+  },
   "Lookup_CatalogNumber": {
     "en": "Catalogue no.",
     "fr": "N° de catalogue",
@@ -17021,6 +17037,14 @@
     "de": "Scanne den Code mit der Kamera deines Telefons und melde dich auf dem Telefon an.",
     "zh-Hans": "用手机相机扫描此代码，然后在手机上登录。",
     "comment": "Under the QR code in the Android TV sign-in pop-up."
+  },
+  "Tv_SignIn_Code": {
+    "en": "Code {0}. Check that your phone shows the same code.",
+    "fr": "Code {0}. Vérifiez que votre téléphone affiche le même code.",
+    "es": "Código {0}. Comprueba que el teléfono muestra el mismo código.",
+    "de": "Code {0}. Prüfe, ob dein Telefon denselben Code anzeigt.",
+    "zh-Hans": "代码 {0}。请确认手机上显示的是同一个代码。",
+    "comment": "Under the QR code on the Apple TV and Android TV sign-in screens. {0} is eight letters in two groups, e.g. BCDF-GHJK. The phone's sign-in page shows the same code before it goes on to Apple or Google."
   },
   "Tv_SignIn_Done": {
     "en": "You're signed in as {0}.",
