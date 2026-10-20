@@ -7,6 +7,7 @@ string files of the desktop, iOS and Android apps. They expect the repos as sibl
     rpm-desktop/    RPM.Desktop, RPM.Core, RPM.Fingerprint, scripts/tool-versions.txt, ...
     rpm-apple/      RPM.iOS, RPM.tvOS
     rpm-android/    RPM.Android
+    rpm-server/     rpm.Api (the credits page), private; skipped when it is not checked out
 
 Set RPM_WORKSPACE to use another parent folder. A repo that is not checked out is skipped, and a
 generator that needs it stops with the path it could not find.
@@ -16,7 +17,7 @@ import pathlib
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PARENT = os.environ.get("RPM_WORKSPACE") or os.path.dirname(ROOT)
-REPOS = ["rpm", "rpm-desktop", "rpm-apple", "rpm-android"]
+REPOS = ["rpm", "rpm-desktop", "rpm-apple", "rpm-android", "rpm-server"]
 
 
 def path(*parts: str) -> str:
