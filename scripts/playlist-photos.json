@@ -5,10 +5,10 @@
     "WHY IT IS PINNED AND NOT SEARCHED. The app does not fetch these covers. A fetch needs a Pexels",
     "key, and that key is not in this repository, so an install without it would have no photo",
     "covers at all. The choice is the id below; the query beside it records how the choice was found",
-    "and is not re-run. Running the generator with the same ids fetches the same seventy-nine",
+    "and is not re-run. Running the generator with the same ids fetches the same eighty-four",
     "photographs.",
     "",
-    "WHERE THESE SEVENTY-NINE CAME FROM. They are photographs that were looked at and kept, each with",
+    "WHERE THESE EIGHTY-FOUR CAME FROM. They are photographs that were looked at and kept, each with",
     "the query it was found by. So the shipped set is a reviewed set, not a fresh search result that",
     "nobody has seen.",
     "",
@@ -65,6 +65,19 @@
       "by": "Николай Шарлай",
       "page": "https://www.pexels.com/photo/bonfire-near-water-at-sunset-8932563/",
       "source": "https://images.pexels.com/photos/8932563/pexels-photo-8932563.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "kind": "Calm",
+      "genre": "Indie",
+      "decade": 0,
+      "list": "Bedroom Tapes (Indie)",
+      "file": "calm-indie.jpg",
+      "query": "cassette tapes bedroom",
+      "id": 17618795,
+      "alt": "Retro tape cassettes scattered on a wooden cabinet, evoking nostalgia and vintage vibes.",
+      "by": "Esra Erdem",
+      "page": "https://www.pexels.com/photo/tape-cassettes-on-a-cabinet-17618795/",
+      "source": "https://images.pexels.com/photos/17618795/pexels-photo-17618795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     },
     {
       "kind": "Calm",
@@ -133,6 +146,19 @@
     },
     {
       "kind": "Calm",
+      "genre": "Rap",
+      "decade": 0,
+      "list": "Low End (Rap)",
+      "file": "calm-rap.jpg",
+      "query": "subwoofer speaker dark",
+      "id": 6587321,
+      "alt": "A detailed black-and-white close-up image of a speaker, highlighting its intricate design.",
+      "by": "Guillaume Meurice",
+      "page": "https://www.pexels.com/photo/monochrome-shot-of-a-bass-speaker-6587321/",
+      "source": "https://images.pexels.com/photos/6587321/pexels-photo-6587321.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "kind": "Calm",
       "genre": "Hip-Hop / Rap",
       "decade": 0,
       "list": "Just the Bars (Hip-Hop / Rap)",
@@ -143,6 +169,19 @@
       "by": "Viktoria Alipatova",
       "page": "https://www.pexels.com/photo/water-dew-on-glass-panel-2130161/",
       "source": "https://images.pexels.com/photos/2130161/pexels-photo-2130161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "kind": "Calm",
+      "genre": "House",
+      "decade": 0,
+      "list": "Sunrise Set (House)",
+      "file": "calm-house.jpg",
+      "query": "sunrise city rooftop",
+      "id": 6330741,
+      "alt": "A serene sunrise over Paris rooftops, capturing the warm morning glow.",
+      "by": "Riccardo Bertolo",
+      "page": "https://www.pexels.com/photo/photo-of-a-rooftop-during-sunrise-6330741/",
+      "source": "https://images.pexels.com/photos/6330741/pexels-photo-6330741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     },
     {
       "kind": "Calm",
@@ -351,6 +390,19 @@
       "by": "Rafael Minguet Delgado",
       "page": "https://www.pexels.com/photo/vibrant-silk-fabrics-with-rich-colors-35962173/",
       "source": "https://images.pexels.com/photos/35962173/pexels-photo-35962173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "kind": "Energetic",
+      "genre": "Rap",
+      "decade": 0,
+      "list": "Rap Core (Rap)",
+      "file": "energetic-rap.jpg",
+      "query": "rapper stage lights microphone",
+      "id": 20532121,
+      "alt": "Two performers engage the audience during a vibrant rap concert with striking smoke effects.",
+      "by": "Sami TÜRK",
+      "page": "https://www.pexels.com/photo/silhouette-of-rappers-at-concert-20532121/",
+      "source": "https://images.pexels.com/photos/20532121/pexels-photo-20532121.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     },
     {
       "kind": "Energetic",
@@ -598,6 +650,19 @@
       "by": "Maor Attias",
       "page": "https://www.pexels.com/photo/silhouette-of-a-woman-dancing-5191722/",
       "source": "https://images.pexels.com/photos/5191722/pexels-photo-5191722.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "kind": "Danceable",
+      "genre": "Club",
+      "decade": 0,
+      "list": "Guest List (Club)",
+      "file": "danceable-club.jpg",
+      "query": "velvet rope club entrance",
+      "id": 219095,
+      "alt": "Illuminated entrance of a nightclub with neon red lights and a vintage scooter.",
+      "by": "mali maeder",
+      "page": "https://www.pexels.com/photo/white-motor-scooter-near-open-door-219095/",
+      "source": "https://images.pexels.com/photos/219095/pexels-photo-219095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     },
     {
       "kind": "Danceable",

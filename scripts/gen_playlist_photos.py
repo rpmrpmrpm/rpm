@@ -181,7 +181,7 @@ def table(photos):
         "/// a path: where the assets sit is <see cref=\"PlaylistPhotos\"/>'s business and it is the",
         "/// only thing that knows it.</param>",
         "/// <param name=\"Alt\">What the picture is, in words, as Pexels describes it. Nothing draws",
-        "/// this; it is here so the next person to open the table can tell the seventy-nine apart",
+        "/// this; it is here so the next person to open the table can tell the eighty-four apart",
         "/// without looking at them.</param>",
         "/// <param name=\"By\">Who took it. The licence asks for no credit and this is the credit",
         "/// anyway.</param>",
