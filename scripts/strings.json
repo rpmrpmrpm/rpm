@@ -18246,6 +18246,14 @@
     "zh-Hans": "卡拉 OK 歌词",
     "comment": "Row in the Android TV app's settings: whether the sung lyric line lights word by word."
   },
+  "Tv_SettingsMixtapeAfter": {
+    "en": "Mixtape when a record ends",
+    "fr": "Mixtape à la fin d'un disque",
+    "es": "Mixtape al acabar un disco",
+    "de": "Mixtape nach dem Ende einer Platte",
+    "zh-Hans": "唱片播完后播放混音带",
+    "comment": "Row in the Android TV app's settings: whether a mixtape like the album or playlist that just finished starts by itself when it ends."
+  },
   "MoodMaker_New": {
     "en": "New mood playlist…",
     "fr": "Nouvelle playlist d'humeur…",
