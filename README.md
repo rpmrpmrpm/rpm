@@ -6,6 +6,17 @@ TV, and can keep your library in the cloud so it is the same everywhere.
 The apps are open source under the [Mozilla Public License 2.0](LICENSE). Website:
 [rpmrpmrpm.com](https://rpmrpmrpm.com).
 
+<p align="center">
+  <img src="docs/screenshots/desktop.jpg" alt="rpm on a Mac, playing an album with Track Info open beside the album wall">
+</p>
+<p align="center">
+  <img src="docs/screenshots/iphone.jpg" width="20%" alt="The rpm iPhone app: Home">
+  <img src="docs/screenshots/tv.jpg" width="77%" alt="rpm on Android TV: the home screen">
+</p>
+
+rpm on a Mac, on an iPhone and on Android TV. The record covers and photographs in the screenshots
+belong to their owners; the code licence does not cover them.
+
 ## The repos
 
 | Repo | App | Language |
