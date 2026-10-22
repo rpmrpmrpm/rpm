@@ -6449,6 +6449,14 @@
     "zh-Hans": "这台 iPhone",
     "comment": "The entry in the speaker picker that brings playback back to the phone."
   },
+  "Rpm_Cast_ThisAndroidPhone": {
+    "en": "This phone",
+    "fr": "Ce téléphone",
+    "es": "Este teléfono",
+    "de": "Dieses Telefon",
+    "zh-Hans": "这台手机",
+    "comment": "Row in the Android phone's speaker picker that plays on the phone itself. Rpm_Cast_ThisPhone says iPhone."
+  },
   "Tv_Cast_ThisTv": {
     "en": "This TV",
     "fr": "Ce téléviseur",
@@ -16310,6 +16318,14 @@
     "zh-Hans": "要从 iPhone 移除这张专辑吗？它仍会保留在你的云端音乐库中。",
     "comment": "Title of the dialog that removes one downloaded album from the iPhone."
   },
+  "Phone_Download_RemoveQuestion": {
+    "en": "Remove this album from your phone? It stays in your cloud library.",
+    "fr": "Supprimer cet album de votre téléphone ? Il reste dans votre bibliothèque cloud.",
+    "es": "¿Eliminar este álbum de tu teléfono? Seguirá en tu biblioteca en la nube.",
+    "de": "Dieses Album vom Handy entfernen? Es bleibt in deiner Cloud-Bibliothek.",
+    "zh-Hans": "要从手机移除这张专辑吗？它仍会保留在你的云端音乐库中。",
+    "comment": "Android phone: title of the dialog that removes one downloaded album from the phone. Rpm_Download_RemoveQuestion says iPhone."
+  },
   "Rpm_Downloads_Title": {
     "en": "Downloads",
     "fr": "Téléchargements",
@@ -16405,6 +16421,14 @@
     "de": "{0} Alben vom iPhone entfernen? Sie bleiben in deiner Cloud-Bibliothek.",
     "zh-Hans": "要从 iPhone 移除 {0} 张专辑吗？它们仍会保留在你的云端音乐库中。",
     "comment": "Title of the dialog that removes several downloaded albums from the iPhone."
+  },
+  "Phone_Downloads_RemoveQuestion": {
+    "en": "Remove {0} albums from your phone? They stay in your cloud library.",
+    "fr": "Supprimer {0} albums de votre téléphone ? Ils restent dans votre bibliothèque cloud.",
+    "es": "¿Eliminar {0} álbumes de tu teléfono? Seguirán en tu biblioteca en la nube.",
+    "de": "{0} Alben vom Handy entfernen? Sie bleiben in deiner Cloud-Bibliothek.",
+    "zh-Hans": "要从手机移除 {0} 张专辑吗？它们仍会保留在你的云端音乐库中。",
+    "comment": "Android phone: title of the dialog that removes several downloaded albums from the phone. {0} is how many. Rpm_Downloads_RemoveQuestion says iPhone."
   },
   "Rpm_Downloads_Empty": {
     "en": "No downloads yet. Open an album and tap the download button to play it without an internet connection.",
