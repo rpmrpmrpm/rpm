@@ -1,5 +1,5 @@
 {
-  "$comment": "Everything RPM ships that somebody else made, and everything it asks. Read by scripts/gen_credits.py, which writes RPM.Desktop/Presentation/About/Credits.Data.cs and RPM.iOS/Modules/RPMKit/Sources/RPMKit/CreditsData.swift, and copies scripts/licenses/*.txt into both heads. NEITHER TABLE IS HAND-EDITED. 'heads' says which head actually ships or calls the thing, and an entry missing from a head is missing from that head's screen: the phone carries no ffmpeg, no ONNX and no SQLite, and saying otherwise on its About screen would be a false statement about what is on the device. 'use' is the key of a string in scripts/strings.json; gen_credits.py fails if it is not there, so a new entry cannot ship with an untranslated line. 'license' names keys of the 'licenses' map below. 'source' is where the exact source of the shipped version is; '{version}' in it is replaced with the entry's version, and an entry under an LGPL licence must have one. 'version_from' names a key in scripts/tool-versions.txt and stands in for 'version' on the tools built or fetched from the versions there, so those versions are written in one place. Two sections are not listed here at all: the wordmark typefaces are generated from scripts/wordmarks.json and the photographs from scripts/genre-photos.json and scripts/playlist-photos.json, because those files are already the source for the assets themselves and a second copy here would drift.",
+  "$comment": "Everything RPM ships that somebody else made, and everything it asks. Read by scripts/gen_credits.py, which writes RPM.Desktop/Presentation/About/Credits.Data.cs, RPM.iOS/Modules/RPMKit/Sources/RPMKit/CreditsData.swift and the Android phone app's RPM.Android/phone/src/main/java/com/rpm/player/phone/profile/CreditsData.kt, and copies scripts/licenses/*.txt into the three heads. NEITHER TABLE IS HAND-EDITED. 'heads' says which head actually ships or calls the thing, and an entry missing from a head is missing from that head's screen: the iPhone carries no ffmpeg, no ONNX and no SQLite, the Android phone carries Media3 and an FFmpeg of its own, and saying otherwise on its About screen would be a false statement about what is on the device. 'use' is the key of a string in scripts/strings.json; gen_credits.py fails if it is not there, so a new entry cannot ship with an untranslated line. 'license' names keys of the 'licenses' map below. 'source' is where the exact source of the shipped version is; '{version}' in it is replaced with the entry's version, and an entry under an LGPL licence must have one. 'version_from' names a key in scripts/tool-versions.txt and stands in for 'version' on the tools built or fetched from the versions there, so those versions are written in one place. Two sections are not listed here at all: the wordmark typefaces are generated from scripts/wordmarks.json and the photographs from scripts/genre-photos.json and scripts/playlist-photos.json, because those files are already the source for the assets themselves and a second copy here would drift.",
   "licenses": {
     "MIT": {
       "name": "MIT License",
@@ -85,6 +85,11 @@
       "name": "Unicode License v3",
       "file": "Unicode-3.0.txt",
       "url": "https://spdx.org/licenses/Unicode-3.0.html"
+    },
+    "MPL-2.0": {
+      "name": "Mozilla Public License 2.0",
+      "file": "MPL-2.0.txt",
+      "url": "https://spdx.org/licenses/MPL-2.0.html"
     },
     "SkiaNotices": {
       "name": "Skia third-party notices",
@@ -603,6 +608,201 @@
           "heads": [
             "desktop"
           ]
+        },
+        {
+          "id": "Kotlin",
+          "name": "Kotlin",
+          "version": "2.4.21",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright 2010-2026 JetBrains s.r.o. and Kotlin Programming Language contributors",
+          "url": "https://kotlinlang.org",
+          "use": "Credits_Kotlin_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "KotlinxCoroutines",
+          "name": "kotlinx.coroutines",
+          "version": "1.11.0",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright 2016-2026 JetBrains s.r.o. and contributors",
+          "url": "https://github.com/Kotlin/kotlinx.coroutines",
+          "use": "Credits_KotlinxCoroutines_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "KotlinxSerialization",
+          "name": "kotlinx.serialization",
+          "version": "1.11.0",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright 2017-2026 JetBrains s.r.o. and contributors",
+          "url": "https://github.com/Kotlin/kotlinx.serialization",
+          "use": "Credits_KotlinxSerialization_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "JetpackCompose",
+          "name": "Jetpack Compose",
+          "version": "1.12.1",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright The Android Open Source Project",
+          "url": "https://developer.android.com/compose",
+          "use": "Credits_Compose_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "AndroidX",
+          "name": "AndroidX",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright The Android Open Source Project",
+          "url": "https://developer.android.com/jetpack/androidx",
+          "use": "Credits_AndroidX_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "OkHttp",
+          "name": "OkHttp",
+          "version": "5.5.0",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright 2019 Square, Inc.",
+          "url": "https://square.github.io/okhttp/",
+          "use": "Credits_OkHttp_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "Okio",
+          "name": "Okio",
+          "version": "3.18.1",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright 2013 Square, Inc.",
+          "url": "https://square.github.io/okio/",
+          "use": "Credits_Okio_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "PublicSuffixList",
+          "name": "Public Suffix List",
+          "detail": "inside OkHttp",
+          "license": [
+            "MPL-2.0"
+          ],
+          "url": "https://publicsuffix.org",
+          "source": "https://github.com/publicsuffix/list",
+          "use": "Credits_PublicSuffixList_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "Coil",
+          "name": "Coil",
+          "version": "3.6.3",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright 2025 Coil Contributors",
+          "url": "https://coil-kt.github.io/coil/",
+          "use": "Credits_Coil_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "AndroidSvg",
+          "name": "AndroidSVG",
+          "version": "1.4",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright 2013 Paul LeBeau, Cave Rock Software Ltd.",
+          "url": "https://bigbadaboom.github.io/androidsvg/",
+          "use": "Credits_AndroidSvg_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "DrawablePainter",
+          "name": "Accompanist Drawable Painter",
+          "version": "0.37.3",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright 2021 The Android Open Source Project",
+          "url": "https://google.github.io/accompanist/",
+          "use": "Credits_DrawablePainter_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "MlKitFaces",
+          "name": "ML Kit face detection",
+          "version": "16.1.7",
+          "detail": "with Google Play services",
+          "license": [
+            "Terms"
+          ],
+          "url": "https://developers.google.com/ml-kit/vision/face-detection",
+          "license_url": "https://developers.google.com/ml-kit/terms",
+          "use": "Credits_MlKitFaces_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "FirebaseComponents",
+          "name": "Firebase components and Data Transport",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright Google LLC",
+          "url": "https://github.com/firebase/firebase-android-sdk",
+          "use": "Credits_MlKitParts_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "JavaxInject",
+          "name": "javax.inject",
+          "version": "1",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright (C) 2009 The JSR-330 Expert Group",
+          "url": "https://github.com/javax-inject/javax-inject",
+          "use": "Credits_MlKitParts_Use",
+          "heads": [
+            "android"
+          ]
         }
       ]
     },
@@ -797,6 +997,64 @@
           "heads": [
             "desktop"
           ]
+        },
+        {
+          "id": "Media3",
+          "name": "AndroidX Media3",
+          "version": "1.11.1",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright The Android Open Source Project",
+          "url": "https://developer.android.com/media/media3",
+          "use": "Credits_Media3_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "Media3Ffmpeg",
+          "name": "Media3 FFmpeg decoder",
+          "version": "1.11.1",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright The Android Open Source Project",
+          "url": "https://github.com/androidx/media/tree/release/libraries/decoder_ffmpeg",
+          "use": "Credits_Media3Ffmpeg_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "FfmpegAndroid",
+          "name": "FFmpeg",
+          "version_from": "FFMPEG_VERSION",
+          "detail": "inside the Media3 FFmpeg decoder",
+          "license": [
+            "LGPL-2.1-or-later"
+          ],
+          "copyright": "Copyright (c) 2000-2026 the FFmpeg developers",
+          "url": "https://ffmpeg.org",
+          "source": "https://ffmpeg.org/releases/ffmpeg-{version}.tar.xz",
+          "use": "Credits_FfmpegAndroid_Use",
+          "heads": [
+            "android"
+          ]
+        },
+        {
+          "id": "Guava",
+          "name": "Guava",
+          "version": "33.3.1-android",
+          "license": [
+            "Apache-2.0"
+          ],
+          "copyright": "Copyright (C) The Guava Authors",
+          "url": "https://github.com/google/guava",
+          "use": "Credits_Guava_Use",
+          "heads": [
+            "android"
+          ]
         }
       ]
     },
@@ -885,7 +1143,8 @@
           "use": "Credits_Cabin_Use",
           "heads": [
             "desktop",
-            "iphone"
+            "iphone",
+            "android"
           ]
         },
         {
@@ -899,7 +1158,8 @@
           "use": "Credits_Thiamine_Use",
           "heads": [
             "desktop",
-            "iphone"
+            "iphone",
+            "android"
           ]
         },
         {
@@ -927,7 +1187,8 @@
           "use": "Credits_FontAwesome_Use",
           "heads": [
             "desktop",
-            "iphone"
+            "iphone",
+            "android"
           ]
         },
         {
@@ -1032,7 +1293,8 @@
           "use": "Credits_Wikipedia_Use",
           "heads": [
             "desktop",
-            "iphone"
+            "iphone",
+            "android"
           ]
         },
         {
@@ -1045,7 +1307,8 @@
           "use": "Credits_Wikidata_Use",
           "heads": [
             "desktop",
-            "iphone"
+            "iphone",
+            "android"
           ]
         },
         {
@@ -1098,7 +1361,8 @@
           "use": "Credits_LrcLib_Use",
           "heads": [
             "desktop",
-            "iphone"
+            "iphone",
+            "android"
           ]
         },
         {
@@ -1111,7 +1375,8 @@
           "use": "Credits_ListenBrainz_Use",
           "heads": [
             "desktop",
-            "iphone"
+            "iphone",
+            "android"
           ]
         },
         {
@@ -1125,7 +1390,8 @@
           "use": "Credits_Fanart_Use",
           "heads": [
             "desktop",
-            "iphone"
+            "iphone",
+            "android"
           ]
         },
         {
@@ -1139,7 +1405,8 @@
           "use": "Credits_TheAudioDb_Use",
           "heads": [
             "desktop",
-            "iphone"
+            "iphone",
+            "android"
           ]
         },
         {
@@ -1164,7 +1431,8 @@
           "use": "Credits_RadioBrowser_Use",
           "heads": [
             "desktop",
-            "iphone"
+            "iphone",
+            "android"
           ]
         },
         {

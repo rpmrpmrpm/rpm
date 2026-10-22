@@ -15406,6 +15406,142 @@
     "zh-Hans": "专辑、曲目与发行信息。",
     "comment": "About screen: what SonoVault is asked for."
   },
+  "Credits_Kotlin_Use": {
+    "en": "The language the Android app is written in, and its standard library.",
+    "fr": "Le langage dans lequel l'application Android est écrite, et sa bibliothèque standard.",
+    "es": "El lenguaje en el que está escrita la aplicación de Android, y su biblioteca estándar.",
+    "de": "Die Sprache, in der die Android-App geschrieben ist, und ihre Standardbibliothek.",
+    "zh-Hans": "Android 应用的编写语言及其标准库。",
+    "comment": "About screen, Android app: what Kotlin is used for."
+  },
+  "Credits_KotlinxCoroutines_Use": {
+    "en": "Runs the app's work in the background, so the screen never waits.",
+    "fr": "Exécute le travail de l'application en arrière-plan, pour que l'écran n'attende jamais.",
+    "es": "Ejecuta el trabajo de la aplicación en segundo plano, para que la pantalla nunca espere.",
+    "de": "Erledigt die Arbeit der App im Hintergrund, damit der Bildschirm nie wartet.",
+    "zh-Hans": "在后台运行应用的工作，让界面无需等待。",
+    "comment": "About screen, Android app: what kotlinx.coroutines is used for."
+  },
+  "Credits_KotlinxSerialization_Use": {
+    "en": "Reads what rpm's server sends, and writes what the app keeps.",
+    "fr": "Lit ce qu'envoie le serveur de rpm et écrit ce que l'application conserve.",
+    "es": "Lee lo que envía el servidor de rpm y escribe lo que la aplicación guarda.",
+    "de": "Liest, was der Server von rpm sendet, und schreibt, was die App speichert.",
+    "zh-Hans": "读取 rpm 服务器发送的数据，并写入应用保存的内容。",
+    "comment": "About screen, Android app: what kotlinx.serialization is used for."
+  },
+  "Credits_Compose_Use": {
+    "en": "The interface framework the Android app is written against.",
+    "fr": "Le framework d'interface sur lequel l'application Android est écrite.",
+    "es": "El framework de interfaz sobre el que está escrita la aplicación de Android.",
+    "de": "Das Oberflächen-Framework, gegen das die Android-App geschrieben ist.",
+    "zh-Hans": "Android 应用所依据的界面框架。",
+    "comment": "About screen, Android app: what Jetpack Compose is used for."
+  },
+  "Credits_AndroidX_Use": {
+    "en": "Android's support libraries: the app's life cycle, the sign-in page in a browser tab, and the profiles that make it start quickly.",
+    "fr": "Les bibliothèques de support d'Android : le cycle de vie de l'application, la page de connexion dans un onglet du navigateur et les profils qui la font démarrer vite.",
+    "es": "Las bibliotecas de soporte de Android: el ciclo de vida de la aplicación, la página de inicio de sesión en una pestaña del navegador y los perfiles que la hacen arrancar rápido.",
+    "de": "Die Support-Bibliotheken von Android: der Lebenszyklus der App, die Anmeldeseite in einem Browser-Tab und die Profile, mit denen sie schnell startet.",
+    "zh-Hans": "Android 的支持库：应用的生命周期、浏览器标签页中的登录页面，以及让应用快速启动的配置文件。",
+    "comment": "About screen, Android app: what the AndroidX libraries is used for."
+  },
+  "Credits_Media3_Use": {
+    "en": "Plays every song and station, and shows what is playing on the lock screen and on headphone and car controls.",
+    "fr": "Lit chaque morceau et chaque station, et affiche la lecture en cours sur l'écran de verrouillage et sur les commandes des écouteurs et de la voiture.",
+    "es": "Reproduce cada canción y emisora, y muestra lo que suena en la pantalla de bloqueo y en los controles de los auriculares y del coche.",
+    "de": "Spielt jeden Titel und jeden Sender ab und zeigt die Wiedergabe auf dem Sperrbildschirm und an Kopfhörer- und Autobedienelementen.",
+    "zh-Hans": "播放每首歌曲和每个电台，并在锁屏以及耳机和车载控制上显示正在播放的内容。",
+    "comment": "About screen, Android app: what AndroidX Media3 is used for."
+  },
+  "Credits_Media3Ffmpeg_Use": {
+    "en": "Hands the songs Android cannot decode itself to FFmpeg.",
+    "fr": "Confie à FFmpeg les morceaux qu'Android ne sait pas décoder lui-même.",
+    "es": "Pasa a FFmpeg las canciones que Android no puede descodificar por sí mismo.",
+    "de": "Übergibt FFmpeg die Titel, die Android nicht selbst dekodieren kann.",
+    "zh-Hans": "将 Android 自身无法解码的歌曲交给 FFmpeg。",
+    "comment": "About screen, Android app: what Media3's FFmpeg decoder is used for."
+  },
+  "Credits_FfmpegAndroid_Use": {
+    "en": "Decodes ALAC, AC-3 and E-AC-3 files played from a computer on your home network.",
+    "fr": "Décode les fichiers ALAC, AC-3 et E-AC-3 lus depuis un ordinateur de votre réseau domestique.",
+    "es": "Descodifica los archivos ALAC, AC-3 y E-AC-3 que se reproducen desde un ordenador de tu red doméstica.",
+    "de": "Dekodiert ALAC-, AC-3- und E-AC-3-Dateien, die von einem Computer in deinem Heimnetz abgespielt werden.",
+    "zh-Hans": "解码从家庭网络中的电脑播放的 ALAC、AC-3 和 E-AC-3 文件。",
+    "comment": "About screen, Android app: what FFmpeg, as built into the Android app is used for."
+  },
+  "Credits_Guava_Use": {
+    "en": "Utilities that Media3 is built on.",
+    "fr": "Des utilitaires sur lesquels repose Media3.",
+    "es": "Utilidades sobre las que se basa Media3.",
+    "de": "Hilfsbibliotheken, auf denen Media3 aufbaut.",
+    "zh-Hans": "Media3 所依赖的工具库。",
+    "comment": "About screen, Android app: what Guava is used for."
+  },
+  "Credits_OkHttp_Use": {
+    "en": "Every request the app sends to rpm's server and to the catalogues.",
+    "fr": "Chaque requête que l'application envoie au serveur de rpm et aux catalogues.",
+    "es": "Cada solicitud que la aplicación envía al servidor de rpm y a los catálogos.",
+    "de": "Jede Anfrage, die die App an den Server von rpm und an die Kataloge sendet.",
+    "zh-Hans": "应用发送给 rpm 服务器和各目录服务的每个请求。",
+    "comment": "About screen, Android app: what OkHttp is used for."
+  },
+  "Credits_Okio_Use": {
+    "en": "The reading and writing under OkHttp and the image loader.",
+    "fr": "La lecture et l'écriture sous OkHttp et le chargeur d'images.",
+    "es": "La lectura y escritura bajo OkHttp y el cargador de imágenes.",
+    "de": "Das Lesen und Schreiben unter OkHttp und dem Bildlader.",
+    "zh-Hans": "OkHttp 和图片加载器底层的读写。",
+    "comment": "About screen, Android app: what Okio is used for."
+  },
+  "Credits_PublicSuffixList_Use": {
+    "en": "Tells OkHttp which part of a web address names the site.",
+    "fr": "Indique à OkHttp quelle partie d'une adresse web désigne le site.",
+    "es": "Indica a OkHttp qué parte de una dirección web nombra el sitio.",
+    "de": "Sagt OkHttp, welcher Teil einer Webadresse die Website benennt.",
+    "zh-Hans": "告诉 OkHttp 网址中哪一部分是站点名称。",
+    "comment": "About screen, Android app: what the Public Suffix List, inside OkHttp is used for."
+  },
+  "Credits_Coil_Use": {
+    "en": "Loads and keeps cover art, photographs and station logos.",
+    "fr": "Charge et conserve les pochettes, les photographies et les logos des stations.",
+    "es": "Carga y guarda las portadas, las fotografías y los logotipos de las emisoras.",
+    "de": "Lädt und speichert Cover, Fotos und Senderlogos.",
+    "zh-Hans": "加载并缓存封面、照片和电台标志。",
+    "comment": "About screen, Android app: what Coil is used for."
+  },
+  "Credits_AndroidSvg_Use": {
+    "en": "Draws the station logos that are published as SVG drawings.",
+    "fr": "Dessine les logos de stations publiés sous forme de dessins SVG.",
+    "es": "Dibuja los logotipos de emisoras que se publican como dibujos SVG.",
+    "de": "Zeichnet die Senderlogos, die als SVG-Zeichnungen veröffentlicht sind.",
+    "zh-Hans": "绘制以 SVG 图形发布的电台标志。",
+    "comment": "About screen, Android app: what AndroidSVG is used for."
+  },
+  "Credits_DrawablePainter_Use": {
+    "en": "Lets the image loader draw its pictures in Compose.",
+    "fr": "Permet au chargeur d'images de dessiner ses images dans Compose.",
+    "es": "Permite que el cargador de imágenes dibuje sus imágenes en Compose.",
+    "de": "Lässt den Bildlader seine Bilder in Compose zeichnen.",
+    "zh-Hans": "让图片加载器在 Compose 中绘制图片。",
+    "comment": "About screen, Android app: what Accompanist Drawable Painter is used for."
+  },
+  "Credits_MlKitFaces_Use": {
+    "en": "Finds the faces in artists' photographs, on the phone, so a crop keeps them in view.",
+    "fr": "Repère les visages sur les photos des artistes, sur le téléphone, pour qu'un recadrage les garde visibles.",
+    "es": "Encuentra las caras en las fotografías de los artistas, en el teléfono, para que un recorte las mantenga a la vista.",
+    "de": "Findet die Gesichter auf Künstlerfotos, auf dem Telefon, damit ein Zuschnitt sie im Bild behält.",
+    "zh-Hans": "在手机上识别艺人照片中的面孔，让裁剪时面孔保持在画面内。",
+    "comment": "About screen, Android app: what ML Kit face detection is used for."
+  },
+  "Credits_MlKitParts_Use": {
+    "en": "Part of what ML Kit is built on.",
+    "fr": "Fait partie de ce sur quoi repose ML Kit.",
+    "es": "Forma parte de aquello sobre lo que se basa ML Kit.",
+    "de": "Teil dessen, worauf ML Kit aufbaut.",
+    "zh-Hans": "ML Kit 所依赖的组件之一。",
+    "comment": "About screen, Android app: what the libraries ML Kit needs (Firebase components, javax.inject) is used for."
+  },
   "Wizard_StepOf": {
     "en": "Step {0} of {1}",
     "fr": "Étape {0} sur {1}",

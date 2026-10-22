@@ -3,8 +3,8 @@
 # Downloads the licence texts the About screen shows, verbatim, into scripts/licenses/.
 #
 # They are committed, because they ship inside the app: scripts/gen_credits.py copies them into
-# RPM.Desktop/Assets/Licenses and into RPMKit's resources. This script exists so that no licence is
-# typed by hand: a licence that is nearly right is not the licence.
+# RPM.Desktop/Assets/Licenses, into RPMKit's resources and into the Android phone app's assets. This
+# script exists so that no licence is typed by hand: a licence that is nearly right is not the licence.
 #
 # Three sources, in order of preference:
 #
@@ -42,6 +42,7 @@ declare -a SPDX=(
   CC-BY-SA-4.0
   CC0-1.0
   blessing
+  MPL-2.0
 )
 
 # The version that Directory.Packages.props pins for a package, so a notices file always matches

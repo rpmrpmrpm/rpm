@@ -1,35 +1,49 @@
 #!/usr/bin/env python3
-"""Writes the credits tables that both apps (the "heads") read, from scripts/credits.json.
+"""Writes the credits tables that the apps (the "heads") read, from scripts/credits.json.
 
 What it writes
 --------------
     RPM.Desktop/Presentation/About/Credits.Data.cs          the desktop's list
     RPM.Desktop/Assets/Licenses/*.txt                       the licence texts it shows
-    RPM.iOS/Modules/RPMKit/Sources/RPMKit/CreditsData.swift the phone's list
+    RPM.iOS/Modules/RPMKit/Sources/RPMKit/CreditsData.swift the iPhone's list
     RPM.iOS/Modules/RPMKit/Sources/RPMKit/Licenses/*.txt    the licence texts it shows
-    rpm.Api/Views/Site/Credits.cshtml                       rpmrpmrpm.com/credits, both heads' entries
+    RPM.Android/phone/src/main/java/com/rpm/player/phone/profile/CreditsData.kt
+                                                            the Android phone's list
+    RPM.Android/phone/src/main/assets/credits/*.txt         the licence texts it shows
+    rpm.Api/Views/Site/Credits.cshtml                       rpmrpmrpm.com/credits, every head's entries
     rpm.Api/wwwroot/licenses/*.txt                          the licence texts that page links
-    rpm.Api/wwwroot/source/                                 the ffmpeg build script and its versions
+    rpm.Api/wwwroot/source/                                 the ffmpeg build scripts and their versions
 
-Do not edit the generated files by hand. Both asset folders are emptied and rewritten, so that a
+Do not edit the generated files by hand. The asset folders are emptied and rewritten, so that a
 licence file is never left behind after the last entry using it is removed (the app would carry a
-licence text it does not name).
+licence text it does not name). The Android phone's folder is called credits and not licenses
+because `:core`, which the phone links, has an assets/licenses folder of its own for the TV app's
+fonts, and assets of the same folder are merged into one in the APK.
 
-The two lists differ, which is the purpose of the "heads" field. The phone ships no ffmpeg, no
-ONNX runtime and no SQLite, so naming them on its screen would be false. Each head gets the entries
-that head ships or calls, and only the licence texts those entries need.
+The lists differ, which is the purpose of the "heads" field. The iPhone ships no ffmpeg, no ONNX
+runtime and no SQLite, so naming them on its screen would be false. The Android phone ships
+Media3, Compose, OkHttp, Coil, ML Kit and an FFmpeg of its own with three decoders. Each head gets
+the entries that head ships or calls, and only the licence texts those entries need.
 
 Two sections are not written by hand. The wordmark typefaces come from scripts/wordmarks.json and
 the photographs from scripts/genre-photos.json, scripts/playlist-photos.json and
 scripts/backdrop-photos.json. Those files are already the source for the assets themselves, and
-copying them into credits.json would create a second place that can go out of date.
+copying them into credits.json would create a second place that can go out of date. On the
+Android phone a photograph is credited when its file is in the app, and a photograph in the app's
+genre-photos or playlist-photos folder that no table names is an error.
+
+The Android files are written into the RPM.Android folder of rpm-android, or of the folder that
+RPM_ANDROID names (a worktree, for example). When neither is there, the Android phone's files are
+not written. The website's page lists every head, so it is then not written either: it stops with
+an error rather than leave the Android entries off it.
 
 Failure behaviour
 -----------------
 It never fails quietly. It exits non-zero if an entry names a string key that is not in
 strings.json, a licence that is not in the map, a licence whose text file is missing, or a
 version_from key that is not in scripts/tool-versions.txt, or if a file in scripts/licenses is
-named by no entry. A wrong credits screen is worse than none.
+named by no entry. A wrong credits screen is worse than none. The Kotlin table names each string
+as R.string.<key>, so a key that `:core`'s string tables do not have fails the Android build too.
 
 Run it after editing scripts/credits.json, and after gen_locales.py has written the strings:
 
@@ -66,11 +80,25 @@ SWIFT_LICENSES = workspace.path(
 # build script next to it, because the LGPL requires them to be available. rpm.Api is in the private
 # server repo; when it is not checked out next to this repo (RPM_SITE sets another folder), the page
 # is not written and the apps' files still are.
-SITE = os.environ.get("RPM_SITE") or os.path.join(workspace.PARENT, "rpm.Api")
+SITE = os.environ.get("RPM_SITE") or workspace.path("rpm.Api")
 SITE_VIEW = os.path.join(SITE, "Views", "Site", "Credits.cshtml")
 SITE_LICENSES = os.path.join(SITE, "wwwroot", "licenses")
 SITE_SOURCE = os.path.join(SITE, "wwwroot", "source")
 BUILD_SCRIPT = workspace.path("scripts", "build-ffmpeg.sh")
+
+# The Android phone app. RPM_ANDROID names another RPM.Android folder, such as one in a worktree, so
+# the table can be written there without touching the shared checkout.
+ANDROID = os.environ.get("RPM_ANDROID") or workspace.path("RPM.Android")
+KT_OUT = os.path.join(
+    ANDROID, "phone", "src", "main", "java", "com", "rpm", "player", "phone", "profile", "CreditsData.kt")
+KT_LICENSES = os.path.join(ANDROID, "phone", "src", "main", "assets", "credits")
+# Where the Android phone carries the photographs, as the scripts that copy them write them.
+ANDROID_GENRE_PHOTOS = os.path.join(ANDROID, "phone", "src", "main", "assets", "genre-photos")
+ANDROID_LIST_PHOTOS = os.path.join(ANDROID, "core", "src", "main", "assets", "playlist-photos")
+ANDROID_BACKDROPS = os.path.join(ANDROID, "phone", "src", "main", "res", "drawable-nodpi")
+# The script that builds the FFmpeg libraries the Android app's FFmpeg decoder links. It is in
+# rpm-android's scripts folder, beside RPM.Android.
+ANDROID_BUILD_SCRIPT = os.path.join(os.path.dirname(ANDROID), "scripts", "build-android-ffmpeg.sh")
 
 # The first line is what Roslyn reads to decide that a file is generated. The analyser rule RPM002
 # (a catalogue's address written outside the API) skips generated code, and it must skip this file:
@@ -78,6 +106,10 @@ BUILD_SCRIPT = workspace.path("scripts", "build-ffmpeg.sh")
 # stop the app from calling one. The second line tells a person who wrote the file.
 BANNER = ("// <auto-generated/>\n"
           "// Written by scripts/gen_credits.py from scripts/credits.json. Do not edit.")
+
+
+# The apps a credit can be on: the desktop app (Mac and Windows), the iPhone and the Android phone.
+HEADS = {"desktop", "iphone", "android"}
 
 
 def load(path: str) -> dict:
@@ -150,7 +182,9 @@ def wordmark_entries() -> list[dict]:
 
     One entry per family, because the typeface is what is credited and two shelves may share one.
     No font file is shipped for these: the app carries the letterforms as outlines, which the SIL
-    Open Font License permits. All of them are under the same OFL text.
+    Open Font License permits. All of them are under the same OFL text. The Android phone carries
+    the same outlines (GenreWordmarkTable.kt, written by gen_wordmarks.py) and draws its genres wall
+    with them.
     """
     data = load(WORDMARKS)
     seen: dict[str, dict] = {}
@@ -164,10 +198,24 @@ def wordmark_entries() -> list[dict]:
             "name": family,
             "license": ["OFL-1.1"],
             "url": shelf.get("url") or google_fonts_url(family),
-            "heads": ["desktop"],
+            "heads": ["desktop", "android"],
         }
 
     return [seen[family] for family in sorted(seen)]
+
+
+def genre_photo_name(genre: str) -> str:
+    """The file a genre's photograph has on the phones: gen_genre_photos.slug with "genre-" before it,
+    as gen_genre_photos_phone.py writes it. Written out here rather than imported, because that
+    module needs the imaging libraries; if the two ever differ, the check in photo_entries fails."""
+    return "genre-" + re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", genre.lower())).strip("-") + ".jpg"
+
+
+def android_photos(folder: str) -> set[str]:
+    """The photographs in one of the Android app's folders, or an empty set when it is not there."""
+    if not os.path.isdir(folder):
+        return set()
+    return {name for name in os.listdir(folder) if name.endswith(".jpg")}
 
 
 def photo_entries() -> list[dict]:
@@ -178,45 +226,75 @@ def photo_entries() -> list[dict]:
     page. The playlist photographs sit behind the frame of a generated list. The backdrop
     photographs are desktop backdrops in Settings, after a script has coloured them.
 
-    Both heads ship the genre and playlist photographs: the phone's genre photographs are cut by
-    gen_genre_photos_phone.py and its playlist photographs are copied by
-    gen_playlist_photos_phone.py, so both About screens list them.
+    Every head ships the genre and playlist photographs: the phones' genre photographs are cut by
+    gen_genre_photos_phone.py, the iPhone's playlist photographs are copied by
+    gen_playlist_photos_phone.py and the Android apps' by gen_playlist_photos_tv.py, so every
+    About screen lists them.
 
     The Pexels licence does not require credit. Credit is given anyway, by the photographer's name,
     because a person took each picture.
+
+    The Android phone is credited with the photographs whose files are in it, looked up where the
+    copying scripts put them: the genre photographs in the phone's assets, the playlist photographs
+    in `:core`'s (the TV and the phone share them), and a backdrop under its resource name in the
+    phone's drawable-nodpi (background-sheet-music.jpg is background_sheet_music.jpg there). The
+    other direction is checked for the two photograph folders: a picture there that no table names
+    would ship with nobody credited, so it stops the script. The backdrop folder is not checked
+    that way, because it also holds the backdrops rpm draws itself.
     """
     entries = []
+    genre_files = android_photos(ANDROID_GENRE_PHOTOS)
+    list_files = android_photos(ANDROID_LIST_PHOTOS)
+    backdrop_files = android_photos(ANDROID_BACKDROPS)
 
+    def heads(*base: str, android: bool) -> list[str]:
+        return list(base) + (["android"] if android else [])
+
+    named_genres = set()
     for photo in load(PHOTOS)["photos"]:
+        name = genre_photo_name(photo["genre"])
+        named_genres.add(name)
         entries.append({
             "id": "Photo" + re.sub(r"[^A-Za-z0-9]", "", photo["genre"]),
             "name": photo.get("by") or "Unknown",
             "detail": photo["genre"],
             "license": ["Pexels"],
             "url": photo.get("page", ""),
-            "heads": ["desktop", "iphone"],
+            "heads": heads("desktop", "iphone", android=name in genre_files),
         })
 
+    named_lists = set()
     for photo in load(LIST_PHOTOS)["photos"]:
+        named_lists.add(photo["file"])
         entries.append({
             "id": "ListPhoto" + re.sub(r"[^A-Za-z0-9]", "", photo["file"]),
             "name": photo.get("by") or "Unknown",
             "detail": photo["list"],
             "license": ["Pexels"],
             "url": photo.get("page", ""),
-            "heads": ["desktop", "iphone"],
+            "heads": heads("desktop", "iphone", android=photo["file"] in list_files),
         })
 
-    # Desktop only: the phone has its own backdrops, and none of them is a photograph.
+    # The Android phone carries the Sheet music backdrop, cut from this photograph by
+    # make_sheet_music.py. The iPhone carries the same cut, but its list does not credit it yet:
+    # crediting it there changes the iPhone's table, and that is a change of its own.
     for photo in load(BACKDROP_PHOTOS)["photos"]:
+        resource = photo["file"].replace("-", "_")
         entries.append({
             "id": "BackdropPhoto" + re.sub(r"[^A-Za-z0-9]", "", photo["backdrop"]),
             "name": photo.get("by") or "Unknown",
             "detail": photo["backdrop"] + " (backdrop)",
             "license": ["Pexels"],
             "url": photo.get("page", ""),
-            "heads": ["desktop"],
+            "heads": heads("desktop", android=resource in backdrop_files),
         })
+
+    unnamed = sorted(genre_files - named_genres) + sorted(list_files - named_lists)
+    if unnamed:
+        for name in unnamed:
+            print(f"gen_credits: the Android app carries the photograph {name}, which no table names",
+                  file=sys.stderr)
+        sys.exit(1)
 
     return sorted(entries, key=lambda e: e["detail"])
 
@@ -254,6 +332,8 @@ def check(credits: dict, sections: list[dict]) -> set[str]:
 
             if not entry.get("heads"):
                 problems.append(f"{where} ships on no head")
+            for head in sorted(set(entry.get("heads", [])) - HEADS):
+                problems.append(f"{where} names the head {head}, which is not an app")
 
             for key in entry["license"]:
                 if key not in licences:
@@ -365,12 +445,20 @@ def write_site(credits: dict, sections: list[dict]) -> None:
 
     # Which app ships the entry. The text says "Desktop" and does not name Mac and Windows, because
     # the desktop list is one list for both, and some entries (the Windows App SDK, Win2D) are on
-    # only one of them.
+    # only one of them. "Android" is the Android phone app.
     def heads(entry: dict) -> str:
-        on = set(entry["heads"])
-        if on == {"desktop", "iphone"}:
-            return "Desktop and iPhone"
-        return "Desktop" if on == {"desktop"} else "iPhone"
+        names = [name for head, name in (("desktop", "Desktop"), ("iphone", "iPhone"),
+                                         ("android", "Android")) if head in entry["heads"]]
+        return names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1]
+
+    # The Android app's FFmpeg decoder, whose version the page names beside the FFmpeg it links.
+    decoder = next((e for sec in sections for e in sec["entries"] if e["id"] == "Media3Ffmpeg"), None)
+    if decoder is None or not decoder.get("version"):
+        raise SystemExit("gen_credits: the page describes the Android app's FFmpeg decoder, "
+                         "but credits.json has no Media3Ffmpeg entry with a version")
+    if not os.path.exists(ANDROID_BUILD_SCRIPT):
+        raise SystemExit(f"gen_credits: the page publishes {ANDROID_BUILD_SCRIPT}, which is not there "
+                         "(check out rpm-android beside this repo, or set RPM_ANDROID)")
 
     lines = [
         "@* Written by RPM/scripts/gen_credits.py from RPM/scripts/credits.json. Not hand-edited: run the script. *@",
@@ -422,6 +510,24 @@ def write_site(credits: dict, sections: list[dict]) -> None:
     lines += [
         "</ul>",
         "",
+        "<h3>FFmpeg in the Android app</h3>",
+        f"<p>The Android app carries FFmpeg {text(versions['FFMPEG_VERSION'])}'s libavcodec, libavutil "
+        "and libswresample, built by rpm under the LGPL 2.1 or later with only the ALAC, AC-3 and "
+        "E-AC-3 decoders and no GPL or nonfree parts. They are linked into "
+        "<code>libffmpegJNI.so</code> together with Media3's FFmpeg decoder "
+        f"{text(decoder['version'])}, which is under the Apache License 2.0.</p>",
+        "<ul>",
+        f"    <li>Build script: {link('/source/build-android-ffmpeg.sh', 'build-android-ffmpeg.sh')}, "
+        f"which builds from the same {link('/source/tool-versions.txt', 'tool-versions.txt')}</li>",
+        f"    <li>The decoder that links them: "
+        f"{link('https://github.com/rpmrpmrpm/rpm-android/tree/main/RPM.Android/ffmpeg', 'RPM.Android/ffmpeg')}"
+        f" in rpm-android, from {link(decoder['url'], 'decoder_ffmpeg')} in Media3 "
+        f"{text(decoder['version'])}</li>",
+        f"    <li>FFmpeg source: the same "
+        f"{link('https://ffmpeg.org/releases/ffmpeg-' + versions['FFMPEG_VERSION'] + '.tar.xz', 'ffmpeg-' + versions['FFMPEG_VERSION'] + '.tar.xz')}"
+        " as above</li>",
+        "</ul>",
+        "",
         "<h3>fpcalc, as Chromaprint builds it</h3>",
         f"<p>rpm ships Chromaprint's own published <code>fpcalc</code> "
         f"{text(versions['CHROMAPRINT_VERSION'])} rather than building it, and that binary has "
@@ -449,6 +555,9 @@ def write_site(credits: dict, sections: list[dict]) -> None:
         "inside it rather than beside it. The same offer covers the build of that version that is not "
         "compiled ahead of time: rpm's own compiled .NET assemblies with TagLib# as a separate file, so "
         "the app can be run, or compiled again, with a modified TagLib#.</p>",
+        "<p>In the Android app, FFmpeg is linked statically into <code>libffmpegJNI.so</code>. "
+        "Everything else in that library is published above as source, so it can be built again "
+        "with a modified FFmpeg; the same offer covers that version's build files.</p>",
     ]
 
     for section in sections:
@@ -486,6 +595,7 @@ def write_site(credits: dict, sections: list[dict]) -> None:
     shutil.rmtree(SITE_SOURCE, ignore_errors=True)
     os.makedirs(SITE_SOURCE, exist_ok=True)
     shutil.copyfile(BUILD_SCRIPT, os.path.join(SITE_SOURCE, "build-ffmpeg.sh"))
+    shutil.copyfile(ANDROID_BUILD_SCRIPT, os.path.join(SITE_SOURCE, "build-android-ffmpeg.sh"))
     shutil.copyfile(TOOL_VERSIONS, os.path.join(SITE_SOURCE, "tool-versions.txt"))
 
 
@@ -602,6 +712,72 @@ def write_swift(credits: dict, sections: list[dict]) -> None:
         handle.write("\n".join(lines))
 
 
+def kt_string(value: str | None) -> str:
+    if not value:
+        return "null"
+    return '"' + value.replace("\\", "\\\\").replace('"', '\\"').replace("$", "\\$") + '"'
+
+
+def kt_res(key: str | None) -> str:
+    """A string key as `:core`'s resource id, so a key the string tables lack fails the build."""
+    return f"R.string.{key}" if key else "null"
+
+
+def write_kotlin(credits: dict, sections: list[dict]) -> None:
+    lines = [
+        BANNER,
+        "",
+        "package com.rpm.player.phone.profile",
+        "",
+        "import com.rpm.player.core.R",
+        "",
+        "/** The Android phone's half of [Credits]: the table, which [Credits] reads. */",
+        "internal object CreditsData {",
+        "    /** The licences that the entries on this head use, by the key an entry names. A licence with a",
+        "     * file has its text in the app's assets, under credits/. A licence without a file is a set of",
+        "     * published terms that only the publisher may host, so the screen links to it. */",
+        "    val licenses: Map<String, CreditLicense> = mapOf(",
+    ]
+
+    for key, licence in licences_for(credits, sections).items():
+        lines.append(
+            f"        {kt_string(key)} to CreditLicense("
+            f"name = {kt_string(licence['name'])}, "
+            f"file = {kt_string(licence.get('file'))}, "
+            f"url = {kt_string(licence.get('url'))}, "
+            f"isNotices = {'true' if licence.get('notices') else 'false'}),")
+
+    lines += [
+        "    )",
+        "",
+        "    /** What this head ships and what it asks, in the order the screen shows it. */",
+        "    val sections: List<CreditSection> = listOf(",
+    ]
+
+    for section in sections:
+        lines.append(f"        CreditSection(title = {kt_res(section['title'])}, "
+                     f"note = {kt_res(section.get('note'))}, entries = listOf(")
+        for entry in section["entries"]:
+            licences = ", ".join(kt_string(key) for key in entry["license"])
+            lines.append(
+                f"            CreditEntry(name = {kt_string(entry['name'])}, "
+                f"version = {kt_string(entry.get('version'))}, "
+                f"detail = {kt_string(entry.get('detail'))}, "
+                f"copyright = {kt_string(entry.get('copyright'))}, "
+                f"url = {kt_string(entry.get('url'))}, "
+                f"source = {kt_string(entry.get('source'))}, "
+                f"use = {kt_res(entry.get('use'))}, "
+                f"termsUrl = {kt_string(entry.get('license_url'))}, "
+                f"licenses = listOf({licences})),")
+        lines += ["        )),"]
+
+    lines += ["    )", "}", ""]
+
+    os.makedirs(os.path.dirname(KT_OUT), exist_ok=True)
+    with open(KT_OUT, "w", encoding="utf-8", newline="\n") as handle:
+        handle.write("\n".join(lines))
+
+
 def main() -> None:
     credits = load(CREDITS)
 
@@ -627,7 +803,21 @@ def main() -> None:
     write_swift(credits, iphone)
     copy_licenses(credits, iphone, SWIFT_LICENSES)
 
+    has_android = os.path.isdir(os.path.join(ANDROID, "phone"))
+    android = for_head(sections, "android")
+    if has_android:
+        write_kotlin(credits, android)
+        copy_licenses(credits, android, KT_LICENSES)
+    else:
+        print(f"{ANDROID} is not checked out: the Android phone's credits were not written")
+
     if os.path.isdir(SITE):
+        if not has_android:
+            # Without the Android app its photographs cannot be looked up, and the page would leave
+            # them off while saying it lists every head.
+            print(f"gen_credits: the website's page lists the Android app, which is not at {ANDROID} "
+                  "(check out rpm-android beside this repo, or set RPM_ANDROID)", file=sys.stderr)
+            sys.exit(1)
         write_site(credits, sections)
     else:
         print(f"{SITE} is not checked out: the website's credits page was not written")
@@ -639,6 +829,9 @@ def main() -> None:
           f"{len(os.listdir(CS_LICENSES))} licence texts")
     print(f"iphone:  {count(iphone)} entries in {len(iphone)} sections, "
           f"{len(os.listdir(SWIFT_LICENSES))} licence texts")
+    if has_android:
+        print(f"android: {count(android)} entries in {len(android)} sections, "
+              f"{len(os.listdir(KT_LICENSES))} licence texts")
 
 
 if __name__ == "__main__":
