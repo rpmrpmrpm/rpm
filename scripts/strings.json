@@ -5281,6 +5281,14 @@
     "zh-Hans": "Lava",
     "comment": "Value of the Room animation row in the Android TV settings: blobs rising and sinking like a lava lamp. A name; leave it untranslated."
   },
+  "Viz_ExitDoublePress": {
+    "en": "Press Back again to leave Pegasus.",
+    "fr": "Appuyez à nouveau sur Retour pour quitter Pegasus.",
+    "es": "Pulsa Atrás de nuevo para salir de Pegasus.",
+    "de": "Drücke erneut Zurück, um Pegasus zu beenden.",
+    "zh-Hans": "再次按返回键以退出 Pegasus。",
+    "comment": "Notice along the foot of Pegasus after the first Back in its side menu over home; a second Back within 2 s leaves Pegasus."
+  },
   "Tv_RoomStyleAlchemy": {
     "en": "Alchemy",
     "fr": "Alchemy",
