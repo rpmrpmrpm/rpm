@@ -7078,11 +7078,11 @@
     "comment": "Settings, Profile page: the standing of an account that does not support rpm."
   },
   "Rpm_Profile_PlanFreeDetail": {
-    "en": "100 GB of cloud storage, every feature, no time limit.",
-    "fr": "100 Go de stockage cloud, toutes les fonctions, sans limite de durée.",
-    "es": "100 GB de almacenamiento en la nube, todas las funciones, sin límite de tiempo.",
-    "de": "100 GB Cloud-Speicher, alle Funktionen, ohne Zeitlimit.",
-    "zh-Hans": "100 GB 云存储空间，全部功能，无时间限制。",
+    "en": "25 GB of cloud storage, every feature, no time limit.",
+    "fr": "25 Go de stockage cloud, toutes les fonctions, sans limite de durée.",
+    "es": "25 GB de almacenamiento en la nube, todas las funciones, sin límite de tiempo.",
+    "de": "25 GB Cloud-Speicher, alle Funktionen, ohne Zeitlimit.",
+    "zh-Hans": "25 GB 云存储空间，全部功能，无时间限制。",
     "comment": "Settings, Profile page: what an account gets without supporting rpm."
   },
   "Rpm_Profile_PlanFreeAppeal": {
@@ -10903,11 +10903,11 @@
     "comment": "Cloud settings: title of the card showing whether the account supports rpm."
   },
   "Cloud_SupporterFree": {
-    "en": "Free account with 100 GB of cloud storage.",
-    "fr": "Compte gratuit avec 100 Go de stockage cloud.",
-    "es": "Cuenta gratuita con 100 GB de almacenamiento en la nube.",
-    "de": "Kostenloses Konto mit 100 GB Cloud-Speicher.",
-    "zh-Hans": "免费账户，含 100 GB 云存储。",
+    "en": "Free account with 25 GB of cloud storage.",
+    "fr": "Compte gratuit avec 25 Go de stockage cloud.",
+    "es": "Cuenta gratuita con 25 GB de almacenamiento en la nube.",
+    "de": "Kostenloses Konto mit 25 GB Cloud-Speicher.",
+    "zh-Hans": "免费账户，含 25 GB 云存储。",
     "comment": "Cloud settings: the standing of an account that is not a supporter."
   },
   "Cloud_SupporterYes": {
