@@ -7116,6 +7116,30 @@
     "zh-Hans": "感谢你支持 rpm。你帮助 rpm 持续运行，并资助新的开发。你的慷慨让我们深受感动。",
     "comment": "Settings, Profile page: second paragraph under 'Supporter', thanking the account for supporting rpm."
   },
+  "Rpm_Profile_PlanTester": {
+    "en": "Closed beta tester",
+    "fr": "Testeur de la bêta fermée",
+    "es": "Probador de la beta cerrada",
+    "de": "Tester der geschlossenen Beta",
+    "zh-Hans": "封闭测试用户",
+    "comment": "Settings, Profile page: the standing of an account marked as a closed beta tester."
+  },
+  "Rpm_Profile_PlanTesterDetail": {
+    "en": "Supporter features and 100 GB of cloud storage.",
+    "fr": "Fonctions des soutiens et 100 Go de stockage cloud.",
+    "es": "Funciones de colaborador y 100 GB de almacenamiento en la nube.",
+    "de": "Unterstützer-Funktionen und 100 GB Cloud-Speicher.",
+    "zh-Hans": "支持者功能和 100 GB 云存储。",
+    "comment": "Settings, Profile page: what a closed beta tester gets."
+  },
+  "Rpm_Profile_PlanTesterThanks": {
+    "en": "Thank you for testing rpm. Your reports help us fix problems before the public beta.",
+    "fr": "Merci de tester rpm. Vos signalements nous aident à corriger les problèmes avant la bêta publique.",
+    "es": "Gracias por probar rpm. Tus informes nos ayudan a corregir problemas antes de la beta pública.",
+    "de": "Danke, dass du rpm testest. Deine Meldungen helfen uns, Fehler vor der öffentlichen Beta zu beheben.",
+    "zh-Hans": "感谢你测试 rpm。你的反馈帮助我们在公开测试前修复问题。",
+    "comment": "Settings, Profile page: second paragraph under 'Closed beta tester', thanking the account for testing."
+  },
   "Rpm_Profile_Playback": {
     "en": "Playback",
     "fr": "Lecture",
@@ -10925,6 +10949,14 @@
     "de": "Du bist Unterstützer bis zum {0}. Dein Cloud-Speicher ist unbegrenzt.",
     "zh-Hans": "你的支持者身份有效期至 {0}。你的云存储无限。",
     "comment": "Cloud settings: a supporter whose support has an end date."
+  },
+  "Cloud_SupporterTester": {
+    "en": "You are a closed beta tester. You get the supporter features and 100 GB of cloud storage.",
+    "fr": "Vous testez la bêta fermée. Vous avez les fonctions des soutiens et 100 Go de stockage cloud.",
+    "es": "Eres probador de la beta cerrada. Tienes las funciones de colaborador y 100 GB de almacenamiento en la nube.",
+    "de": "Du testest die geschlossene Beta. Du hast die Unterstützer-Funktionen und 100 GB Cloud-Speicher.",
+    "zh-Hans": "你是封闭测试用户。你可使用支持者功能，并拥有 100 GB 云存储。",
+    "comment": "Cloud settings: the standing of an account marked as a closed beta tester."
   },
   "Cloud_SupporterUnknown": {
     "en": "Your supporter status could not be retrieved.",
