@@ -13884,7 +13884,7 @@
     "es": "Aleatorio",
     "de": "Zufällig",
     "zh-Hans": "随机播放",
-    "comment": "Key on the iPhone queue panel that puts the tracks still to come in another order."
+    "comment": "Key on the iPhone queue panel, and in the band of the desktop Now playing card, that puts the tracks still to come in another order."
   },
   "Rpm_Queue_Rearrange": {
     "en": "Rearrange",
@@ -13892,7 +13892,7 @@
     "es": "Reorganizar",
     "de": "Neu anordnen",
     "zh-Hans": "重新排序",
-    "comment": "Key on the iPhone queue panel and Now playing page that turns row dragging on."
+    "comment": "Key on the iPhone queue panel and Now playing page, and in the band of the desktop Now playing card, that turns row dragging on."
   },
   "Rpm_Library_SearchCeiling": {
     "en": "Showing the first {0} matches. Type more to narrow the search.",
@@ -18646,13 +18646,21 @@
     "zh-Hans": "卡拉 OK 歌词",
     "comment": "Row in the Android TV app's settings: whether the sung lyric line lights word by word."
   },
+  "Settings_MixtapeAfterHint": {
+    "en": "When an album, a playlist or a single ends, the music carries on with songs like it from your collection.",
+    "fr": "À la fin d'un album, d'une playlist ou d'un single, la musique continue avec des morceaux semblables de votre collection.",
+    "es": "Cuando termina un álbum, una lista o un sencillo, la música sigue con canciones parecidas de tu colección.",
+    "de": "Wenn ein Album, eine Playlist oder eine Single endet, geht die Musik mit ähnlichen Songs aus deiner Sammlung weiter.",
+    "zh-Hans": "专辑、播放列表或单曲播完后，继续播放你收藏中与之相似的歌曲。",
+    "comment": "Line under the \"Mixtape when a record ends\" heading (Tv_SettingsMixtapeAfter) on the desktop Sound settings page, above its on/off switch."
+  },
   "Tv_SettingsMixtapeAfter": {
     "en": "Mixtape when a record ends",
     "fr": "Mixtape à la fin d'un disque",
     "es": "Mixtape al acabar un disco",
     "de": "Mixtape nach dem Ende einer Platte",
     "zh-Hans": "唱片播完后播放混音带",
-    "comment": "Row in the Android TV app's settings: whether a mixtape like the album or playlist that just finished starts by itself when it ends."
+    "comment": "Row in the Android TV app's settings, and in Pegasus's, and the heading of its card on the desktop Sound settings page: whether a mixtape like the album or playlist that just finished starts by itself when it ends."
   },
   "MoodMaker_New": {
     "en": "New mood playlist…",
@@ -18973,6 +18981,14 @@
     "de": "Wiedergabeliste",
     "zh-Hans": "播放队列",
     "comment": "Player deck at the foot of the window: tooltip and accessible name of the key left of stop that opens the queue (the songs playing now and next) as a card above the deck."
+  },
+  "Deck_QueueUnshuffle": {
+    "en": "Back to the original order",
+    "fr": "Revenir à l'ordre d'origine",
+    "es": "Volver al orden original",
+    "de": "Zurück zur ursprünglichen Reihenfolge",
+    "zh-Hans": "恢复原来的顺序",
+    "comment": "Tooltip and accessible name of the shuffle key in the band of the desktop Now playing card, while the queue is shuffled. Pressing it puts the songs still to come back in the order they had before the shuffle. Before the press the same key says Rpm_Queue_Shuffle."
   },
   "Deck_QueueEmpty": {
     "en": "Nothing is queued. Play a record or a song and what comes next shows here.",
