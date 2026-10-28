@@ -7874,6 +7874,190 @@
     "zh-Hans": "此版本的 rpm 不会自动更新。",
     "comment": "Settings, Profile page: status in a build that was not installed by the installer."
   },
+  "Shell_Feedback": {
+    "en": "Send feedback",
+    "fr": "Envoyer un commentaire",
+    "es": "Enviar comentarios",
+    "de": "Feedback senden",
+    "zh-Hans": "发送反馈",
+    "comment": "Item in the hamburger menu, under Help. Opens the feedback window, which takes both problems and suggestions."
+  },
+  "Feedback_Title": {
+    "en": "Send feedback",
+    "fr": "Envoyer un commentaire",
+    "es": "Enviar comentarios",
+    "de": "Feedback senden",
+    "zh-Hans": "发送反馈",
+    "comment": "Title of the feedback window opened from the hamburger menu."
+  },
+  "Feedback_Body": {
+    "en": "Report something that went wrong, or suggest something that could be better.",
+    "fr": "Signalez un problème ou proposez une amélioration.",
+    "es": "Informa de un problema o sugiere una mejora.",
+    "de": "Melden Sie ein Problem oder schlagen Sie eine Verbesserung vor.",
+    "zh-Hans": "报告问题，或提出改进建议。",
+    "comment": "First line in the feedback window, above the kind and area lists and the text box."
+  },
+  "Feedback_KindLabel": {
+    "en": "What is this",
+    "fr": "De quoi s'agit-il",
+    "es": "De qué se trata",
+    "de": "Worum geht es",
+    "zh-Hans": "反馈类型",
+    "comment": "Feedback window: label over the list that picks a problem or a suggestion."
+  },
+  "Feedback_KindProblem": {
+    "en": "Something is wrong",
+    "fr": "Quelque chose ne fonctionne pas",
+    "es": "Algo no funciona",
+    "de": "Etwas funktioniert nicht",
+    "zh-Hans": "有问题",
+    "comment": "Feedback window, kind list: a bug. It is the first choice."
+  },
+  "Feedback_KindIdea": {
+    "en": "Something could be better",
+    "fr": "Quelque chose pourrait être mieux",
+    "es": "Algo se puede mejorar",
+    "de": "Etwas könnte besser sein",
+    "zh-Hans": "有改进建议",
+    "comment": "Feedback window, kind list: a suggestion."
+  },
+  "Feedback_Sends": {
+    "en": "Sent with your feedback: the screenshot below, your rpm version, your operating system and the app's recent activity, which can include track and file names.",
+    "fr": "Envoyé avec votre commentaire : la capture ci-dessous, votre version de rpm, votre système d'exploitation et l'activité récente de l'app, qui peut inclure des noms de morceaux et de fichiers.",
+    "es": "Se envía con tus comentarios: la captura de abajo, tu versión de rpm, tu sistema operativo y la actividad reciente de la app, que puede incluir nombres de pistas y de archivos.",
+    "de": "Mit Ihrem Feedback wird gesendet: das Bild unten, Ihre rpm-Version, Ihr Betriebssystem und die letzten Aktionen der App, darunter möglicherweise Titel- und Dateinamen.",
+    "zh-Hans": "随反馈一起发送：下方的截图、您的 rpm 版本、操作系统，以及应用的近期操作记录，其中可能包含曲目名和文件名。",
+    "comment": "Feedback window: says what travels with the feedback, under the text box."
+  },
+  "Feedback_AreaLabel": {
+    "en": "Which part of rpm",
+    "fr": "Quelle partie de rpm",
+    "es": "Qué parte de rpm",
+    "de": "Welcher Teil von rpm",
+    "zh-Hans": "rpm 的哪个部分",
+    "comment": "Feedback window: label over the list of parts of the app. It covers suggestions as well as problems, so it does not say \"where it happened\"."
+  },
+  "Feedback_AreaOther": {
+    "en": "Something else",
+    "fr": "Autre chose",
+    "es": "Otra cosa",
+    "de": "Etwas anderes",
+    "zh-Hans": "其他",
+    "comment": "Feedback window, area list: the choice for anything not on the list. It is the first choice."
+  },
+  "Feedback_AreaPlayback": {
+    "en": "Playback",
+    "fr": "Lecture",
+    "es": "Reproducción",
+    "de": "Wiedergabe",
+    "zh-Hans": "播放",
+    "comment": "Feedback window, area list."
+  },
+  "Feedback_AreaLibrary": {
+    "en": "Library and import",
+    "fr": "Bibliothèque et import",
+    "es": "Biblioteca e importación",
+    "de": "Bibliothek und Import",
+    "zh-Hans": "音乐库与导入",
+    "comment": "Feedback window, area list."
+  },
+  "Feedback_AreaArtwork": {
+    "en": "Artwork and details",
+    "fr": "Pochettes et informations",
+    "es": "Portadas y datos",
+    "de": "Cover und Angaben",
+    "zh-Hans": "封面与信息",
+    "comment": "Feedback window, area list. Covers cover art, track details and the catalogues."
+  },
+  "Feedback_AreaCloud": {
+    "en": "Cloud",
+    "fr": "Cloud",
+    "es": "Nube",
+    "de": "Cloud",
+    "zh-Hans": "云端",
+    "comment": "Feedback window, area list."
+  },
+  "Feedback_AreaRadio": {
+    "en": "Radio",
+    "fr": "Radio",
+    "es": "Radio",
+    "de": "Radio",
+    "zh-Hans": "电台",
+    "comment": "Feedback window, area list."
+  },
+  "Feedback_AreaSharing": {
+    "en": "Sharing and phone",
+    "fr": "Partage et téléphone",
+    "es": "Compartir y teléfono",
+    "de": "Freigabe und Telefon",
+    "zh-Hans": "共享与手机",
+    "comment": "Feedback window, area list. Covers the library server and the phone and TV apps."
+  },
+  "Feedback_AreaInterface": {
+    "en": "Interface",
+    "fr": "Interface",
+    "es": "Interfaz",
+    "de": "Oberfläche",
+    "zh-Hans": "界面",
+    "comment": "Feedback window, area list. Covers how the app looks and reacts."
+  },
+  "Feedback_PlaceholderProblem": {
+    "en": "What went wrong?",
+    "fr": "Qu'est-ce qui n'a pas fonctionné ?",
+    "es": "¿Qué ha fallado?",
+    "de": "Was hat nicht funktioniert?",
+    "zh-Hans": "出了什么问题？",
+    "comment": "Feedback window: placeholder in the empty text box while the kind is a problem."
+  },
+  "Feedback_PlaceholderIdea": {
+    "en": "What would you change?",
+    "fr": "Que changeriez-vous ?",
+    "es": "¿Qué cambiarías?",
+    "de": "Was würden Sie ändern?",
+    "zh-Hans": "您希望改进什么？",
+    "comment": "Feedback window: placeholder in the empty text box while the kind is a suggestion."
+  },
+  "Feedback_Screenshot": {
+    "en": "Include this screenshot",
+    "fr": "Inclure cette capture",
+    "es": "Incluir esta captura",
+    "de": "Dieses Bild mitsenden",
+    "zh-Hans": "包含此截图",
+    "comment": "Feedback window: switch over the picture of the app as it was when the window was opened."
+  },
+  "Feedback_NeedWords": {
+    "en": "Please write something before sending.",
+    "fr": "Veuillez écrire quelque chose avant d'envoyer.",
+    "es": "Escribe algo antes de enviar.",
+    "de": "Bitte schreiben Sie etwas, bevor Sie senden.",
+    "zh-Hans": "发送前请先填写内容。",
+    "comment": "Shown when Send feedback is pressed with an empty text box."
+  },
+  "Feedback_Send": {
+    "en": "Send feedback",
+    "fr": "Envoyer",
+    "es": "Enviar",
+    "de": "Senden",
+    "zh-Hans": "发送",
+    "comment": "Feedback window: the button that sends it."
+  },
+  "Feedback_Sent": {
+    "en": "Thanks. Your feedback was sent.",
+    "fr": "Merci. Votre commentaire a été envoyé.",
+    "es": "Gracias. Tus comentarios se han enviado.",
+    "de": "Danke. Ihr Feedback wurde gesendet.",
+    "zh-Hans": "谢谢。您的反馈已发送。",
+    "comment": "Shown after the feedback has landed on the server."
+  },
+  "Feedback_Failed": {
+    "en": "The feedback could not be sent. Please try again later.",
+    "fr": "Le commentaire n'a pas pu être envoyé. Veuillez réessayer plus tard.",
+    "es": "No se han podido enviar los comentarios. Inténtalo de nuevo más tarde.",
+    "de": "Das Feedback konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+    "zh-Hans": "反馈发送失败。请稍后再试。",
+    "comment": "Shown when the server would not take the feedback."
+  },
   "Crash_PromptTitle": {
     "en": "rpm closed unexpectedly",
     "fr": "rpm s'est fermé de manière inattendue",
