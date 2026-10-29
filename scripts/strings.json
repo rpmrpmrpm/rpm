@@ -8058,6 +8058,38 @@
     "zh-Hans": "反馈发送失败。请稍后再试。",
     "comment": "Shown when the server would not take the feedback."
   },
+  "Feedback_RepliesTo": {
+    "en": "Replies go to {0}.",
+    "fr": "Les réponses seront envoyées à {0}.",
+    "es": "Las respuestas se enviarán a {0}.",
+    "de": "Antworten werden an {0} gesendet.",
+    "zh-Hans": "回复将发送至 {0}。",
+    "comment": "Feedback window, under the text box when signed in. {0} is the account's email address, where a reply to the report is sent."
+  },
+  "Feedback_ReplyEmail": {
+    "en": "Email for replies (optional)",
+    "fr": "E-mail pour les réponses (facultatif)",
+    "es": "Correo para las respuestas (opcional)",
+    "de": "E-Mail für Antworten (optional)",
+    "zh-Hans": "用于回复的电子邮箱（可选）",
+    "comment": "Feedback window, when signed out: placeholder of the box for the address a reply to the report is sent to."
+  },
+  "Feedback_AreaDownloads": {
+    "en": "Downloads",
+    "fr": "Téléchargements",
+    "es": "Descargas",
+    "de": "Downloads",
+    "zh-Hans": "下载",
+    "comment": "Feedback window, area list, phone apps only: albums downloaded to play without a connection."
+  },
+  "Feedback_AreaCasting": {
+    "en": "Speakers and casting",
+    "fr": "Enceintes et diffusion",
+    "es": "Altavoces y transmisión",
+    "de": "Lautsprecher und Streaming",
+    "zh-Hans": "扬声器与投放",
+    "comment": "Feedback window, area list, phone apps only: playing on speakers, Chromecast and AirPlay (Play on)."
+  },
   "Crash_PromptTitle": {
     "en": "rpm closed unexpectedly",
     "fr": "rpm s'est fermé de manière inattendue",
