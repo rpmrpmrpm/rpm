@@ -19558,6 +19558,14 @@
     "zh-Hans": "该电子邮件已有账户，请尝试登录。",
     "comment": "Sign-up window: the address already has an account."
   },
+  "SignUp_SocialAccount": {
+    "en": "This email is already used with Apple or Google. Continue with Apple or Google instead.",
+    "fr": "Cet e-mail est déjà utilisé avec Apple ou Google. Continuez plutôt avec Apple ou Google.",
+    "es": "Este correo ya se usa con Apple o Google. Continúa con Apple o Google.",
+    "de": "Diese E-Mail wird schon mit Apple oder Google verwendet. Mach stattdessen mit Apple oder Google weiter.",
+    "zh-Hans": "该电子邮件已用于 Apple 或 Google 登录，请改用 Apple 或 Google 继续。",
+    "comment": "Sign-up window: the address already signs in with Apple or Google, so an email account is refused."
+  },
   "SignUp_WeakPassword": {
     "en": "That password is too easy to guess. Use at least 8 characters, with an uppercase letter, a lowercase letter and a number.",
     "fr": "Ce mot de passe est trop facile à deviner. Utilisez au moins 8 caractères, avec une majuscule, une minuscule et un chiffre.",
@@ -19575,11 +19583,11 @@
     "comment": "Sign-up window: the address was refused."
   },
   "SignUp_InvalidName": {
-    "en": "Your name can use letters, numbers, spaces, hyphens and dots, 2 to 50 of them.",
-    "fr": "Votre nom peut contenir des lettres, des chiffres, des espaces, des tirets et des points, de 2 à 50 caractères.",
-    "es": "Tu nombre puede llevar letras, números, espacios, guiones y puntos, de 2 a 50 caracteres.",
-    "de": "Dein Name darf Buchstaben, Zahlen, Leerzeichen, Bindestriche und Punkte enthalten, 2 bis 50 Zeichen.",
-    "zh-Hans": "名字可使用字母、数字、空格、连字符和句点，长度为 2 到 50 个字符。",
+    "en": "Your name can use letters, numbers, spaces, hyphens, dots and apostrophes, 2 to 50 of them.",
+    "fr": "Votre nom peut contenir des lettres, des chiffres, des espaces, des tirets, des points et des apostrophes, de 2 à 50 caractères.",
+    "es": "Tu nombre puede llevar letras, números, espacios, guiones, puntos y apóstrofos, de 2 a 50 caracteres.",
+    "de": "Dein Name darf Buchstaben, Zahlen, Leerzeichen, Bindestriche, Punkte und Apostrophe enthalten, 2 bis 50 Zeichen.",
+    "zh-Hans": "名字可使用字母、数字、空格、连字符、句点和撇号，长度为 2 到 50 个字符。",
     "comment": "Sign-up window: the name was refused."
   },
   "SignUp_InvalidCode": {
