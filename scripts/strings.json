@@ -10902,6 +10902,86 @@
     "zh-Hans": "否",
     "comment": "Album editor choice: this is not a classical record. The default."
   },
+  "AlbumEdit_GroupSeries": {
+    "en": "SERIES",
+    "fr": "SÉRIE",
+    "es": "SERIE",
+    "de": "REIHE",
+    "zh-Hans": "系列",
+    "comment": "Album editor group kicker for the series a record is one volume of, such as a box-set edition released over many volumes. ALLCAPS, like every other group kicker."
+  },
+  "AlbumEdit_InSeries": {
+    "en": "Part of a series",
+    "fr": "Fait partie d'une série",
+    "es": "Forma parte de una serie",
+    "de": "Teil einer Reihe",
+    "zh-Hans": "属于系列",
+    "comment": "Album editor field label: whether this record is one volume of a series of releases, such as volume 43 of The Complete Mozart Edition."
+  },
+  "AlbumEdit_SeriesYes": {
+    "en": "Yes",
+    "fr": "Oui",
+    "es": "Sí",
+    "de": "Ja",
+    "zh-Hans": "是",
+    "comment": "Album editor choice: this record is one volume of a series."
+  },
+  "AlbumEdit_SeriesNo": {
+    "en": "No",
+    "fr": "Non",
+    "es": "No",
+    "de": "Nein",
+    "zh-Hans": "否",
+    "comment": "Album editor choice: this record stands alone. The default."
+  },
+  "AlbumEdit_SeriesName": {
+    "en": "Series",
+    "fr": "Série",
+    "es": "Serie",
+    "de": "Reihe",
+    "zh-Hans": "系列名称",
+    "comment": "Album editor field label: the name of the series this record belongs to. The box also offers the series already in the library."
+  },
+  "AlbumEdit_SeriesNameHint": {
+    "en": "e.g. The Complete Mozart Edition",
+    "fr": "p. ex. The Complete Mozart Edition",
+    "es": "p. ej. The Complete Mozart Edition",
+    "de": "z. B. The Complete Mozart Edition",
+    "zh-Hans": "例如 The Complete Mozart Edition",
+    "comment": "Placeholder in the album editor's series name box. The example is a real box set's own title, so it stays in English."
+  },
+  "AlbumEdit_SeriesVolume": {
+    "en": "Volume",
+    "fr": "Volume",
+    "es": "Volumen",
+    "de": "Band",
+    "zh-Hans": "卷号",
+    "comment": "Album editor field label: which volume of the series this record is."
+  },
+  "AlbumEdit_SeriesVolumeHint": {
+    "en": "e.g. 43",
+    "fr": "p. ex. 43",
+    "es": "p. ej. 43",
+    "de": "z. B. 43",
+    "zh-Hans": "例如 43",
+    "comment": "Placeholder in the album editor's volume box."
+  },
+  "Album_SeriesVolume": {
+    "en": "Volume {0} of {1}",
+    "fr": "Volume {0} de {1}",
+    "es": "Volumen {0} de {1}",
+    "de": "Band {0} von {1}",
+    "zh-Hans": "{1} 第 {0} 卷",
+    "comment": "Line under an album's title on its page: which volume of which series it is. {0} is the volume as the listener typed it (43, IV, 3a), {1} the series' name."
+  },
+  "Album_SeriesPart": {
+    "en": "Part of {0}",
+    "fr": "Fait partie de {0}",
+    "es": "Forma parte de {0}",
+    "de": "Teil von {0}",
+    "zh-Hans": "属于 {0}",
+    "comment": "Line under an album's title on its page, for a series whose volumes are not numbered. {0} is the series' name."
+  },
   "AlbumEdit_GroupSettings": {
     "en": "SETTINGS",
     "fr": "RÉGLAGES",
