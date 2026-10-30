@@ -19268,7 +19268,7 @@
     "es": "¡Gracias por unirte a la beta cerrada!",
     "de": "Danke, dass du bei der geschlossenen Beta dabei bist!",
     "zh-Hans": "感谢你加入封闭测试！",
-    "comment": "The note shown once after setup: its heading."
+    "comment": "The note shown once to an account marked as a closed beta tester: its heading."
   },
   "Beta_WelcomeIntro": {
     "en": "We're so excited to have you on board! You're one of the very first people to use rpm, and that makes you part of building it.",
@@ -19309,22 +19309,6 @@
     "de": "Als Dankeschön bekommst du rpm für das iPhone mit 100 GB in der Cloud und alle Supporter-Vorteile. rpm für Android TV ist fast fertig, und du bekommst es zuerst!",
     "zh-Hans": "作为感谢，你将获得带 100 GB 云空间的 iPhone 版 rpm，以及所有支持者福利。Android TV 版 rpm 即将完成，你会第一个拿到！",
     "comment": "The beta welcome, third point: what testers get."
-  },
-  "Beta_WelcomeTourLine": {
-    "en": "Next up, a quick tour! rpm shows you around step by step, so you know right where everything is. Let's get started!",
-    "fr": "Et maintenant, une petite visite ! rpm vous fait découvrir l'application pas à pas, pour que vous sachiez où tout se trouve. C'est parti !",
-    "es": "¡Y ahora, un recorrido rápido! rpm te enseña la aplicación paso a paso, para que sepas dónde está todo. ¡Vamos allá!",
-    "de": "Als Nächstes eine kurze Tour! rpm zeigt dir Schritt für Schritt alles, damit du sofort weißt, wo was ist. Los geht's!",
-    "zh-Hans": "接下来，快速游览一下！rpm 会一步步带你认识应用，让你清楚每样东西在哪里。我们开始吧！",
-    "comment": "The beta welcome: the last paragraph, saying the tour of hints follows."
-  },
-  "Beta_WelcomeTour": {
-    "en": "Show me around",
-    "fr": "Faites-moi visiter",
-    "es": "Enséñamelo",
-    "de": "Zeig mir alles",
-    "zh-Hans": "带我看看",
-    "comment": "The beta welcome's button: closes it and starts the tour of hints."
   },
   "Coach_ImportSources": {
     "en": "You can select if you want to import from a folder, your CD, a vinyl record or DVD. From there, find the release by searching the Catalog ID, barcode or title and artist. Easy, right? For now, let's close this section.",
