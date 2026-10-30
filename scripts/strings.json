@@ -10982,6 +10982,38 @@
     "zh-Hans": "属于 {0}",
     "comment": "Line under an album's title on its page, for a series whose volumes are not numbered. {0} is the series' name."
   },
+  "Album_SeriesStillToFind": {
+    "en": "Still to find",
+    "fr": "Encore à trouver",
+    "es": "Por encontrar",
+    "de": "Noch zu finden",
+    "zh-Hans": "尚未收藏",
+    "comment": "Name under an empty sleeve on the album page's series row: a numbered volume of the series that is not in the listener's collection."
+  },
+  "Album_SeriesVolumeNumber": {
+    "en": "Volume {0}",
+    "fr": "Volume {0}",
+    "es": "Volumen {0}",
+    "de": "Band {0}",
+    "zh-Hans": "第 {0} 卷",
+    "comment": "Second line under a sleeve on the album page's series row. {0} is the volume as the listener typed it (43, IV, 3a)."
+  },
+  "Album_SeriesHave": {
+    "en": "You have {0}",
+    "fr": "Vous en avez {0}",
+    "es": "Tienes {0}",
+    "de": "Du hast {0}",
+    "zh-Hans": "已收藏 {0} 张",
+    "comment": "Beside the series name over the album page's series row: how many of the series' records are in the collection, when none of the numbered volumes is missing. {0} is a number."
+  },
+  "Album_SeriesHaveMissing": {
+    "en": "You have {0} · {1} still to find",
+    "fr": "Vous en avez {0} · {1} encore à trouver",
+    "es": "Tienes {0} · {1} por encontrar",
+    "de": "Du hast {0} · {1} noch zu finden",
+    "zh-Hans": "已收藏 {0} 张 · 还差 {1} 张",
+    "comment": "Beside the series name over the album page's series row. {0} is how many of the series' records are in the collection, {1} how many numbered volumes below the highest one held are not."
+  },
   "AlbumEdit_GroupSettings": {
     "en": "SETTINGS",
     "fr": "RÉGLAGES",
