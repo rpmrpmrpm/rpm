@@ -344,19 +344,35 @@
     {
       "genre": "Classical",
       "subgenres": [
+        "Medieval",
+        "Renaissance",
         "Early Music",
         "Baroque",
         "Classical Period",
         "Romantic Classical",
+        "Late Romantic",
+        "Impressionist",
+        "Modernist",
+        "Serialism",
+        "Minimalism",
         "Contemporary Classical",
         "Orchestral",
+        "Symphony",
+        "Concerto",
         "Chamber Music",
-        "Choral",
+        "String Quartet",
+        "Sonata",
         "Solo Piano",
-        "Minimalism",
-        "Medieval",
-        "Renaissance",
-        "Impressionist"
+        "Harpsichord",
+        "Organ",
+        "Classical Guitar",
+        "Choral",
+        "Oratorio",
+        "Cantata",
+        "Mass",
+        "Requiem",
+        "Art Song",
+        "Ballet"
       ]
     },
     {
@@ -370,10 +386,33 @@
     {
       "genre": "Opera",
       "subgenres": [
-        "Grand Opera",
+        "Opera Seria",
         "Opera Buffa",
+        "Dramma Giocoso",
+        "Opera Semiseria",
         "Bel Canto",
-        "Operetta"
+        "Verismo",
+        "Tragédie en Musique",
+        "Opéra-Ballet",
+        "Opéra Comique",
+        "Grand Opera",
+        "Opéra Lyrique",
+        "Opéra Bouffe",
+        "Singspiel",
+        "Romantische Oper",
+        "Spieloper",
+        "Märchenoper",
+        "Musikdrama",
+        "Zeitoper",
+        "Ballad Opera",
+        "Semi-Opera",
+        "Savoy Opera",
+        "Zarzuela",
+        "Operetta",
+        "Intermezzo",
+        "Chamber Opera",
+        "Rescue Opera",
+        "Opera-Oratorio"
       ]
     },
     {
@@ -590,6 +629,8 @@
     "psychedelic",
     "gothic",
     "glam",
-    "instrumental"
+    "instrumental",
+    "organ",
+    "mass"
   ]
 }

@@ -16,6 +16,7 @@ import json
 import workspace
 import os
 import sys
+import unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE = workspace.path("scripts", "subgenres.json")
@@ -27,8 +28,9 @@ KOTLIN_TARGET = workspace.path("RPM.Android", "core", "src", "main", "java", "co
 
 
 def normalize(value):
-    """The same folding as Genres.Normalize: only letters and digits, in lower case."""
-    return "".join(c.lower() for c in value if c.isalnum())
+    """The same folding as GenreText.Fold: only letters and digits, in lower case, without accents.
+    Decomposing splits an accented letter into the letter and a mark, and the mark is not alphanumeric."""
+    return "".join(c.lower() for c in unicodedata.normalize("NFD", value) if c.isalnum())
 
 
 def quote(value):
