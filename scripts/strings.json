@@ -3187,11 +3187,11 @@
     "comment": "Settings, Music folder card: creating or opening the mirror failed. The first-run wizard has its own, Wizard_FolderFailed."
   },
   "Wizard_FolderFailed": {
-    "en": "That folder could not be opened. Choose another folder.",
-    "fr": "Ce dossier n'a pas pu être ouvert. Choisissez un autre dossier.",
-    "es": "No se pudo abrir esa carpeta. Elige otra carpeta.",
-    "de": "Dieser Ordner konnte nicht geöffnet werden. Wähle einen anderen Ordner.",
-    "zh-Hans": "无法打开该文件夹。请选择其他文件夹。",
+    "en": "That folder couldn't be opened. No problem, just choose another one.",
+    "fr": "Ce dossier n'a pas pu être ouvert. Pas de souci, choisissez-en simplement un autre.",
+    "es": "No se pudo abrir esa carpeta. No pasa nada, elige otra.",
+    "de": "Dieser Ordner konnte nicht geöffnet werden. Kein Problem, wähle einfach einen anderen.",
+    "zh-Hans": "无法打开该文件夹。没关系，换一个文件夹即可。",
     "comment": "First-run setup, folder step: the chosen folder could not be opened as a library. There is no previous music folder at this point."
   },
   "Settings_Naming": {
@@ -3321,11 +3321,11 @@
     "zh-Hans": "关闭"
   },
   "Setup_ExistingLibrary": {
-    "en": "Existing rpm music folder. It will be opened.",
-    "fr": "Dossier musical rpm existant. Il sera ouvert.",
-    "es": "Carpeta de música de rpm existente: se abrirá.",
-    "de": "Vorhandener rpm-Musikordner. Er wird geöffnet.",
-    "zh-Hans": "现有的 rpm 音乐文件夹。将直接打开。"
+    "en": "This is already an rpm music folder. rpm will open it.",
+    "fr": "C'est déjà un dossier musical rpm. rpm va l'ouvrir.",
+    "es": "Esta ya es una carpeta de música de rpm. rpm la abrirá.",
+    "de": "Das ist bereits ein rpm-Musikordner. rpm öffnet ihn.",
+    "zh-Hans": "这已经是一个 rpm 音乐文件夹，rpm 将直接打开它。"
   },
   "Setup_NotEmpty": {
     "en": "This folder isn't empty. Pick an empty folder, or an existing rpm music folder to open it.",
@@ -8621,11 +8621,11 @@
     "zh-Hans": "提交举报"
   },
   "Login_NewHere": {
-    "en": "New here? Continue with Apple or Google and an account is made for you.",
-    "fr": "Nouveau ? Continuez avec Apple ou Google, un compte est créé pour vous.",
-    "es": "¿Nuevo por aquí? Continúa con Apple o Google y se creará tu cuenta.",
-    "de": "Neu hier? Weiter mit Apple oder Google, ein Konto wird für dich angelegt.",
-    "zh-Hans": "第一次使用？使用 Apple 或 Google 继续，账户会自动创建。"
+    "en": "New here? Sign up with your email, or continue with Apple or Google and an account is made for you.",
+    "fr": "Nouveau ici ? Inscrivez-vous avec votre e-mail, ou continuez avec Apple ou Google et un compte est créé pour vous.",
+    "es": "¿Eres nuevo? Regístrate con tu correo, o continúa con Apple o Google y se crea una cuenta para ti.",
+    "de": "Neu hier? Registriere dich mit deiner E-Mail oder mach mit Apple oder Google weiter, dann wird ein Konto für dich erstellt.",
+    "zh-Hans": "新用户？用电子邮件注册，或使用 Apple 或 Google 继续，系统会为你创建账户。"
   },
   "Login_Subtitle": {
     "en": "Please sign in to your rpm account.",
@@ -15855,11 +15855,11 @@
     "comment": "Setup wizard step 1 heading."
   },
   "Wizard_FolderBody": {
-    "en": "Pick one empty folder. rpm files everything you import into it, named and organised.",
-    "fr": "Choisissez un dossier vide. rpm y range tout ce que vous importez, nommé et organisé.",
-    "es": "Elige una carpeta vacía. rpm archiva en ella todo lo que importes, con nombre y orden.",
-    "de": "Wähle einen leeren Ordner. rpm legt alles Importierte benannt und geordnet darin ab.",
-    "zh-Hans": "选择一个空文件夹。rpm 会把导入的所有音乐命名整理后存放在其中。",
+    "en": "Pick an empty folder, and rpm takes care of the rest. Everything you import is named and organised in it, so your collection always stays tidy.",
+    "fr": "Choisissez un dossier vide, et rpm s'occupe du reste. Tout ce que vous importez y est nommé et organisé, pour que votre collection reste toujours en ordre.",
+    "es": "Elige una carpeta vacía y rpm se encarga del resto. Todo lo que importes se nombra y se ordena en ella, para que tu colección esté siempre en orden.",
+    "de": "Wähle einen leeren Ordner, und rpm kümmert sich um den Rest. Alles, was du importierst, wird darin benannt und geordnet, damit deine Sammlung immer aufgeräumt bleibt.",
+    "zh-Hans": "选择一个空文件夹，其余的交给 rpm。你导入的所有音乐都会在其中命名整理，让你的收藏始终井井有条。",
     "comment": "Setup wizard step 1, line under the heading."
   },
   "Wizard_NoFolderChosen": {
@@ -15879,11 +15879,11 @@
     "comment": "Setup wizard step 2 heading."
   },
   "Wizard_ImportBody": {
-    "en": "Choose where your music is now. rpm reads it, checks it, and files it into your collection.",
-    "fr": "Indiquez où se trouve votre musique. rpm la lit, la vérifie et la range dans votre collection.",
-    "es": "Indica dónde está tu música ahora. rpm la lee, la revisa y la archiva en tu colección.",
-    "de": "Gib an, wo deine Musik jetzt liegt. rpm liest sie, prüft sie und legt sie in deiner Sammlung ab.",
-    "zh-Hans": "选择音乐当前所在位置。rpm 会读取、检查并归档到你的收藏中。",
+    "en": "Already have your music somewhere else? No problem! Choose the folder it's in, and rpm reads it, checks it and files it neatly into your collection.",
+    "fr": "Votre musique se trouve déjà ailleurs ? Pas de souci ! Choisissez son dossier, et rpm la lit, la vérifie et la range soigneusement dans votre collection.",
+    "es": "¿Ya tienes tu música en otro sitio? ¡No pasa nada! Elige la carpeta donde está y rpm la lee, la revisa y la archiva ordenadamente en tu colección.",
+    "de": "Deine Musik liegt schon woanders? Kein Problem! Wähle den Ordner, in dem sie liegt, und rpm liest sie, prüft sie und legt sie ordentlich in deiner Sammlung ab.",
+    "zh-Hans": "音乐已经放在别处了？没问题！选择它所在的文件夹，rpm 会读取、检查，并将其整齐地归入你的收藏。",
     "comment": "Setup wizard step 2, line under the heading, before a source is chosen."
   },
   "Wizard_ScanSummary": {
@@ -15951,11 +15951,11 @@
     "comment": "Setup wizard step 2, under the destination preview."
   },
   "Wizard_DoneTitle": {
-    "en": "You're set up",
-    "fr": "Tout est prêt",
-    "es": "Todo listo",
-    "de": "Alles bereit",
-    "zh-Hans": "设置完成",
+    "en": "You're all set!",
+    "fr": "Tout est prêt !",
+    "es": "¡Todo listo!",
+    "de": "Alles bereit!",
+    "zh-Hans": "一切就绪！",
     "comment": "Setup wizard step 3 heading."
   },
   "Wizard_DoneAlbums": {
@@ -15983,11 +15983,11 @@
     "comment": "Setup wizard step 3, heading over the supporter pitch."
   },
   "Wizard_SupportPitch": {
-    "en": "rpm is built by a small team of dedicated people who love music and believe in collecting and owning your own music. Supporters help with the hosting costs and with the development of new features.",
-    "fr": "rpm est conçu par une petite équipe de passionnés qui aiment la musique et croient qu'il faut collectionner et posséder sa propre musique. Les soutiens aident à payer l'hébergement et le développement de nouvelles fonctionnalités.",
-    "es": "rpm lo crea un pequeño equipo de personas dedicadas que aman la música y creen en coleccionar y poseer tu propia música. Los mecenas ayudan con los costes de alojamiento y con el desarrollo de nuevas funciones.",
-    "de": "rpm wird von einem kleinen, engagierten Team gebaut, das Musik liebt und daran glaubt, die eigene Musik zu sammeln und zu besitzen. Unterstützer helfen bei den Hosting-Kosten und bei der Entwicklung neuer Funktionen.",
-    "zh-Hans": "rpm 由一支热爱音乐的小团队打造，我们相信收藏并真正拥有自己的音乐。支持者帮助我们承担托管费用和新功能的开发。",
+    "en": "rpm is made by a small team of people who love music, and who believe in collecting and owning your own. Supporters help keep it going: they cover the hosting costs and help us build new features.",
+    "fr": "rpm est créé par une petite équipe de passionnés de musique, qui croient qu'il faut collectionner et posséder sa propre musique. Les supporters nous aident à continuer : ils couvrent les frais d'hébergement et nous aident à créer de nouvelles fonctions.",
+    "es": "rpm lo hace un pequeño equipo de personas que aman la música y creen en coleccionar y tener tu propia música. Los supporters ayudan a que siga adelante: cubren los gastos de alojamiento y nos ayudan a crear nuevas funciones.",
+    "de": "rpm wird von einem kleinen Team gemacht, das Musik liebt und daran glaubt, die eigene Musik zu sammeln und zu besitzen. Supporter halten es am Laufen: Sie decken die Hostingkosten und helfen uns, neue Funktionen zu bauen.",
+    "zh-Hans": "rpm 由一个热爱音乐的小团队打造，我们相信收藏并拥有属于自己的音乐。支持者让 rpm 得以持续：他们承担托管费用，并帮助我们开发新功能。",
     "comment": "Setup wizard step 3, the supporter pitch."
   },
   "Wizard_Finish": {
@@ -15999,27 +15999,27 @@
     "comment": "Setup wizard step 3, the button that finishes without becoming a supporter."
   },
   "Coach_AddMusic": {
-    "en": "Add music here. Point rpm at a folder, a CD or a turntable and it files everything into your collection.",
-    "fr": "Ajoutez de la musique ici. Indiquez à rpm un dossier, un CD ou une platine et il range tout dans votre collection.",
-    "es": "Añade música aquí. Indica a rpm una carpeta, un CD o un tocadiscos y lo archiva todo en tu colección.",
-    "de": "Hier kommt Musik herein. Zeig rpm einen Ordner, eine CD oder einen Plattenspieler, und alles wird in deiner Sammlung abgelegt.",
-    "zh-Hans": "在这里添加音乐。给 rpm 指定一个文件夹、一张 CD 或一台唱机，它会把所有内容归入你的收藏。",
+    "en": "This is where your music comes in! Go ahead, give Import a press.",
+    "fr": "C'est ici que votre musique arrive ! Allez-y, appuyez sur Importer.",
+    "es": "¡Aquí es donde entra tu música! Adelante, pulsa Importar.",
+    "de": "Hier kommt deine Musik rein! Na los, drück auf Importieren.",
+    "zh-Hans": "你的音乐从这里进来！来吧，点一下“导入”。",
     "comment": "First-run hint pointing at the Import tab in the left rail."
   },
   "Coach_ArtHeader": {
-    "en": "Drag this to open the artwork, or double click it to put it away.",
-    "fr": "Faites glisser pour ouvrir la pochette, ou double-cliquez pour la ranger.",
-    "es": "Arrastra esto para abrir la portada, o haz doble clic para guardarla.",
-    "de": "Zieh hier, um das Cover zu öffnen, oder klick doppelt, um es wegzulegen.",
-    "zh-Hans": "拖动这里可以展开封面，双击可以收起。",
+    "en": "Currently playing something and want to see the artwork? Drag this to open it, or double-click it to tuck it away again.",
+    "fr": "Vous écoutez quelque chose et voulez voir la pochette ? Faites glisser ceci pour l'ouvrir, ou double-cliquez pour la ranger.",
+    "es": "¿Estás escuchando algo y quieres ver la portada? Arrastra esto para abrirla, o haz doble clic para guardarla otra vez.",
+    "de": "Läuft gerade etwas und du willst das Artwork sehen? Zieh hieran, um es zu öffnen, oder doppelklicke, um es wieder wegzupacken.",
+    "zh-Hans": "正在播放音乐，想看看封面？拖动这里打开，双击即可再收起来。",
     "comment": "First-run hint pointing at the grip under the artwork band."
   },
   "Coach_Views": {
-    "en": "Three ways to look at your collection: a list, a wall of covers, or the albums in a grid.",
-    "fr": "Trois façons de voir votre collection : une liste, un mur de pochettes ou les albums en grille.",
-    "es": "Tres formas de ver tu colección: una lista, un muro de portadas o los álbumes en cuadrícula.",
-    "de": "Drei Ansichten deiner Sammlung: eine Liste, eine Cover-Wand oder die Alben im Raster.",
-    "zh-Hans": "查看收藏的三种方式：列表、封面墙，或专辑网格。",
+    "en": "Browse your collection your way! Switch between the album grid, the album list and the data table, any time you like.",
+    "fr": "Parcourez votre collection à votre façon ! Passez de la grille d'albums à la liste d'albums ou au tableau de données, quand vous voulez.",
+    "es": "¡Explora tu colección a tu manera! Cambia entre la cuadrícula de álbumes, la lista de álbumes y la tabla de datos cuando quieras.",
+    "de": "Durchstöbere deine Sammlung, wie du willst! Wechsle jederzeit zwischen Albenraster, Albenliste und Datentabelle.",
+    "zh-Hans": "按你的方式浏览收藏！随时在专辑网格、专辑列表和数据表之间切换。",
     "comment": "First-run hint pointing at the view switch in the library header."
   },
   "HomeLock_Kicker": {
@@ -16143,12 +16143,20 @@
     "comment": "Tooltip on the × in the top-right corner of the playlists pane card about lists that are not there yet. Hides the card for good."
   },
   "Wizard_Welcome": {
-    "en": "Welcome to rpm. We will guide you through setting up your music collection.",
-    "fr": "Bienvenue dans rpm. Nous allons vous guider pour configurer votre collection musicale.",
-    "es": "Te damos la bienvenida a rpm. Te guiaremos para configurar tu colección de música.",
-    "de": "Willkommen bei rpm. Wir führen dich durch die Einrichtung deiner Musiksammlung.",
-    "zh-Hans": "欢迎使用 rpm。我们将引导你完成音乐收藏的设置。",
+    "en": "Welcome to rpm! Let's get your music collection set up. It only takes a few steps.",
+    "fr": "Bienvenue dans rpm ! Configurons votre collection musicale. Cela ne prend que quelques étapes.",
+    "es": "¡Bienvenido a rpm! Vamos a preparar tu colección de música. Solo son unos pasos.",
+    "de": "Willkommen bei rpm! Lass uns deine Musiksammlung einrichten. Es sind nur ein paar Schritte.",
+    "zh-Hans": "欢迎使用 rpm！我们来设置你的音乐收藏，只需几个步骤。",
     "comment": "Setup wizard step 1, under the wordmark and tagline, above the folder question."
+  },
+  "Wizard_Hello": {
+    "en": "Welcome to rpm!",
+    "fr": "Bienvenue dans rpm !",
+    "es": "¡Bienvenido a rpm!",
+    "de": "Willkommen bei rpm!",
+    "zh-Hans": "欢迎使用 rpm！",
+    "comment": "Setup wizard, first launch: the welcome alone in the middle of the window while the opening sound plays, before step 1 fades in."
   },
   "Wizard_ChooseFolder": {
     "en": "Choose a folder",
@@ -16207,27 +16215,27 @@
     "comment": "Setup wizard step 2 press button, Copy, when some files are not identified."
   },
   "Wizard_LayoutHint": {
-    "en": "Please select the folder structure you wish to use for the music collection.",
-    "fr": "Choisissez la structure de dossiers à utiliser pour la collection musicale.",
-    "es": "Elige la estructura de carpetas que quieres usar para la colección de música.",
-    "de": "Wähle die Ordnerstruktur, die für die Musiksammlung verwendet werden soll.",
-    "zh-Hans": "请选择音乐收藏所使用的文件夹结构。",
+    "en": "How would you like your collection laid out? Pick the folder structure that suits you best.",
+    "fr": "Comment souhaitez-vous organiser votre collection ? Choisissez la structure de dossiers qui vous convient le mieux.",
+    "es": "¿Cómo quieres organizar tu colección? Elige la estructura de carpetas que mejor te vaya.",
+    "de": "Wie soll deine Sammlung aufgebaut sein? Wähle die Ordnerstruktur, die am besten zu dir passt.",
+    "zh-Hans": "你希望收藏如何排列？选择最适合你的文件夹结构。",
     "comment": "Setup wizard step 2, under the Folder layout heading, above the template choices."
   },
   "Wizard_OriginalsHint": {
-    "en": "What do you want rpm to do with the music files in the folder you selected?",
-    "fr": "Que doit faire rpm avec les fichiers musicaux du dossier que vous avez choisi ?",
-    "es": "¿Qué quieres que rpm haga con los archivos de música de la carpeta que elegiste?",
-    "de": "Was soll rpm mit den Musikdateien im gewählten Ordner tun?",
-    "zh-Hans": "你希望 rpm 如何处理所选文件夹中的音乐文件？",
+    "en": "What should rpm do with the music files in the folder you chose?",
+    "fr": "Que doit faire rpm des fichiers musicaux du dossier que vous avez choisi ?",
+    "es": "¿Qué debe hacer rpm con los archivos de música de la carpeta que elegiste?",
+    "de": "Was soll rpm mit den Musikdateien in dem gewählten Ordner machen?",
+    "zh-Hans": "rpm 应如何处理你所选文件夹中的音乐文件？",
     "comment": "Setup wizard step 2, under The original files heading, above the move/copy choice."
   },
   "Wizard_PlanHint": {
-    "en": "This is the initial folder structure of your music collection.",
-    "fr": "Voici la structure de dossiers initiale de votre collection musicale.",
-    "es": "Esta es la estructura de carpetas inicial de tu colección de música.",
-    "de": "Das ist die anfängliche Ordnerstruktur deiner Musiksammlung.",
-    "zh-Hans": "这是你音乐收藏的初始文件夹结构。",
+    "en": "Here's a preview of how your music collection will look to begin with.",
+    "fr": "Voici un aperçu de votre collection musicale à ses débuts.",
+    "es": "Aquí tienes una vista previa de cómo será tu colección de música al principio.",
+    "de": "Hier siehst du, wie deine Musiksammlung zu Beginn aussehen wird.",
+    "zh-Hans": "这是你的音乐收藏最初的样子预览。",
     "comment": "Setup wizard step 2, under the Music collection heading, above the destination grid."
   },
   "QueueDup_InCloud": {
@@ -16463,11 +16471,11 @@
     "comment": "Settings button that puts every coachmark back."
   },
   "Coach_SignIn": {
-    "en": "Sign in to rpm to use the cloud: your collection on your phone, and streaming wherever you are.",
-    "fr": "Connectez-vous à rpm pour utiliser le cloud : votre collection sur votre téléphone, et l'écoute en streaming où que vous soyez.",
-    "es": "Inicia sesión en rpm para usar la nube: tu colección en el móvil y streaming estés donde estés.",
-    "de": "Melde dich bei rpm an, um die Cloud zu nutzen: deine Sammlung auf dem Handy und Streaming von überall.",
-    "zh-Hans": "登录 rpm 即可使用云功能：手机上访问你的收藏，随时随地在线播放。",
+    "en": "Take your music with you! Sign in to rpm to use the cloud, so your collection is on your phone and streams wherever you are.",
+    "fr": "Emportez votre musique partout ! Connectez-vous à rpm pour utiliser le cloud : votre collection sur votre téléphone, et en streaming où que vous soyez.",
+    "es": "¡Llévate tu música contigo! Inicia sesión en rpm para usar la nube: tu colección en tu teléfono y en streaming estés donde estés.",
+    "de": "Nimm deine Musik mit! Melde dich bei rpm an, um die Cloud zu nutzen: deine Sammlung auf deinem Handy, gestreamt, wo immer du bist.",
+    "zh-Hans": "把音乐随身带走！登录 rpm 即可使用云端：收藏就在你的手机上，随时随地都能播放。",
     "comment": "First-run hint pointing at the menu, shown only while signed out."
   },
   "Settings_Hints": {
@@ -19045,5 +19053,581 @@
     "de": "OK nimmt einen Titel auf, Hoch und Runter verschieben ihn, OK legt ihn ab.",
     "zh-Hans": "按 OK 拿起歌曲，上下键移动，再按 OK 放下。",
     "comment": "Line under the title of the TV player's Now playing drawer while rearranging is on. OK, Up and Down are the TV remote's keys."
+  },
+  "Wizard_RegionBody": {
+    "en": "Choose the language the app should be in, and your country for localization.",
+    "fr": "Choisissez la langue de l'application, et votre pays pour la localisation.",
+    "es": "Elige el idioma de la aplicación y tu país para la localización.",
+    "de": "Wähle die Sprache der App und dein Land für die Lokalisierung.",
+    "zh-Hans": "选择应用使用的语言，以及用于本地化的国家。",
+    "comment": "Setup wizard step 1, line under the Country and language heading."
+  },
+  "Wizard_LookTitle": {
+    "en": "Make rpm your own",
+    "fr": "Personnalisez rpm",
+    "es": "Haz rpm a tu manera",
+    "de": "Mach rpm zu deinem",
+    "zh-Hans": "打造你的 rpm",
+    "comment": "Setup wizard step 4 heading: the background, Pegasus's visualizer, the record and when rpm opens by itself."
+  },
+  "Wizard_LookBackgroundHint": {
+    "en": "The picture behind the whole app. You can also use one of your own later, in Settings.",
+    "fr": "L'image derrière toute l'application. Vous pourrez aussi utiliser la vôtre plus tard, dans les réglages.",
+    "es": "La imagen detrás de toda la aplicación. Más tarde también puedes usar una tuya, en Ajustes.",
+    "de": "Das Bild hinter der ganzen App. Später kannst du in den Einstellungen auch ein eigenes verwenden.",
+    "zh-Hans": "整个应用背后的图片。之后也可以在设置中使用你自己的图片。",
+    "comment": "Setup wizard step 4, line under the Background heading."
+  },
+  "Wizard_LookStart": {
+    "en": "Open rpm automatically",
+    "fr": "Ouvrir rpm automatiquement",
+    "es": "Abrir rpm automáticamente",
+    "de": "rpm automatisch öffnen",
+    "zh-Hans": "自动打开 rpm",
+    "comment": "Setup wizard step 4, heading over the two switches: open rpm for a music CD, and for a music file."
+  },
+  "Wizard_LayoutTitle": {
+    "en": "How do you want to browse your collection?",
+    "fr": "Comment voulez-vous parcourir votre collection ?",
+    "es": "¿Cómo quieres explorar tu colección?",
+    "de": "Wie möchtest du deine Sammlung durchsuchen?",
+    "zh-Hans": "你想如何浏览你的收藏？",
+    "comment": "Setup wizard step 5 heading: the view the library opens in."
+  },
+  "Wizard_LayoutBody": {
+    "en": "Pick the view your library opens in. You can switch between them any time, at the top of the library.",
+    "fr": "Choisissez la vue dans laquelle s'ouvre votre bibliothèque. Vous pouvez en changer à tout moment, en haut de la bibliothèque.",
+    "es": "Elige la vista con la que se abre tu biblioteca. Puedes cambiarla cuando quieras, en la parte superior de la biblioteca.",
+    "de": "Wähle die Ansicht, in der sich deine Bibliothek öffnet. Du kannst jederzeit oben in der Bibliothek wechseln.",
+    "zh-Hans": "选择资料库打开时的视图。你可以随时在资料库顶部切换。",
+    "comment": "Setup wizard step 5, line over the three view pictures."
+  },
+  "Wizard_LayoutWallDesc": {
+    "en": "Every cover side by side, like your records on a shelf.",
+    "fr": "Toutes les pochettes côte à côte, comme vos disques sur une étagère.",
+    "es": "Todas las portadas una junto a otra, como tus discos en una estantería.",
+    "de": "Alle Cover nebeneinander, wie deine Platten im Regal.",
+    "zh-Hans": "所有封面并排陈列，就像架子上的唱片。",
+    "comment": "Setup wizard step 5, under the Album grid picture."
+  },
+  "Wizard_LayoutListDesc": {
+    "en": "Each album with its cover and its tracklist.",
+    "fr": "Chaque album avec sa pochette et sa liste de titres.",
+    "es": "Cada álbum con su portada y su lista de canciones.",
+    "de": "Jedes Album mit Cover und Titelliste.",
+    "zh-Hans": "每张专辑配上封面和曲目列表。",
+    "comment": "Setup wizard step 5, under the Album list picture."
+  },
+  "Wizard_LayoutTableDesc": {
+    "en": "Every song in rows and columns, to sort and edit.",
+    "fr": "Tous les titres en lignes et en colonnes, à trier et à modifier.",
+    "es": "Todas las canciones en filas y columnas, para ordenar y editar.",
+    "de": "Alle Songs in Zeilen und Spalten, zum Sortieren und Bearbeiten.",
+    "zh-Hans": "所有歌曲以行列呈现，便于排序和编辑。",
+    "comment": "Setup wizard step 5, under the Data table picture."
+  },
+  "Wizard_RoomOriginalDesc": {
+    "en": "Soft lights that drift and pulse with the music.",
+    "fr": "Des lumières douces qui dérivent et battent au rythme de la musique.",
+    "es": "Luces suaves que flotan y laten con la música.",
+    "de": "Sanfte Lichter, die mit der Musik treiben und pulsieren.",
+    "zh-Hans": "柔和的光随音乐飘动、律动。",
+    "comment": "Pegasus's Original room animation, one line under its name (setup wizard and Display settings)."
+  },
+  "Wizard_RoomYangDesc": {
+    "en": "Glowing balls circling the middle, trailing light.",
+    "fr": "Des boules lumineuses qui tournent autour du centre, en traînant la lumière.",
+    "es": "Esferas brillantes que giran alrededor del centro, dejando una estela de luz.",
+    "de": "Leuchtende Kugeln, die um die Mitte kreisen und Licht hinter sich herziehen.",
+    "zh-Hans": "发光的球体绕着中心旋转，拖曳出光尾。",
+    "comment": "Pegasus's Yang room animation, one line under its name."
+  },
+  "Wizard_RoomLavaDesc": {
+    "en": "Blobs that rise and sink like a lava lamp.",
+    "fr": "Des bulles qui montent et descendent comme dans une lampe à lave.",
+    "es": "Burbujas que suben y bajan como en una lámpara de lava.",
+    "de": "Blasen, die wie in einer Lavalampe steigen und sinken.",
+    "zh-Hans": "像熔岩灯一样上升又下沉的色块。",
+    "comment": "Pegasus's Lava room animation, one line under its name."
+  },
+  "Wizard_RoomAlchemyDesc": {
+    "en": "Broad ribbons of light flowing across the screen.",
+    "fr": "De larges rubans de lumière qui traversent l'écran.",
+    "es": "Anchas cintas de luz que fluyen por la pantalla.",
+    "de": "Breite Lichtbänder, die über den Bildschirm fließen.",
+    "zh-Hans": "宽阔的光带在屏幕上流淌。",
+    "comment": "Pegasus's Alchemy room animation, one line under its name."
+  },
+  "Settings_PegasusVisualizer": {
+    "en": "Visualizer in Pegasus",
+    "fr": "Visualiseur dans Pegasus",
+    "es": "Visualizador en Pegasus",
+    "de": "Visualizer in Pegasus",
+    "zh-Hans": "Pegasus 中的可视化效果",
+    "comment": "Heading for the choice of Pegasus's room animation (setup wizard step 4 and Display settings)."
+  },
+  "Settings_PegasusVisualizerHint": {
+    "en": "The moving lights behind the music when Pegasus plays.",
+    "fr": "Les lumières en mouvement derrière la musique quand Pegasus joue.",
+    "es": "Las luces en movimiento detrás de la música cuando Pegasus reproduce.",
+    "de": "Die bewegten Lichter hinter der Musik, wenn Pegasus spielt.",
+    "zh-Hans": "Pegasus 播放时音乐背后流动的光。",
+    "comment": "Line under the Visualizer in Pegasus heading."
+  },
+  "Settings_SameAsWindows": {
+    "en": "Same as Windows ({0})",
+    "fr": "Comme Windows ({0})",
+    "es": "Igual que Windows ({0})",
+    "de": "Wie Windows ({0})",
+    "zh-Hans": "与 Windows 相同（{0}）",
+    "comment": "Display settings, first entry of the language and country pickers: follow Windows. {0} is what Windows gives now."
+  },
+  "Settings_LanguageRestart": {
+    "en": "Restart rpm to see the new language everywhere.",
+    "fr": "Redémarrez rpm pour voir la nouvelle langue partout.",
+    "es": "Reinicia rpm para ver el nuevo idioma en todas partes.",
+    "de": "Starte rpm neu, um die neue Sprache überall zu sehen.",
+    "zh-Hans": "重新启动 rpm 以在所有地方使用新语言。",
+    "comment": "Display settings, shown after the language is changed."
+  },
+  "Settings_RestartNow": {
+    "en": "Restart now",
+    "fr": "Redémarrer",
+    "es": "Reiniciar ahora",
+    "de": "Jetzt neu starten",
+    "zh-Hans": "立即重新启动",
+    "comment": "Display settings, button that closes rpm and starts it again."
+  },
+  "Settings_MusicFiles": {
+    "en": "Music files",
+    "fr": "Fichiers musicaux",
+    "es": "Archivos de música",
+    "de": "Musikdateien",
+    "zh-Hans": "音乐文件",
+    "comment": "Library settings, heading of the card for opening music files with rpm."
+  },
+  "Settings_OpenMusicFiles": {
+    "en": "Open rpm when a music file is played",
+    "fr": "Ouvrir rpm à la lecture d'un fichier musical",
+    "es": "Abrir rpm al reproducir un archivo de música",
+    "de": "rpm öffnen, wenn eine Musikdatei abgespielt wird",
+    "zh-Hans": "播放音乐文件时打开 rpm",
+    "comment": "Switch: make rpm the app Windows opens music files with (setup wizard step 4 and Library settings)."
+  },
+  "Settings_OpenMusicFilesHint": {
+    "en": "Music files you open play in rpm. Windows asks you to confirm rpm in its own settings.",
+    "fr": "Les fichiers musicaux que vous ouvrez sont lus dans rpm. Windows vous demande de confirmer rpm dans ses propres réglages.",
+    "es": "Los archivos de música que abras se reproducen en rpm. Windows te pide confirmar rpm en su propia configuración.",
+    "de": "Musikdateien, die du öffnest, werden in rpm abgespielt. Windows bittet dich, rpm in den eigenen Einstellungen zu bestätigen.",
+    "zh-Hans": "你打开的音乐文件会在 rpm 中播放。Windows 会请你在其设置中确认使用 rpm。",
+    "comment": "Line under the Open rpm when a music file is played switch."
+  },
+  "Settings_OpenMusicFilesType": {
+    "en": "Music file",
+    "fr": "Fichier musical",
+    "es": "Archivo de música",
+    "de": "Musikdatei",
+    "zh-Hans": "音乐文件",
+    "comment": "What Windows calls a file type rpm opens, in Explorer's Type column and Open with."
+  },
+  "Settings_LibraryLayout": {
+    "en": "Library layout",
+    "fr": "Disposition de la bibliothèque",
+    "es": "Diseño de la biblioteca",
+    "de": "Bibliotheksansicht",
+    "zh-Hans": "资料库布局",
+    "comment": "Library settings, heading of the choice of the view the library opens in."
+  },
+  "Settings_LibraryLayoutHint": {
+    "en": "The view your library opens in. The keys at the top of the library switch it too.",
+    "fr": "La vue dans laquelle s'ouvre votre bibliothèque. Les boutons en haut de la bibliothèque la changent aussi.",
+    "es": "La vista con la que se abre tu biblioteca. Los botones de la parte superior de la biblioteca también la cambian.",
+    "de": "Die Ansicht, in der sich deine Bibliothek öffnet. Die Tasten oben in der Bibliothek wechseln sie ebenfalls.",
+    "zh-Hans": "资料库打开时的视图。资料库顶部的按钮也可以切换。",
+    "comment": "Line under the Library layout heading."
+  },
+  "Wizard_HelloSubtitle": {
+    "en": "Let's get you started.",
+    "fr": "Commençons.",
+    "es": "Empecemos.",
+    "de": "Lass uns loslegen.",
+    "zh-Hans": "让我们开始吧。",
+    "comment": "Setup wizard, first launch: the line under the welcome greeting, shown after two seconds."
+  },
+  "Wizard_Continue": {
+    "en": "Continue",
+    "fr": "Continuer",
+    "es": "Continuar",
+    "de": "Weiter",
+    "zh-Hans": "继续",
+    "comment": "Setup wizard, first launch: the button under the welcome that goes on to step 1."
+  },
+  "Beta_WelcomeTitle": {
+    "en": "Thank you for joining the closed beta!",
+    "fr": "Merci de rejoindre la bêta fermée !",
+    "es": "¡Gracias por unirte a la beta cerrada!",
+    "de": "Danke, dass du bei der geschlossenen Beta dabei bist!",
+    "zh-Hans": "感谢你加入封闭测试！",
+    "comment": "The note shown once after setup: its heading."
+  },
+  "Beta_WelcomeIntro": {
+    "en": "We're so excited to have you on board! You're one of the very first people to use rpm, and that makes you part of building it.",
+    "fr": "Nous sommes ravis de vous compter parmi nous ! Vous faites partie des toutes premières personnes à utiliser rpm, et donc de celles qui le construisent.",
+    "es": "¡Nos alegra muchísimo tenerte a bordo! Eres de las primeras personas en usar rpm, y eso te hace parte de su creación.",
+    "de": "Wir freuen uns riesig, dass du dabei bist! Du gehörst zu den allerersten, die rpm benutzen, und damit baust du es mit uns.",
+    "zh-Hans": "很高兴你的加入！你是最早使用 rpm 的人之一，也因此成为打造它的一员。",
+    "comment": "The beta welcome: the first paragraph, under the heading."
+  },
+  "Beta_WelcomeWhatHeading": {
+    "en": "What the closed beta is about",
+    "fr": "Ce qu'est la bêta fermée",
+    "es": "De qué trata la beta cerrada",
+    "de": "Worum es in der geschlossenen Beta geht",
+    "zh-Hans": "封闭测试是什么",
+    "comment": "The beta welcome: the small heading over its three points."
+  },
+  "Beta_WelcomeUse": {
+    "en": "Bring your own collection into rpm, and make it your music player. Rip your CDs, record your vinyl or import your files. It's all up to you!",
+    "fr": "Amenez votre propre collection dans rpm, et faites-en votre lecteur de musique. Rippez vos CD, enregistrez vos vinyles ou importez vos fichiers. C'est vous qui choisissez !",
+    "es": "Trae tu propia colección a rpm y conviértelo en tu reproductor de música. Ripea tus CD, graba tus vinilos o importa tus archivos. ¡Tú decides!",
+    "de": "Bring deine eigene Sammlung in rpm und mach es zu deinem Musikplayer. Rippe deine CDs, nimm deine Platten auf oder importiere deine Dateien. Ganz wie du willst!",
+    "zh-Hans": "把你自己的收藏带进 rpm，让它成为你的音乐播放器。翻录 CD、录制黑胶或导入文件，全由你决定！",
+    "comment": "The beta welcome, first point: what testers are asked to do."
+  },
+  "Beta_WelcomeTell": {
+    "en": "Something broken, missing, or working really well? Let us know! You talk directly with the people who build rpm, and your feedback decides what we work on next.",
+    "fr": "Quelque chose ne marche pas, manque, ou marche vraiment bien ? Dites-le-nous ! Vous parlez directement avec l'équipe de rpm, et vos retours décident de nos prochains chantiers.",
+    "es": "¿Algo falla, falta o funciona de maravilla? ¡Cuéntanoslo! Hablas directamente con quienes crean rpm, y tus comentarios deciden en qué trabajamos después.",
+    "de": "Etwas ist kaputt, fehlt oder funktioniert richtig gut? Sag es uns! Du sprichst direkt mit den Leuten, die rpm bauen, und dein Feedback entscheidet, woran wir als Nächstes arbeiten.",
+    "zh-Hans": "有东西坏了、缺了，或者特别好用？告诉我们！你会直接和打造 rpm 的人交流，你的反馈决定我们接下来做什么。",
+    "comment": "The beta welcome, second point: reporting back."
+  },
+  "Beta_WelcomeGet": {
+    "en": "As a thank you, you get rpm for iPhone with 100 GB in the cloud, and all the supporter perks. rpm for Android TV is almost ready, and you'll get it first!",
+    "fr": "Pour vous remercier, vous recevez rpm pour iPhone avec 100 Go dans le cloud, et tous les avantages des supporters. rpm pour Android TV est presque prêt, et vous l'aurez en premier !",
+    "es": "Como agradecimiento, recibes rpm para iPhone con 100 GB en la nube y todas las ventajas de supporter. rpm para Android TV está casi listo, ¡y lo tendrás antes que nadie!",
+    "de": "Als Dankeschön bekommst du rpm für das iPhone mit 100 GB in der Cloud und alle Supporter-Vorteile. rpm für Android TV ist fast fertig, und du bekommst es zuerst!",
+    "zh-Hans": "作为感谢，你将获得带 100 GB 云空间的 iPhone 版 rpm，以及所有支持者福利。Android TV 版 rpm 即将完成，你会第一个拿到！",
+    "comment": "The beta welcome, third point: what testers get."
+  },
+  "Beta_WelcomeTourLine": {
+    "en": "Next up, a quick tour! rpm shows you around step by step, so you know right where everything is. Let's get started!",
+    "fr": "Et maintenant, une petite visite ! rpm vous fait découvrir l'application pas à pas, pour que vous sachiez où tout se trouve. C'est parti !",
+    "es": "¡Y ahora, un recorrido rápido! rpm te enseña la aplicación paso a paso, para que sepas dónde está todo. ¡Vamos allá!",
+    "de": "Als Nächstes eine kurze Tour! rpm zeigt dir Schritt für Schritt alles, damit du sofort weißt, wo was ist. Los geht's!",
+    "zh-Hans": "接下来，快速游览一下！rpm 会一步步带你认识应用，让你清楚每样东西在哪里。我们开始吧！",
+    "comment": "The beta welcome: the last paragraph, saying the tour of hints follows."
+  },
+  "Beta_WelcomeTour": {
+    "en": "Show me around",
+    "fr": "Faites-moi visiter",
+    "es": "Enséñamelo",
+    "de": "Zeig mir alles",
+    "zh-Hans": "带我看看",
+    "comment": "The beta welcome's button: closes it and starts the tour of hints."
+  },
+  "Coach_ImportSources": {
+    "en": "You can select if you want to import from a folder, your CD, a vinyl record or DVD. From there, find the release by searching the Catalog ID, barcode or title and artist. Easy, right? For now, let's close this section.",
+    "fr": "Vous pouvez choisir d'importer depuis un dossier, votre CD, un disque vinyle ou un DVD. Ensuite, trouvez la sortie en cherchant le numéro de catalogue, le code-barres ou le titre et l'artiste. Facile, non ? Pour l'instant, fermons cette section.",
+    "es": "Puedes elegir importar desde una carpeta, tu CD, un disco de vinilo o un DVD. Después, encuentra la edición buscando el número de catálogo, el código de barras o el título y el artista. Fácil, ¿verdad? Por ahora, cerremos esta sección.",
+    "de": "Du kannst auswählen, ob du aus einem Ordner, von deiner CD, einer Schallplatte oder einer DVD importierst. Danach findest du die Veröffentlichung über die Katalognummer, den Barcode oder Titel und Künstler. Einfach, oder? Für jetzt schließen wir diesen Bereich.",
+    "zh-Hans": "你可以选择从文件夹、CD、黑胶唱片或 DVD 导入。然后通过目录编号、条形码或标题和艺人找到这张发行。很简单吧？现在，先把这个区域关上吧。",
+    "comment": "First-run hint beside the import pane, after Import was pressed. Asks for the pane to be closed again."
+  },
+  "Coach_SideScreens": {
+    "en": "On the left sidebar, you can also find the track info, visualizer and internet radio side screens. Read up on your music, use a visualizer to just let it play in the background, or listen to the radio.",
+    "fr": "Dans la barre latérale gauche, vous trouverez aussi les écrans des infos du morceau, du visualiseur et de la radio internet. Renseignez-vous sur votre musique, laissez tourner un visualiseur en fond, ou écoutez la radio.",
+    "es": "En la barra lateral izquierda también encontrarás las pantallas de información de la pista, el visualizador y la radio por internet. Infórmate sobre tu música, deja un visualizador de fondo o escucha la radio.",
+    "de": "In der linken Seitenleiste findest du außerdem die Bereiche für Titelinfos, Visualizer und Internetradio. Lies mehr über deine Musik, lass einfach einen Visualizer im Hintergrund laufen oder hör Radio.",
+    "zh-Hans": "在左侧边栏，你还能找到曲目信息、可视化效果和网络电台。了解你的音乐，让可视化效果在后台静静播放，或者收听电台。",
+    "comment": "First-run hint pointing at the rail's track info, visualizations and internet radio buttons."
+  },
+  "Coach_AppViews": {
+    "en": "rpm has more than one way to look at your music! Give this a press to see the views.",
+    "fr": "rpm a plus d'une façon de montrer votre musique ! Appuyez ici pour voir les vues.",
+    "es": "¡rpm tiene más de una forma de mostrar tu música! Pulsa aquí para ver las vistas.",
+    "de": "rpm kann deine Musik auf mehr als eine Art zeigen! Drück hier, um die Ansichten zu sehen.",
+    "zh-Hans": "rpm 有不止一种方式呈现你的音乐！点一下这里看看各种视图。",
+    "comment": "First-run hint pointing at the deck's eye button, which opens the views picker."
+  },
+  "Coach_AppViewsOpen": {
+    "en": "Main is the full app, for browsing and managing your collection. RPaMp is a compact player that stays out of your way while you work. And Pegasus fills the whole screen, made for the couch, with the visualizer and the lyrics. Switch any time you like!",
+    "fr": "Principal, c'est l'application complète, pour parcourir et gérer votre collection. RPaMp est un lecteur compact qui reste discret pendant que vous travaillez. Et Pegasus remplit tout l'écran, pensé pour le canapé, avec le visualiseur et les paroles. Changez quand vous voulez !",
+    "es": "Principal es la aplicación completa, para explorar y gestionar tu colección. RPaMp es un reproductor compacto que no estorba mientras trabajas. Y Pegasus llena toda la pantalla, pensado para el sofá, con el visualizador y las letras. ¡Cambia cuando quieras!",
+    "de": "Die Hauptansicht ist die ganze App, zum Durchstöbern und Verwalten deiner Sammlung. RPaMp ist ein kompakter Player, der dir beim Arbeiten nicht im Weg ist. Und Pegasus füllt den ganzen Bildschirm, gemacht fürs Sofa, mit Visualizer und Songtexten. Wechsle, wann immer du willst!",
+    "zh-Hans": "“主界面”是完整的应用，用来浏览和管理收藏。RPaMp 是一个小巧的播放器，工作时不会打扰你。Pegasus 则铺满整个屏幕，专为沙发而生，配有可视化效果和歌词。随时都可以切换！",
+    "comment": "First-run hint beside the open views picker: what Main, RPaMp and Pegasus each are. Main is View_Library's own word."
+  },
+  "Wizard_AccountTitle": {
+    "en": "Your rpm account",
+    "fr": "Votre compte rpm",
+    "es": "Tu cuenta de rpm",
+    "de": "Dein rpm-Konto",
+    "zh-Hans": "你的 rpm 账户",
+    "comment": "Setup wizard step 2 heading."
+  },
+  "Wizard_AccountBody": {
+    "en": "Take your music with you! With an rpm account, your collection is on your phone and streams wherever you are. The cloud only works for people with an account, but everything else works without one, so you can always do this later.",
+    "fr": "Emportez votre musique partout ! Avec un compte rpm, votre collection est sur votre téléphone et en streaming où que vous soyez. Le cloud ne fonctionne qu'avec un compte, mais tout le reste fonctionne sans, alors vous pouvez toujours le faire plus tard.",
+    "es": "¡Llévate tu música contigo! Con una cuenta de rpm, tu colección está en tu teléfono y en streaming estés donde estés. La nube solo funciona con una cuenta, pero todo lo demás funciona sin ella, así que siempre puedes hacerlo más tarde.",
+    "de": "Nimm deine Musik mit! Mit einem rpm-Konto ist deine Sammlung auf deinem Handy und wird gestreamt, wo immer du bist. Die Cloud funktioniert nur mit einem Konto, alles andere aber auch ohne, also kannst du das jederzeit später machen.",
+    "zh-Hans": "把音乐随身带走！有了 rpm 账户，你的收藏就在手机上，随时随地都能播放。云端功能仅限有账户的用户使用，其他一切无需账户也能用，所以你随时可以稍后再登录。",
+    "comment": "Setup wizard step 2, line under the heading: the cloud needs an account, nothing else does."
+  },
+  "Wizard_AccountSignedIn": {
+    "en": "Signed in as {0}",
+    "fr": "Connecté en tant que {0}",
+    "es": "Sesión iniciada como {0}",
+    "de": "Angemeldet als {0}",
+    "zh-Hans": "已登录：{0}",
+    "comment": "Setup wizard step 2, once signed in. {0} is the account's name or email."
+  },
+  "Coach_Next": {
+    "en": "Next",
+    "fr": "Suivant",
+    "es": "Siguiente",
+    "de": "Weiter",
+    "zh-Hans": "下一步",
+    "comment": "The link under a first-run hint that moves the tour on to the next one."
+  },
+  "Coach_DoneTitle": {
+    "en": "And that's the tour!",
+    "fr": "Et voilà la visite !",
+    "es": "¡Y eso es todo el recorrido!",
+    "de": "Und das war die Tour!",
+    "zh-Hans": "游览到此结束！",
+    "comment": "The card that ends the first-run tour: its heading."
+  },
+  "Coach_DoneBody": {
+    "en": "You know your way around rpm now. Rip, record, import and play to your heart's content, and make your collection your own. Have fun collecting!",
+    "fr": "Vous connaissez maintenant rpm sur le bout des doigts. Rippez, enregistrez, importez et écoutez autant que vous voulez, et faites de votre collection la vôtre. Amusez-vous bien à collectionner !",
+    "es": "Ya conoces rpm de arriba abajo. Ripea, graba, importa y escucha todo lo que quieras, y haz tuya tu colección. ¡Que disfrutes coleccionando!",
+    "de": "Jetzt kennst du dich in rpm aus. Rippe, nimm auf, importiere und hör so viel du willst, und mach deine Sammlung zu deiner. Viel Spaß beim Sammeln!",
+    "zh-Hans": "现在你已经熟悉 rpm 了。尽情翻录、录制、导入和播放，打造属于你自己的收藏。祝你收藏愉快！",
+    "comment": "The card that ends the first-run tour: the line under the heading."
+  },
+  "Coach_DoneButton": {
+    "en": "Start collecting",
+    "fr": "Commencer à collectionner",
+    "es": "Empezar a coleccionar",
+    "de": "Losgehen mit dem Sammeln",
+    "zh-Hans": "开始收藏",
+    "comment": "The card that ends the first-run tour: the button that closes it and hands the app over."
+  },
+  "Wizard_AccountLoggedIn": {
+    "en": "You're logged in!",
+    "fr": "Vous êtes connecté !",
+    "es": "¡Ya has iniciado sesión!",
+    "de": "Du bist angemeldet!",
+    "zh-Hans": "你已登录！",
+    "comment": "Setup wizard step 2, once signed in: the news, over who is signed in."
+  },
+  "Wizard_DiscogsTitle": {
+    "en": "Link your Discogs account",
+    "fr": "Liez votre compte Discogs",
+    "es": "Vincula tu cuenta de Discogs",
+    "de": "Verknüpfe dein Discogs-Konto",
+    "zh-Hans": "关联你的 Discogs 账户",
+    "comment": "Setup wizard step 2, once signed in: the heading of the offer to connect Discogs."
+  },
+  "Wizard_DiscogsBody": {
+    "en": "Got a Discogs account? Link it to rpm, and finding the exact pressing of your records is a breeze. Discogs is catalogued by collectors just like you, so even the rarest releases are usually there!",
+    "fr": "Vous avez un compte Discogs ? Liez-le à rpm, et trouver le pressage exact de vos disques devient un jeu d'enfant. Discogs est catalogué par des collectionneurs comme vous, alors même les sorties les plus rares y sont souvent !",
+    "es": "¿Tienes una cuenta de Discogs? Vincúlala a rpm y encontrar la edición exacta de tus discos será pan comido. Discogs lo catalogan coleccionistas como tú, ¡así que hasta las ediciones más raras suelen estar ahí!",
+    "de": "Du hast ein Discogs-Konto? Verknüpfe es mit rpm, und die genaue Pressung deiner Platten zu finden ist ein Kinderspiel. Discogs wird von Sammlern wie dir katalogisiert, also sind selbst die seltensten Veröffentlichungen meistens dabei!",
+    "zh-Hans": "有 Discogs 账户吗？把它关联到 rpm，找到唱片的确切版本就轻而易举。Discogs 由和你一样的收藏者编目，所以就连最稀有的发行通常也能找到！",
+    "comment": "Setup wizard step 2, once signed in: why to connect Discogs."
+  },
+  "Wizard_DiscogsLinked": {
+    "en": "Discogs is linked!",
+    "fr": "Discogs est lié !",
+    "es": "¡Discogs está vinculado!",
+    "de": "Discogs ist verknüpft!",
+    "zh-Hans": "Discogs 已关联！",
+    "comment": "Setup wizard step 2, once Discogs is connected. The Discogs user name may follow in brackets."
+  },
+  "SignUp_Title": {
+    "en": "Sign up to rpm",
+    "fr": "S'inscrire à rpm",
+    "es": "Regístrate en rpm",
+    "de": "Bei rpm registrieren",
+    "zh-Hans": "注册 rpm",
+    "comment": "The sign-up window's title."
+  },
+  "SignUp_Button": {
+    "en": "Sign up",
+    "fr": "S'inscrire",
+    "es": "Registrarse",
+    "de": "Registrieren",
+    "zh-Hans": "注册",
+    "comment": "Sign-in window: the button beside Sign in that opens the sign-up window instead."
+  },
+  "SignUp_Subtitle": {
+    "en": "Make your rpm account in a minute! Then your collection goes wherever you go.",
+    "fr": "Créez votre compte rpm en une minute ! Votre collection vous suit ensuite partout.",
+    "es": "¡Crea tu cuenta de rpm en un minuto! Así tu colección irá contigo a todas partes.",
+    "de": "Erstell dein rpm-Konto in einer Minute! Dann ist deine Sammlung überall dabei.",
+    "zh-Hans": "一分钟创建你的 rpm 账户！之后你的收藏随你而行。",
+    "comment": "Sign-up window, the line over the form."
+  },
+  "SignUp_Name": {
+    "en": "Name",
+    "fr": "Nom",
+    "es": "Nombre",
+    "de": "Name",
+    "zh-Hans": "名字",
+    "comment": "Sign-up window: the name field's placeholder."
+  },
+  "SignUp_PasswordRule": {
+    "en": "At least 8 characters, with an uppercase letter, a lowercase letter and a number.",
+    "fr": "Au moins 8 caractères, avec une majuscule, une minuscule et un chiffre.",
+    "es": "Al menos 8 caracteres, con una mayúscula, una minúscula y un número.",
+    "de": "Mindestens 8 Zeichen, mit einem Großbuchstaben, einem Kleinbuchstaben und einer Zahl.",
+    "zh-Hans": "至少 8 个字符，包含大写字母、小写字母和数字。",
+    "comment": "Sign-up window, under the password field: the accounts service's password rule."
+  },
+  "SignUp_Create": {
+    "en": "Create account",
+    "fr": "Créer le compte",
+    "es": "Crear cuenta",
+    "de": "Konto erstellen",
+    "zh-Hans": "创建账户",
+    "comment": "Sign-up window: the button that sends the form."
+  },
+  "SignUp_Confirm": {
+    "en": "Confirm",
+    "fr": "Confirmer",
+    "es": "Confirmar",
+    "de": "Bestätigen",
+    "zh-Hans": "确认",
+    "comment": "Sign-up window: the button that sends the mailed code."
+  },
+  "SignUp_CodeSent": {
+    "en": "Nearly there! We've sent a six-digit code to {0}. Type it in below.",
+    "fr": "Presque fini ! Nous avons envoyé un code à six chiffres à {0}. Saisissez-le ci-dessous.",
+    "es": "¡Casi está! Hemos enviado un código de seis dígitos a {0}. Escríbelo abajo.",
+    "de": "Fast geschafft! Wir haben einen sechsstelligen Code an {0} geschickt. Gib ihn unten ein.",
+    "zh-Hans": "快好了！我们已向 {0} 发送了六位数验证码，请在下方输入。",
+    "comment": "Sign-up window, the code face. {0} is the email address."
+  },
+  "SignUp_Code": {
+    "en": "Code",
+    "fr": "Code",
+    "es": "Código",
+    "de": "Code",
+    "zh-Hans": "验证码",
+    "comment": "Sign-up window: the code field's placeholder."
+  },
+  "SignUp_Resend": {
+    "en": "Send a new code",
+    "fr": "Envoyer un nouveau code",
+    "es": "Enviar un código nuevo",
+    "de": "Neuen Code senden",
+    "zh-Hans": "重新发送验证码",
+    "comment": "Sign-up window, under the code field."
+  },
+  "SignUp_CodeResent": {
+    "en": "A new code is on its way. Check your inbox!",
+    "fr": "Un nouveau code est en route. Regardez votre boîte de réception !",
+    "es": "Un código nuevo va de camino. ¡Mira tu bandeja de entrada!",
+    "de": "Ein neuer Code ist unterwegs. Schau in dein Postfach!",
+    "zh-Hans": "新的验证码已发送，请查看收件箱！",
+    "comment": "Sign-up window: a fresh code was mailed (asked for, or because the old one expired)."
+  },
+  "SignUp_NeedFields": {
+    "en": "Fill in your name, email and password.",
+    "fr": "Indiquez votre nom, votre e-mail et un mot de passe.",
+    "es": "Escribe tu nombre, tu correo y una contraseña.",
+    "de": "Gib deinen Namen, deine E-Mail und ein Passwort ein.",
+    "zh-Hans": "请填写名字、电子邮件和密码。",
+    "comment": "Sign-up window: a field was left empty."
+  },
+  "SignUp_NeedCode": {
+    "en": "Type in the code from the email.",
+    "fr": "Saisissez le code reçu par e-mail.",
+    "es": "Escribe el código del correo.",
+    "de": "Gib den Code aus der E-Mail ein.",
+    "zh-Hans": "请输入邮件中的验证码。",
+    "comment": "Sign-up window: the code field was left empty."
+  },
+  "SignUp_AlreadyRegistered": {
+    "en": "There's already an account with this email. Try signing in instead.",
+    "fr": "Un compte existe déjà avec cet e-mail. Essayez plutôt de vous connecter.",
+    "es": "Ya hay una cuenta con este correo. Prueba a iniciar sesión.",
+    "de": "Mit dieser E-Mail gibt es schon ein Konto. Melde dich stattdessen an.",
+    "zh-Hans": "该电子邮件已有账户，请尝试登录。",
+    "comment": "Sign-up window: the address already has an account."
+  },
+  "SignUp_WeakPassword": {
+    "en": "That password is too easy to guess. Use at least 8 characters, with an uppercase letter, a lowercase letter and a number.",
+    "fr": "Ce mot de passe est trop facile à deviner. Utilisez au moins 8 caractères, avec une majuscule, une minuscule et un chiffre.",
+    "es": "Esa contraseña es demasiado fácil. Usa al menos 8 caracteres, con una mayúscula, una minúscula y un número.",
+    "de": "Dieses Passwort ist zu leicht zu erraten. Nimm mindestens 8 Zeichen, mit einem Großbuchstaben, einem Kleinbuchstaben und einer Zahl.",
+    "zh-Hans": "该密码太容易被猜到。请至少使用 8 个字符，包含大写字母、小写字母和数字。",
+    "comment": "Sign-up window: the password does not meet the rule."
+  },
+  "SignUp_InvalidEmail": {
+    "en": "That doesn't look like an email address.",
+    "fr": "Cela ne ressemble pas à une adresse e-mail.",
+    "es": "Eso no parece una dirección de correo.",
+    "de": "Das sieht nicht nach einer E-Mail-Adresse aus.",
+    "zh-Hans": "这看起来不像电子邮件地址。",
+    "comment": "Sign-up window: the address was refused."
+  },
+  "SignUp_InvalidName": {
+    "en": "Your name can use letters, numbers, spaces, hyphens and dots, 2 to 50 of them.",
+    "fr": "Votre nom peut contenir des lettres, des chiffres, des espaces, des tirets et des points, de 2 à 50 caractères.",
+    "es": "Tu nombre puede llevar letras, números, espacios, guiones y puntos, de 2 a 50 caracteres.",
+    "de": "Dein Name darf Buchstaben, Zahlen, Leerzeichen, Bindestriche und Punkte enthalten, 2 bis 50 Zeichen.",
+    "zh-Hans": "名字可使用字母、数字、空格、连字符和句点，长度为 2 到 50 个字符。",
+    "comment": "Sign-up window: the name was refused."
+  },
+  "SignUp_InvalidCode": {
+    "en": "That code isn't right. Have another look at the email.",
+    "fr": "Ce code n'est pas bon. Revérifiez l'e-mail.",
+    "es": "Ese código no es correcto. Vuelve a mirar el correo.",
+    "de": "Der Code stimmt nicht. Schau noch mal in die E-Mail.",
+    "zh-Hans": "验证码不正确，请再看看邮件。",
+    "comment": "Sign-up window: the code was wrong."
+  },
+  "SignUp_TooMany": {
+    "en": "Too many tries for now. Wait a little, then try again.",
+    "fr": "Trop d'essais pour l'instant. Patientez un peu, puis réessayez.",
+    "es": "Demasiados intentos por ahora. Espera un poco y vuelve a intentarlo.",
+    "de": "Gerade zu viele Versuche. Warte kurz und versuch es noch mal.",
+    "zh-Hans": "尝试次数过多，请稍后再试。",
+    "comment": "Sign-up window: the accounts service is limiting attempts."
+  },
+  "SignUp_Failed": {
+    "en": "Couldn't make the account. Please try again.",
+    "fr": "Impossible de créer le compte. Veuillez réessayer.",
+    "es": "No se pudo crear la cuenta. Inténtalo de nuevo.",
+    "de": "Das Konto konnte nicht erstellt werden. Bitte versuch es noch mal.",
+    "zh-Hans": "无法创建账户，请重试。",
+    "comment": "Sign-up window: any other failure."
+  },
+  "Wizard_AccountSignUp": {
+    "en": "Sign up to rpm",
+    "fr": "S'inscrire à rpm",
+    "es": "Regístrate en rpm",
+    "de": "Bei rpm registrieren",
+    "zh-Hans": "注册 rpm",
+    "comment": "Setup wizard step 2: opens the sign-up window."
+  },
+  "Wizard_AccountHaveOne": {
+    "en": "Already have an account? Sign in",
+    "fr": "Vous avez déjà un compte ? Connectez-vous",
+    "es": "¿Ya tienes una cuenta? Inicia sesión",
+    "de": "Schon ein Konto? Anmelden",
+    "zh-Hans": "已有账户？登录",
+    "comment": "Setup wizard step 2, under Sign up: opens the sign-in window for an email and password."
+  },
+  "Wizard_ImportSlow": {
+    "en": "Hang tight! A big collection can take a while to import, so feel free to grab a coffee while rpm files it all away.",
+    "fr": "Patience ! Une grande collection peut prendre un moment à importer, alors prenez un café pendant que rpm range tout.",
+    "es": "¡Aguanta! Una colección grande puede tardar un rato en importarse, así que tómate un café mientras rpm lo archiva todo.",
+    "de": "Gleich geschafft! Eine große Sammlung braucht etwas Zeit zum Importieren, also hol dir ruhig einen Kaffee, während rpm alles ablegt.",
+    "zh-Hans": "请稍候！大型收藏的导入可能需要一些时间，不妨去喝杯咖啡，让 rpm 慢慢整理。",
+    "comment": "Setup wizard step 4, over the import's progress bar after ten seconds of importing."
   }
 }
