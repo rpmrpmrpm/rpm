@@ -37,6 +37,19 @@ def quote(value):
     return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
+def flatten(entries, parent=None):
+    """A shelf's styles in reading order, each with the style it sits under: (name, parent). An entry
+    is a name, or {"name", "styles"} for a main style with its own styles beneath it, nested as deep
+    as the list needs. A main style comes before everything under it, which is the order a picker
+    shows."""
+    for entry in entries:
+        if isinstance(entry, str):
+            yield entry, parent
+        else:
+            yield entry["name"], parent
+            yield from flatten(entry["styles"], entry["name"])
+
+
 def main():
     with open(SOURCE, encoding="utf8") as f:
         data = json.load(f)
@@ -54,13 +67,14 @@ def main():
     # A style with the same name as a shelf cannot be told apart from it once both are folded to
     # letters and digits.
     folded_genres = {normalize(g): g for g in genres}
-    pairs = []
+    styles = []
     for shelf in shelves:
-        for name in shelf["subgenres"]:
+        for name, parent in flatten(shelf["subgenres"]):
             if normalize(name) in folded_genres:
                 sys.exit(f"{SOURCE}: style {name!r} is spelled like the shelf "
                          f"{folded_genres[normalize(name)]!r}.")
-            pairs.append((name, shelf["genre"]))
+            styles.append((name, shelf["genre"], parent))
+    pairs = [(name, genre) for name, genre, _ in styles]
 
     # A name under more than one shelf is offered under each shelf, but it is matched to none of them,
     # because a style that belongs to three shelves does not identify any one of them.
@@ -115,12 +129,16 @@ def main():
         w(f"        {quote(genre)},")
     w("    ];")
     w("")
-    w("    /// <summary>Every style and the shelf it hangs off, in offering order. A name appears")
-    w("    /// once per shelf it belongs to.</summary>")
+    w("    /// <summary>Every style and the shelf it hangs off, in offering order, with the main style")
+    w("    /// it sits under where it has one. A main style comes before the styles under it. A name")
+    w("    /// appears once per shelf it belongs to.</summary>")
     w("    public static readonly IReadOnlyList<Subgenre> All =")
     w("    [")
-    for name, genre in pairs:
-        w(f"        new({quote(name)}, {quote(genre)}),")
+    for name, genre, parent in styles:
+        if parent is None:
+            w(f"        new({quote(name)}, {quote(genre)}),")
+        else:
+            w(f"        new({quote(name)}, {quote(genre)}, {quote(parent)}),")
     w("    ];")
     w("")
     w("    /// <summary>Folded names that belong to more than one shelf, and so are matched to")

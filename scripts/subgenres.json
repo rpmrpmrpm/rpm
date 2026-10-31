@@ -1,5 +1,5 @@
 {
-  "$comment": "The shelves RPM files records under, and the styles that hang off them. Single source: RPM.Core/Metadata/Subgenres.cs and Genres.All are generated from this by scripts/gen_subgenres.py and are never hand-edited. Order is the order things are offered in, so it is deliberate. A name under more than one shelf is offered under each and is matched to none of them, because a style belonging to three shelves names no one of them. 'blocked' are words that fall out of splitting a tag and must never be read as a style; they bind the style lookup only, and several are perfectly good shelf words. A blocked word that folds onto a real style costs that style its key: it is still offered in the picker and is not matched out of a tag, which is what 'alternative & punk' does to Alternative Punk and is deliberate.",
+  "$comment": "The shelves RPM files records under, and the styles that hang off them. Single source: RPM.Core/Metadata/Subgenres.cs and Genres.All are generated from this by scripts/gen_subgenres.py and are never hand-edited. Order is the order things are offered in, so it is deliberate. A style is a name, or {\"name\", \"styles\"} for a main style with the styles under it, nested as deep as needed; the picker shows the styles under a main style indented beneath it, and the nesting never decides a shelf. A name under more than one shelf is offered under each and is matched to none of them, because a style belonging to three shelves names no one of them. 'blocked' are words that fall out of splitting a tag and must never be read as a style; they bind the style lookup only, and several are perfectly good shelf words. A blocked word that folds onto a real style costs that style its key: it is still offered in the picker and is not matched out of a tag, which is what 'alternative & punk' does to Alternative Punk and is deliberate.",
   "unknown": "Other / Unknown",
   "shelves": [
     {
@@ -234,44 +234,382 @@
     {
       "genre": "Electronic / Dance",
       "subgenres": [
-        "Electronica",
+        {
+          "name": "Ambient",
+          "styles": [
+            "Ambient Dub",
+            {
+              "name": "Dark Ambient",
+              "styles": [
+                "Ambient Industrial",
+                "Dungeon Synth",
+                "Isolationism"
+              ]
+            },
+            "Dreampunk",
+            "Illbient",
+            {
+              "name": "New Age",
+              "styles": [
+                "Neoclassical New Age",
+                "Space Music"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bass Music",
+          "styles": [
+            {
+              "name": "Dubstep",
+              "styles": [
+                "Brostep",
+                "Moombahcore",
+                "Post-Dubstep",
+                "Reggaestep",
+                "Riddim"
+              ]
+            },
+            "Footwork",
+            {
+              "name": "Future Bass",
+              "styles": [
+                "Kawaii Future Bass"
+              ]
+            },
+            "Jungle Terror",
+            "Midtempo Bass",
+            "Trap (EDM)",
+            "UK Bass",
+            {
+              "name": "Wave",
+              "styles": [
+                "Hardwave"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Breakbeat",
+          "styles": [
+            "Acid Breaks",
+            "Big Beat",
+            {
+              "name": "Breakbeat Hardcore",
+              "styles": [
+                "Darkcore",
+                "Hardcore Breaks"
+              ]
+            },
+            "Broken Beat",
+            "Florida Breaks",
+            "Nu Skool Breaks",
+            "Progressive Breaks",
+            "Psychedelic Breakbeat"
+          ]
+        },
+        {
+          "name": "Chillout",
+          "styles": [
+            "Downtempo",
+            {
+              "name": "Psybient",
+              "styles": [
+                "Psydub"
+              ]
+            },
+            "Trip Hop",
+            "Trip Rock"
+          ]
+        },
+        {
+          "name": "Eurodance",
+          "styles": [
+            "Italo Dance"
+          ]
+        },
+        {
+          "name": "Drum and Bass",
+          "styles": [
+            "Darkstep",
+            "Drumfunk",
+            "Drumstep",
+            "Hardstep",
+            {
+              "name": "Intelligent Drum and Bass",
+              "styles": [
+                "Atmospheric Drum and Bass"
+              ]
+            },
+            "Jazzstep",
+            "Jump-Up",
+            "Liquid Funk",
+            "Neurofunk",
+            "Sambass",
+            "Techstep"
+          ]
+        },
+        {
+          "name": "Electronic Rock",
+          "styles": [
+            {
+              "name": "Alternative Dance",
+              "styles": [
+                "Baggy",
+                "New Rave"
+              ]
+            },
+            "Dance-Punk",
+            "Cold Wave",
+            {
+              "name": "Dark Wave",
+              "styles": [
+                "Neoclassical Dark Wave",
+                "Neue Deutsche Todeskunst"
+              ]
+            },
+            {
+              "name": "Ethereal Wave",
+              "styles": [
+                "Nu-Gaze"
+              ]
+            },
+            "Minimal Wave",
+            "Neue Deutsche Welle"
+          ]
+        },
+        {
+          "name": "Electronica",
+          "styles": [
+            "Folktronica",
+            {
+              "name": "Livetronica",
+              "styles": [
+                "Laptronica"
+              ]
+            },
+            "Nu Jazz",
+            {
+              "name": "Progressive Electronic",
+              "styles": [
+                "Berlin School",
+                "Kosmische Musik"
+              ]
+            },
+            "Leftfield"
+          ]
+        },
+        {
+          "name": "Ethnic Electronica",
+          "styles": [
+            "Asian Underground",
+            "Coupé-Décalé",
+            "Kuduro",
+            "Mahraganat",
+            "Shangaan Electro",
+            "Budots",
+            "Changa Tuki",
+            "Dancehall Pop",
+            "Denpa",
+            "Guaracha (EDM)",
+            {
+              "name": "Funk Carioca",
+              "styles": [
+                "Funk Melody",
+                "Funk Ostentação",
+                "Proibidão",
+                "Rasteirinha"
+              ]
+            },
+            "Merenhouse",
+            "Nortec",
+            "Rabòday",
+            "Rara Tech",
+            "Russ Music",
+            "Shamstep",
+            "Tecnocumbia",
+            "Tribal Guarachero",
+            {
+              "name": "Worldbeat",
+              "styles": [
+                "Manila Sound"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hard Dance",
+          "styles": [
+            "Hard NRG",
+            {
+              "name": "Hardstyle",
+              "styles": [
+                "Dubstyle",
+                "Euphoric Frenchcore",
+                "Euphoric Hardstyle",
+                "Rawstyle",
+                "Trapstyle"
+              ]
+            },
+            "Jumpstyle",
+            "Lento Violento",
+            "Mákina"
+          ]
+        },
+        {
+          "name": "Hardcore",
+          "styles": [
+            "Bouncy Techno",
+            {
+              "name": "Breakcore",
+              "styles": [
+                "Raggacore"
+              ]
+            },
+            "Digital Hardcore",
+            "Frenchcore",
+            {
+              "name": "Gabber",
+              "styles": [
+                "Early Hardcore",
+                "Mainstream Hardcore"
+              ]
+            },
+            {
+              "name": "Happy Hardcore",
+              "styles": [
+                "UK Hardcore"
+              ]
+            },
+            "Industrial Hardcore",
+            "J-Core",
+            {
+              "name": "Speedcore",
+              "styles": [
+                "Extratone",
+                "Flashcore",
+                "Splittercore"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hauntology",
+          "styles": [
+            "Chillwave",
+            "Hypnagogic Pop",
+            {
+              "name": "Synthwave",
+              "styles": [
+                "Darksynth",
+                "Sovietwave"
+              ]
+            },
+            {
+              "name": "Vaporwave",
+              "styles": [
+                "Future Funk",
+                "Hardvapour",
+                "Mallsoft",
+                "Vaportrap"
+              ]
+            }
+          ]
+        },
         "Electro",
-        "Trance",
-        "Psytrance",
-        "Eurodance",
-        "Italo Dance",
-        "Alternative Dance",
-        "Ambient",
-        "Dark Ambient",
-        "New Age",
-        "Progressive Electronic",
-        "IDM",
-        "Leftfield",
-        "Downtempo",
-        "Trip Hop",
-        "Chillout",
-        "Chillwave",
-        "Synthwave",
-        "Dark Wave",
-        "Ethereal Wave",
-        "Minimal Wave",
-        "Witch House",
-        "Vaporwave",
-        "Vaportrap",
-        "Future Funk",
-        "Folktronica",
-        "Drum and Bass",
-        "Jungle",
-        "Breakbeat",
-        "Dubstep",
-        "Post-Dubstep",
-        "UK Garage",
-        "Speed Garage",
-        "Hardstyle",
-        "Industrial",
-        "Post-Industrial",
-        "Future Bass",
-        "Lo-fi Beats"
+        "Glitch Hop",
+        "Lo-fi Beats",
+        {
+          "name": "Industrial",
+          "styles": [
+            "Post-Industrial",
+            {
+              "name": "Electro-Industrial",
+              "styles": [
+                {
+                  "name": "Dark Electro",
+                  "styles": [
+                    "Aggrotech"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "EBM",
+              "styles": [
+                "Futurepop",
+                "New Beat"
+              ]
+            },
+            "Martial Industrial",
+            "Witch House"
+          ]
+        },
+        {
+          "name": "IDM",
+          "styles": [
+            "Algorave",
+            "Drill 'n' Bass"
+          ]
+        },
+        {
+          "name": "Jungle",
+          "styles": [
+            "Ragga Jungle"
+          ]
+        },
+        {
+          "name": "Trance",
+          "styles": [
+            "Acid Trance",
+            "Balearic Trance",
+            "Dream Trance",
+            {
+              "name": "Eurotrance",
+              "styles": [
+                "Hands Up"
+              ]
+            },
+            {
+              "name": "Goa Trance",
+              "styles": [
+                "Nitzhonot"
+              ]
+            },
+            "Hard Trance",
+            "Progressive Trance",
+            {
+              "name": "Psytrance",
+              "styles": [
+                "Dark Psytrance",
+                "Full-On",
+                "Minimal Psytrance",
+                "Progressive Psytrance",
+                "Suomisaundi"
+              ]
+            },
+            "Tech Trance",
+            "Uplifting Trance",
+            "Vocal Trance"
+          ]
+        },
+        {
+          "name": "UK Garage",
+          "styles": [
+            "2-Step",
+            "Bassline",
+            "Breakstep",
+            "Future Garage",
+            "Speed Garage",
+            {
+              "name": "UK Funky",
+              "styles": [
+                "Funkstep"
+              ]
+            },
+            "Wonky"
+          ]
+        }
       ]
     },
     {
@@ -631,6 +969,8 @@
     "glam",
     "instrumental",
     "organ",
-    "mass"
+    "mass",
+    "hardcore",
+    "wave"
   ]
 }
