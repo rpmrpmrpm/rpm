@@ -5,10 +5,10 @@
     "WHY IT IS PINNED AND NOT SEARCHED. The app does not fetch these covers. A fetch needs a Pexels",
     "key, and that key is not in this repository, so an install without it would have no photo",
     "covers at all. The choice is the id below; the query beside it records how the choice was found",
-    "and is not re-run. Running the generator with the same ids fetches the same eighty-four",
+    "and is not re-run. Running the generator with the same ids fetches the same eighty-three",
     "photographs.",
     "",
-    "WHERE THESE EIGHTY-FOUR CAME FROM. They are photographs that were looked at and kept, each with",
+    "WHERE THESE EIGHTY-THREE CAME FROM. They are photographs that were looked at and kept, each with",
     "the query it was found by. So the shipped set is a reviewed set, not a fresh search result that",
     "nobody has seen.",
     "",
@@ -169,19 +169,6 @@
       "by": "Viktoria Alipatova",
       "page": "https://www.pexels.com/photo/water-dew-on-glass-panel-2130161/",
       "source": "https://images.pexels.com/photos/2130161/pexels-photo-2130161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-    },
-    {
-      "kind": "Calm",
-      "genre": "House",
-      "decade": 0,
-      "list": "Sunrise Set (House)",
-      "file": "calm-house.jpg",
-      "query": "sunrise city rooftop",
-      "id": 6330741,
-      "alt": "A serene sunrise over Paris rooftops, capturing the warm morning glow.",
-      "by": "Riccardo Bertolo",
-      "page": "https://www.pexels.com/photo/photo-of-a-rooftop-during-sunrise-6330741/",
-      "source": "https://images.pexels.com/photos/6330741/pexels-photo-6330741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     },
     {
       "kind": "Calm",
