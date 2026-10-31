@@ -196,29 +196,131 @@
     {
       "genre": "House",
       "subgenres": [
-        "Deep House",
-        "Tech House",
-        "Progressive House",
-        "Electro House",
-        "Future House",
-        "French House",
-        "Garage House",
-        "Tribal House",
         "Acid House",
+        {
+          "name": "Afro House",
+          "styles": [
+            "Afro Tech",
+            "Amapiano",
+            "Kidandali"
+          ]
+        },
+        "Ambient House",
+        "Balearic Beat",
+        "Ballroom",
+        "Bass House",
+        {
+          "name": "Brazilian Bass",
+          "styles": [
+            "Slap House"
+          ]
+        },
+        "Blog House",
+        "Chicago Hard House",
         "Chicago House",
-        "Afro House",
-        "Euro House"
+        "Deep House",
+        "Disco House",
+        {
+          "name": "Diva House",
+          "styles": [
+            "Hardbag"
+          ]
+        },
+        {
+          "name": "Electro House",
+          "styles": [
+            "Complextro",
+            "Dutch House",
+            "Fidget House",
+            "Melbourne Bounce"
+          ]
+        },
+        "Electro Swing",
+        "Euro House",
+        "French House",
+        "Funky House",
+        "Future House",
+        "Garage House",
+        {
+          "name": "Ghetto House",
+          "styles": [
+            "Ghettotech",
+            "Juke House"
+          ]
+        },
+        "Gqom",
+        {
+          "name": "Hip House",
+          "styles": [
+            "Electro Hop"
+          ]
+        },
+        "Italo House",
+        "Jackin House",
+        "Jazz House",
+        "Kwaito",
+        "Latin House",
+        "Melodic House",
+        "Microhouse",
+        {
+          "name": "Moombahton",
+          "styles": [
+            "Moombahsoul"
+          ]
+        },
+        "New Jersey Sound",
+        {
+          "name": "Outsider House",
+          "styles": [
+            "Lo-fi House"
+          ]
+        },
+        "Progressive House",
+        "Soulful House",
+        "Stadium House",
+        "Tech House",
+        "Tribal House",
+        "Tropical House",
+        "Trouse",
+        {
+          "name": "UK Hard House",
+          "styles": [
+            {
+              "name": "Pumping House",
+              "styles": [
+                "Hardbass"
+              ]
+            },
+            "Scouse House"
+          ]
+        }
       ]
     },
     {
       "genre": "Techno",
       "subgenres": [
-        "Detroit Techno",
-        "Minimal Techno",
         "Acid Techno",
         "Ambient Techno",
-        "Hard Techno",
-        "Industrial Techno"
+        "Birmingham Sound",
+        "Bleep Techno",
+        "Detroit Techno",
+        "Dub Techno",
+        {
+          "name": "Hard Techno",
+          "styles": [
+            {
+              "name": "Free Tekno",
+              "styles": [
+                "Jungletek",
+                "Raggatek"
+              ]
+            }
+          ]
+        },
+        "Industrial Techno",
+        "Minimal Techno",
+        "Schaffel",
+        "Toytown Techno"
       ]
     },
     {
@@ -971,6 +1073,7 @@
     "organ",
     "mass",
     "hardcore",
-    "wave"
+    "wave",
+    "ballroom"
   ]
 }
