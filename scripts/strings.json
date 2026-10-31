@@ -9894,6 +9894,14 @@
     "zh-Hans": "生于 {0} 年",
     "comment": "On the conductor's card in the track info pane, for a conductor who is alive: the year they were born. {0} is the year."
   },
+  "TrackInfo_AboutConductor": {
+    "en": "About the conductor",
+    "fr": "À propos du chef d'orchestre",
+    "es": "Sobre el director",
+    "de": "Über den Dirigenten",
+    "zh-Hans": "关于指挥",
+    "comment": "Heading over the conductor's card in the track info pane, under the album's card, on a record that credits a conductor."
+  },
   "TrackInfo_AboutAlbum": {
     "en": "About the album",
     "fr": "À propos de l'album",
