@@ -9886,6 +9886,14 @@
     "zh-Hans": "乐队成员",
     "comment": "Track info pane and artist page: heading over the list of people in the band, with their dates of birth."
   },
+  "TrackInfo_ConductorBorn": {
+    "en": "Born {0}",
+    "fr": "Né en {0}",
+    "es": "Nacido en {0}",
+    "de": "Geboren {0}",
+    "zh-Hans": "生于 {0} 年",
+    "comment": "On the conductor's card in the track info pane, for a conductor who is alive: the year they were born. {0} is the year."
+  },
   "TrackInfo_AboutAlbum": {
     "en": "About the album",
     "fr": "À propos de l'album",
