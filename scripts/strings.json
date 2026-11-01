@@ -6281,12 +6281,12 @@
     "zh-Hans": "正在加载音乐库…"
   },
   "Rpm_Library_Empty": {
-    "en": "Nothing here yet. Upload your library from rpm on your computer and it appears here.",
-    "fr": "Rien ici pour l'instant. Envoyez votre bibliothèque depuis rpm sur votre ordinateur et elle apparaîtra ici.",
-    "es": "Aquí no hay nada todavía. Sube tu biblioteca desde rpm en tu ordenador y aparecerá aquí.",
-    "de": "Hier ist noch nichts. Lade deine Mediathek aus rpm auf deinem Rechner hoch, dann erscheint sie hier.",
-    "zh-Hans": "这里还没有内容。在电脑上用 rpm 上传你的音乐库后即会显示在这里。",
-    "comment": "Empty state on the iPhone library tab when the user's cloud store is empty."
+    "en": "Nothing here yet. Upload your library from rpm on your computer and it appears here. Sign in there with this account.",
+    "fr": "Rien ici pour l'instant. Envoyez votre bibliothèque depuis rpm sur votre ordinateur et elle apparaîtra ici. Connectez-vous-y avec ce compte.",
+    "es": "Aquí no hay nada todavía. Sube tu biblioteca desde rpm en tu ordenador y aparecerá aquí. Inicia sesión allí con esta cuenta.",
+    "de": "Hier ist noch nichts. Lade deine Mediathek aus rpm auf deinem Rechner hoch, dann erscheint sie hier. Melde dich dort mit diesem Konto an.",
+    "zh-Hans": "这里还没有内容。在电脑上用 rpm 上传你的音乐库后即会显示在这里。请在电脑上用此账户登录。",
+    "comment": "Phone and TV apps: empty state of home, the album wall, the artists wall and the genres wall when the person's own collection has no music. A shared collection uses Rpm_Share_EmptyShelf."
   },
   "Rpm_Library_Error": {
     "en": "Couldn't reach your library.",
@@ -7003,6 +7003,14 @@
     "de": "Profil",
     "zh-Hans": "个人",
     "comment": "iPhone tab bar label for the account and settings screen."
+  },
+  "Rpm_Tab_Home": {
+    "en": "Home",
+    "fr": "Accueil",
+    "es": "Inicio",
+    "de": "Start",
+    "zh-Hans": "主页",
+    "comment": "Phone tab bar label for the home screen. The page itself uses Home_Heading, in lower case."
   },
   "Rpm_Profile_Subtitle": {
     "en": "Your account, your storage, and how the app behaves.",
@@ -16207,12 +16215,20 @@
     "comment": "Locked home panel heading when a single album is missing."
   },
   "HomeLock_Body": {
-    "en": "Home shows what you've been playing and what to put on next. It needs a few more records before it can say anything useful.",
-    "fr": "L'accueil montre ce que vous avez écouté et quoi mettre ensuite. Il lui faut quelques disques de plus pour être utile.",
-    "es": "Inicio muestra lo que has escuchado y qué poner después. Necesita unos discos más para decir algo útil.",
-    "de": "Start zeigt, was du gehört hast und was als Nächstes läuft. Dafür braucht es noch ein paar Platten mehr.",
-    "zh-Hans": "主页展示你最近在听什么，以及接下来放什么。还需要几张唱片才能给出有用的结果。",
-    "comment": "Locked home panel, line under the heading."
+    "en": "Home shows what you played recently and suggests what to play next.",
+    "fr": "L'accueil montre ce que vous avez écouté récemment et suggère quoi écouter ensuite.",
+    "es": "Inicio muestra lo que has escuchado últimamente y sugiere qué escuchar después.",
+    "de": "Start zeigt, was du zuletzt gehört hast, und schlägt vor, was du als Nächstes hören kannst.",
+    "zh-Hans": "主页显示你最近听过的音乐，并推荐接下来听什么。",
+    "comment": "Locked home panel, line under the heading. Desktop, where the heading already says how many albums are missing, and the phone and Apple TV for a shared collection, where the person cannot add music."
+  },
+  "Rpm_HomeLock_Body": {
+    "en": "Home shows what you played recently and suggests what to play next. Upload more albums from rpm on your computer.",
+    "fr": "L'accueil montre ce que vous avez écouté récemment et suggère quoi écouter ensuite. Envoyez plus d'albums depuis rpm sur votre ordinateur.",
+    "es": "Inicio muestra lo que has escuchado últimamente y sugiere qué escuchar después. Sube más álbumes desde rpm en tu ordenador.",
+    "de": "Start zeigt, was du zuletzt gehört hast, und schlägt vor, was du als Nächstes hören kannst. Lade mehr Alben aus rpm auf deinem Rechner hoch.",
+    "zh-Hans": "主页显示你最近听过的音乐，并推荐接下来听什么。请在电脑上用 rpm 上传更多专辑。",
+    "comment": "Phone and Apple TV: locked home screen for the person's own collection, line under the heading. Music can only be added in the desktop app, so the line says where. A shared collection uses HomeLock_Body."
   },
   "HomeLock_Progress": {
     "en": "{0} of {1} albums",
@@ -17614,13 +17630,21 @@
     "zh-Hans": "用手机相机扫描二维码，然后在手机上登录。",
     "comment": "Android TV sign-in screen, under the two QR codes (Google and Apple). The person scans one with a phone and finishes signing in there; the TV signs in by itself."
   },
-  "Tv_Library_Empty": {
-    "en": "Nothing here yet. Upload your library from rpm on your computer and it appears here.",
-    "fr": "Rien pour l'instant. Envoyez votre bibliothèque depuis rpm sur votre ordinateur et elle apparaîtra ici.",
-    "es": "Aquí no hay nada todavía. Sube tu biblioteca desde rpm en tu ordenador y aparecerá aquí.",
-    "de": "Hier ist noch nichts. Lade deine Bibliothek mit rpm auf deinem Computer hoch, dann erscheint sie hier.",
-    "zh-Hans": "这里还没有内容。在电脑上用 rpm 上传你的音乐库后就会出现在这里。",
-    "comment": "Android TV album wall when the signed-in account has no music in the cloud."
+  "Tv_Artist_NotHere": {
+    "en": "This artist has no albums in this collection.",
+    "fr": "Cet artiste n'a aucun album dans cette collection.",
+    "es": "Este artista no tiene álbumes en esta colección.",
+    "de": "Dieser Interpret hat keine Alben in dieser Sammlung.",
+    "zh-Hans": "此艺人在这个音乐收藏中没有专辑。",
+    "comment": "Apple TV: artist page when the artist is not in the collection on screen, for example after switching collections."
+  },
+  "Tv_Genre_NotHere": {
+    "en": "This genre has no albums in this collection.",
+    "fr": "Ce genre n'a aucun album dans cette collection.",
+    "es": "Este género no tiene álbumes en esta colección.",
+    "de": "Dieses Genre hat keine Alben in dieser Sammlung.",
+    "zh-Hans": "此流派在这个音乐收藏中没有专辑。",
+    "comment": "Apple TV: genre page when no album in the collection on screen is in the genre, for example after switching collections."
   },
   "Tv_Library_ReadingCount": {
     "en": "Reading your library ({0} tracks)",
