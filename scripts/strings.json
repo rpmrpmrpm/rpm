@@ -12846,38 +12846,6 @@
     "zh-Hans": "返回艺人",
     "comment": "Tooltip on the back button of an artist's page."
   },
-  "Artists_PhotoPrevious": {
-    "en": "Previous photo",
-    "fr": "Photo précédente",
-    "es": "Foto anterior",
-    "de": "Vorheriges Foto",
-    "zh-Hans": "上一张照片",
-    "comment": "Tooltip on the back arrow of the photo slideshow on an artist's page."
-  },
-  "Artists_PhotoNext": {
-    "en": "Next photo",
-    "fr": "Photo suivante",
-    "es": "Foto siguiente",
-    "de": "Nächstes Foto",
-    "zh-Hans": "下一张照片",
-    "comment": "Tooltip on the forward arrow of the photo slideshow on an artist's page."
-  },
-  "Artists_PhotoSlideshowStart": {
-    "en": "Start slideshow",
-    "fr": "Lancer le diaporama",
-    "es": "Iniciar pase de fotos",
-    "de": "Diaschau starten",
-    "zh-Hans": "开始幻灯片放映",
-    "comment": "Tooltip on the slideshow button of an artist's page while it is off."
-  },
-  "Artists_PhotoSlideshowStop": {
-    "en": "Stop slideshow",
-    "fr": "Arrêter le diaporama",
-    "es": "Detener pase de fotos",
-    "de": "Diaschau beenden",
-    "zh-Hans": "停止幻灯片放映",
-    "comment": "Tooltip on the slideshow button of an artist's page while it is running."
-  },
   "Artists_Albums": {
     "en": "Albums",
     "fr": "Albums",
@@ -13221,14 +13189,6 @@
     "de": "Laut Sammlern auf Discogs",
     "zh-Hans": "根据 Discogs 收藏者",
     "comment": "Line under the Most popular heading saying where the ranking comes from."
-  },
-  "Artists_PopularConnect": {
-    "en": "Connect a Discogs account in Settings to see this.",
-    "fr": "Connectez un compte Discogs dans les paramètres pour voir ceci.",
-    "es": "Conecta una cuenta de Discogs en Ajustes para ver esto.",
-    "de": "Verbinden Sie in den Einstellungen ein Discogs-Konto, um dies zu sehen.",
-    "zh-Hans": "在设置中连接 Discogs 账户以查看。",
-    "comment": "Shown in the Most popular card on an artist's page when no Discogs account is connected."
   },
   "Artists_PopularHave": {
     "en": "{0} have it",
