@@ -1583,13 +1583,29 @@
     "zh-Hans": "乐团",
     "comment": "Tag field: the orchestra or choir, on a classical record."
   },
-  "Details_Soloists": {
-    "en": "Soloists",
-    "fr": "Solistes",
-    "es": "Solistas",
-    "de": "Solisten",
-    "zh-Hans": "独奏者",
-    "comment": "Tag field: the featured performers, as the sleeve credits them."
+  "Details_Performers": {
+    "en": "Performers",
+    "fr": "Interprètes",
+    "es": "Intérpretes",
+    "de": "Interpreten",
+    "zh-Hans": "演奏者",
+    "comment": "Tag field, classical credits: the people who played on the track, one per line, each with their instrument in brackets."
+  },
+  "Details_Vocalists": {
+    "en": "Vocalists",
+    "fr": "Chanteurs",
+    "es": "Vocalistas",
+    "de": "Sänger",
+    "zh-Hans": "演唱者",
+    "comment": "Tag field, classical credits: the people who sang on the track, one per line, each with their voice in brackets."
+  },
+  "Details_AddLine": {
+    "en": "Add another name",
+    "fr": "Ajouter un autre nom",
+    "es": "Añadir otro nombre",
+    "de": "Weiteren Namen hinzufügen",
+    "zh-Hans": "再添加一个名字",
+    "comment": "Tooltip on the + beside a list of performers or vocalists: adds an empty line for one more person."
   },
   "Details_Lyricist": {
     "en": "Lyricist",
@@ -1838,6 +1854,14 @@
     "de": "MESSWERT",
     "zh-Hans": "读数",
     "comment": "Dense form group heading: what the measurement came out of (grid, confidences, which analyser)."
+  },
+  "MassEdit_GroupClassical": {
+    "en": "CLASSICAL",
+    "fr": "CLASSIQUE",
+    "es": "CLÁSICA",
+    "de": "KLASSIK",
+    "zh-Hans": "古典",
+    "comment": "All-caps group heading over the classical credits: composer, conductor, ensemble, performers and vocalists."
   },
   "MassEdit_GroupWork": {
     "en": "WORK",
@@ -10933,6 +10957,14 @@
     "de": "Nie",
     "zh-Hans": "从不",
     "comment": "Album editor choice: leave this record at its own level whatever the global setting says."
+  },
+  "AlbumEdit_ApplyToTracks": {
+    "en": "Apply changes to tracks",
+    "fr": "Appliquer aux pistes",
+    "es": "Aplicar a las pistas",
+    "de": "Auf Titel anwenden",
+    "zh-Hans": "应用到曲目",
+    "comment": "Tick beside Cancel in the album editor: on save, every field is written to every track of the record, and the album artist becomes each track's own artist."
   },
   "AlbumEdit_Classical": {
     "en": "Is classical",
