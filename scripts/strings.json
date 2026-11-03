@@ -830,11 +830,11 @@
     "zh-Hans": "连接 Discogs"
   },
   "Catalog_DiscogsConnectFailed": {
-    "en": "Discogs did not finish connecting. Try again.",
-    "fr": "Discogs n'a pas terminé la connexion. Réessayez.",
-    "es": "Discogs no terminó de conectarse. Inténtelo de nuevo.",
-    "de": "Discogs hat die Verbindung nicht abgeschlossen. Versuchen Sie es erneut.",
-    "zh-Hans": "Discogs 未能完成连接。请重试。"
+    "en": "Discogs didn’t finish connecting. Give it another go!",
+    "fr": "La connexion à Discogs n’a pas abouti. Réessayez !",
+    "es": "Discogs no terminó de conectarse. ¡Inténtalo otra vez!",
+    "de": "Die Verbindung mit Discogs hat nicht geklappt. Versuch es gleich noch mal!",
+    "zh-Hans": "Discogs 没有连接成功。再试一次吧！"
   },
   "Catalog_DiscogsConnected": {
     "en": "connected",
@@ -865,11 +865,11 @@
     "zh-Hans": "未连接"
   },
   "Catalog_DiscogsPending": {
-    "en": "Finish signing in to Discogs in your browser, then check again.",
-    "fr": "Terminez la connexion à Discogs dans votre navigateur, puis vérifiez à nouveau.",
-    "es": "Termine de iniciar sesión en Discogs en su navegador y vuelva a comprobar.",
-    "de": "Schließen Sie die Anmeldung bei Discogs in Ihrem Browser ab und prüfen Sie dann erneut.",
-    "zh-Hans": "请在浏览器中完成 Discogs 登录，然后重新检查。"
+    "en": "Finish signing in to Discogs in your browser, then come back and check again.",
+    "fr": "Terminez la connexion à Discogs dans votre navigateur, puis revenez vérifier.",
+    "es": "Termina de iniciar sesión en Discogs en tu navegador y vuelve a comprobarlo.",
+    "de": "Schließ die Anmeldung bei Discogs in deinem Browser ab, dann komm zurück und prüf es noch einmal.",
+    "zh-Hans": "请先在浏览器中完成 Discogs 登录，然后回来再检查一次。"
   },
   "Catalog_DiscogsSignIn": {
     "en": "sign in to rpm first",
@@ -894,11 +894,11 @@
     "zh-Hans": "此处不可用"
   },
   "Catalog_DiscogsWhy": {
-    "en": "Discogs is catalogued by the people who own the records, so pressings the rpm database does not have are usually there. Connecting your own account means your searches count against your rate limit rather than one shared by every rpm user.",
-    "fr": "Discogs est catalogué par les propriétaires des disques : les pressages absents de la base rpm s'y trouvent en général. Avec votre propre compte, vos recherches comptent sur votre quota et non sur celui partagé par tous les utilisateurs de rpm.",
-    "es": "Discogs lo cataloga la gente que tiene los discos, así que los prensajes que no están en la base de datos de rpm suelen estar ahí. Al conectar tu cuenta, tus búsquedas cuentan en tu límite y no en uno compartido por todos los usuarios de rpm.",
-    "de": "Discogs wird von den Leuten katalogisiert, denen die Platten gehören. Pressungen, die in der rpm-Datenbank fehlen, sind dort meist zu finden. Mit einem eigenen Konto zählen deine Suchen auf dein Limit statt auf eines, das sich alle rpm-Nutzer teilen.",
-    "zh-Hans": "Discogs 由唱片持有者共同编目，rpm 数据库没有收录的压片通常在这里能找到。连接你自己的账户后，搜索计入你自己的调用额度，而不是所有 rpm 用户共用的额度。"
+    "en": "Discogs is put together by the people who own the records, so it often has pressings the rpm database doesn’t. Connect your own account and your searches use your own rate limit, instead of one everybody shares.",
+    "fr": "Discogs est alimenté par les gens qui possèdent les disques, il a donc souvent des pressages que la base de rpm n’a pas. Connectez votre propre compte et vos recherches utilisent votre propre limite, au lieu d’une limite partagée par tout le monde.",
+    "es": "Discogs lo construyen las personas que tienen los discos, así que suele tener ediciones que la base de datos de rpm no tiene. Conecta tu propia cuenta y tus búsquedas usarán tu propio límite, en lugar de uno compartido por todos.",
+    "de": "Discogs wird von den Leuten gepflegt, denen die Platten gehören, deshalb findest du dort oft Pressungen, die die rpm-Datenbank nicht hat. Verbinde dein eigenes Konto, dann zählen deine Suchen gegen dein eigenes Limit statt gegen eines, das sich alle teilen.",
+    "zh-Hans": "Discogs 由唱片的主人们共同整理，常常收录 rpm 数据库里没有的版本。连接你自己的帐户后，搜索会使用你自己的频率限额，而不是和所有人共用一个。"
   },
   "Catalog_Heading": {
     "en": "Catalogues",
@@ -908,11 +908,11 @@
     "zh-Hans": "唱片数据库"
   },
   "Catalog_Intro": {
-    "en": "Where rpm looks when you look an album up. Searching needs an rpm account; connect a Discogs account to search Discogs too.",
-    "fr": "Où rpm cherche lorsque vous recherchez un album. La recherche nécessite un compte rpm ; connectez un compte Discogs pour interroger Discogs aussi.",
-    "es": "Dónde busca rpm cuando consultas un álbum. Buscar requiere una cuenta rpm; conecta una cuenta de Discogs para consultar Discogs también.",
-    "de": "Wo rpm sucht, wenn du ein Album nachschlägst. Die Suche benötigt ein rpm-Konto; verbinde ein Discogs-Konto, um auch Discogs zu durchsuchen.",
-    "zh-Hans": "查找专辑时 rpm 会搜索的位置。搜索需要 rpm 账户；连接 Discogs 账户即可一并搜索 Discogs。"
+    "en": "This is where rpm looks when you look up an album. You’ll need an rpm account to search, and if you connect Discogs, rpm searches there too.",
+    "fr": "C’est ici que rpm cherche quand vous recherchez un album. Il vous faut un compte rpm pour chercher, et si vous connectez Discogs, rpm y cherche aussi.",
+    "es": "Aquí es donde rpm busca cuando consultas un álbum. Necesitas una cuenta de rpm para buscar, y si conectas Discogs, rpm también busca allí.",
+    "de": "Hier sucht rpm, wenn du ein Album nachschlägst. Zum Suchen brauchst du ein rpm-Konto, und wenn du Discogs verbindest, sucht rpm auch dort.",
+    "zh-Hans": "这里是你查找专辑时 rpm 去搜索的地方。搜索需要 rpm 帐户；连接 Discogs 后，rpm 也会在那里搜索。"
   },
   "Catalog_RpmSearched": {
     "en": "Always searched. Nothing to connect.",
@@ -931,11 +931,11 @@
     "comment": "RPM catalogue status on the Catalog settings page, signed out."
   },
   "Catalog_FanartWhy": {
-    "en": "rpm gets artist photos, square artist pictures and logos from fanart.tv. Add your own free fanart.tv personal key to get new images after 2 days instead of 7. The key is saved to your rpm account and used on all your devices.",
-    "fr": "rpm récupère les photos d'artistes, les images carrées et les logos sur fanart.tv. Ajoutez votre clé personnelle fanart.tv gratuite pour recevoir les nouvelles images après 2 jours au lieu de 7. La clé est enregistrée dans votre compte rpm et utilisée sur tous vos appareils.",
-    "es": "rpm obtiene fotos de artistas, imágenes cuadradas y logotipos de fanart.tv. Añade tu clave personal gratuita de fanart.tv para recibir las imágenes nuevas a los 2 días en lugar de a los 7. La clave se guarda en tu cuenta de rpm y se usa en todos tus dispositivos.",
-    "de": "rpm lädt Künstlerfotos, quadratische Künstlerbilder und Logos von fanart.tv. Füge deinen kostenlosen persönlichen fanart.tv-Schlüssel hinzu, um neue Bilder nach 2 statt nach 7 Tagen zu erhalten. Der Schlüssel wird in deinem rpm-Konto gespeichert und auf allen deinen Geräten verwendet.",
-    "zh-Hans": "rpm 从 fanart.tv 获取艺人照片、方形艺人图片和标志。添加你自己的免费 fanart.tv 个人密钥，新图片将在 2 天后而不是 7 天后可用。密钥保存在你的 rpm 账户中，并在你的所有设备上使用。",
+    "en": "rpm gets artist photos, square pictures and logos from fanart.tv. Add your own free personal key and you’ll get new images after 2 days instead of 7. The key is saved to your rpm account, so it works on all your devices.",
+    "fr": "rpm récupère les photos d’artistes, les images carrées et les logos sur fanart.tv. Ajoutez votre propre clé personnelle gratuite et vous recevrez les nouvelles images au bout de 2 jours au lieu de 7. La clé est enregistrée dans votre compte rpm, elle fonctionne donc sur tous vos appareils.",
+    "es": "rpm obtiene fotos de artistas, imágenes cuadradas y logotipos de fanart.tv. Añade tu propia clave personal gratuita y recibirás las imágenes nuevas a los 2 días en vez de a los 7. La clave se guarda en tu cuenta de rpm, así que funciona en todos tus dispositivos.",
+    "de": "rpm holt Künstlerfotos, quadratische Bilder und Logos von fanart.tv. Füg deinen eigenen kostenlosen persönlichen Schlüssel hinzu, dann bekommst du neue Bilder schon nach 2 statt nach 7 Tagen. Der Schlüssel wird in deinem rpm-Konto gespeichert und funktioniert so auf all deinen Geräten.",
+    "zh-Hans": "rpm 从 fanart.tv 获取艺人照片、方形图片和标志。添加你自己的免费个人密钥后，新图片 2 天就能拿到，而不是 7 天。密钥保存在你的 rpm 帐户里，所以在你所有设备上都能用。",
     "comment": "Catalog settings page, fanart.tv section: what fanart.tv provides and what adding a personal key changes."
   },
   "Catalog_FanartKeyPlaceholder": {
@@ -1056,11 +1056,11 @@
     "zh-Hans": "云存储"
   },
   "Cloud_Intro": {
-    "en": "Keep your music in the rpm cloud as well as on this computer. Your files stay on disk unless you ask otherwise.",
-    "fr": "Gardez votre musique dans le cloud rpm en plus de cet ordinateur. Vos fichiers restent sur le disque, sauf demande contraire.",
-    "es": "Guarda tu música en la nube de rpm además de en este ordenador. Tus archivos permanecen en el disco salvo que indiques lo contrario.",
-    "de": "Bewahre deine Musik zusätzlich zu diesem Rechner in der rpm-Cloud auf. Deine Dateien bleiben auf der Festplatte, sofern du nichts anderes verlangst.",
-    "zh-Hans": "把你的音乐同时保存在 rpm 云端和这台电脑上。除非你另行设置，文件都会留在磁盘上。"
+    "en": "Keep your music safe in the rpm cloud, as well as on this computer. Your files stay right where they are unless you say otherwise.",
+    "fr": "Gardez votre musique en sécurité dans le cloud rpm, en plus de cet ordinateur. Vos fichiers restent où ils sont, sauf si vous en décidez autrement.",
+    "es": "Guarda tu música a salvo en la nube de rpm, además de en este ordenador. Tus archivos se quedan donde están, salvo que digas lo contrario.",
+    "de": "Bewahre deine Musik sicher in der rpm-Cloud auf, zusätzlich zu diesem Computer. Deine Dateien bleiben, wo sie sind, solange du nichts anderes sagst.",
+    "zh-Hans": "把你的音乐安全地存进 rpm 云端，同时保留在这台电脑上。除非你另有安排，文件都会原地不动。"
   },
   "Cloud_ModeAll": {
     "en": "Sync all music",
@@ -1113,11 +1113,11 @@
     "comment": "Cloud settings, heading of the card that says what is not on this computer."
   },
   "Cloud_OnlyInCloudHint": {
-    "en": "rpm never removes your files. If you delete music to free up space, the cloud copy stays, and you can download it again from the right-click menu.",
-    "fr": "rpm ne supprime jamais vos fichiers. Si vous supprimez de la musique pour libérer de l'espace, la copie dans le cloud est conservée et vous pouvez la retélécharger depuis le menu contextuel.",
-    "es": "rpm nunca elimina tus archivos. Si borras música para liberar espacio, la copia en la nube se conserva y puedes volver a descargarla desde el menú contextual.",
-    "de": "rpm entfernt deine Dateien nie. Wenn du Musik löschst, um Platz zu schaffen, bleibt die Cloud-Kopie erhalten, und du kannst sie über das Kontextmenü wieder herunterladen.",
-    "zh-Hans": "rpm 从不删除你的文件。如果你为了腾出空间而删除音乐，云端副本会保留，你可以在右键菜单中重新下载。",
+    "en": "rpm never removes your files. If you delete music to free up space, the cloud copy stays, and you can download it again any time from the right-click menu.",
+    "fr": "rpm ne supprime jamais vos fichiers. Si vous effacez de la musique pour libérer de la place, la copie dans le cloud reste, et vous pouvez la retélécharger à tout moment depuis le menu du clic droit.",
+    "es": "rpm nunca elimina tus archivos. Si borras música para liberar espacio, la copia en la nube se queda, y puedes volver a descargarla cuando quieras desde el menú del botón derecho.",
+    "de": "rpm entfernt nie deine Dateien. Wenn du Musik löschst, um Platz zu schaffen, bleibt die Kopie in der Cloud, und du kannst sie jederzeit über das Rechtsklickmenü wieder herunterladen.",
+    "zh-Hans": "rpm 从不删除你的文件。如果你为了腾出空间删掉音乐，云端副本仍会保留，你随时可以从右键菜单重新下载。",
     "comment": "Cloud settings, under Cloud_OnlyInCloud."
   },
   "Cloud_Pending": {
@@ -2835,19 +2835,19 @@
     "comment": "Settings > Collection: button that runs the tagging pass over every analysed track."
   },
   "Settings_AnalysisTagsHint": {
-    "en": "rpm works out the tempo and key of every track used in DJ mode. With this on, each track that finishes analysing has them written into its own tags, where a file browser and any other music program can read them. Only empty fields are filled: a value already in a file is left alone.",
-    "fr": "rpm détermine le tempo et la tonalité de chaque piste utilisée en mode DJ. Avec cette option, chaque piste analysée les reçoit dans ses propres tags, lisibles par un explorateur de fichiers et par tout autre logiciel musical. Seuls les champs vides sont remplis : une valeur déjà présente est conservée.",
-    "es": "rpm calcula el tempo y la tonalidad de cada pista usada en el modo DJ. Con esto activado, cada pista analizada los recibe en sus propias etiquetas, donde un explorador de archivos y cualquier otro programa de música pueden leerlos. Solo se rellenan los campos vacíos: un valor que ya esté en el archivo se deja intacto.",
-    "de": "rpm ermittelt Tempo und Tonart jedes Titels, der im DJ-Modus genutzt wird. Ist das aktiv, werden sie nach der Analyse in die Tags des Titels geschrieben, wo ein Dateimanager und jedes andere Musikprogramm sie lesen können. Nur leere Felder werden gefüllt: ein Wert, der schon in der Datei steht, bleibt unangetastet.",
-    "zh-Hans": "rpm 会计算 DJ 模式中所用每首曲目的速度和调性。开启后，分析完成的曲目会把它们写入自身标签，文件管理器和其他音乐软件都能读取。仅填写空白字段：文件中已有的值不会改动。",
+    "en": "rpm works out the tempo and key of every track for DJ mode. Turn this on and each analysed track gets them written into its own tags, so your file browser and other music apps can read them too. Only empty fields are filled, so anything already in a file stays as it is.",
+    "fr": "rpm détermine le tempo et la tonalité de chaque piste pour le mode DJ. Activez cette option et chaque piste analysée les reçoit dans ses propres tags, pour que votre explorateur de fichiers et vos autres applis musicales puissent les lire aussi. Seuls les champs vides sont remplis : ce qui figure déjà dans un fichier reste tel quel.",
+    "es": "rpm calcula el tempo y la tonalidad de cada pista para el modo DJ. Actívalo y cada pista analizada los recibe en sus propias etiquetas, para que tu explorador de archivos y otras apps de música también puedan leerlos. Solo se rellenan los campos vacíos, así que lo que ya tenga un archivo se queda igual.",
+    "de": "rpm ermittelt Tempo und Tonart jedes Titels für den DJ-Modus. Schalte das ein, und jeder analysierte Titel bekommt sie in seine eigenen Tags geschrieben, damit dein Dateibrowser und andere Musik-Apps sie auch lesen können. Nur leere Felder werden gefüllt, was schon in einer Datei steht, bleibt also, wie es ist.",
+    "zh-Hans": "rpm 会为 DJ 模式算出每首曲目的速度和调性。打开后，每首分析完的曲目都会把它们写进自己的标签，你的文件浏览器和其他音乐软件也能读到。只填写空白字段，文件里已有的内容保持不变。",
     "comment": "Settings > Collection: explanation under the tempo-and-key toggle."
   },
   "Settings_AnalysisTagsNoneWaiting": {
-    "en": "Every analysed track has its tempo and key written.",
-    "fr": "Chaque piste analysée a son tempo et sa tonalité écrits.",
-    "es": "Cada pista analizada tiene su tempo y tonalidad escritos.",
-    "de": "Bei jedem analysierten Titel sind Tempo und Tonart geschrieben.",
-    "zh-Hans": "所有已分析的曲目都已写入速度和调性。",
+    "en": "All done! Every analysed track has its tempo and key written.",
+    "fr": "C’est fait ! Chaque piste analysée a son tempo et sa tonalité.",
+    "es": "¡Listo! Todas las pistas analizadas tienen su tempo y tonalidad.",
+    "de": "Fertig! Jeder analysierte Titel hat Tempo und Tonart.",
+    "zh-Hans": "全部完成！每首已分析的曲目都写好了速度和调性。",
     "comment": "Settings > Collection: shown in place of the count when nothing is waiting."
   },
   "Settings_AnalysisTagsOverwrite": {
@@ -2875,11 +2875,11 @@
     "comment": "Settings > Collection: the backfill button's label while the pass is running."
   },
   "Settings_AnalysisTagsWaiting": {
-    "en": "{0} analysed tracks are waiting for their tempo and key.",
-    "fr": "{0} morceaux analysés attendent leur tempo et leur tonalité.",
-    "es": "{0} pistas analizadas esperan su tempo y su tonalidad.",
-    "de": "{0} analysierte Titel warten auf Tempo und Tonart.",
-    "zh-Hans": "有 {0} 首已分析的曲目还在等待写入速度与调性。",
+    "en": "{0} analysed tracks are still waiting for their tempo and key.",
+    "fr": "{0} pistes analysées attendent encore leur tempo et leur tonalité.",
+    "es": "{0} pistas analizadas siguen esperando su tempo y tonalidad.",
+    "de": "{0} analysierte Titel warten noch auf Tempo und Tonart.",
+    "zh-Hans": "还有 {0} 首已分析的曲目在等待写入速度和调性。",
     "comment": "Settings > Collection: how many analysed tracks the backfill would write to."
   },
   "Settings_AnalysisTagsWrite": {
@@ -2915,11 +2915,11 @@
     "comment": "Settings > Display: toggle for the turning record at the right of the art display."
   },
   "Settings_HeaderRecordHint": {
-    "en": "Show the turning record at the right of the art display. Off, the artwork fills the full width.",
-    "fr": "Affiche le disque qui tourne à droite du bandeau. Désactivé, l'illustration occupe toute la largeur.",
-    "es": "Muestra el disco giratorio a la derecha del panel. Desactivado, la imagen ocupa todo el ancho.",
-    "de": "Zeigt die drehende Schallplatte rechts in der Coveranzeige. Aus füllt das Bild die volle Breite.",
-    "zh-Hans": "在封面展示区右侧显示旋转的唱片。关闭时，图片将铺满整个宽度。",
+    "en": "Show the spinning record on the right of the art display. Turn it off and the artwork fills the whole width.",
+    "fr": "Affiche le disque qui tourne à droite de l’affichage des pochettes. Désactivez-le et la pochette occupe toute la largeur.",
+    "es": "Muestra el disco girando a la derecha de la pantalla de carátulas. Desactívalo y la carátula ocupa todo el ancho.",
+    "de": "Zeigt die drehende Platte rechts in der Cover-Anzeige. Schalte es aus, und das Artwork füllt die ganze Breite.",
+    "zh-Hans": "在封面展示的右侧显示旋转的唱片。关闭后，封面会铺满整个宽度。",
     "comment": "Settings > Display: hint under the spinning record toggle."
   },
   "Settings_HeaderArtistPhoto": {
@@ -2931,11 +2931,11 @@
     "comment": "Settings > Display: toggle for the artist photograph behind the art display."
   },
   "Settings_HeaderArtistPhotoHint": {
-    "en": "Show a photo of the artist behind the art display. Off, no photos are downloaded and the album colours are used instead.",
-    "fr": "Affiche une photo de l'artiste derrière le bandeau. Désactivé, aucune photo n'est téléchargée et les couleurs de l'album sont utilisées.",
-    "es": "Muestra una foto del artista detrás del panel. Desactivado, no se descargan fotos y se usan los colores del álbum.",
-    "de": "Zeigt ein Foto des Künstlers hinter der Coveranzeige. Aus werden keine Fotos geladen und stattdessen die Albumfarben verwendet.",
-    "zh-Hans": "在封面展示区后面显示艺人照片。关闭时不会下载照片，改用专辑配色。",
+    "en": "Show a photo of the artist behind the art display. Turn it off and rpm downloads no photos, using the album’s colours instead.",
+    "fr": "Affiche une photo de l’artiste derrière l’affichage des pochettes. Désactivez-le et rpm ne télécharge aucune photo : les couleurs de l’album prennent le relais.",
+    "es": "Muestra una foto del artista detrás de la pantalla de carátulas. Desactívalo y rpm no descarga fotos: usa los colores del álbum en su lugar.",
+    "de": "Zeigt ein Foto des Künstlers hinter der Cover-Anzeige. Schalte es aus, dann lädt rpm keine Fotos und nimmt stattdessen die Farben des Albums.",
+    "zh-Hans": "在封面展示背后显示艺人照片。关闭后，rpm 不下载任何照片，改用专辑的颜色。",
     "comment": "Settings > Display: hint under the artist photo toggle."
   },
   "Settings_MultiDisc": {
@@ -2947,11 +2947,11 @@
     "comment": "Settings > Collection: title of the card choosing how multi-disc releases are handled."
   },
   "Settings_MultiDiscHint": {
-    "en": "How a release that spans several discs is handled when you rip or import it.",
-    "fr": "Comment traiter une publication répartie sur plusieurs disques lors du rip ou de l’import.",
-    "es": "Cómo se trata una edición repartida en varios discos al copiarla o importarla.",
-    "de": "Wie eine Veröffentlichung über mehrere CDs beim Rippen oder Importieren behandelt wird.",
-    "zh-Hans": "在抓取或导入跨多张碟的发行版时如何处理。",
+    "en": "How rpm handles a release that spans several discs when you rip or import it.",
+    "fr": "Comment rpm gère une parution sur plusieurs disques quand vous l’extrayez ou l’importez.",
+    "es": "Cómo trata rpm un lanzamiento de varios discos cuando lo ripeas o lo importas.",
+    "de": "Wie rpm eine Veröffentlichung über mehrere Discs behandelt, wenn du sie rippst oder importierst.",
+    "zh-Hans": "翻录或导入多碟发行时，rpm 如何处理。",
     "comment": "Settings > Collection: hint under the multi-disc mode picker."
   },
   "Settings_MultiDiscMerged": {
@@ -2995,19 +2995,19 @@
     "comment": "Settings toggle: send anonymous per-song play counts so album pages can mark the most played track."
   },
   "Settings_ShareListeningHint": {
-    "en": "Sends a count of how often you play each song, with no times and no history. It marks the most played song on album pages. Turn it off and nothing more is sent.",
-    "fr": "Envoie le nombre de fois que vous écoutez chaque morceau, sans horodatage ni historique. Cela met en avant le morceau le plus écouté sur les pages d'album. Désactivez et plus rien n'est envoyé.",
-    "es": "Envía cuántas veces reproduces cada canción, sin horas ni historial. Sirve para marcar la canción más escuchada en las páginas de álbum. Desactívalo y no se envía nada más.",
-    "de": "Sendet, wie oft Sie jeden Titel spielen, ohne Zeiten und ohne Verlauf. Damit wird der meistgespielte Titel auf Albumseiten markiert. Ausgeschaltet wird nichts mehr gesendet.",
-    "zh-Hans": "发送您播放每首歌曲的次数，不含时间和历史记录。用于在专辑页面标记最常播放的歌曲。关闭后不再发送任何内容。",
+    "en": "Sends a count of how often you play each song, with no times and no history. That’s how album pages mark the most played song. Turn it off and nothing more is sent.",
+    "fr": "Envoie le nombre d’écoutes de chaque morceau, sans heure ni historique. C’est ainsi que les pages d’album signalent le morceau le plus écouté. Désactivez-le et plus rien n’est envoyé.",
+    "es": "Envía cuántas veces reproduces cada canción, sin horas ni historial. Así es como las páginas de álbum marcan la canción más escuchada. Desactívalo y no se envía nada más.",
+    "de": "Sendet, wie oft du jeden Song spielst, ohne Uhrzeiten und ohne Verlauf. So markieren die Albumseiten den meistgespielten Song. Schalte es aus, und es wird nichts mehr gesendet.",
+    "zh-Hans": "发送每首歌的播放次数，不含时间，也不含历史记录。专辑页面就是靠它标出最常播放的歌曲。关闭后就不再发送任何内容。",
     "comment": "Settings hint under the Share what I play toggle: what leaves the computer and what it is for."
   },
   "Settings_FingerprintHint": {
-    "en": "rpm computes an audio fingerprint for each track and shares it with the recognition service, which makes identifying music better for everyone. It runs in the background and never changes your files.",
-    "fr": "rpm calcule une empreinte audio pour chaque piste et la partage avec le service de reconnaissance, ce qui améliore l'identification pour tout le monde. Cela tourne en arrière-plan et ne modifie jamais vos fichiers.",
-    "es": "rpm calcula una huella de audio para cada pista y la comparte con el servicio de reconocimiento, lo que mejora la identificación para todos. Se ejecuta en segundo plano y nunca modifica tus archivos.",
-    "de": "rpm berechnet für jeden Titel einen Audio-Fingerabdruck und teilt ihn mit dem Erkennungsdienst, was die Identifizierung für alle verbessert. Das läuft im Hintergrund und ändert deine Dateien nie.",
-    "zh-Hans": "rpm 会为每首曲目计算音频指纹并共享给识别服务，从而让所有人的识别效果更好。它在后台运行，且不会修改你的文件。",
+    "en": "rpm makes an audio fingerprint of each track and shares it with the recognition service, which helps everyone identify music better. It runs quietly in the background and never changes your files.",
+    "fr": "rpm crée une empreinte audio de chaque piste et la partage avec le service de reconnaissance, ce qui aide tout le monde à mieux identifier la musique. Cela se fait discrètement en arrière-plan, sans jamais modifier vos fichiers.",
+    "es": "rpm crea una huella de audio de cada pista y la comparte con el servicio de reconocimiento, lo que ayuda a todos a identificar mejor la música. Funciona discretamente en segundo plano y nunca cambia tus archivos.",
+    "de": "rpm erstellt von jedem Titel einen Audio-Fingerabdruck und teilt ihn mit dem Erkennungsdienst, das hilft allen, Musik besser zu erkennen. Das läuft leise im Hintergrund und ändert nie deine Dateien.",
+    "zh-Hans": "rpm 会为每首曲目生成音频指纹，并分享给识别服务，让大家都能更准确地识别音乐。它在后台安静运行，绝不会改动你的文件。",
     "comment": "Settings > Collection: hint under the fingerprinting toggle."
   },
   "Settings_Discs": {
@@ -3027,11 +3027,11 @@
     "comment": "Toggle that registers rpm as the machine's handler for an inserted music CD."
   },
   "Settings_DiscDefaultHint": {
-    "en": "This computer opens audio discs with rpm instead of its own music app. rpm asks before it rips anything. This is the same setting as the one in the system settings, and either place can change it.",
-    "fr": "Cet ordinateur ouvre les disques audio avec rpm plutôt qu'avec son propre lecteur. rpm demande avant de lancer une extraction. C'est le même réglage que celui du système, et les deux endroits le modifient.",
-    "es": "Este ordenador abre los discos de audio con rpm en lugar de con su propia aplicación de música. rpm pregunta antes de extraer nada. Es el mismo ajuste que el del sistema, y se puede cambiar desde cualquiera de los dos.",
-    "de": "Dieser Rechner öffnet Audio-Discs mit rpm statt mit der eigenen Musik-App. rpm fragt nach, bevor es etwas rippt. Es ist dieselbe Einstellung wie in den Systemeinstellungen, und beide Stellen ändern sie.",
-    "zh-Hans": "这台电脑用 rpm 而不是系统自带的音乐应用打开音频光盘。rpm 在抓取前会先询问。这与系统设置中的选项是同一项，两处均可更改。",
+    "en": "Pop in an audio CD and it opens in rpm instead of your computer’s own music app. Don’t worry, rpm always asks before it rips anything. It’s the same setting as the one in your system settings, so you can change it in either place.",
+    "fr": "Insérez un CD audio et il s’ouvre dans rpm plutôt que dans l’appli musicale de votre ordinateur. Pas d’inquiétude, rpm demande toujours avant d’extraire quoi que ce soit. C’est le même réglage que dans les paramètres du système, vous pouvez donc le changer à l’un ou l’autre endroit.",
+    "es": "Mete un CD de audio y se abre en rpm en lugar de en la app de música de tu ordenador. Tranquilo, rpm siempre pregunta antes de ripear nada. Es el mismo ajuste que el de la configuración del sistema, así que puedes cambiarlo en cualquiera de los dos sitios.",
+    "de": "Leg eine Audio-CD ein, und sie öffnet sich in rpm statt in der Musik-App deines Computers. Keine Sorge, rpm fragt immer, bevor es etwas rippt. Es ist dieselbe Einstellung wie in den Systemeinstellungen, du kannst sie also an beiden Stellen ändern.",
+    "zh-Hans": "放入音频 CD，它会在 rpm 中打开，而不是电脑自带的音乐应用。别担心，rpm 翻录前一定会先问你。这和系统设置里的是同一个选项，在哪边都能修改。",
     "comment": "Hint under the disc-handler toggle."
   },
   "Settings_DiscDefaultUnavailable": {
@@ -3066,11 +3066,11 @@
     "zh-Hans": "背景"
   },
   "Settings_BackgroundHint": {
-    "en": "Pick one of the app’s own backdrops, or use a picture of your own.",
-    "fr": "Choisissez un des fonds de l’application, ou utilisez votre propre image.",
-    "es": "Elige uno de los fondos de la aplicación o usa tu propia imagen.",
-    "de": "Wähle einen der mitgelieferten Hintergründe, oder verwende ein eigenes Bild.",
-    "zh-Hans": "选择应用自带的背景，或使用你自己的图片。",
+    "en": "Pick one of rpm’s own backdrops, or use a picture of your own.",
+    "fr": "Choisissez l’un des fonds de rpm, ou utilisez une image à vous.",
+    "es": "Elige uno de los fondos de rpm o usa una imagen tuya.",
+    "de": "Wähle einen der Hintergründe von rpm oder nimm ein eigenes Bild.",
+    "zh-Hans": "从 rpm 自带的背景里挑一张，或者用你自己的图片。",
     "comment": "Hint under the Background heading in Display settings, above the row of backdrop tiles."
   },
   "Settings_BackgroundDefault": {
@@ -3165,11 +3165,11 @@
     "zh-Hans": "音乐收藏"
   },
   "Settings_LibraryIntro": {
-    "en": "Where your music is kept, how files are named, and what happens when new music comes in.",
-    "fr": "Où votre musique est rangée, comment les fichiers sont nommés et ce qui se passe à l'arrivée de nouveaux morceaux.",
-    "es": "Dónde se guarda tu música, cómo se nombran los archivos y qué ocurre cuando llega música nueva.",
-    "de": "Wo deine Musik liegt, wie Dateien benannt werden und was mit neuer Musik geschieht.",
-    "zh-Hans": "音乐存放的位置、文件的命名方式，以及导入新音乐时的处理方式。",
+    "en": "Where your music lives, how your files are named, and what happens when new music comes in.",
+    "fr": "Où vit votre musique, comment vos fichiers sont nommés et ce qui se passe quand de la nouvelle musique arrive.",
+    "es": "Dónde vive tu música, cómo se llaman tus archivos y qué pasa cuando llega música nueva.",
+    "de": "Wo deine Musik zu Hause ist, wie deine Dateien heißen und was passiert, wenn neue Musik dazukommt.",
+    "zh-Hans": "你的音乐存放在哪里、文件如何命名，以及新音乐加入时会发生什么。",
     "comment": "Settings > Collection: caption under the page heading."
   },
   "Settings_MusicFolder": {
@@ -3226,11 +3226,11 @@
     "zh-Hans": "文件命名"
   },
   "Settings_NamingHint": {
-    "en": "How ripped, recorded and imported files are named and filed. Rips and vinyl recordings enter the queue with the default template, and Import files everything the same way. Build your own layout from the tokens below.",
-    "fr": "Comment les fichiers extraits, enregistrés et importés sont nommés et classés. Les extractions et les enregistrements vinyle entrent dans la file avec le modèle par défaut, et l'import classe tout de la même manière. Composez votre propre disposition avec les jetons ci-dessous.",
-    "es": "Cómo se nombran y archivan los archivos extraídos, grabados e importados. Las extracciones y las grabaciones de vinilo entran en la cola con la plantilla predeterminada, y la importación archiva todo igual. Crea tu propio diseño con los tokens de abajo.",
-    "de": "Wie gerippte, aufgenommene und importierte Dateien benannt und abgelegt werden. Rips und Vinyl-Aufnahmen kommen mit der Standardvorlage in die Warteschlange, und der Import legt alles genauso ab. Baue dein eigenes Layout aus den Bausteinen unten.",
-    "zh-Hans": "抓取、录制和导入的文件如何命名与归档。抓取和黑胶录音会以默认模板进入队列，导入也按同样方式归档。可用下方的标记自定义命名格式。"
+    "en": "How your ripped, recorded and imported files are named and filed. Rips and vinyl recordings join the queue with the default template, and Import files everything the same way. Build your own layout from the tokens below!",
+    "fr": "Comment vos fichiers extraits, enregistrés et importés sont nommés et rangés. Les extractions et les enregistrements de vinyles rejoignent la file avec le modèle par défaut, et l’importation range tout de la même façon. Composez votre propre organisation avec les éléments ci-dessous !",
+    "es": "Cómo se llaman y se ordenan tus archivos ripeados, grabados e importados. Los ripeos y las grabaciones de vinilo entran en la cola con la plantilla predeterminada, e Importar lo ordena todo igual. ¡Crea tu propia estructura con las piezas de abajo!",
+    "de": "Wie deine gerippten, aufgenommenen und importierten Dateien heißen und abgelegt werden. Rips und Vinyl-Aufnahmen kommen mit der Standardvorlage in die Warteschlange, und der Import legt alles genauso ab. Bau dir mit den Bausteinen unten dein eigenes Schema!",
+    "zh-Hans": "你翻录、录制和导入的文件如何命名和归档。翻录和黑胶录音会套用默认模板进入队列，导入也按同样方式归档。用下面的标记搭出你自己的结构吧！"
   },
   "Settings_NamingNew": {
     "en": "New",
@@ -3324,11 +3324,11 @@
     "zh-Hans": "每个模板都需要名称和模板字符串。"
   },
   "Settings_NamingErrorDuplicate": {
-    "en": "The name \"{0}\" is used twice. Names must be unique.",
-    "fr": "Le nom « {0} » est utilisé deux fois. Les noms doivent être uniques.",
-    "es": "El nombre «{0}» se usa dos veces. Los nombres deben ser únicos.",
-    "de": "Der Name „{0}“ wird zweimal verwendet. Namen müssen eindeutig sein.",
-    "zh-Hans": "名称“{0}”被使用了两次。名称必须唯一。"
+    "en": "The name \"{0}\" is already taken. Each name needs to be different.",
+    "fr": "Le nom « {0} » est déjà pris. Chaque nom doit être différent.",
+    "es": "El nombre «{0}» ya está en uso. Cada nombre tiene que ser distinto.",
+    "de": "Der Name „{0}“ ist schon vergeben. Jeder Name muss anders sein.",
+    "zh-Hans": "名称“{0}”已被使用。每个名称都需要不同。"
   },
   "Settings_Title": {
     "en": "Settings",
@@ -7118,11 +7118,11 @@
     "comment": "Settings, Profile page: what an account gets without supporting rpm."
   },
   "Rpm_Profile_PlanFreeAppeal": {
-    "en": "Please consider supporting rpm. Supporters keep the lights on and get access to supporter-exclusive features.",
-    "fr": "Pensez à soutenir rpm. Les soutiens font vivre l'application et ont accès à des fonctions réservées.",
-    "es": "Considera apoyar rpm. Los colaboradores mantienen el proyecto en marcha y tienen acceso a funciones exclusivas.",
-    "de": "Bitte erwäge, rpm zu unterstützen. Unterstützer halten das Licht an und erhalten Zugang zu exklusiven Funktionen.",
-    "zh-Hans": "请考虑支持 rpm。支持者让 rpm 得以运转，并可使用支持者专属功能。",
+    "en": "Enjoying rpm? Please consider supporting it! Supporters keep the lights on and get some exclusive extras.",
+    "fr": "Vous aimez rpm ? Pensez à le soutenir ! Les soutiens font tourner la maison et profitent de quelques extras exclusifs.",
+    "es": "¿Te gusta rpm? ¡Plantéate apoyarlo! Los colaboradores mantienen las luces encendidas y consiguen algunos extras exclusivos.",
+    "de": "Gefällt dir rpm? Überleg doch, es zu unterstützen! Unterstützer halten den Laden am Laufen und bekommen ein paar exklusive Extras.",
+    "zh-Hans": "喜欢 rpm 吗？欢迎考虑支持它！支持者让 rpm 继续运转，还能获得一些专属福利。",
     "comment": "Settings, Profile page: second paragraph under 'Not a supporter', asking the account to support rpm."
   },
   "Rpm_Profile_PlanSupporter": {
@@ -7141,11 +7141,11 @@
     "comment": "Settings, Profile page: what supporting rpm gets you."
   },
   "Rpm_Profile_PlanSupporterThanks": {
-    "en": "Thank you for supporting rpm. You help keep rpm going and fund new development. We are humbled by your generosity.",
-    "fr": "Merci de soutenir rpm. Vous aidez rpm à continuer et financez son développement. Votre générosité nous touche.",
-    "es": "Gracias por apoyar rpm. Ayudas a que rpm siga adelante y financias su desarrollo. Tu generosidad nos conmueve.",
-    "de": "Danke, dass du rpm unterstützt. Du hilfst, rpm am Laufen zu halten, und finanzierst die Weiterentwicklung. Deine Großzügigkeit bewegt uns.",
-    "zh-Hans": "感谢你支持 rpm。你帮助 rpm 持续运行，并资助新的开发。你的慷慨让我们深受感动。",
+    "en": "Thank you for supporting rpm! You keep rpm going and help pay for everything new. We’re genuinely humbled.",
+    "fr": "Merci de soutenir rpm ! Vous faites vivre rpm et financez tout ce qui arrive de nouveau. Nous en sommes sincèrement touchés.",
+    "es": "¡Gracias por apoyar rpm! Mantienes rpm en marcha y ayudas a pagar todo lo nuevo. Nos sentimos de verdad agradecidos.",
+    "de": "Danke, dass du rpm unterstützt! Du hältst rpm am Laufen und hilfst, alles Neue zu finanzieren. Wir sind ehrlich gerührt.",
+    "zh-Hans": "感谢你支持 rpm！是你让 rpm 继续前进，也帮我们为每一项新功能买单。我们真心感动。",
     "comment": "Settings, Profile page: second paragraph under 'Supporter', thanking the account for supporting rpm."
   },
   "Rpm_Profile_PlanTester": {
@@ -7165,11 +7165,11 @@
     "comment": "Settings, Profile page: what a closed beta tester gets."
   },
   "Rpm_Profile_PlanTesterThanks": {
-    "en": "Thank you for testing rpm. Your reports help us fix problems before the public beta.",
-    "fr": "Merci de tester rpm. Vos signalements nous aident à corriger les problèmes avant la bêta publique.",
-    "es": "Gracias por probar rpm. Tus informes nos ayudan a corregir problemas antes de la beta pública.",
-    "de": "Danke, dass du rpm testest. Deine Meldungen helfen uns, Fehler vor der öffentlichen Beta zu beheben.",
-    "zh-Hans": "感谢你测试 rpm。你的反馈帮助我们在公开测试前修复问题。",
+    "en": "Thank you for testing rpm! Your reports help us fix problems before the public beta.",
+    "fr": "Merci de tester rpm ! Vos rapports nous aident à corriger les problèmes avant la bêta publique.",
+    "es": "¡Gracias por probar rpm! Tus informes nos ayudan a arreglar problemas antes de la beta pública.",
+    "de": "Danke, dass du rpm testest! Deine Berichte helfen uns, Probleme vor der öffentlichen Beta zu beheben.",
+    "zh-Hans": "感谢你测试 rpm！你的报告帮我们在公开测试前修好问题。",
     "comment": "Settings, Profile page: second paragraph under 'Closed beta tester', thanking the account for testing."
   },
   "Rpm_Profile_Playback": {
@@ -7362,11 +7362,11 @@
     "zh-Hans": "关闭"
   },
   "Settings_NamingSaveHint": {
-    "en": "Saving makes the template above the default for the collection.",
-    "fr": "Enregistrer fait du modèle ci-dessus celui par défaut pour la collection.",
-    "es": "Al guardar, la plantilla de arriba pasa a ser la predeterminada de la colección.",
-    "de": "Beim Speichern wird die Vorlage oben zur Standardvorlage der Sammlung.",
-    "zh-Hans": "保存后，上方的模板将成为音乐收藏的默认模板。"
+    "en": "Save to make the template above the default for your collection.",
+    "fr": "Enregistrez pour faire du modèle ci-dessus celui par défaut de votre collection.",
+    "es": "Guarda para que la plantilla de arriba sea la predeterminada de tu colección.",
+    "de": "Speichere, um die Vorlage oben zum Standard für deine Sammlung zu machen.",
+    "zh-Hans": "保存后，上面的模板就会成为你收藏的默认模板。"
   },
   "Naming_ApplyTemplate": {
     "en": "Template: {0}",
@@ -7527,11 +7527,11 @@
     "zh-Hans": "最近的云端活动"
   },
   "Cloud_HistoryHint": {
-    "en": "Uploads, removals and downloads from the last {0} days.",
-    "fr": "Envois, suppressions et téléchargements des {0} derniers jours.",
-    "es": "Subidas, eliminaciones y descargas de los últimos {0} días.",
-    "de": "Uploads, Entfernungen und Downloads der letzten {0} Tage.",
-    "zh-Hans": "最近 {0} 天的上传、移除和下载记录。"
+    "en": "Everything uploaded, removed and downloaded in the last {0} days.",
+    "fr": "Tout ce qui a été envoyé, supprimé et téléchargé ces {0} derniers jours.",
+    "es": "Todo lo que se ha subido, quitado y descargado en los últimos {0} días.",
+    "de": "Alles, was in den letzten {0} Tagen hochgeladen, entfernt und heruntergeladen wurde.",
+    "zh-Hans": "最近 {0} 天内上传、移除和下载的全部内容。"
   },
   "Cloud_HistoryEmpty": {
     "en": "Nothing yet.",
@@ -7632,18 +7632,18 @@
     "zh-Hans": "个人资料"
   },
   "Profile_SignedOut": {
-    "en": "You are not signed in. An account is needed for cloud storage, the catalogues and your plan.",
-    "fr": "Vous n'êtes pas connecté. Un compte est nécessaire pour le stockage cloud, les catalogues et votre formule.",
-    "es": "No has iniciado sesión. Necesitas una cuenta para el almacenamiento en la nube, los catálogos y tu plan.",
-    "de": "Du bist nicht angemeldet. Für Cloud-Speicher, die Kataloge und deinen Tarif wird ein Konto benötigt.",
-    "zh-Hans": "你尚未登录。云存储、目录服务和你的套餐都需要账户。"
+    "en": "You’re not signed in. With an account, you get cloud storage, the catalogues and your plan.",
+    "fr": "Vous n’êtes pas connecté. Avec un compte, vous profitez du stockage cloud, des catalogues et de votre formule.",
+    "es": "No has iniciado sesión. Con una cuenta tienes almacenamiento en la nube, los catálogos y tu plan.",
+    "de": "Du bist nicht angemeldet. Mit einem Konto bekommst du Cloud-Speicher, die Kataloge und deinen Tarif.",
+    "zh-Hans": "你还没有登录。有了帐户，就能使用云端存储、目录和你的方案。"
   },
   "Profile_SignOutDetail": {
-    "en": "Signing out stops the cloud sync. The music on this computer stays exactly where it is.",
-    "fr": "La déconnexion arrête la synchronisation cloud. La musique sur cet ordinateur reste où elle est.",
-    "es": "Cerrar sesión detiene la sincronización con la nube. La música de este ordenador se queda donde está.",
-    "de": "Beim Abmelden stoppt die Cloud-Synchronisierung. Die Musik auf diesem Computer bleibt, wo sie ist.",
-    "zh-Hans": "退出登录会停止云端同步。这台电脑上的音乐保持原样。"
+    "en": "Signing out stops the cloud sync. Don’t worry, the music on this computer stays exactly where it is.",
+    "fr": "Se déconnecter arrête la synchronisation cloud. Pas d’inquiétude, la musique de cet ordinateur reste exactement où elle est.",
+    "es": "Cerrar sesión detiene la sincronización con la nube. Tranquilo, la música de este ordenador se queda exactamente donde está.",
+    "de": "Beim Abmelden stoppt die Cloud-Synchronisierung. Keine Sorge, die Musik auf diesem Computer bleibt genau, wo sie ist.",
+    "zh-Hans": "退出登录会停止云同步。别担心，这台电脑上的音乐原封不动。"
   },
   "Account_Delete": {
     "en": "Delete account",
@@ -7670,11 +7670,11 @@
     "comment": "Body of the delete-account confirmation, on both heads."
   },
   "Account_DeleteKeepsFiles": {
-    "en": "Music files on this computer are not deleted.",
-    "fr": "Les fichiers musicaux sur cet ordinateur ne sont pas supprimés.",
-    "es": "Los archivos de música de este ordenador no se eliminan.",
-    "de": "Musikdateien auf diesem Computer werden nicht gelöscht.",
-    "zh-Hans": "此电脑上的音乐文件不会被删除。",
+    "en": "The music files on this computer won’t be touched.",
+    "fr": "Les fichiers musicaux de cet ordinateur ne seront pas touchés.",
+    "es": "Los archivos de música de este ordenador no se tocarán.",
+    "de": "Die Musikdateien auf diesem Computer bleiben unberührt.",
+    "zh-Hans": "这台电脑上的音乐文件不会受到影响。",
     "comment": "Second line of the delete-account confirmation on the desktop."
   },
   "Account_DeleteCloudOnlyOne": {
@@ -7710,19 +7710,19 @@
     "comment": "The delete-account confirmation's red button while the request runs."
   },
   "Account_DeleteEmailRefused": {
-    "en": "This email doesn't match your account. If it is correct, contact support.",
-    "fr": "Cette adresse ne correspond pas à votre compte. Si elle est correcte, contactez l'assistance.",
-    "es": "Este correo no coincide con tu cuenta. Si es correcto, contacta con soporte.",
-    "de": "Diese E-Mail-Adresse passt nicht zu deinem Konto. Wenn sie stimmt, wende dich an den Support.",
-    "zh-Hans": "此邮箱与你的账户不符。如果邮箱无误，请联系支持。",
+    "en": "This email doesn’t match your account. If you’re sure it’s right, please get in touch with support.",
+    "fr": "Cette adresse e-mail ne correspond pas à votre compte. Si vous êtes sûr qu’elle est correcte, contactez le support.",
+    "es": "Este correo no coincide con tu cuenta. Si estás seguro de que es correcto, ponte en contacto con soporte.",
+    "de": "Diese E-Mail-Adresse passt nicht zu deinem Konto. Wenn du sicher bist, dass sie stimmt, melde dich bitte beim Support.",
+    "zh-Hans": "这个邮箱和你的帐户不匹配。如果你确定没错，请联系客服。",
     "comment": "Shown in the delete-account confirmation when the server refuses the typed address."
   },
   "Account_DeleteFailed": {
-    "en": "Your account could not be deleted. Check your connection and try again.",
-    "fr": "Votre compte n'a pas pu être supprimé. Vérifiez votre connexion et réessayez.",
-    "es": "No se pudo eliminar tu cuenta. Comprueba tu conexión e inténtalo de nuevo.",
-    "de": "Dein Konto konnte nicht gelöscht werden. Prüfe deine Verbindung und versuche es erneut.",
-    "zh-Hans": "无法删除你的账户。请检查网络连接后重试。",
+    "en": "Your account couldn’t be deleted. Check your connection and try again.",
+    "fr": "Votre compte n’a pas pu être supprimé. Vérifiez votre connexion et réessayez.",
+    "es": "No se pudo eliminar tu cuenta. Comprueba tu conexión y vuelve a intentarlo.",
+    "de": "Dein Konto konnte nicht gelöscht werden. Prüf deine Verbindung und versuch es noch einmal.",
+    "zh-Hans": "无法删除你的帐户。请检查网络连接后再试。",
     "comment": "Shown in the delete-account confirmation when the request did not get through or the server failed. Nothing was deleted."
   },
   "Account_DeletedTitle": {
@@ -7734,11 +7734,11 @@
     "comment": "Title of the note shown after the account was deleted."
   },
   "Account_DeletedBody": {
-    "en": "Your account is deleted and you are signed out. Your cloud library is removed within two hours. You can keep using rpm without an account.",
-    "fr": "Votre compte est supprimé et vous êtes déconnecté. Votre bibliothèque cloud est effacée sous deux heures. Vous pouvez continuer à utiliser rpm sans compte.",
-    "es": "Tu cuenta se ha eliminado y has cerrado sesión. Tu biblioteca en la nube se borra en un plazo de dos horas. Puedes seguir usando rpm sin cuenta.",
-    "de": "Dein Konto ist gelöscht und du bist abgemeldet. Deine Cloud-Bibliothek wird innerhalb von zwei Stunden entfernt. Du kannst rpm ohne Konto weiter nutzen.",
-    "zh-Hans": "你的账户已删除，你已退出登录。你的云端音乐库将在两小时内移除。你可以继续在没有账户的情况下使用 rpm。",
+    "en": "Your account is deleted and you’re signed out. Your cloud library is removed within two hours. You can of course keep using rpm without an account.",
+    "fr": "Votre compte est supprimé et vous êtes déconnecté. Votre bibliothèque cloud est effacée dans les deux heures. Vous pouvez bien sûr continuer à utiliser rpm sans compte.",
+    "es": "Tu cuenta se ha eliminado y has cerrado sesión. Tu biblioteca en la nube se borra en un plazo de dos horas. Por supuesto, puedes seguir usando rpm sin cuenta.",
+    "de": "Dein Konto ist gelöscht und du bist abgemeldet. Deine Cloud-Bibliothek wird innerhalb von zwei Stunden entfernt. Du kannst rpm natürlich auch ohne Konto weiter nutzen.",
+    "zh-Hans": "你的帐户已删除，你也已退出登录。云端音乐库会在两小时内移除。当然，你仍然可以不登录继续使用 rpm。",
     "comment": "Body of the note shown after the account was deleted, on both heads."
   },
   "Community_DeletedUser": {
@@ -7757,11 +7757,11 @@
     "zh-Hans": "应用数据"
   },
   "Profile_DataFolderDetail": {
-    "en": "Settings, the artwork cache and your sign-in are kept here. Your music is not: it lives in your music folder.",
-    "fr": "Les réglages, le cache des pochettes et votre connexion sont conservés ici. Pas votre musique : elle vit dans votre dossier musical.",
-    "es": "Aquí se guardan los ajustes, la caché de portadas y tu sesión. Tu música no: está en tu carpeta de música.",
-    "de": "Einstellungen, der Cover-Cache und deine Anmeldung liegen hier. Deine Musik nicht: die liegt in deinem Musikordner.",
-    "zh-Hans": "设置、封面缓存和登录信息保存在这里。你的音乐不在此处：它保存在你的音乐文件夹中。"
+    "en": "Your settings, the artwork cache and your sign-in live here. Your music doesn’t: that stays in your music folder.",
+    "fr": "Vos réglages, le cache des pochettes et votre connexion se trouvent ici. Pas votre musique : elle reste dans votre dossier de musique.",
+    "es": "Aquí viven tus ajustes, la caché de carátulas y tu inicio de sesión. Tu música no: esa se queda en tu carpeta de música.",
+    "de": "Hier liegen deine Einstellungen, der Artwork-Cache und deine Anmeldung. Deine Musik nicht: Die bleibt in deinem Musikordner.",
+    "zh-Hans": "你的设置、封面缓存和登录信息都在这里。音乐不在这里，它们留在你的音乐文件夹里。"
   },
   "Profile_ShowFolder": {
     "en": "Show folder",
@@ -7779,11 +7779,11 @@
     "comment": "Settings, Profile page: title of the card for downloaded lookup data."
   },
   "Profile_CacheDetail": {
-    "en": "Artwork, radio stations, lyrics and album information downloaded from the internet. It is kept for 30 days, then downloaded again when needed.",
-    "fr": "Pochettes, stations de radio, paroles et informations sur les albums téléchargées depuis Internet. Ces données sont conservées 30 jours, puis retéléchargées si nécessaire.",
-    "es": "Portadas, emisoras de radio, letras e información de álbumes descargadas de internet. Se conservan 30 días y se vuelven a descargar cuando hacen falta.",
-    "de": "Cover, Radiosender, Songtexte und Albuminformationen aus dem Internet. Sie werden 30 Tage aufbewahrt und bei Bedarf erneut geladen.",
-    "zh-Hans": "从互联网下载的封面、电台、歌词和专辑信息。保留 30 天，需要时会重新下载。",
+    "en": "Artwork, radio stations, lyrics and album info downloaded from the internet. rpm keeps it for 30 days, then fetches it again when it’s needed.",
+    "fr": "Pochettes, stations de radio, paroles et infos d’albums téléchargées sur internet. rpm les garde 30 jours, puis les récupère à nouveau quand il en a besoin.",
+    "es": "Carátulas, emisoras de radio, letras e información de álbumes descargadas de internet. rpm las guarda 30 días y luego las vuelve a buscar cuando hacen falta.",
+    "de": "Artwork, Radiosender, Songtexte und Albuminfos aus dem Internet. rpm behält sie 30 Tage und holt sie danach neu, wenn sie gebraucht werden.",
+    "zh-Hans": "从网上下载的封面、电台、歌词和专辑信息。rpm 会保留 30 天，之后需要时再重新获取。",
     "comment": "Settings, Profile page: what the cached data card holds."
   },
   "Profile_CacheUsed": {
@@ -7811,11 +7811,11 @@
     "comment": "Title of the window shown when a new version has been downloaded."
   },
   "Update_Body": {
-    "en": "rpm {0} is ready to install. Restart now, or it installs the next time you quit.",
-    "fr": "rpm {0} est prêt à être installé. Redémarrez maintenant, ou la mise à jour s'installera à la prochaine fermeture.",
-    "es": "rpm {0} está listo para instalarse. Reinicia ahora o se instalará la próxima vez que cierres la app.",
-    "de": "rpm {0} kann installiert werden. Jetzt neu starten, oder es wird beim nächsten Beenden installiert.",
-    "zh-Hans": "rpm {0} 已可安装。可以立即重启，或在下次退出时自动安装。",
+    "en": "rpm {0} is ready to install. Restart now, or it installs itself the next time you quit.",
+    "fr": "rpm {0} est prêt à être installé. Redémarrez maintenant, ou il s’installera la prochaine fois que vous quitterez.",
+    "es": "rpm {0} está listo para instalarse. Reinicia ahora, o se instalará solo la próxima vez que salgas.",
+    "de": "rpm {0} ist bereit zur Installation. Starte jetzt neu, oder es installiert sich, wenn du die App das nächste Mal beendest.",
+    "zh-Hans": "rpm {0} 已准备好安装。现在重启，或者在你下次退出时自动安装。",
     "comment": "Body of the update window. {0} is a version such as 0.2.0."
   },
   "Update_Restart": {
@@ -7843,11 +7843,11 @@
     "comment": "Settings, Profile page: title of the updates card."
   },
   "Profile_UpdatesDetail": {
-    "en": "rpm checks for a new version when it starts, downloads it in the background and installs it when you quit.",
-    "fr": "rpm vérifie s'il existe une nouvelle version au démarrage, la télécharge en arrière-plan et l'installe à la fermeture.",
-    "es": "rpm busca una versión nueva al iniciarse, la descarga en segundo plano y la instala al cerrar.",
-    "de": "rpm sucht beim Start nach einer neuen Version, lädt sie im Hintergrund und installiert sie beim Beenden.",
-    "zh-Hans": "rpm 会在启动时检查新版本，在后台下载，并在退出时安装。",
+    "en": "rpm checks for a new version when it starts, downloads it quietly in the background and installs it when you quit. You don’t have to do a thing!",
+    "fr": "rpm vérifie s’il existe une nouvelle version au démarrage, la télécharge discrètement en arrière-plan et l’installe quand vous quittez. Vous n’avez rien à faire !",
+    "es": "rpm busca una versión nueva al arrancar, la descarga discretamente en segundo plano y la instala cuando sales. ¡No tienes que hacer nada!",
+    "de": "rpm sucht beim Start nach einer neuen Version, lädt sie leise im Hintergrund und installiert sie, wenn du die App beendest. Du musst gar nichts tun!",
+    "zh-Hans": "rpm 启动时会检查新版本，在后台悄悄下载，并在你退出时安装。你什么都不用做！",
     "comment": "Settings, Profile page: what the updates card does."
   },
   "Profile_CheckUpdates": {
@@ -8163,11 +8163,11 @@
     "comment": "Settings > Profile, updates card: switch for sending crash reports."
   },
   "Settings_CrashReportsDesc": {
-    "en": "When rpm closes unexpectedly, send a report so the problem can be fixed.",
-    "fr": "Quand rpm se ferme de manière inattendue, envoyer un rapport pour que le problème puisse être corrigé.",
-    "es": "Cuando rpm se cierre inesperadamente, enviar un informe para que se pueda corregir el problema.",
-    "de": "Wenn rpm unerwartet beendet wird, einen Bericht senden, damit das Problem behoben werden kann.",
-    "zh-Hans": "rpm 意外关闭时发送报告，以便修复问题。",
+    "en": "If rpm ever closes unexpectedly, it sends us a report so we can fix the problem.",
+    "fr": "Si rpm se ferme de façon inattendue, il nous envoie un rapport pour que nous puissions corriger le problème.",
+    "es": "Si rpm se cierra de forma inesperada, nos envía un informe para que podamos arreglar el problema.",
+    "de": "Falls sich rpm unerwartet schließt, schickt es uns einen Bericht, damit wir das Problem beheben können.",
+    "zh-Hans": "如果 rpm 意外关闭，它会给我们发送一份报告，方便我们修复问题。",
     "comment": "Settings > Profile: hint under the crash reports switch."
   },
   "Profile_CacheCleared": {
@@ -8707,11 +8707,11 @@
     "comment": "Settings rail: the section for how the app looks."
   },
   "Settings_DisplayIntro": {
-    "en": "How rpm looks: the picture behind the app, and the art display.",
-    "fr": "L'apparence de rpm : l'image en arrière-plan et l'affichage des pochettes.",
-    "es": "El aspecto de rpm: la imagen de fondo y la vista de portadas.",
-    "de": "Das Aussehen von rpm: das Hintergrundbild und die Cover-Ansicht.",
-    "zh-Hans": "rpm 的外观：应用背景图片和封面显示。",
+    "en": "How rpm looks: the picture behind the app, and the art display at the top.",
+    "fr": "L’apparence de rpm : l’image derrière l’application et l’affichage des pochettes en haut.",
+    "es": "Cómo se ve rpm: la imagen detrás de la app y la pantalla de carátulas de arriba.",
+    "de": "Wie rpm aussieht: das Bild hinter der App und die Cover-Anzeige oben.",
+    "zh-Hans": "rpm 的外观：应用背后的图片，以及顶部的封面展示。",
     "comment": "Settings > Display: caption under the page heading."
   },
   "Settings_Sound": {
@@ -8723,11 +8723,11 @@
     "comment": "Settings rail: the section for the speakers the music comes out of."
   },
   "Settings_SoundIntro": {
-    "en": "Which speakers the music plays through, how loud it is, and how it is tuned.",
-    "fr": "Sur quelles enceintes la musique est jouée, à quel volume et avec quel réglage.",
-    "es": "Por qué altavoces suena la música, a qué volumen y con qué ajuste.",
-    "de": "Über welche Lautsprecher die Musik läuft, wie laut sie ist und wie sie eingestellt ist.",
-    "zh-Hans": "音乐通过哪些扬声器播放、音量大小，以及音效调节。",
+    "en": "Which speakers your music plays through, how loud it is, and how it’s tuned.",
+    "fr": "Les enceintes sur lesquelles votre musique est jouée, son volume et ses réglages.",
+    "es": "Por qué altavoces suena tu música, a qué volumen y cómo está ajustada.",
+    "de": "Über welche Lautsprecher deine Musik läuft, wie laut sie ist und wie sie klingt.",
+    "zh-Hans": "你的音乐从哪个音箱播放、音量多大，以及音色如何调整。",
     "comment": "Settings > Sound: caption under the page heading."
   },
   "Settings_Output": {
@@ -8739,11 +8739,11 @@
     "comment": "Settings, Sound: label above the output-device picker."
   },
   "Settings_OutputHint": {
-    "en": "Where the music plays. With the system default, rpm switches with it when you connect a speaker or change outputs. Pick a device and it stays there.",
-    "fr": "Où la musique est jouée. Avec la sortie par défaut du système, rpm change en même temps que lui lorsque vous branchez une enceinte ou changez de sortie. Choisissez un appareil et il ne bouge plus.",
-    "es": "Dónde suena la música. Con la salida predeterminada del sistema, rpm cambia con él cuando conectas un altavoz o cambias de salida. Elige un dispositivo y se queda fijo.",
-    "de": "Wo die Musik spielt. Mit dem Systemstandard wechselt rpm mit, sobald du einen Lautsprecher anschließt oder die Ausgabe wechselst. Wähle ein Gerät, und es bleibt dabei.",
-    "zh-Hans": "音乐的播放位置。使用系统默认设备时，连接扬声器或切换输出后 rpm 会一同切换；选定某个设备后则固定不变。",
+    "en": "Where your music plays. On the system default, rpm follows along when you connect a speaker or switch outputs. Pick a device and rpm sticks with it.",
+    "fr": "Où votre musique est jouée. Avec la sortie par défaut du système, rpm suit le mouvement quand vous branchez une enceinte ou changez de sortie. Choisissez un appareil et rpm s’y tient.",
+    "es": "Dónde suena tu música. Con la salida predeterminada del sistema, rpm te sigue cuando conectas un altavoz o cambias de salida. Elige un dispositivo y rpm se queda con él.",
+    "de": "Wo deine Musik spielt. Mit dem Systemstandard zieht rpm mit, sobald du einen Lautsprecher anschließt oder die Ausgabe wechselst. Wähle ein Gerät, und rpm bleibt dabei.",
+    "zh-Hans": "你的音乐在哪里播放。使用系统默认设备时，连接音箱或切换输出，rpm 都会跟着切换；选定一个设备后，rpm 就一直用它。",
     "comment": "Settings, Sound: hint under the output-device picker."
   },
   "Settings_OutputSystem": {
@@ -8754,12 +8754,28 @@
     "zh-Hans": "使用系统默认设备",
     "comment": "Settings, Sound: first item in the output picker, the default."
   },
+  "Settings_DeviceVolume": {
+    "en": "Control device volume",
+    "fr": "Contrôler le volume de l’appareil",
+    "es": "Controlar el volumen del dispositivo",
+    "de": "Gerätelautstärke steuern",
+    "zh-Hans": "控制设备音量",
+    "comment": "Settings > Sound > Output: switch. On, the volume slider sets a Bluetooth speaker's own volume (the computer's output volume) instead of rpm's own volume."
+  },
+  "Settings_DeviceVolumeHint": {
+    "en": "On a Bluetooth speaker, the slider can set the speaker’s own volume, which keeps every bit of the sound. That’s your computer’s volume too, though, so everything else you’re playing goes up and down with it. Turn it off and the slider only changes rpm.",
+    "fr": "Sur une enceinte Bluetooth, le curseur peut régler le volume de l’enceinte elle-même, ce qui préserve chaque détail du son. Mais c’est aussi le volume de votre ordinateur : tout ce que vous écoutez d’autre monte et baisse avec lui. Désactivez-le et le curseur ne règle plus que rpm.",
+    "es": "En un altavoz Bluetooth, el control puede ajustar el volumen del propio altavoz, lo que conserva cada detalle del sonido. Pero también es el volumen de tu ordenador, así que todo lo demás que suene sube y baja con él. Desactívalo y el control solo ajustará rpm.",
+    "de": "Bei einem Bluetooth-Lautsprecher kann der Regler die Lautstärke des Lautsprechers selbst einstellen, so bleibt jedes Detail des Klangs erhalten. Das ist aber auch die Lautstärke deines Computers, also wird alles andere, was gerade läuft, mit lauter und leiser. Schalte es aus, und der Regler ändert nur noch rpm.",
+    "zh-Hans": "连接蓝牙音箱时，滑块可以直接调节音箱本身的音量，保留声音的每一个细节。不过这也是电脑的音量，其他正在播放的声音会一起变大变小。关闭后，滑块只调节 rpm。",
+    "comment": "Settings > Sound > Output: explains the device volume switch above."
+  },
   "Settings_OutputMissing": {
-    "en": "Not connected right now, so the music plays on the system's speakers until it is reconnected.",
-    "fr": "Pas connecté pour le moment : la musique passe par les enceintes du système jusqu'à sa reconnexion.",
-    "es": "No está conectado ahora mismo, así que la música suena por los altavoces del sistema hasta que se vuelva a conectar.",
-    "de": "Gerade nicht verbunden, die Musik läuft daher über die Systemlautsprecher, bis es wieder da ist.",
-    "zh-Hans": "当前未连接，音乐将通过系统扬声器播放，直到重新连接。",
+    "en": "Not connected right now, so your music plays on the system’s speakers until it’s back.",
+    "fr": "Pas connecté pour l’instant : votre musique est jouée sur les enceintes du système jusqu’à son retour.",
+    "es": "No está conectado ahora mismo, así que tu música suena por los altavoces del sistema hasta que vuelva.",
+    "de": "Gerade nicht verbunden, deshalb läuft deine Musik über die Systemlautsprecher, bis es wieder da ist.",
+    "zh-Hans": "暂时没有连接，在它回来之前，音乐会从系统音箱播放。",
     "comment": "Settings, Sound: shown when the chosen device is not currently on the machine."
   },
   "Settings_OutputNow": {
@@ -8779,11 +8795,11 @@
     "comment": "Settings, Sound: heading of the equalizer card."
   },
   "Settings_EqHint": {
-    "en": "The same ten bands as the player, saved per set of speakers: a curve that suits a laptop is wrong for a hi-fi, so each one is remembered separately.",
-    "fr": "Les mêmes dix bandes que le lecteur, enregistrées par jeu d'enceintes : une courbe qui convient à un portable ne convient pas à une chaîne, chacune est donc mémorisée séparément.",
-    "es": "Las mismas diez bandas que el reproductor, guardadas por juego de altavoces: una curva que va bien en un portátil no vale para un equipo, así que cada una se recuerda por separado.",
-    "de": "Dieselben zehn Bänder wie im Player, pro Lautsprecherpaar gespeichert: eine Kurve, die zu einem Laptop passt, taugt nicht für eine Anlage, deshalb wird jede einzeln gemerkt.",
-    "zh-Hans": "与播放器相同的十个频段，按扬声器分别保存：适合笔记本的曲线并不适合音响，因此各自单独记忆。",
+    "en": "The same ten bands as the player, saved for each set of speakers. A curve that suits your laptop sounds wrong on a hi-fi, so rpm remembers each one separately.",
+    "fr": "Les mêmes dix bandes que le lecteur, enregistrées pour chaque paire d’enceintes. Une courbe qui convient à votre portable sonne faux sur une chaîne hi-fi, alors rpm retient chacune séparément.",
+    "es": "Las mismas diez bandas que el reproductor, guardadas para cada juego de altavoces. Una curva que va bien en tu portátil suena mal en un equipo de alta fidelidad, así que rpm recuerda cada una por separado.",
+    "de": "Dieselben zehn Bänder wie im Player, für jedes Lautsprecherpaar gespeichert. Eine Kurve, die zu deinem Laptop passt, klingt an einer Hi-Fi-Anlage falsch, deshalb merkt sich rpm jede einzeln.",
+    "zh-Hans": "和播放器相同的十个频段，按每套音箱分别保存。适合笔记本的曲线放到 Hi-Fi 上会不对劲，所以 rpm 会分别记住每一套。",
     "comment": "Settings, Sound: hint under the equalizer heading, explaining the per-device curves."
   },
   "Settings_EqOn": {
@@ -10199,11 +10215,11 @@
     "comment": "Cloud settings: title of the card listing what the cloud failed to do."
   },
   "Cloud_ErrorsHint": {
-    "en": "What the cloud could not do, and why. Send a report and we can look into it.",
-    "fr": "Ce que le cloud n'a pas pu faire, et pourquoi. Envoyez un rapport et nous pourrons regarder.",
-    "es": "Lo que la nube no pudo hacer, y por qué. Envía un informe y podremos revisarlo.",
-    "de": "Was die Cloud nicht ausführen konnte, und warum. Sende einen Bericht, dann sehen wir uns das an.",
-    "zh-Hans": "云端未能完成的操作及原因。发送报告后我们可以进一步排查。",
+    "en": "What the cloud couldn’t do, and why. Send us a report and we’ll take a look.",
+    "fr": "Ce que le cloud n’a pas pu faire, et pourquoi. Envoyez-nous un rapport et nous y jetterons un œil.",
+    "es": "Lo que la nube no pudo hacer, y por qué. Envíanos un informe y le echaremos un vistazo.",
+    "de": "Was die Cloud nicht geschafft hat, und warum. Schick uns einen Bericht, und wir sehen uns das an.",
+    "zh-Hans": "云端没能完成的操作及原因。给我们发一份报告，我们会看看是怎么回事。",
     "comment": "Cloud settings: hint under the errors card title."
   },
   "Cloud_ErrorsEmpty": {
@@ -10239,11 +10255,11 @@
     "comment": "Cloud settings: the send button once the report has landed."
   },
   "Cloud_ErrorsReportRefused": {
-    "en": "The report could not be sent. Please try again later.",
-    "fr": "Le rapport n'a pas pu être envoyé. Réessayez plus tard.",
-    "es": "No se pudo enviar el informe. Inténtalo de nuevo más tarde.",
-    "de": "Der Bericht konnte nicht gesendet werden. Bitte später erneut versuchen.",
-    "zh-Hans": "报告发送失败，请稍后再试。",
+    "en": "The report couldn’t be sent. Please try again a little later.",
+    "fr": "Le rapport n’a pas pu être envoyé. Réessayez un peu plus tard.",
+    "es": "No se pudo enviar el informe. Vuelve a intentarlo un poco más tarde.",
+    "de": "Der Bericht konnte nicht gesendet werden. Versuch es bitte etwas später noch einmal.",
+    "zh-Hans": "报告没能发出。请稍后再试。",
     "comment": "Cloud settings: shown when sending the error report was refused."
   },
   "CloudChip_ErrorsHint": {
@@ -10302,11 +10318,11 @@
     "zh-Hans": "取回你的文件？"
   },
   "Cloud_BringBackBody": {
-    "en": "{0} tracks are missing from this computer and are still in the cloud. Downloading them needs {1}, and this disk has {2} free. Only tracks removed on this computer are downloaded, not those removed on your other machines.",
-    "fr": "{0} morceaux manquent sur cet ordinateur et sont toujours dans le cloud. Les télécharger demande {1}, et ce disque dispose de {2} libres. Seuls les morceaux supprimés sur cet ordinateur sont téléchargés, pas ceux supprimés sur vos autres machines.",
-    "es": "Faltan {0} pistas en este ordenador y siguen en la nube. Descargarlas necesita {1}, y este disco tiene {2} libres. Solo se descargan las pistas eliminadas en este ordenador, no las eliminadas en tus otras máquinas.",
-    "de": "{0} Titel fehlen auf diesem Rechner und liegen noch in der Cloud. Sie herunterzuladen braucht {1}, und auf dieser Festplatte sind {2} frei. Geladen wird nur, was auf diesem Rechner entfernt wurde, nicht das von deinen anderen Rechnern.",
-    "zh-Hans": "这台电脑缺少 {0} 首曲目，它们仍在云端。下载它们需要 {1}，本磁盘剩余 {2}。只会下载在这台电脑上删除的曲目，不包括在你其他机器上删除的。"
+    "en": "{0} tracks are missing from this computer but still safe in the cloud. Downloading them takes {1}, and this disk has {2} free. Only tracks removed on this computer come back, not ones you removed on your other machines.",
+    "fr": "{0} pistes manquent sur cet ordinateur mais sont toujours à l’abri dans le cloud. Les télécharger demande {1}, et ce disque a {2} de libre. Seules les pistes supprimées sur cet ordinateur reviennent, pas celles supprimées sur vos autres machines.",
+    "es": "Faltan {0} pistas en este ordenador, pero siguen a salvo en la nube. Descargarlas ocupa {1}, y este disco tiene {2} libres. Solo vuelven las pistas eliminadas en este ordenador, no las que quitaste en tus otros equipos.",
+    "de": "{0} Titel fehlen auf diesem Computer, sind aber noch sicher in der Cloud. Zum Herunterladen brauchst du {1}, und auf diesem Laufwerk sind {2} frei. Es kommen nur Titel zurück, die auf diesem Computer entfernt wurden, nicht die von deinen anderen Rechnern.",
+    "zh-Hans": "这台电脑上少了 {0} 首曲目，但它们还安全地保存在云端。下载需要 {1}，这块磁盘还有 {2} 可用。只会找回在这台电脑上删除的曲目，不包括你在其他电脑上删除的。"
   },
   "Cloud_BringBackConfirm": {
     "en": "Download them",
@@ -10323,11 +10339,11 @@
     "zh-Hans": "保留在云端"
   },
   "Cloud_BringBackNoSpace": {
-    "en": "There is not enough room on this disk: {0} needed, {1} free.",
-    "fr": "Il n'y a pas assez de place sur ce disque : {0} nécessaires, {1} libres.",
-    "es": "No hay sitio suficiente en este disco: hacen falta {0} y hay {1} libres.",
-    "de": "Auf dieser Festplatte ist nicht genug Platz: {0} nötig, {1} frei.",
-    "zh-Hans": "磁盘空间不足：需要 {0}，剩余 {1}。"
+    "en": "There’s not enough room on this disk: you need {0}, and {1} is free.",
+    "fr": "Il n’y a pas assez de place sur ce disque : il vous faut {0}, et {1} est libre.",
+    "es": "No hay sitio suficiente en este disco: necesitas {0} y hay {1} libres.",
+    "de": "Auf diesem Laufwerk ist nicht genug Platz: Du brauchst {0}, frei sind {1}.",
+    "zh-Hans": "这块磁盘空间不够：需要 {0}，可用 {1}。"
   },
   "Cloud_BringBackFailed": {
     "en": "{0} of {1} tracks could not be downloaded.",
@@ -10337,11 +10353,11 @@
     "zh-Hans": "{1} 首中有 {0} 首无法下载。"
   },
   "Cloud_OffloadState": {
-    "en": "{0} tracks are in the cloud only. That frees {1} on this computer.",
-    "fr": "{0} morceaux sont uniquement dans le cloud. Cela libère {1} sur cet ordinateur.",
-    "es": "{0} pistas están solo en la nube. Eso libera {1} en este ordenador.",
-    "de": "{0} Titel liegen nur in der Cloud. Das spart {1} auf diesem Rechner.",
-    "zh-Hans": "有 {0} 首曲目仅存于云端，为这台电脑节省 {1}。"
+    "en": "{0} tracks live only in the cloud, which saves {1} on this computer.",
+    "fr": "{0} pistes vivent uniquement dans le cloud, ce qui libère {1} sur cet ordinateur.",
+    "es": "{0} pistas viven solo en la nube, lo que ahorra {1} en este ordenador.",
+    "de": "{0} Titel liegen nur in der Cloud, das spart {1} auf diesem Computer.",
+    "zh-Hans": "有 {0} 首曲目只存放在云端，为这台电脑省下了 {1}。"
   },
   "Cloud_OffloadStateNone": {
     "en": "No tracks are missing from this computer.",
@@ -10409,11 +10425,11 @@
     "comment": "Log book verb: the cloud copy was kept, the file on this computer was deleted."
   },
   "Cloud_OffloadElsewhere": {
-    "en": "{0} tracks have never been on this computer. Your other computers uploaded them, and they stream from the cloud.",
-    "fr": "{0} morceaux n'ont jamais été sur cet ordinateur. Vos autres ordinateurs les ont envoyés, et ils sont lus depuis le cloud.",
-    "es": "{0} pistas nunca han estado en este ordenador. Tus otros ordenadores las subieron y se reproducen desde la nube.",
-    "de": "{0} Titel waren nie auf diesem Rechner. Deine anderen Rechner haben sie hochgeladen, sie werden aus der Cloud gestreamt.",
-    "zh-Hans": "有 {0} 首曲目从未存在于这台电脑。它们由你的其他电脑上传，从云端播放。"
+    "en": "{0} tracks have never been on this computer. Your other computers uploaded them, and they stream straight from the cloud.",
+    "fr": "{0} pistes n’ont jamais été sur cet ordinateur. Vos autres ordinateurs les ont envoyées, et elles sont diffusées directement depuis le cloud.",
+    "es": "{0} pistas nunca han estado en este ordenador. Las subieron tus otros ordenadores y se reproducen directamente desde la nube.",
+    "de": "{0} Titel waren nie auf diesem Computer. Deine anderen Computer haben sie hochgeladen, und sie streamen direkt aus der Cloud.",
+    "zh-Hans": "有 {0} 首曲目从未在这台电脑上出现过。它们由你的其他电脑上传，直接从云端播放。"
   },
   "Queue_ImportingMove": {
     "en": "Moving selected files to your collection",
@@ -10440,11 +10456,11 @@
     "comment": "Settings > Collection: title of the card choosing move vs copy on import."
   },
   "Settings_ImportActionHint": {
-    "en": "What happens to the original files when the import queue is added to your collection.",
-    "fr": "Ce qu'il advient des fichiers d'origine lorsque la file d'import est ajoutée à votre collection.",
-    "es": "Qué ocurre con los archivos originales cuando la cola de importación se añade a tu colección.",
-    "de": "Was mit den Originaldateien passiert, wenn die Import-Warteschlange in deine Sammlung übernommen wird.",
-    "zh-Hans": "导入队列加入收藏时，原始文件会如何处理。",
+    "en": "What happens to your original files when the import queue is added to your collection.",
+    "fr": "Ce qui arrive à vos fichiers d’origine quand la file d’importation est ajoutée à votre collection.",
+    "es": "Qué pasa con tus archivos originales cuando la cola de importación se añade a tu colección.",
+    "de": "Was mit deinen Originaldateien passiert, wenn die Import-Warteschlange zu deiner Sammlung hinzukommt.",
+    "zh-Hans": "导入队列加入收藏时，你的原始文件会怎样处理。",
     "comment": "Settings > Collection: hint under the import-action picker."
   },
   "Settings_ImportActionMove": {
@@ -10871,11 +10887,11 @@
     "comment": "Sound settings section heading for ReplayGain-style loudness normalisation."
   },
   "Settings_NormalizeHint": {
-    "en": "Plays every record at the same loudness, so you do not have to change the volume between one album and the next. Each track is measured once, in the background.",
-    "fr": "Joue chaque disque au même niveau sonore, pour ne pas avoir à régler le volume d'un album à l'autre. Chaque piste est mesurée une fois, en arrière-plan.",
-    "es": "Reproduce cada disco al mismo volumen, así no tienes que ajustarlo de un álbum a otro. Cada pista se mide una vez, en segundo plano.",
-    "de": "Spielt jede Platte gleich laut, damit du zwischen einem Album und dem nächsten nicht die Lautstärke ändern musst. Jeder Titel wird einmal gemessen, im Hintergrund.",
-    "zh-Hans": "让每张唱片以相同响度播放，专辑之间无需再调音量。每首曲目在后台测量一次。",
+    "en": "Plays every record at the same loudness, so you don’t have to reach for the volume between one album and the next. rpm measures each track once, quietly in the background.",
+    "fr": "Joue chaque disque au même niveau sonore, pour que vous n’ayez pas à toucher au volume d’un album à l’autre. rpm mesure chaque piste une seule fois, discrètement en arrière-plan.",
+    "es": "Reproduce cada disco al mismo volumen, así no tienes que tocar el volumen de un álbum a otro. rpm mide cada pista una sola vez, discretamente en segundo plano.",
+    "de": "Spielt jede Platte gleich laut, damit du zwischen zwei Alben nicht zur Lautstärke greifen musst. rpm misst jeden Titel einmal, ganz leise im Hintergrund.",
+    "zh-Hans": "让每张唱片以相同响度播放，换专辑时不用再去调音量。rpm 会在后台悄悄把每首曲目测量一次。",
     "comment": "Explains what volume levelling does, under the Sound settings heading."
   },
   "Settings_NormalizeOff": {
@@ -10911,11 +10927,11 @@
     "comment": "Checkbox: whether volume levelling applies to classical records, which are excluded by default."
   },
   "Settings_NormalizeClassicalHint": {
-    "en": "Off by default. A quiet movement is meant to be quiet, and levelling flattens the dynamics the performance depends on.",
-    "fr": "Désactivé par défaut. Un mouvement calme doit rester calme, et l'égalisation du volume aplatit les nuances dont dépend l'interprétation.",
-    "es": "Desactivado por defecto. Un movimiento suave debe sonar suave, y nivelar el volumen aplana la dinámica de la que depende la interpretación.",
-    "de": "Standardmäßig aus. Ein leiser Satz soll leise sein, und eine Lautheitsangleichung nimmt der Aufführung die Dynamik, auf der sie beruht.",
-    "zh-Hans": "默认关闭。安静的乐章本就该安静，音量拉平会压掉演奏所依赖的动态。",
+    "en": "Off by default. A quiet movement is meant to be quiet, and levelling would flatten the dynamics the performance depends on.",
+    "fr": "Désactivé par défaut. Un mouvement calme est fait pour être calme, et l’égalisation aplatirait les nuances dont dépend l’interprétation.",
+    "es": "Desactivado por defecto. Un movimiento tranquilo debe sonar tranquilo, y nivelarlo aplanaría la dinámica de la que depende la interpretación.",
+    "de": "Standardmäßig aus. Ein leiser Satz soll leise sein, und das Angleichen würde die Dynamik plätten, von der die Aufführung lebt.",
+    "zh-Hans": "默认关闭。安静的乐章本就该安静，统一响度会抹平演奏所依赖的强弱变化。",
     "comment": "Explains why classical records are excluded from volume levelling by default."
   },
   "Settings_NormalizeMeasuring": {
@@ -11287,11 +11303,11 @@
     "comment": "Supporters-only window: shown when DJ mode is started by an account that is not a supporter."
   },
   "Supporters_Backdrop": {
-    "en": "This backdrop is available to supporters of rpm only. Please consider supporting rpm.",
-    "fr": "Cet arrière-plan est réservé aux soutiens de rpm. Merci d'envisager de soutenir rpm.",
-    "es": "Este fondo está disponible solo para colaboradores de rpm. Considera apoyar a rpm.",
-    "de": "Dieser Hintergrund steht nur Unterstützern von rpm zur Verfügung. Bitte unterstütze rpm.",
-    "zh-Hans": "此背景仅向 rpm 的支持者提供。欢迎支持 rpm。",
+    "en": "This backdrop is just for rpm supporters. Fancy it? Please consider supporting rpm!",
+    "fr": "Ce fond est réservé aux soutiens de rpm. Il vous plaît ? Pensez à soutenir rpm !",
+    "es": "Este fondo es solo para los colaboradores de rpm. ¿Te gusta? ¡Plantéate apoyar rpm!",
+    "de": "Dieser Hintergrund ist nur für Unterstützer von rpm. Gefällt er dir? Überleg doch, rpm zu unterstützen!",
+    "zh-Hans": "这个背景只给 rpm 支持者使用。喜欢吗？欢迎考虑支持 rpm！",
     "comment": "Supporters-only window: shown when the gold backdrop is picked by an account that is not a supporter."
   },
   "Supporters_Karaoke": {
@@ -11335,19 +11351,19 @@
     "comment": "Cloud settings usage line when there is no room left at all."
   },
   "Cloud_AlmostFullHint": {
-    "en": "Less than {0} left. When full, rpm will stop uploading.",
-    "fr": "Il reste moins de {0}. Une fois plein, rpm cessera d'envoyer.",
-    "es": "Queda menos de {0}. Cuando esté lleno, rpm dejará de subir.",
-    "de": "Weniger als {0} übrig. Ist er voll, lädt rpm nichts mehr hoch.",
-    "zh-Hans": "剩余不足 {0}。存储已满时，rpm 将停止上传。",
+    "en": "Less than {0} left. Once it’s full, rpm stops uploading.",
+    "fr": "Il reste moins de {0}. Une fois l’espace plein, rpm arrête d’envoyer.",
+    "es": "Quedan menos de {0}. Cuando se llene, rpm dejará de subir.",
+    "de": "Weniger als {0} übrig. Sobald er voll ist, hört rpm mit dem Hochladen auf.",
+    "zh-Hans": "剩余不到 {0}。空间满了之后，rpm 会停止上传。",
     "comment": "Cloud settings: the warning shown while the account is almost full."
   },
   "Cloud_SyncAllPaused": {
-    "en": "Switched to selected music because cloud storage was full.",
-    "fr": "Basculé sur la musique sélectionnée : le stockage cloud était plein.",
-    "es": "Se cambió a la música seleccionada porque el almacenamiento en la nube estaba lleno.",
-    "de": "Auf ausgewählte Musik umgestellt, weil der Cloud-Speicher voll war.",
-    "zh-Hans": "因云存储已满，已切换为同步选定的音乐。",
+    "en": "Your cloud storage filled up, so rpm switched to syncing only your selected music.",
+    "fr": "Votre espace cloud est plein, alors rpm ne synchronise plus que la musique sélectionnée.",
+    "es": "Tu almacenamiento en la nube se llenó, así que rpm pasó a sincronizar solo la música seleccionada.",
+    "de": "Dein Cloud-Speicher ist voll, deshalb synchronisiert rpm jetzt nur noch deine ausgewählte Musik.",
+    "zh-Hans": "你的云端空间满了，所以 rpm 改为只同步你选中的音乐。",
     "comment": "Cloud settings: shown while the sync mode is the one the full store dropped it to."
   },
   "Cloud_SupporterHeading": {
@@ -11367,35 +11383,35 @@
     "comment": "Cloud settings: the standing of an account that is not a supporter."
   },
   "Cloud_SupporterYes": {
-    "en": "You are a supporter. Your cloud storage is unlimited.",
-    "fr": "Vous êtes un soutien. Votre stockage cloud est illimité.",
-    "es": "Eres colaborador. Tu almacenamiento en la nube es ilimitado.",
-    "de": "Du bist Unterstützer. Dein Cloud-Speicher ist unbegrenzt.",
-    "zh-Hans": "你是支持者。你的云存储无限。",
+    "en": "You’re a supporter, so your cloud storage is unlimited. Thank you!",
+    "fr": "Vous êtes un soutien de rpm, votre espace cloud est donc illimité. Merci !",
+    "es": "Eres colaborador, así que tu almacenamiento en la nube es ilimitado. ¡Gracias!",
+    "de": "Du bist Unterstützer, dein Cloud-Speicher ist also unbegrenzt. Danke!",
+    "zh-Hans": "你是支持者，云端空间不限量。谢谢你！",
     "comment": "Cloud settings: the standing of a supporter."
   },
   "Cloud_SupporterYesUntil": {
-    "en": "You are a supporter until {0}. Your cloud storage is unlimited.",
-    "fr": "Vous êtes un soutien jusqu'au {0}. Votre stockage cloud est illimité.",
-    "es": "Eres colaborador hasta el {0}. Tu almacenamiento en la nube es ilimitado.",
-    "de": "Du bist Unterstützer bis zum {0}. Dein Cloud-Speicher ist unbegrenzt.",
-    "zh-Hans": "你的支持者身份有效期至 {0}。你的云存储无限。",
+    "en": "You’re a supporter until {0}, so your cloud storage is unlimited. Thank you!",
+    "fr": "Vous êtes un soutien de rpm jusqu’au {0}, votre espace cloud est donc illimité. Merci !",
+    "es": "Eres colaborador hasta el {0}, así que tu almacenamiento en la nube es ilimitado. ¡Gracias!",
+    "de": "Du bist bis {0} Unterstützer, dein Cloud-Speicher ist also unbegrenzt. Danke!",
+    "zh-Hans": "你的支持者身份有效至 {0}，云端空间不限量。谢谢你！",
     "comment": "Cloud settings: a supporter whose support has an end date."
   },
   "Cloud_SupporterTester": {
-    "en": "You are a closed beta tester. You get the supporter features and 100 GB of cloud storage.",
-    "fr": "Vous testez la bêta fermée. Vous avez les fonctions des soutiens et 100 Go de stockage cloud.",
-    "es": "Eres probador de la beta cerrada. Tienes las funciones de colaborador y 100 GB de almacenamiento en la nube.",
-    "de": "Du testest die geschlossene Beta. Du hast die Unterstützer-Funktionen und 100 GB Cloud-Speicher.",
-    "zh-Hans": "你是封闭测试用户。你可使用支持者功能，并拥有 100 GB 云存储。",
+    "en": "You’re a closed beta tester, so you get the supporter features and 100 GB of cloud storage. Thanks for helping out!",
+    "fr": "Vous faites partie de la bêta fermée : vous profitez des fonctions réservées aux soutiens et de 100 Go de stockage cloud. Merci pour votre aide !",
+    "es": "Eres tester de la beta cerrada, así que tienes las funciones de colaborador y 100 GB de almacenamiento en la nube. ¡Gracias por echar una mano!",
+    "de": "Du bist Tester der geschlossenen Beta und bekommst die Unterstützer-Funktionen und 100 GB Cloud-Speicher. Danke fürs Mithelfen!",
+    "zh-Hans": "你是封闭测试成员，可以使用支持者功能和 100 GB 云端空间。谢谢你的帮忙！",
     "comment": "Cloud settings: the standing of an account marked as a closed beta tester."
   },
   "Cloud_SupporterUnknown": {
-    "en": "Your supporter status could not be retrieved.",
-    "fr": "Votre statut de soutien n'a pas pu être récupéré.",
-    "es": "No se ha podido obtener tu estado de colaborador.",
-    "de": "Dein Unterstützer-Status konnte nicht abgerufen werden.",
-    "zh-Hans": "无法获取你的支持者状态。",
+    "en": "We couldn’t check your supporter status just now.",
+    "fr": "Impossible de vérifier votre statut de soutien pour le moment.",
+    "es": "No hemos podido comprobar tu estado de colaborador ahora mismo.",
+    "de": "Wir konnten deinen Unterstützer-Status gerade nicht prüfen.",
+    "zh-Hans": "暂时无法查询你的支持者状态。",
     "comment": "Cloud settings: the server did not answer, which is not the same as 'not a supporter'."
   },
   "CloudFull_PausedAll": {
@@ -11767,11 +11783,11 @@
     "comment": "First row of the share button's library list on the deck: this computer's own collection."
   },
   "Share_SignInNeeded": {
-    "en": "Sharing needs an rpm account. Sign in to share your collection and to open the ones shared with you.",
-    "fr": "Le partage nécessite un compte rpm. Connectez-vous pour partager votre collection et ouvrir celles qui vous sont partagées.",
-    "es": "Compartir requiere una cuenta rpm. Inicia sesión para compartir tu colección y abrir las que compartan contigo.",
-    "de": "Zum Teilen ist ein rpm-Konto nötig. Melde dich an, um deine Sammlung zu teilen und die geteilten zu öffnen.",
-    "zh-Hans": "共享需要 rpm 账户。登录后即可共享您的音乐收藏，并打开别人共享给您的音乐收藏。",
+    "en": "Sharing needs an rpm account. Sign in to share your collection and open the ones shared with you.",
+    "fr": "Le partage nécessite un compte rpm. Connectez-vous pour partager votre collection et ouvrir celles qu’on partage avec vous.",
+    "es": "Para compartir necesitas una cuenta de rpm. Inicia sesión para compartir tu colección y abrir las que compartan contigo.",
+    "de": "Zum Teilen brauchst du ein rpm-Konto. Melde dich an, um deine Sammlung zu teilen und die zu öffnen, die mit dir geteilt werden.",
+    "zh-Hans": "共享需要 rpm 帐户。登录后即可共享你的收藏，也能打开别人分享给你的收藏。",
     "comment": "Strip above the sharing settings when nobody is signed in."
   },
   "Share_Title": {
@@ -11847,11 +11863,11 @@
     "comment": "Settings toggle: turn local network sharing on or off."
   },
   "Settings_ShareLibraryHint": {
-    "en": "Computers running rpm on this network can ask to share. You choose who gets access.",
-    "fr": "Les ordinateurs qui utilisent rpm sur ce réseau peuvent demander à partager. Vous choisissez qui a accès.",
-    "es": "Los equipos con rpm en esta red pueden solicitar compartir. Tú eliges quién tiene acceso.",
-    "de": "Computer mit rpm in diesem Netzwerk können eine Freigabe anfragen. Sie entscheiden, wer Zugriff erhält.",
-    "zh-Hans": "此网络中运行 rpm 的电脑可以请求共享。由你决定谁可以访问。",
+    "en": "Computers running rpm on this network can ask to share. You decide who gets access.",
+    "fr": "Les ordinateurs qui utilisent rpm sur ce réseau peuvent demander à partager. C’est vous qui décidez qui y a accès.",
+    "es": "Los ordenadores con rpm en esta red pueden pedir compartir. Tú decides quién tiene acceso.",
+    "de": "Computer mit rpm in diesem Netzwerk können fragen, ob sie teilen dürfen. Du entscheidest, wer Zugriff bekommt.",
+    "zh-Hans": "这个网络里运行 rpm 的电脑可以请求共享。谁能访问由你决定。",
     "comment": "Settings: hint under the sharing toggle."
   },
   "Settings_ShareName": {
@@ -11863,19 +11879,19 @@
     "comment": "Settings: label of the text box holding the name other computers see."
   },
   "Settings_ShareNameHint": {
-    "en": "Leave this empty to use your display name. When you are not signed in, this computer's name is used.",
-    "fr": "Laissez ce champ vide pour utiliser votre nom d'affichage. Si vous n'êtes pas connecté, le nom de cet ordinateur est utilisé.",
-    "es": "Deja este campo vacío para usar tu nombre visible. Si no has iniciado sesión, se usa el nombre de este ordenador.",
-    "de": "Lassen Sie dieses Feld leer, um Ihren Anzeigenamen zu verwenden. Wenn Sie nicht angemeldet sind, wird der Name dieses Computers verwendet.",
-    "zh-Hans": "留空则使用你的显示名称。未登录时使用这台电脑的名称。",
+    "en": "Leave this empty to use your display name. If you’re not signed in, rpm uses this computer’s name.",
+    "fr": "Laissez ce champ vide pour utiliser votre nom d’affichage. Si vous n’êtes pas connecté, rpm utilise le nom de cet ordinateur.",
+    "es": "Déjalo vacío para usar tu nombre visible. Si no has iniciado sesión, rpm usa el nombre de este ordenador.",
+    "de": "Lass das leer, um deinen Anzeigenamen zu verwenden. Wenn du nicht angemeldet bist, nimmt rpm den Namen dieses Computers.",
+    "zh-Hans": "留空则使用你的显示名称。未登录时，rpm 会使用这台电脑的名称。",
     "comment": "Settings, Sharing: hint under the \"This computer is called\" box. Empty falls back to the account display name, then to the machine name."
   },
   "Settings_ShareNobody": {
-    "en": "Nothing shared yet. Open rpm on another computer on this network and it appears here.",
-    "fr": "Rien de partagé pour l'instant. Ouvrez rpm sur un autre ordinateur de ce réseau et il apparaîtra ici.",
-    "es": "Todavía no hay nada compartido. Abre rpm en otro equipo de esta red y aparecerá aquí.",
-    "de": "Noch nichts geteilt. Öffnen Sie rpm auf einem anderen Computer in diesem Netzwerk, dann erscheint er hier.",
-    "zh-Hans": "尚未共享。在此网络的另一台电脑上打开 rpm，它就会出现在这里。",
+    "en": "Nothing shared yet. Open rpm on another computer on this network and it’ll show up here.",
+    "fr": "Rien de partagé pour l’instant. Ouvrez rpm sur un autre ordinateur de ce réseau et il apparaîtra ici.",
+    "es": "Aún no hay nada compartido. Abre rpm en otro ordenador de esta red y aparecerá aquí.",
+    "de": "Noch nichts geteilt. Öffne rpm auf einem anderen Computer in diesem Netzwerk, dann taucht er hier auf.",
+    "zh-Hans": "还没有共享任何内容。在同一网络的另一台电脑上打开 rpm，它就会出现在这里。",
     "comment": "Settings: empty state of the shared computers list."
   },
   "Settings_ShareRemove": {
@@ -12223,11 +12239,11 @@
     "comment": "Settings section: which tags a queued file must carry."
   },
   "Settings_RequiredTagsHint": {
-    "en": "A queued file is marked when it is missing any of these. Import is not blocked by them.",
-    "fr": "Un fichier en attente est signalé s'il lui manque l'une de ces balises. L'importation n'est pas bloquée.",
-    "es": "Un archivo en cola se marca si le falta alguna de estas etiquetas. La importación no se bloquea.",
-    "de": "Eine Datei in der Warteschlange wird markiert, wenn eines dieser Tags fehlt. Der Import wird dadurch nicht blockiert.",
-    "zh-Hans": "队列中的文件如果缺少其中任何一项，就会被标记。这不会阻止导入。",
+    "en": "A queued file gets a mark when it’s missing any of these. Don’t worry, you can still import it.",
+    "fr": "Un fichier en file reçoit une marque s’il lui manque l’un de ces champs. Pas d’inquiétude, vous pouvez quand même l’importer.",
+    "es": "Un archivo en cola recibe una marca si le falta alguno de estos. Tranquilo, puedes importarlo igualmente.",
+    "de": "Eine Datei in der Warteschlange bekommt eine Markierung, wenn ihr eines davon fehlt. Keine Sorge, importieren kannst du sie trotzdem.",
+    "zh-Hans": "队列中的文件缺少其中任何一项时会被标记出来。别担心，照样可以导入。",
     "comment": "Settings hint under the required tags checkboxes."
   },
   "Settings_CatalogueFill": {
@@ -12239,11 +12255,11 @@
     "comment": "Settings > Collection, required tags card: toggle that looks each added record up in the catalogue and fills blank genre, subgenre and year in the import queue."
   },
   "Settings_CatalogueFillHint": {
-    "en": "rpm looks each record up in its catalogue and fills in the genre, subgenre and year where they are blank or not on rpm's genre list. Values that are already set are kept. Nothing is written to your files until you import.",
-    "fr": "rpm recherche chaque disque dans son catalogue et complète le genre, le sous-genre et l'année lorsqu'ils sont vides ou absents de la liste des genres de rpm. Les valeurs déjà renseignées sont conservées. Rien n'est écrit dans vos fichiers avant l'importation.",
-    "es": "rpm busca cada disco en su catálogo y completa el género, el subgénero y el año cuando están vacíos o no figuran en la lista de géneros de rpm. Los valores ya definidos se conservan. No se escribe nada en tus archivos hasta que importes.",
-    "de": "rpm sucht jede Platte in seinem Katalog und ergänzt Genre, Subgenre und Jahr, wo sie fehlen oder nicht in der Genreliste von rpm stehen. Bereits gesetzte Werte bleiben erhalten. Bis zum Import wird nichts in deine Dateien geschrieben.",
-    "zh-Hans": "rpm 会在其目录中查找每张唱片，并在流派、子流派和年份为空或不在 rpm 流派列表中时补全它们。已设置的值会保留。在你导入之前，不会写入任何文件。",
+    "en": "rpm looks each record up in its catalogue and fills in the genre, subgenre and year wherever they’re blank or not on rpm’s genre list. Anything you’ve already set stays put, and nothing is written to your files until you import.",
+    "fr": "rpm cherche chaque disque dans son catalogue et complète le genre, le sous-genre et l’année quand ils sont vides ou absents de la liste des genres de rpm. Ce que vous avez déjà renseigné ne bouge pas, et rien n’est écrit dans vos fichiers avant l’importation.",
+    "es": "rpm busca cada disco en su catálogo y rellena el género, el subgénero y el año cuando están vacíos o no figuran en la lista de géneros de rpm. Lo que ya hayas puesto se queda como está, y no se escribe nada en tus archivos hasta que importes.",
+    "de": "rpm schlägt jede Platte in seinem Katalog nach und ergänzt Genre, Subgenre und Jahr, wo sie leer sind oder nicht auf der Genreliste von rpm stehen. Was du schon eingetragen hast, bleibt, und in deine Dateien wird erst beim Import etwas geschrieben.",
+    "zh-Hans": "rpm 会在目录中查找每张唱片，在流派、子流派和年份为空或不在 rpm 流派列表中时补上。你已经填好的内容保持不变，导入之前也不会写入你的文件。",
     "comment": "Settings hint under the catalogue fill toggle."
   },
   "Queue_ChipDuplicates": {
@@ -16655,11 +16671,11 @@
     "comment": "Display settings, card heading over the button that replays the coachmarks."
   },
   "Settings_HintsHint": {
-    "en": "The arrows that point out where music comes in, how the artwork header opens, and how to switch views. They appear once each and then stop.",
-    "fr": "Les flèches qui montrent par où la musique arrive, comment ouvrir l'en-tête de pochette et comment changer de vue. Elles apparaissent une fois chacune, puis disparaissent.",
-    "es": "Las flechas que muestran por dónde entra la música, cómo se abre la cabecera de portada y cómo cambiar de vista. Aparecen una vez cada una y luego no vuelven.",
-    "de": "Die Pfeile, die zeigen, wo Musik hereinkommt, wie sich das Cover-Banner öffnet und wie man die Ansicht wechselt. Jeder erscheint einmal und dann nicht mehr.",
-    "zh-Hans": "这些箭头会指出音乐从哪里导入、封面横幅如何展开，以及如何切换视图。每个只出现一次。",
+    "en": "The little arrows that show you where music comes in, how the artwork header opens and how to switch views. Each one pops up once, then leaves you be.",
+    "fr": "Les petites flèches qui vous montrent où arrive la musique, comment s’ouvre l’en-tête des pochettes et comment changer de vue. Chacune apparaît une fois, puis vous laisse tranquille.",
+    "es": "Las flechitas que te enseñan por dónde entra la música, cómo se abre la cabecera de carátulas y cómo cambiar de vista. Cada una aparece una vez y luego te deja tranquilo.",
+    "de": "Die kleinen Pfeile, die dir zeigen, wo Musik hereinkommt, wie sich die Cover-Leiste öffnet und wie du die Ansicht wechselst. Jeder taucht einmal auf und lässt dich dann in Ruhe.",
+    "zh-Hans": "那些小箭头会告诉你音乐从哪里进来、封面顶栏怎么打开、视图怎么切换。每个只出现一次，之后就不再打扰你。",
     "comment": "Display settings, line under the first-run hints heading."
   },
   "Settings_HintsBack": {
@@ -18863,11 +18879,11 @@
     "comment": "Row in the Android TV app's settings: whether the sung lyric line lights word by word."
   },
   "Settings_MixtapeAfterHint": {
-    "en": "When an album, a playlist or a single ends, the music carries on with songs like it from your collection.",
-    "fr": "À la fin d'un album, d'une playlist ou d'un single, la musique continue avec des morceaux semblables de votre collection.",
-    "es": "Cuando termina un álbum, una lista o un sencillo, la música sigue con canciones parecidas de tu colección.",
-    "de": "Wenn ein Album, eine Playlist oder eine Single endet, geht die Musik mit ähnlichen Songs aus deiner Sammlung weiter.",
-    "zh-Hans": "专辑、播放列表或单曲播完后，继续播放你收藏中与之相似的歌曲。",
+    "en": "When an album, playlist or single ends, the music keeps going with similar songs from your collection.",
+    "fr": "Quand un album, une playlist ou un single se termine, la musique continue avec des morceaux similaires de votre collection.",
+    "es": "Cuando termina un álbum, una lista o un single, la música sigue con canciones parecidas de tu colección.",
+    "de": "Wenn ein Album, eine Playlist oder eine Single zu Ende ist, geht die Musik mit ähnlichen Songs aus deiner Sammlung weiter.",
+    "zh-Hans": "专辑、播放列表或单曲放完后，音乐会接着播放你收藏里相似的歌曲。",
     "comment": "Line under the \"Mixtape when a record ends\" heading (Tv_SettingsMixtapeAfter) on the desktop Sound settings page, above its on/off switch."
   },
   "Tv_SettingsMixtapeAfter": {
@@ -19343,11 +19359,11 @@
     "comment": "Heading for the choice of Pegasus's room animation (setup wizard step 4 and Display settings)."
   },
   "Settings_PegasusVisualizerHint": {
-    "en": "The moving lights behind the music when Pegasus plays.",
-    "fr": "Les lumières en mouvement derrière la musique quand Pegasus joue.",
-    "es": "Las luces en movimiento detrás de la música cuando Pegasus reproduce.",
-    "de": "Die bewegten Lichter hinter der Musik, wenn Pegasus spielt.",
-    "zh-Hans": "Pegasus 播放时音乐背后流动的光。",
+    "en": "The moving lights behind the music while Pegasus plays.",
+    "fr": "Les lumières qui bougent derrière la musique pendant que Pegasus joue.",
+    "es": "Las luces que se mueven detrás de la música mientras suena Pegasus.",
+    "de": "Die bewegten Lichter hinter der Musik, während Pegasus spielt.",
+    "zh-Hans": "Pegasus 播放时，音乐背后流动的光影。",
     "comment": "Line under the Visualizer in Pegasus heading."
   },
   "Settings_SameAsWindows": {
@@ -19391,11 +19407,11 @@
     "comment": "Switch: make rpm the app Windows opens music files with (setup wizard step 4 and Library settings)."
   },
   "Settings_OpenMusicFilesHint": {
-    "en": "Music files you open play in rpm. Windows asks you to confirm rpm in its own settings.",
-    "fr": "Les fichiers musicaux que vous ouvrez sont lus dans rpm. Windows vous demande de confirmer rpm dans ses propres réglages.",
-    "es": "Los archivos de música que abras se reproducen en rpm. Windows te pide confirmar rpm en su propia configuración.",
-    "de": "Musikdateien, die du öffnest, werden in rpm abgespielt. Windows bittet dich, rpm in den eigenen Einstellungen zu bestätigen.",
-    "zh-Hans": "你打开的音乐文件会在 rpm 中播放。Windows 会请你在其设置中确认使用 rpm。",
+    "en": "Music files you open will play in rpm. Windows will ask you to confirm rpm in its own settings.",
+    "fr": "Les fichiers musicaux que vous ouvrez seront lus dans rpm. Windows vous demandera de confirmer rpm dans ses propres paramètres.",
+    "es": "Los archivos de música que abras se reproducirán en rpm. Windows te pedirá que confirmes rpm en su propia configuración.",
+    "de": "Musikdateien, die du öffnest, laufen dann in rpm. Windows bittet dich, rpm in seinen eigenen Einstellungen zu bestätigen.",
+    "zh-Hans": "你打开的音乐文件会在 rpm 中播放。Windows 会请你在它自己的设置里确认 rpm。",
     "comment": "Line under the Open rpm when a music file is played switch."
   },
   "Settings_OpenMusicFilesType": {
@@ -19415,11 +19431,11 @@
     "comment": "Library settings, heading of the choice of the view the library opens in."
   },
   "Settings_LibraryLayoutHint": {
-    "en": "The view your library opens in. The keys at the top of the library switch it too.",
-    "fr": "La vue dans laquelle s'ouvre votre bibliothèque. Les boutons en haut de la bibliothèque la changent aussi.",
-    "es": "La vista con la que se abre tu biblioteca. Los botones de la parte superior de la biblioteca también la cambian.",
-    "de": "Die Ansicht, in der sich deine Bibliothek öffnet. Die Tasten oben in der Bibliothek wechseln sie ebenfalls.",
-    "zh-Hans": "资料库打开时的视图。资料库顶部的按钮也可以切换。",
+    "en": "The view your library opens in. You can switch it any time with the buttons at the top of the library.",
+    "fr": "La vue dans laquelle s’ouvre votre bibliothèque. Vous pouvez en changer à tout moment avec les boutons en haut de la bibliothèque.",
+    "es": "La vista con la que se abre tu biblioteca. Puedes cambiarla cuando quieras con los botones de la parte superior.",
+    "de": "Die Ansicht, in der deine Bibliothek öffnet. Mit den Knöpfen oben in der Bibliothek kannst du sie jederzeit wechseln.",
+    "zh-Hans": "音乐库打开时的视图。你随时可以用音乐库顶部的按钮切换。",
     "comment": "Line under the Library layout heading."
   },
   "Wizard_HelloSubtitle": {
