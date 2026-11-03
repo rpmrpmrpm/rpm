@@ -6900,6 +6900,46 @@
     "zh-Hans": "光驱中有一张音频 CD",
     "comment": "Tooltip on the rip chip while it is asking about a disc rather than showing a rip."
   },
+  "Rip_CardTitle": {
+    "en": "Disc inserted",
+    "fr": "Disque inséré",
+    "es": "Disco insertado",
+    "de": "Disc eingelegt",
+    "zh-Hans": "已放入光盘",
+    "comment": "Heading of the card that slides up when an audio CD goes into the drive."
+  },
+  "Rip_CardLooking": {
+    "en": "Looking up your disc…",
+    "fr": "Recherche de votre disque…",
+    "es": "Buscando tu disco…",
+    "de": "Deine Disc wird nachgeschlagen…",
+    "zh-Hans": "正在查找你的光盘…",
+    "comment": "Disc card: shown beside the turning record while the CD is read and looked up."
+  },
+  "Rip_CardUnknown": {
+    "en": "We couldn’t find this disc, but you can still play or rip it.",
+    "fr": "Nous n’avons pas trouvé ce disque, mais vous pouvez quand même l’écouter ou l’extraire.",
+    "es": "No hemos encontrado este disco, pero puedes reproducirlo o ripearlo igualmente.",
+    "de": "Wir haben diese Disc nicht gefunden, aber du kannst sie trotzdem abspielen oder rippen.",
+    "zh-Hans": "没有找到这张光盘的信息，不过你仍然可以播放或翻录它。",
+    "comment": "Disc card: the CD was read but no catalogue knows it."
+  },
+  "Rip_CardPlay": {
+    "en": "Play CD",
+    "fr": "Écouter le CD",
+    "es": "Reproducir CD",
+    "de": "CD abspielen",
+    "zh-Hans": "播放 CD",
+    "comment": "Disc card button: plays the CD straight away without adding it to the collection."
+  },
+  "Rip_CardRip": {
+    "en": "Rip CD",
+    "fr": "Extraire le CD",
+    "es": "Ripear CD",
+    "de": "CD rippen",
+    "zh-Hans": "翻录 CD",
+    "comment": "Disc card button: opens Import from CD on this disc."
+  },
   "Rip_AutoPlayAction": {
     "en": "Rip the disc with rpm",
     "fr": "Extraire le disque avec rpm",
