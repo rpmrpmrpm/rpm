@@ -15278,6 +15278,14 @@
     "zh-Hans": "摄影",
     "comment": "Credits section: the genre photographs and the generated playlists' photographs."
   },
+  "Credits_Section_Music": {
+    "en": "Music",
+    "fr": "Musique",
+    "es": "Música",
+    "de": "Musik",
+    "zh-Hans": "音乐",
+    "comment": "Credits section: recordings that ship with the app."
+  },
   "Credits_Section_Words": {
     "en": "Word lists",
     "fr": "Listes de mots",
@@ -15878,6 +15886,14 @@
     "zh-Hans": "用于生成封面和流派页面的照片。",
     "comment": "About screen: what Pexels is asked for."
   },
+  "Credits_Musopen_Use": {
+    "en": "The recording of the Moonlight Sonata in the tracks you can try during setup.",
+    "fr": "L'enregistrement de la Sonate au clair de lune parmi les morceaux à essayer pendant la configuration.",
+    "es": "La grabación de la Sonata Claro de luna entre las pistas que puedes probar durante la configuración.",
+    "de": "Die Aufnahme der Mondscheinsonate unter den Titeln, die du bei der Einrichtung ausprobieren kannst.",
+    "zh-Hans": "设置时可试听曲目中的《月光奏鸣曲》录音。",
+    "comment": "Credits entry: what the Musopen recording is used for."
+  },
   "Credits_RadioBrowser_Use": {
     "en": "The directory of internet radio stations.",
     "fr": "L'annuaire des radios en ligne.",
@@ -16397,6 +16413,30 @@
     "de": "Ordner wählen",
     "zh-Hans": "选择文件夹",
     "comment": "Setup wizard step 2: the one source. Onboarding imports a folder of files and nothing else."
+  },
+  "Wizard_TryStarter": {
+    "en": "Try our tracks",
+    "fr": "Essayer nos morceaux",
+    "es": "Probar nuestras pistas",
+    "de": "Unsere Titel ausprobieren",
+    "zh-Hans": "试试我们的曲目",
+    "comment": "Setup wizard step 2: the tile beside Choose a folder. It imports three tracks that ship with the app."
+  },
+  "Wizard_TryStarterHint": {
+    "en": "No music to hand? No problem! Start with three tracks from us and see what rpm can do.",
+    "fr": "Pas de musique sous la main ? Pas de souci ! Commencez avec trois morceaux de notre part et découvrez ce que rpm sait faire.",
+    "es": "¿No tienes música a mano? ¡No pasa nada! Empieza con tres pistas nuestras y descubre lo que rpm puede hacer.",
+    "de": "Gerade keine Musik zur Hand? Kein Problem! Starte mit drei Titeln von uns und sieh selbst, was rpm kann.",
+    "zh-Hans": "手边没有音乐？没问题！先用我们准备的三首曲目，看看 rpm 能做什么。",
+    "comment": "Setup wizard step 2: the line under Try our tracks."
+  },
+  "Wizard_StarterSource": {
+    "en": "Three tracks from rpm",
+    "fr": "Trois morceaux de rpm",
+    "es": "Tres pistas de rpm",
+    "de": "Drei Titel von rpm",
+    "zh-Hans": "rpm 准备的三首曲目",
+    "comment": "Setup wizard step 2, review: shown where a chosen folder's path goes, when the source is the tracks that ship with the app."
   },
   "Wizard_PlanFolder": {
     "en": "Folder",

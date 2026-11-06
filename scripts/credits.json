@@ -108,6 +108,10 @@
       "name": "Font Awesome Pro License",
       "url": "https://fontawesome.com/license"
     },
+    "PublicDomain": {
+      "name": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_sonata_no._14_in_c_sharp_minor_%27moonlight%27,_op._27_no._2_-_i._adagio_sostenuto.ogg"
+    },
     "Pexels": {
       "name": "Pexels License",
       "url": "https://www.pexels.com/license/"
@@ -1232,6 +1236,25 @@
       "note": "Credits_Photographs_Note",
       "generated": "photos",
       "entries": []
+    },
+    {
+      "id": "Music",
+      "title": "Credits_Section_Music",
+      "entries": [
+        {
+          "id": "Musopen",
+          "name": "Musopen",
+          "license": [
+            "PublicDomain"
+          ],
+          "copyright": "Piano Sonata No. 14, first movement, performed by Paul Pitman for Musopen",
+          "url": "https://musopen.org",
+          "use": "Credits_Musopen_Use",
+          "heads": [
+            "desktop"
+          ]
+        }
+      ]
     },
     {
       "id": "Words",
