@@ -320,6 +320,9 @@ def check_catalogue_name(strings: dict) -> int:
 
 WEB_ROOT = pathlib.Path(workspace.PARENT) / "rpm-web"
 WEB_USES = re.compile(r"""\btext\(\s*['"]([A-Za-z0-9_]+)['"]""")
+# A key can also travel in a variable: a sign-in step returns the key of its message, and a list holds
+# the keys of its rows. Any quoted word that is a key in the table counts as used.
+WEB_NAMES = re.compile(r"""['"]([A-Z][A-Za-z0-9]*_[A-Za-z0-9_]+)['"]""")
 
 
 def write_web(strings: dict) -> int:
@@ -331,7 +334,9 @@ def write_web(strings: dict) -> int:
     used = set()
     for path in (WEB_ROOT / "src").rglob("*"):
         if path.suffix in (".ts", ".svelte"):
-            used.update(WEB_USES.findall(path.read_text(encoding="utf-8")))
+            source = path.read_text(encoding="utf-8")
+            used.update(WEB_USES.findall(source))
+            used.update(key for key in WEB_NAMES.findall(source) if key in strings)
 
     missing = sorted(key for key in used if key not in strings)
     for key in missing:

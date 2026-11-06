@@ -19863,11 +19863,11 @@
     "comment": "Setup wizard step 4, over the import's progress bar after ten seconds of importing."
   },
   "Web_BetaClosed": {
-    "en": "rpm is in a closed beta. Sign in if you have an account, or apply to join the beta.",
-    "fr": "rpm est en bêta fermée. Connectez-vous si vous avez un compte, ou demandez à rejoindre la bêta.",
-    "es": "rpm está en beta cerrada. Inicia sesión si tienes una cuenta o solicita unirte a la beta.",
-    "de": "rpm ist in einer geschlossenen Beta. Melde dich an, wenn du ein Konto hast, oder bewirb dich für die Beta.",
-    "zh-Hans": "rpm 正处于封闭测试阶段。已有账户可直接登录，也可以申请加入测试。",
+    "en": "rpm is in a closed beta. You need the code from your welcome mail.",
+    "fr": "rpm est en bêta fermée. Il vous faut le code de votre e-mail de bienvenue.",
+    "es": "rpm está en beta cerrada. Necesitas el código de tu correo de bienvenida.",
+    "de": "rpm ist in einer geschlossenen Beta. Du brauchst den Code aus deiner Willkommensmail.",
+    "zh-Hans": "rpm 正处于封闭测试阶段。你需要欢迎邮件中的代码。",
     "comment": "Web app sign-in card, in place of the sign-up link while sign-up is closed."
   },
   "Web_BetaApply": {
@@ -19877,5 +19877,121 @@
     "de": "Für die Beta bewerben",
     "zh-Hans": "申请加入测试",
     "comment": "Web app sign-in card, a link to the beta form on the website."
+  },
+  "Web_LibraryEmpty": {
+    "en": "Nothing here yet. Import your music and it shows up here.",
+    "fr": "Rien pour l'instant. Importez votre musique et elle apparaîtra ici.",
+    "es": "Aún no hay nada. Importa tu música y aparecerá aquí.",
+    "de": "Noch nichts da. Importiere deine Musik, dann erscheint sie hier.",
+    "zh-Hans": "这里还没有内容。导入你的音乐后就会显示在这里。",
+    "comment": "Web app library pane, when the account has no tracks yet."
+  },
+  "Web_ImportCannotStore": {
+    "en": "This file type can't be stored in the cloud.",
+    "fr": "Ce type de fichier ne peut pas être stocké dans le cloud.",
+    "es": "Este tipo de archivo no se puede guardar en la nube.",
+    "de": "Dieser Dateityp kann nicht in der Cloud gespeichert werden.",
+    "zh-Hans": "此文件类型无法存储到云端。",
+    "comment": "Web app import queue, on a file in a format the store cannot hold."
+  },
+  "Web_ImportStagePreparing": {
+    "en": "Preparing",
+    "fr": "Préparation",
+    "es": "Preparando",
+    "de": "Wird vorbereitet",
+    "zh-Hans": "正在准备",
+    "comment": "Web app import queue, status of a track while its audio is prepared for upload."
+  },
+  "Web_ImportStageUploading": {
+    "en": "Uploading",
+    "fr": "Envoi",
+    "es": "Subiendo",
+    "de": "Wird hochgeladen",
+    "zh-Hans": "正在上传",
+    "comment": "Web app import queue, status of a track while it uploads."
+  },
+  "Web_ImportAlreadyThere": {
+    "en": "Already in your collection",
+    "fr": "Déjà dans votre collection",
+    "es": "Ya está en tu colección",
+    "de": "Schon in deiner Sammlung",
+    "zh-Hans": "已在你的收藏中",
+    "comment": "Web app import queue, on a track whose audio the account already holds."
+  },
+  "Web_ImportDone": {
+    "en": "Imported",
+    "fr": "Importé",
+    "es": "Importado",
+    "de": "Importiert",
+    "zh-Hans": "已导入",
+    "comment": "Web app import queue, on a track that has reached the cloud."
+  },
+  "Web_ImportEmptyHint": {
+    "en": "Add files or a folder. They appear here so you can check them before they go to your collection.",
+    "fr": "Ajoutez des fichiers ou un dossier. Ils apparaissent ici pour que vous puissiez les vérifier avant de les ajouter à votre collection.",
+    "es": "Añade archivos o una carpeta. Aparecen aquí para que puedas revisarlos antes de pasarlos a tu colección.",
+    "de": "Füge Dateien oder einen Ordner hinzu. Sie erscheinen hier, damit du sie prüfen kannst, bevor sie in deine Sammlung kommen.",
+    "zh-Hans": "添加文件或文件夹。它们会显示在这里，方便你在加入收藏前检查。",
+    "comment": "Web app import pane, when the queue is empty."
+  },
+  "Web_ImportAddFiles": {
+    "en": "Add files",
+    "fr": "Ajouter des fichiers",
+    "es": "Añadir archivos",
+    "de": "Dateien hinzufügen",
+    "zh-Hans": "添加文件",
+    "comment": "Web app import pane, button that opens the file picker."
+  },
+  "Web_ImportAddFolder": {
+    "en": "Add a folder",
+    "fr": "Ajouter un dossier",
+    "es": "Añadir una carpeta",
+    "de": "Ordner hinzufügen",
+    "zh-Hans": "添加文件夹",
+    "comment": "Web app import pane, button that opens the folder picker."
+  },
+  "Web_ImportKeepOpen": {
+    "en": "Keep this page open until the import has finished.",
+    "fr": "Gardez cette page ouverte jusqu'à la fin de l'importation.",
+    "es": "Mantén esta página abierta hasta que termine la importación.",
+    "de": "Lass diese Seite geöffnet, bis der Import abgeschlossen ist.",
+    "zh-Hans": "请在导入完成前保持此页面打开。",
+    "comment": "Web app import pane, while an import is running."
+  },
+  "Web_ImportMixed": {
+    "en": "Different values",
+    "fr": "Valeurs différentes",
+    "es": "Valores distintos",
+    "de": "Unterschiedliche Werte",
+    "zh-Hans": "多个不同的值",
+    "comment": "Web app tag panel, placeholder of a field whose value differs between the ticked tracks."
+  },
+  "Web_CodeTitle": {
+    "en": "Your code",
+    "fr": "Votre code",
+    "es": "Tu código",
+    "de": "Dein Code",
+    "zh-Hans": "你的代码"
+  },
+  "Web_CodeRefused": {
+    "en": "That code doesn't work. If it matches your welcome mail, reply to that mail and we'll help.",
+    "fr": "Ce code ne fonctionne pas. S'il correspond à votre e-mail de bienvenue, répondez à cet e-mail et nous vous aiderons.",
+    "es": "Ese código no funciona. Si coincide con tu correo de bienvenida, responde a ese correo y te ayudaremos.",
+    "de": "Dieser Code funktioniert nicht. Wenn er mit deiner Willkommensmail übereinstimmt, antworte auf diese Mail, dann helfen wir dir.",
+    "zh-Hans": "此代码无效。如果它与欢迎邮件中的一致，请回复该邮件，我们会帮你解决。"
+  },
+  "Web_CodeFailed": {
+    "en": "Your code could not be checked. Please try again.",
+    "fr": "Votre code n'a pas pu être vérifié. Veuillez réessayer.",
+    "es": "No se pudo comprobar tu código. Inténtalo de nuevo.",
+    "de": "Dein Code konnte nicht geprüft werden. Bitte versuche es noch einmal.",
+    "zh-Hans": "无法验证你的代码，请重试。"
+  },
+  "Web_ImportClearDone": {
+    "en": "Clear finished",
+    "fr": "Effacer les terminés",
+    "es": "Quitar los terminados",
+    "de": "Erledigte entfernen",
+    "zh-Hans": "清除已完成"
   }
 }
