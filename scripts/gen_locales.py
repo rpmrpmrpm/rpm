@@ -11,7 +11,9 @@ Emits, from the one table:
     RPM.iOS/Modules/RPMKit/Sources/RPMKit/Strings/<locale>.lproj/ --- read by the
     Swift phone app through RPMKit's `Loc`;
   * one strings.xml per locale under RPM.Android/core/src/main/res/values*/ ---
-    read by the Android TV app and the Android phone app through `:core`'s `R.string`.
+    read by the Android TV app and the Android phone app through `:core`'s `R.string`;
+  * one JSON file per locale under rpm-web/src/strings/ --- read by the web app. It holds only
+    the keys the web code names, because the browser downloads it.
 
     python3 scripts/gen_locales.py
 
@@ -316,6 +318,35 @@ def check_catalogue_name(strings: dict) -> int:
     return len(named)
 
 
+WEB_ROOT = pathlib.Path(workspace.PARENT) / "rpm-web"
+WEB_USES = re.compile(r"""\btext\(\s*['"]([A-Za-z0-9_]+)['"]""")
+
+
+def write_web(strings: dict) -> int:
+    """One JSON table per locale, with the keys the web code names. Returns the number of keys that
+    the code names and the table does not have. Skipped when rpm-web is not checked out."""
+    if not WEB_ROOT.is_dir():
+        return 0
+
+    used = set()
+    for path in (WEB_ROOT / "src").rglob("*"):
+        if path.suffix in (".ts", ".svelte"):
+            used.update(WEB_USES.findall(path.read_text(encoding="utf-8")))
+
+    missing = sorted(key for key in used if key not in strings)
+    for key in missing:
+        print(f"rpm-web names a key that is not in strings.json: {key}")
+
+    out_dir = WEB_ROOT / "src" / "strings"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for loc in LOCALES:
+        table = {key: strings[key][loc] for key in sorted(used) if key in strings}
+        with open(out_dir / f"{loc}.json", "w", encoding="utf-8", newline="\n") as fh:
+            json.dump(table, fh, ensure_ascii=False, indent=0)
+            fh.write("\n")
+    return len(missing)
+
+
 def main() -> None:
     with open(DATA, encoding="utf-8") as fh:
         strings = json.load(fh)
@@ -342,7 +373,11 @@ def main() -> None:
 
     write_swift(strings)
     write_android(strings)
-    print(f"Wrote {len(LOCALES)} locales from {len(strings)} keys, for all three heads.")
+    web_missing = write_web(strings)
+    print(f"Wrote {len(LOCALES)} locales from {len(strings)} keys, for every head.")
+
+    if web_missing:
+        raise SystemExit(f"{web_missing} key(s) used by the web app are not in strings.json")
 
     missing = check_swift_keys(strings)
     if missing:
