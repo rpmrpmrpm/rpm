@@ -8978,6 +8978,14 @@
     "zh-Hans": "打开系统设置中的声音，在输出下选择一个设备。",
     "comment": "Sound output message, a numbered step on macOS. Names macOS's own System Settings, Sound, Output, as macOS words them in each language."
   },
+  "AudioOut_StepMacSoundPreferences": {
+    "en": "Open System Preferences, then Sound, and choose a device under Output.",
+    "fr": "Ouvrez Préférences Système, puis Son, et choisissez un appareil sous Sortie.",
+    "es": "Abre Preferencias del Sistema, luego Sonido, y elige un dispositivo en Salida.",
+    "de": "Öffne die Systemeinstellungen, dann Ton, und wähle unter Ausgabe ein Gerät.",
+    "zh-Hans": "打开系统偏好设置中的声音，在输出下选择一个设备。",
+    "comment": "Sound output message, a numbered step on macOS 12. Names System Preferences, Sound, Output, as macOS 12 words them in each language: macOS 13 renamed System Preferences to System Settings."
+  },
   "AudioOut_StepOtherSound": {
     "en": "Open your system's sound settings and check that an output device is selected.",
     "fr": "Ouvrez les paramètres audio du système et vérifiez qu'un périphérique de sortie est sélectionné.",
