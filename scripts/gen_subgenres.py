@@ -25,6 +25,7 @@ SWIFT_TARGET = workspace.path("RPM.iOS", "Modules", "RPMLibrary", "Sources", "RP
                             "Subgenres.Data.swift")
 KOTLIN_TARGET = workspace.path("RPM.Android", "core", "src", "main", "java", "com", "rpm", "player",
                              "core", "library", "SubgenreTable.kt")
+WEB_TARGET = os.path.join(workspace.PARENT, "rpm-web", "src", "library", "subgenres.json")
 
 
 def normalize(value):
@@ -167,6 +168,7 @@ def main():
 
     write_swift(genres, pairs, shared, blocked, version)
     write_kotlin(genres, pairs, shared, blocked, version)
+    write_web(genres, pairs, shared, blocked, version)
 
     print(f"{os.path.relpath(TARGET, ROOT)}: {len(genres)} shelves, {len(pairs)} styles, "
           f"{len(shared)} shared, {len(blocked)} blocked, version {version}")
@@ -271,6 +273,21 @@ def write_kotlin(genres, pairs, shared, blocked, version):
     with open(KOTLIN_TARGET, "w", encoding="utf8") as f:
         f.write("\n".join(lines))
     print(f"{os.path.relpath(KOTLIN_TARGET, ROOT)}: written")
+
+
+def write_web(genres, pairs, shared, blocked, version):
+    """The same table for the web app, read by genres.ts."""
+    table = {
+        "version": version,
+        "shelves": genres,
+        "styles": pairs,
+        "sharedKeys": sorted(shared),
+        "blockedKeys": sorted({normalize(b) for b in blocked if normalize(b)}),
+    }
+    with open(WEB_TARGET, "w", encoding="utf8") as f:
+        json.dump(table, f, ensure_ascii=False, indent=0)
+        f.write("\n")
+    print(f"{os.path.relpath(WEB_TARGET, workspace.PARENT)}: written")
 
 
 if __name__ == "__main__":

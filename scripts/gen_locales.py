@@ -333,7 +333,7 @@ def write_web(strings: dict) -> int:
 
     used = set()
     for path in (WEB_ROOT / "src").rglob("*"):
-        if path.suffix in (".ts", ".svelte"):
+        if path.suffix in (".ts", ".js", ".svelte"):
             source = path.read_text(encoding="utf-8")
             used.update(WEB_USES.findall(source))
             used.update(key for key in WEB_NAMES.findall(source) if key in strings)

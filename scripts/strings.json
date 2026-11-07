@@ -13534,6 +13534,14 @@
     "zh-Hans": "高级识别仅限支持者使用。本次其余曲目仅使用基础识别。",
     "comment": "Recognize dialog, and the split window's status line after Recognize selected: the server refused the advanced layer mid-run, so the run carried on without it."
   },
+  "Recognize_AdvancedDown": {
+    "en": "Advanced recognition is not available right now. The rest of the run used basic recognition only.",
+    "fr": "La reconnaissance avancée n’est pas disponible pour le moment. Le reste de l’analyse a utilisé la reconnaissance de base.",
+    "es": "El reconocimiento avanzado no está disponible en este momento. El resto del proceso usó solo el reconocimiento básico.",
+    "de": "Die erweiterte Erkennung ist gerade nicht verfügbar. Der Rest des Durchlaufs nutzte nur die einfache Erkennung.",
+    "zh-Hans": "高级识别暂时不可用。本次其余曲目仅使用基础识别。",
+    "comment": "Recognize window: the advanced layer failed mid-run, so the run carried on without it."
+  },
   "Recognize_ColStatus": {
     "en": "Status",
     "fr": "Statut",
@@ -20033,5 +20041,142 @@
     "es": "Quitar los terminados",
     "de": "Erledigte entfernen",
     "zh-Hans": "清除已完成"
+  },
+  "Web_DesktopPitch": {
+    "en": "The desktop app adds your local library, recording and ripping.",
+    "fr": "L'application de bureau ajoute votre bibliothèque locale, l'enregistrement et l'extraction de CD.",
+    "es": "La aplicación de escritorio añade tu biblioteca local, la grabación y la copia de CD.",
+    "de": "Die Desktop-App bietet zusätzlich deine lokale Bibliothek, Aufnahme und CD-Rippen.",
+    "zh-Hans": "桌面版还提供本地音乐库、录音和 CD 抓轨。"
+  },
+  "Web_DesktopDownload": {
+    "en": "Download rpm for {0}",
+    "fr": "Télécharger rpm pour {0}",
+    "es": "Descargar rpm para {0}",
+    "de": "rpm für {0} laden",
+    "zh-Hans": "下载 {0} 版 rpm"
+  },
+  "Web_DesktopMac": {
+    "en": "Mac",
+    "fr": "Mac",
+    "es": "Mac",
+    "de": "Mac",
+    "zh-Hans": "Mac"
+  },
+  "Web_DesktopWindows": {
+    "en": "Windows",
+    "fr": "Windows",
+    "es": "Windows",
+    "de": "Windows",
+    "zh-Hans": "Windows"
+  },
+  "Web_DesktopOpen": {
+    "en": "Open rpm",
+    "fr": "Ouvrir rpm",
+    "es": "Abrir rpm",
+    "de": "rpm öffnen",
+    "zh-Hans": "打开 rpm"
+  },
+  "Web_DesktopHere": {
+    "en": "rpm is installed on this computer.",
+    "fr": "rpm est installé sur cet ordinateur.",
+    "es": "rpm está instalado en este ordenador.",
+    "de": "rpm ist auf diesem Computer installiert.",
+    "zh-Hans": "这台电脑已安装 rpm。"
+  },
+  "Web_DesktopDidNotOpen": {
+    "en": "rpm did not open. It may not be installed yet.",
+    "fr": "rpm ne s'est pas ouvert. Il n'est peut-être pas encore installé.",
+    "es": "rpm no se ha abierto. Puede que aún no esté instalado.",
+    "de": "rpm wurde nicht geöffnet. Vielleicht ist es noch nicht installiert.",
+    "zh-Hans": "rpm 未能打开，可能尚未安装。"
+  },
+  "Web_DesktopFailed": {
+    "en": "The download could not start. Please try again.",
+    "fr": "Le téléchargement n'a pas pu démarrer. Veuillez réessayer.",
+    "es": "No se pudo iniciar la descarga. Inténtalo de nuevo.",
+    "de": "Der Download konnte nicht gestartet werden. Bitte versuche es noch einmal.",
+    "zh-Hans": "无法开始下载，请重试。"
+  },
+  "Web_DesktopAppleSilicon": {
+    "en": "Mac with Apple silicon",
+    "fr": "Mac avec puce Apple",
+    "es": "Mac con chip de Apple",
+    "de": "Mac mit Apple-Chip",
+    "zh-Hans": "搭载 Apple 芯片的 Mac"
+  },
+  "Web_DesktopIntel": {
+    "en": "Mac with an Intel processor",
+    "fr": "Mac avec processeur Intel",
+    "es": "Mac con procesador Intel",
+    "de": "Mac mit Intel-Prozessor",
+    "zh-Hans": "搭载 Intel 处理器的 Mac"
+  },
+  "Web_DesktopIntelOld": {
+    "en": "Intel Mac with macOS 12 to 14",
+    "fr": "Mac Intel avec macOS 12 à 14",
+    "es": "Mac Intel con macOS 12 a 14",
+    "de": "Intel-Mac mit macOS 12 bis 14",
+    "zh-Hans": "macOS 12 至 14 的 Intel Mac"
+  },
+  "Web_DeleteAsk": {
+    "en": "Delete {0} from your cloud library? This cannot be undone.",
+    "fr": "Supprimer {0} de votre bibliothèque cloud ? Cette action est irréversible.",
+    "es": "¿Eliminar {0} de tu biblioteca en la nube? No se puede deshacer.",
+    "de": "{0} aus deiner Cloud-Bibliothek löschen? Das lässt sich nicht rückgängig machen.",
+    "zh-Hans": "要从云端音乐库删除“{0}”吗？此操作无法撤销。"
+  },
+  "Web_ImportAlbumFileTip": {
+    "en": "This looks like a whole album in one file. The desktop app can split it into tracks.",
+    "fr": "Ce fichier ressemble à un album entier. L'application de bureau peut le découper en morceaux.",
+    "es": "Parece un álbum completo en un solo archivo. La aplicación de escritorio puede dividirlo en pistas.",
+    "de": "Das sieht nach einem ganzen Album in einer Datei aus. Die Desktop-App kann es in Titel aufteilen.",
+    "zh-Hans": "这看起来是整张专辑的单个文件。桌面版可以将其拆分为曲目。",
+    "comment": "Import pane of the web app: tooltip on the mark beside a file that looks like a whole album. The web app does not split files."
+  },
+  "Web_ImportRipNote": {
+    "en": "To rip your CDs and record your vinyl, download the desktop app.",
+    "fr": "Pour extraire vos CD et enregistrer vos vinyles, téléchargez l'application de bureau.",
+    "es": "Para copiar tus CD y grabar tus vinilos, descarga la aplicación de escritorio.",
+    "de": "Um CDs zu rippen und Schallplatten aufzunehmen, lade die Desktop-App herunter.",
+    "zh-Hans": "如需抓取 CD 和录制黑胶唱片，请下载桌面版。"
+  },
+  "Web_ImportSavedNote": {
+    "en": "{0} track(s) from your last visit are waiting. Add the same folder or files and your changes come back.",
+    "fr": "{0} morceau(x) de votre dernière visite sont en attente. Ajoutez le même dossier ou les mêmes fichiers pour retrouver vos modifications.",
+    "es": "{0} pista(s) de tu última visita están esperando. Añade la misma carpeta o los mismos archivos y tus cambios volverán.",
+    "de": "{0} Titel von deinem letzten Besuch warten noch. Füge denselben Ordner oder dieselben Dateien hinzu, dann sind deine Änderungen wieder da.",
+    "zh-Hans": "上次访问留下的 {0} 首曲目正在等待。添加相同的文件夹或文件，你的更改就会恢复。",
+    "comment": "Import pane of the web app: tracks were being prepared when the page was last closed. The browser cannot reopen files by itself."
+  },
+  "Web_ImportSavedReopen": {
+    "en": "Open the folder again",
+    "fr": "Rouvrir le dossier",
+    "es": "Volver a abrir la carpeta",
+    "de": "Ordner wieder öffnen",
+    "zh-Hans": "重新打开文件夹",
+    "comment": "Import pane of the web app: button that reopens the folder picked on the last visit, in browsers that can."
+  },
+  "Web_ImportSavedForget": {
+    "en": "Forget them",
+    "fr": "Les oublier",
+    "es": "Olvidarlas",
+    "de": "Verwerfen",
+    "zh-Hans": "不再保留",
+    "comment": "Import pane of the web app: button that drops the tracks kept from the last visit."
+  },
+  "Web_PlaylistsDesktopNote": {
+    "en": "Auto playlists, mood lists and smart playlists are made in the desktop app.",
+    "fr": "Les playlists automatiques, les listes d'ambiance et les playlists intelligentes sont créées dans l'application de bureau.",
+    "es": "Las listas automáticas, las listas de ambiente y las listas inteligentes se crean en la aplicación de escritorio.",
+    "de": "Automatische Playlists, Stimmungslisten und intelligente Playlists entstehen in der Desktop-App.",
+    "zh-Hans": "自动播放列表、心情列表和智能播放列表由桌面版生成。"
+  },
+  "Web_DeleteAccountFailed": {
+    "en": "The account could not be deleted. Please try again.",
+    "fr": "Le compte n'a pas pu être supprimé. Veuillez réessayer.",
+    "es": "No se pudo eliminar la cuenta. Inténtalo de nuevo.",
+    "de": "Das Konto konnte nicht gelöscht werden. Bitte versuche es noch einmal.",
+    "zh-Hans": "无法删除账户，请重试。"
   }
 }
