@@ -20134,6 +20134,38 @@
     "zh-Hans": "这看起来是整张专辑的单个文件。桌面版可以将其拆分为曲目。",
     "comment": "Import pane of the web app: tooltip on the mark beside a file that looks like a whole album. The web app does not split files."
   },
+  "Web_EditDesktopNote": {
+    "en": "If rpm on a computer also holds these tracks, its tags replace these the next time it syncs.",
+    "fr": "Si rpm sur un ordinateur contient aussi ces morceaux, ses tags remplaceront ceux-ci à sa prochaine synchronisation.",
+    "es": "Si rpm en un ordenador también tiene estas pistas, sus etiquetas sustituirán a estas la próxima vez que se sincronice.",
+    "de": "Wenn rpm auf einem Computer diese Titel ebenfalls hat, ersetzen dessen Tags diese bei der nächsten Synchronisierung.",
+    "zh-Hans": "如果电脑上的 rpm 也保存了这些曲目，下次同步时其标签将替换这里的内容。",
+    "comment": "Web app, track and album editor: the desktop pushes its own tags to the cloud when it syncs."
+  },
+  "Web_EditFailed": {
+    "en": "The changes could not be saved. Try again.",
+    "fr": "Les modifications n'ont pas pu être enregistrées. Réessayez.",
+    "es": "No se pudieron guardar los cambios. Inténtalo de nuevo.",
+    "de": "Die Änderungen konnten nicht gespeichert werden. Versuche es erneut.",
+    "zh-Hans": "无法保存更改。请重试。",
+    "comment": "Web app, track and album editor: the save failed."
+  },
+  "Web_PlaylistFolderHint": {
+    "en": "Folder name. Use / for a folder inside a folder. Leave it empty for no folder.",
+    "fr": "Nom du dossier. Utilisez / pour un dossier dans un dossier. Laissez vide pour aucun dossier.",
+    "es": "Nombre de la carpeta. Usa / para una carpeta dentro de otra. Déjalo vacío para no usar carpeta.",
+    "de": "Ordnername. Mit / legst du einen Ordner in einem Ordner an. Leer lassen für keinen Ordner.",
+    "zh-Hans": "文件夹名称。用 / 表示文件夹中的文件夹。留空表示不放入文件夹。",
+    "comment": "Web app, playlists: under the field that files a playlist in a folder."
+  },
+  "Web_RadioNotHere": {
+    "en": "A browser cannot play this station's stream. It plays in the desktop app.",
+    "fr": "Un navigateur ne peut pas lire le flux de cette station. Elle fonctionne dans l'application de bureau.",
+    "es": "Un navegador no puede reproducir la emisión de esta estación. Funciona en la aplicación de escritorio.",
+    "de": "Ein Browser kann den Stream dieses Senders nicht abspielen. In der Desktop-App funktioniert er.",
+    "zh-Hans": "浏览器无法播放此电台的音频流。可在桌面应用中播放。",
+    "comment": "Web app, radio: on the play key of a saved station whose stream is not https, or is a format the browser has no player for."
+  },
   "Web_ImportRipNote": {
     "en": "To rip your CDs and record your vinyl, download the desktop app.",
     "fr": "Pour extraire vos CD et enregistrer vos vinyles, téléchargez l'application de bureau.",
