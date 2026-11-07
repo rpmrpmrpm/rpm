@@ -1832,18 +1832,18 @@
     "comment": "Track editor tab: the work, sorting, pressing and identifiers."
   },
   "MassEdit_GroupLevel": {
-    "en": "Level",
-    "fr": "Niveau",
-    "es": "Nivel",
-    "de": "Pegel",
+    "en": "LEVEL",
+    "fr": "NIVEAU",
+    "es": "NIVEL",
+    "de": "PEGEL",
     "zh-Hans": "电平",
     "comment": "Dense form group heading: how loud the record is (loudness, true peak)."
   },
   "MassEdit_GroupMeasured": {
-    "en": "Measured",
-    "fr": "Mesuré",
-    "es": "Medido",
-    "de": "Gemessen",
+    "en": "MEASURED",
+    "fr": "MESURÉ",
+    "es": "MEDIDO",
+    "de": "GEMESSEN",
     "zh-Hans": "测量值",
     "comment": "Dense form group heading: the tempo and key fields, which the app measures itself."
   },
@@ -20134,14 +20134,6 @@
     "zh-Hans": "这看起来是整张专辑的单个文件。桌面版可以将其拆分为曲目。",
     "comment": "Import pane of the web app: tooltip on the mark beside a file that looks like a whole album. The web app does not split files."
   },
-  "Web_EditDesktopNote": {
-    "en": "If rpm on a computer also holds these tracks, its tags replace these the next time it syncs.",
-    "fr": "Si rpm sur un ordinateur contient aussi ces morceaux, ses tags remplaceront ceux-ci à sa prochaine synchronisation.",
-    "es": "Si rpm en un ordenador también tiene estas pistas, sus etiquetas sustituirán a estas la próxima vez que se sincronice.",
-    "de": "Wenn rpm auf einem Computer diese Titel ebenfalls hat, ersetzen dessen Tags diese bei der nächsten Synchronisierung.",
-    "zh-Hans": "如果电脑上的 rpm 也保存了这些曲目，下次同步时其标签将替换这里的内容。",
-    "comment": "Web app, track and album editor: the desktop pushes its own tags to the cloud when it syncs."
-  },
   "Web_EditFailed": {
     "en": "The changes could not be saved. Try again.",
     "fr": "Les modifications n'ont pas pu être enregistrées. Réessayez.",
@@ -20149,6 +20141,38 @@
     "de": "Die Änderungen konnten nicht gespeichert werden. Versuche es erneut.",
     "zh-Hans": "无法保存更改。请重试。",
     "comment": "Web app, track and album editor: the save failed."
+  },
+  "Web_EditReading": {
+    "en": "Reading the tags…",
+    "fr": "Lecture des tags…",
+    "es": "Leyendo las etiquetas…",
+    "de": "Tags werden gelesen…",
+    "zh-Hans": "正在读取标签…",
+    "comment": "Web app, edit windows: shown while the tags of the tracks are read from the cloud."
+  },
+  "Web_EditReadFailed": {
+    "en": "The tags could not be read. Close the window and try again.",
+    "fr": "Les tags n'ont pas pu être lus. Fermez la fenêtre et réessayez.",
+    "es": "No se pudieron leer las etiquetas. Cierra la ventana e inténtalo de nuevo.",
+    "de": "Die Tags konnten nicht gelesen werden. Schließe das Fenster und versuche es erneut.",
+    "zh-Hans": "无法读取标签。请关闭窗口后重试。",
+    "comment": "Web app, edit windows: the tags could not be read from the cloud, so nothing can be edited."
+  },
+  "Web_EditSaving": {
+    "en": "Saving…",
+    "fr": "Enregistrement…",
+    "es": "Guardando…",
+    "de": "Wird gespeichert…",
+    "zh-Hans": "正在保存…",
+    "comment": "Web app, track metadata from a release: shown while the filled-in tags are saved."
+  },
+  "Web_ArtHint": {
+    "en": "The picture is saved as the album cover in your cloud, and added to the file when the track is downloaded.",
+    "fr": "L'image est enregistrée comme pochette de l'album dans votre cloud, et ajoutée au fichier quand le morceau est téléchargé.",
+    "es": "La imagen se guarda como portada del álbum en tu nube y se añade al archivo cuando se descarga la pista.",
+    "de": "Das Bild wird als Albumcover in deiner Cloud gespeichert und beim Herunterladen des Titels in die Datei eingefügt.",
+    "zh-Hans": "图片会作为专辑封面保存在你的云端，并在下载曲目时加入文件。",
+    "comment": "Web app, track details, Artwork tab: where a picture chosen here is saved."
   },
   "Web_PlaylistFolderHint": {
     "en": "Folder name. Use / for a folder inside a folder. Leave it empty for no folder.",
