@@ -8621,6 +8621,14 @@
     "de": "Dieser Name ist vergeben.",
     "zh-Hans": "该名称已被占用。"
   },
+  "Profile_NameInvalid": {
+    "en": "A display name has 2 to 40 characters.",
+    "fr": "Un nom d'affichage compte de 2 à 40 caractères.",
+    "es": "Un nombre visible tiene entre 2 y 40 caracteres.",
+    "de": "Ein Anzeigename hat 2 bis 40 Zeichen.",
+    "zh-Hans": "显示名称需为 2 到 40 个字符。",
+    "comment": "Settings, profile: the display name typed is too short or too long."
+  },
   "Profile_NameSaved": {
     "en": "Saved.",
     "fr": "Enregistré.",
