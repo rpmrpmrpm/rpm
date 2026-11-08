@@ -20050,6 +20050,46 @@
     "de": "Erledigte entfernen",
     "zh-Hans": "清除已完成"
   },
+  "Web_ImportingUpload": {
+    "en": "Uploading selected files to your collection",
+    "fr": "Envoi des fichiers sélectionnés vers votre collection",
+    "es": "Subiendo los archivos seleccionados a tu colección",
+    "de": "Ausgewählte Dateien werden in deine Sammlung hochgeladen",
+    "zh-Hans": "正在将所选文件上传到你的收藏",
+    "comment": "Web app import pane: caption under the animation while an import is running. The web app uploads the files to the cloud."
+  },
+  "Web_ImportAllDoneTitle": {
+    "en": "Import finished",
+    "fr": "Importation terminée",
+    "es": "Importación terminada",
+    "de": "Import abgeschlossen",
+    "zh-Hans": "导入完成",
+    "comment": "Web app: title of the dialog shown when an import has finished and every track in the import list is imported."
+  },
+  "Web_ImportAllDoneBody": {
+    "en": "All tracks are imported. Do you want to close the import pane?",
+    "fr": "Toutes les pistes sont importées. Voulez-vous fermer le panneau d'importation ?",
+    "es": "Todas las pistas se han importado. ¿Quieres cerrar el panel de importación?",
+    "de": "Alle Titel sind importiert. Möchtest du den Importbereich schließen?",
+    "zh-Hans": "所有曲目均已导入。要关闭导入面板吗？",
+    "comment": "Web app: body of the dialog shown when an import has finished and every track in the import list is imported."
+  },
+  "Web_ImportAllDoneClose": {
+    "en": "Close",
+    "fr": "Fermer",
+    "es": "Cerrar",
+    "de": "Schließen",
+    "zh-Hans": "关闭",
+    "comment": "Web app, import finished dialog: primary button. Closes the import pane."
+  },
+  "Web_ImportAllDoneStay": {
+    "en": "Stay",
+    "fr": "Rester",
+    "es": "Quedarse",
+    "de": "Bleiben",
+    "zh-Hans": "留在此处",
+    "comment": "Web app, import finished dialog: secondary button. Keeps the import pane open."
+  },
   "Web_DesktopPitch": {
     "en": "The desktop app adds your local library, recording and ripping.",
     "fr": "L'application de bureau ajoute votre bibliothèque locale, l'enregistrement et l'extraction de CD.",
