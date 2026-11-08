@@ -20250,5 +20250,13 @@
     "es": "No se pudo eliminar la cuenta. Inténtalo de nuevo.",
     "de": "Das Konto konnte nicht gelöscht werden. Bitte versuche es noch einmal.",
     "zh-Hans": "无法删除账户，请重试。"
+  },
+  "Web_StarterFailed": {
+    "en": "Our tracks could not be downloaded. Try again.",
+    "fr": "Nos morceaux n’ont pas pu être téléchargés. Réessayez.",
+    "es": "No se pudieron descargar nuestras pistas. Inténtalo de nuevo.",
+    "de": "Unsere Titel konnten nicht heruntergeladen werden. Versuche es noch einmal.",
+    "zh-Hans": "无法下载我们的曲目。请重试。",
+    "comment": "Web app, Import pane and setup: shown under Try our tracks when the three tracks that ship with the app could not be fetched."
   }
 }
