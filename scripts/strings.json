@@ -20166,6 +20166,14 @@
     "zh-Hans": "无法读取标签。请关闭窗口后重试。",
     "comment": "Web app, edit windows: the tags could not be read from the cloud, so nothing can be edited."
   },
+  "Web_AnalysisFailed": {
+    "en": "The analysis could not be loaded.",
+    "fr": "L'analyse n'a pas pu être chargée.",
+    "es": "No se pudo cargar el análisis.",
+    "de": "Die Analyse konnte nicht geladen werden.",
+    "zh-Hans": "无法加载分析结果。",
+    "comment": "Web app, track details, Sound tab: the shared analysis of the track could not be fetched from the cloud."
+  },
   "Web_EditSaving": {
     "en": "Saving…",
     "fr": "Enregistrement…",
