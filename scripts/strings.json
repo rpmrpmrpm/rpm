@@ -11382,6 +11382,38 @@
     "zh-Hans": "成为支持者",
     "comment": "Button that opens the page where supporting rpm is bought."
   },
+  "Supporter_Manage": {
+    "en": "Manage subscription",
+    "fr": "Gérer l'abonnement",
+    "es": "Gestionar suscripción",
+    "de": "Abo verwalten",
+    "zh-Hans": "管理订阅",
+    "comment": "Button in Settings for a paying supporter. Opens the Stripe page where the subscription is cancelled or the card is changed."
+  },
+  "Supporter_CheckoutFailed": {
+    "en": "Payments are not available right now. Please try again later.",
+    "fr": "Les paiements ne sont pas disponibles pour le moment. Veuillez réessayer plus tard.",
+    "es": "Los pagos no están disponibles en este momento. Inténtalo de nuevo más tarde.",
+    "de": "Zahlungen sind gerade nicht möglich. Bitte versuch es später noch mal.",
+    "zh-Hans": "目前无法付款，请稍后重试。",
+    "comment": "Shown under Become a supporter or Manage subscription when the payment page could not be opened."
+  },
+  "Supporter_NoSubscription": {
+    "en": "This account has no subscription.",
+    "fr": "Ce compte n'a pas d'abonnement.",
+    "es": "Esta cuenta no tiene suscripción.",
+    "de": "Dieses Konto hat kein Abo.",
+    "zh-Hans": "此账户没有订阅。",
+    "comment": "Shown under Manage subscription for a supporter who did not pay through Stripe (for example, support given by rpm)."
+  },
+  "Web_BetaSupporter": {
+    "en": "Supporters can use rpm now, without a code.",
+    "fr": "Les soutiens peuvent utiliser rpm dès maintenant, sans code.",
+    "es": "Los colaboradores pueden usar rpm ya, sin código.",
+    "de": "Unterstützer können rpm schon jetzt nutzen, ohne Code.",
+    "zh-Hans": "支持者现在即可使用 rpm，无需代码。",
+    "comment": "Web app beta code card, above the Become a supporter button: paying opens the closed beta."
+  },
   "Cloud_UsageUnlimited": {
     "en": "{0} used (unlimited storage)",
     "fr": "{0} utilisés (stockage illimité)",
