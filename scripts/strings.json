@@ -21211,22 +21211,6 @@
     "zh-Hans": "无法读取",
     "comment": "Import from another app: why a track was not imported."
   },
-  "Migration_ReasonDiskFull": {
-    "en": "The disk is full",
-    "fr": "Le disque est plein",
-    "es": "El disco está lleno",
-    "de": "Das Laufwerk ist voll",
-    "zh-Hans": "磁盘已满",
-    "comment": "Import from another app: why a track was not imported."
-  },
-  "Migration_ReasonCloudFull": {
-    "en": "Cloud storage full",
-    "fr": "Stockage cloud plein",
-    "es": "Almacenamiento en la nube lleno",
-    "de": "Cloud-Speicher voll",
-    "zh-Hans": "云存储已满",
-    "comment": "Import from another app: why a track was not imported."
-  },
   "Migration_ReasonCouldNotCopy": {
     "en": "Could not be copied",
     "fr": "Copie impossible",
