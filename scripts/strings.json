@@ -20875,6 +20875,14 @@
     "zh-Hans": "正在完成",
     "comment": "Import from another app: progress stage."
   },
+  "Migration_StageWaiting": {
+    "en": "Waiting for the connection",
+    "fr": "En attente de la connexion",
+    "es": "Esperando la conexión",
+    "de": "Warten auf die Verbindung",
+    "zh-Hans": "正在等待连接",
+    "comment": "Import from another app: progress stage while the media server or the cloud gives no answer. The import tries again by itself."
+  },
   "Migration_ProgressTracks": {
     "en": "{0} of {1} tracks, {2} of {3}",
     "fr": "{0} sur {1} titres, {2} sur {3}",
@@ -20962,6 +20970,14 @@
     "de": "Angehalten: Ihr Cloud-Speicher ist voll.",
     "zh-Hans": "已停止：你的云存储已满。",
     "comment": "Import from another app: why the import stopped."
+  },
+  "Migration_StoppedCloudOff": {
+    "en": "Stopped: you are signed out, or cloud storage is turned off.",
+    "fr": "Arrêté : vous êtes déconnecté, ou le stockage cloud est désactivé.",
+    "es": "Detenido: has cerrado sesión o el almacenamiento en la nube está desactivado.",
+    "de": "Angehalten: Sie sind abgemeldet, oder der Cloud-Speicher ist ausgeschaltet.",
+    "zh-Hans": "已停止：你已退出登录，或云存储已关闭。",
+    "comment": "Import from another app: why a cloud-only import stopped."
   },
   "Migration_Status": {
     "en": "Importing from {0}: {1} of {2}",
@@ -21106,6 +21122,14 @@
     "de": "Konnte nicht kopiert werden",
     "zh-Hans": "无法复制",
     "comment": "Import from another app: why a track was not imported."
+  },
+  "Migration_ReasonUploadFailed": {
+    "en": "Could not be uploaded",
+    "fr": "Envoi impossible",
+    "es": "No se pudo subir",
+    "de": "Konnte nicht hochgeladen werden",
+    "zh-Hans": "无法上传",
+    "comment": "Import from another app: why a track was not imported (cloud-only import, the cloud refused the file). The upload's own reason follows in brackets."
   },
   "Migration_ReasonRemoved": {
     "en": "Removed from rpm during the import",
