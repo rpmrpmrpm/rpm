@@ -20523,6 +20523,22 @@
     "zh-Hans": "继续从 {0} 导入",
     "comment": "Import from another app: button for an import that has not finished. {0} is the source, for example MusicBee."
   },
+  "Migration_Forget": {
+    "en": "Forget",
+    "fr": "Oublier",
+    "es": "Olvidar",
+    "de": "Vergessen",
+    "zh-Hans": "忘记",
+    "comment": "Import from another app, list of apps: button beside 'Continue import from ...' that forgets that unfinished import."
+  },
+  "Migration_ForgetHint": {
+    "en": "Forgets this unfinished import and its saved sign-in. What was imported stays in rpm.",
+    "fr": "Oublie cette importation inachevée et sa connexion enregistrée. Ce qui a été importé reste dans rpm.",
+    "es": "Olvida esta importación sin terminar y su inicio de sesión guardado. Lo importado se queda en rpm.",
+    "de": "Vergisst diesen unvollständigen Import und seine gespeicherte Anmeldung. Was importiert wurde, bleibt in rpm.",
+    "zh-Hans": "忘记这次未完成的导入及其保存的登录信息。已导入的内容保留在 rpm 中。",
+    "comment": "Import from another app, list of apps: tooltip of the Forget button."
+  },
   "Migration_HowMusicBee": {
     "en": "In MusicBee, open Edit > Preferences > Library and turn on \"Save a copy of the library tags as an iTunes formatted XML file\". Close MusicBee, then choose the file \"iTunes Music Library.xml\" in MusicBee's library folder.",
     "fr": "Dans MusicBee, ouvrez Edit > Preferences > Library et activez « Save a copy of the library tags as an iTunes formatted XML file ». Fermez MusicBee, puis choisissez le fichier « iTunes Music Library.xml » dans le dossier de bibliothèque de MusicBee.",
