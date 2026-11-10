@@ -20402,5 +20402,749 @@
     "de": "Das Original ist genau so, wie es hochgeladen wurde. Eine niedrigere Bitrate braucht weniger Daten.",
     "zh-Hans": "原始文件与上传时完全相同。较低的比特率使用更少的数据。",
     "comment": "Web app, Settings, Sound: under Streaming quality, what the choices do."
+  },
+  "AddMusic_OtherApp": {
+    "en": "From another app",
+    "fr": "Depuis une autre app",
+    "es": "Desde otra app",
+    "de": "Aus einer anderen App",
+    "zh-Hans": "从其他应用导入",
+    "comment": "Add music window: the tile that imports a library from another music app."
+  },
+  "AddMusic_OtherAppHint": {
+    "en": "MusicBee, iTunes, Jellyfin, Plex, Navidrome",
+    "fr": "MusicBee, iTunes, Jellyfin, Plex, Navidrome",
+    "es": "MusicBee, iTunes, Jellyfin, Plex, Navidrome",
+    "de": "MusicBee, iTunes, Jellyfin, Plex, Navidrome",
+    "zh-Hans": "MusicBee、iTunes、Jellyfin、Plex、Navidrome",
+    "comment": "Add music window: the line under 'From another app', naming the apps it can import from."
+  },
+  "Migration_Title": {
+    "en": "Import from another app",
+    "fr": "Importer depuis une autre app",
+    "es": "Importar desde otra app",
+    "de": "Aus einer anderen App importieren",
+    "zh-Hans": "从其他应用导入",
+    "comment": "Title of the window that imports a library from another music app."
+  },
+  "Migration_ChooseKicker": {
+    "en": "Where is your music now?",
+    "fr": "Où se trouve votre musique ?",
+    "es": "¿Dónde está tu música ahora?",
+    "de": "Wo ist Ihre Musik jetzt?",
+    "zh-Hans": "你的音乐现在在哪里？",
+    "comment": "Import from another app: heading above the list of apps."
+  },
+  "Migration_SourceMusicBee": {
+    "en": "MusicBee",
+    "fr": "MusicBee",
+    "es": "MusicBee",
+    "de": "MusicBee",
+    "zh-Hans": "MusicBee",
+    "comment": "Import from another app: the MusicBee choice. A product name."
+  },
+  "Migration_SourceITunes": {
+    "en": "iTunes or Apple Music",
+    "fr": "iTunes ou Apple Music",
+    "es": "iTunes o Apple Music",
+    "de": "iTunes oder Apple Music",
+    "zh-Hans": "iTunes 或 Apple Music",
+    "comment": "Import from another app: the iTunes / Apple Music choice."
+  },
+  "Migration_SourceJellyfin": {
+    "en": "Jellyfin",
+    "fr": "Jellyfin",
+    "es": "Jellyfin",
+    "de": "Jellyfin",
+    "zh-Hans": "Jellyfin",
+    "comment": "Import from another app: the Jellyfin choice. A product name."
+  },
+  "Migration_SourcePlex": {
+    "en": "Plex",
+    "fr": "Plex",
+    "es": "Plex",
+    "de": "Plex",
+    "zh-Hans": "Plex",
+    "comment": "Import from another app: the Plex choice. A product name."
+  },
+  "Migration_SourceNavidrome": {
+    "en": "Navidrome or Subsonic",
+    "fr": "Navidrome ou Subsonic",
+    "es": "Navidrome o Subsonic",
+    "de": "Navidrome oder Subsonic",
+    "zh-Hans": "Navidrome 或 Subsonic",
+    "comment": "Import from another app: the Navidrome / Subsonic server choice."
+  },
+  "Migration_SourcePlaylistFiles": {
+    "en": "Playlist files",
+    "fr": "Fichiers de playlist",
+    "es": "Archivos de lista",
+    "de": "Playlist-Dateien",
+    "zh-Hans": "播放列表文件",
+    "comment": "Import from another app: the choice for .m3u/.pls playlist files. Also the name shown for this source in the report."
+  },
+  "Migration_HintFile": {
+    "en": "Uses the library file it saves",
+    "fr": "Utilise le fichier de bibliothèque qu'elle enregistre",
+    "es": "Usa el archivo de biblioteca que guarda",
+    "de": "Nutzt die gespeicherte Mediathekdatei",
+    "zh-Hans": "使用它保存的资料库文件",
+    "comment": "Import from another app: line under MusicBee and iTunes."
+  },
+  "Migration_HintServer": {
+    "en": "Signs in to your server",
+    "fr": "Se connecte à votre serveur",
+    "es": "Inicia sesión en tu servidor",
+    "de": "Meldet sich bei Ihrem Server an",
+    "zh-Hans": "登录你的服务器",
+    "comment": "Import from another app: line under Jellyfin, Plex and Navidrome."
+  },
+  "Migration_HintPlaylistFiles": {
+    "en": ".m3u, .m3u8 and .pls from any player",
+    "fr": ".m3u, .m3u8 et .pls de tout lecteur",
+    "es": ".m3u, .m3u8 y .pls de cualquier reproductor",
+    "de": ".m3u, .m3u8 und .pls aus jedem Player",
+    "zh-Hans": "任何播放器的 .m3u、.m3u8 和 .pls",
+    "comment": "Import from another app: line under Playlist files."
+  },
+  "Migration_ContinueImport": {
+    "en": "Continue import from {0}",
+    "fr": "Reprendre l'import depuis {0}",
+    "es": "Continuar la importación desde {0}",
+    "de": "Import aus {0} fortsetzen",
+    "zh-Hans": "继续从 {0} 导入",
+    "comment": "Import from another app: button for an import that has not finished. {0} is the source, for example MusicBee."
+  },
+  "Migration_HowMusicBee": {
+    "en": "In MusicBee, open Edit > Preferences > Library and turn on \"Save a copy of the library tags as an iTunes formatted XML file\". Close MusicBee, then choose the file \"iTunes Music Library.xml\" in MusicBee's library folder.",
+    "fr": "Dans MusicBee, ouvrez Edit > Preferences > Library et activez « Save a copy of the library tags as an iTunes formatted XML file ». Fermez MusicBee, puis choisissez le fichier « iTunes Music Library.xml » dans le dossier de bibliothèque de MusicBee.",
+    "es": "En MusicBee, abre Edit > Preferences > Library y activa «Save a copy of the library tags as an iTunes formatted XML file». Cierra MusicBee y elige el archivo «iTunes Music Library.xml» en la carpeta de biblioteca de MusicBee.",
+    "de": "Öffnen Sie in MusicBee Edit > Preferences > Library und aktivieren Sie „Save a copy of the library tags as an iTunes formatted XML file“. Schließen Sie MusicBee und wählen Sie die Datei „iTunes Music Library.xml“ im Mediathekordner von MusicBee.",
+    "zh-Hans": "在 MusicBee 中打开 Edit > Preferences > Library，开启“Save a copy of the library tags as an iTunes formatted XML file”。关闭 MusicBee，然后选择 MusicBee 资料库文件夹中的“iTunes Music Library.xml”文件。",
+    "comment": "Import from another app: how to get MusicBee's library file. MusicBee's menu names are in English in the app; keep them as they are."
+  },
+  "Migration_HowITunes": {
+    "en": "In Apple Music, choose File > Library > Export Library. In iTunes for Windows, choose Edit > Preferences > Advanced and turn on \"Share iTunes Library XML with other applications\". Then choose the library file.",
+    "fr": "Dans Apple Music, choisissez Fichier > Bibliothèque > Exporter la bibliothèque. Dans iTunes pour Windows, choisissez Édition > Préférences > Avancé et activez « Partager le fichier XML de la bibliothèque iTunes avec d'autres applications ». Choisissez ensuite le fichier de bibliothèque.",
+    "es": "En Apple Music, elige Archivo > Biblioteca > Exportar biblioteca. En iTunes para Windows, elige Edición > Preferencias > Avanzado y activa «Compartir XML de la biblioteca de iTunes con otras aplicaciones». Después elige el archivo de biblioteca.",
+    "de": "Wählen Sie in Apple Music Ablage > Mediathek > Mediathek exportieren. Wählen Sie in iTunes für Windows Bearbeiten > Einstellungen > Erweitert und aktivieren Sie „iTunes-Mediathek-XML mit anderen Programmen teilen“. Wählen Sie dann die Mediathekdatei.",
+    "zh-Hans": "在 Apple Music 中选择“文件 > 资料库 > 导出资料库”。在 Windows 版 iTunes 中选择“编辑 > 偏好设置 > 高级”，开启“与其他应用程序共享 iTunes 资料库 XML”。然后选择资料库文件。",
+    "comment": "Import from another app: how to get the iTunes / Apple Music library file."
+  },
+  "Migration_HowPlaylistFiles": {
+    "en": "Choose one or more playlist files. The music they list must be on this computer.",
+    "fr": "Choisissez un ou plusieurs fichiers de playlist. La musique qu'ils contiennent doit être sur cet ordinateur.",
+    "es": "Elige uno o varios archivos de lista. La música que contienen debe estar en este ordenador.",
+    "de": "Wählen Sie eine oder mehrere Playlist-Dateien. Die enthaltene Musik muss auf diesem Computer liegen.",
+    "zh-Hans": "选择一个或多个播放列表文件。其中列出的音乐必须在这台电脑上。",
+    "comment": "Import from another app: explanation for playlist files."
+  },
+  "Migration_ChooseFile": {
+    "en": "Choose file",
+    "fr": "Choisir le fichier",
+    "es": "Elegir archivo",
+    "de": "Datei wählen",
+    "zh-Hans": "选择文件",
+    "comment": "Import from another app: button that opens a file picker for the library file."
+  },
+  "Migration_ChoosePlaylists": {
+    "en": "Choose playlists",
+    "fr": "Choisir des playlists",
+    "es": "Elegir listas",
+    "de": "Playlists wählen",
+    "zh-Hans": "选择播放列表",
+    "comment": "Import from another app: button that opens a file picker for playlist files."
+  },
+  "Migration_ServerAddress": {
+    "en": "Server address",
+    "fr": "Adresse du serveur",
+    "es": "Dirección del servidor",
+    "de": "Serveradresse",
+    "zh-Hans": "服务器地址",
+    "comment": "Import from another app: label of the media server address box."
+  },
+  "Migration_UserName": {
+    "en": "User name",
+    "fr": "Nom d'utilisateur",
+    "es": "Nombre de usuario",
+    "de": "Benutzername",
+    "zh-Hans": "用户名",
+    "comment": "Import from another app: label of the user name box."
+  },
+  "Migration_Password": {
+    "en": "Password",
+    "fr": "Mot de passe",
+    "es": "Contraseña",
+    "de": "Passwort",
+    "zh-Hans": "密码",
+    "comment": "Import from another app: label of the password box."
+  },
+  "Migration_SignIn": {
+    "en": "Sign in",
+    "fr": "Se connecter",
+    "es": "Iniciar sesión",
+    "de": "Anmelden",
+    "zh-Hans": "登录",
+    "comment": "Import from another app: button that signs in to the media server."
+  },
+  "Migration_QuickConnect": {
+    "en": "Use Quick Connect",
+    "fr": "Utiliser Quick Connect",
+    "es": "Usar Quick Connect",
+    "de": "Quick Connect verwenden",
+    "zh-Hans": "使用 Quick Connect",
+    "comment": "Import from another app: Jellyfin's code sign-in. Quick Connect is Jellyfin's name for it."
+  },
+  "Migration_QuickConnectCode": {
+    "en": "Enter this code in another Jellyfin app, under Settings > Quick Connect: {0}",
+    "fr": "Saisissez ce code dans une autre app Jellyfin, dans Paramètres > Quick Connect : {0}",
+    "es": "Introduce este código en otra app de Jellyfin, en Ajustes > Quick Connect: {0}",
+    "de": "Geben Sie diesen Code in einer anderen Jellyfin-App unter Einstellungen > Quick Connect ein: {0}",
+    "zh-Hans": "在另一个 Jellyfin 应用的“设置 > Quick Connect”中输入此代码：{0}",
+    "comment": "Import from another app: shown while waiting for a Jellyfin Quick Connect approval. {0} is the six-digit code."
+  },
+  "Migration_PlexSignIn": {
+    "en": "Sign in with Plex",
+    "fr": "Se connecter avec Plex",
+    "es": "Iniciar sesión con Plex",
+    "de": "Mit Plex anmelden",
+    "zh-Hans": "使用 Plex 登录",
+    "comment": "Import from another app: button that opens Plex's sign-in page in the browser."
+  },
+  "Migration_PlexWaiting": {
+    "en": "Sign in to Plex in your browser. This window continues when you are done.",
+    "fr": "Connectez-vous à Plex dans votre navigateur. Cette fenêtre continue ensuite.",
+    "es": "Inicia sesión en Plex en tu navegador. Esta ventana continúa cuando termines.",
+    "de": "Melden Sie sich im Browser bei Plex an. Dieses Fenster geht danach weiter.",
+    "zh-Hans": "请在浏览器中登录 Plex。完成后此窗口会继续。",
+    "comment": "Import from another app: shown while waiting for the Plex sign-in in the browser."
+  },
+  "Migration_PlexServer": {
+    "en": "Server",
+    "fr": "Serveur",
+    "es": "Servidor",
+    "de": "Server",
+    "zh-Hans": "服务器",
+    "comment": "Import from another app: label of the Plex server list."
+  },
+  "Migration_PlexNoServer": {
+    "en": "No Plex server could be reached from here.",
+    "fr": "Aucun serveur Plex n'est joignable d'ici.",
+    "es": "No se puede acceder a ningún servidor Plex desde aquí.",
+    "de": "Von hier ist kein Plex-Server erreichbar.",
+    "zh-Hans": "从这里无法连接到任何 Plex 服务器。",
+    "comment": "Import from another app: error when the Plex account has no server that answers."
+  },
+  "Migration_SignInFailed": {
+    "en": "The server did not accept the user name or password.",
+    "fr": "Le serveur n'a pas accepté le nom d'utilisateur ou le mot de passe.",
+    "es": "El servidor no aceptó el nombre de usuario o la contraseña.",
+    "de": "Der Server hat Benutzername oder Passwort nicht angenommen.",
+    "zh-Hans": "服务器不接受此用户名或密码。",
+    "comment": "Import from another app: error after a refused sign-in."
+  },
+  "Migration_ServerUnreachable": {
+    "en": "The server could not be reached. Check the address.",
+    "fr": "Le serveur est injoignable. Vérifiez l'adresse.",
+    "es": "No se pudo acceder al servidor. Comprueba la dirección.",
+    "de": "Der Server ist nicht erreichbar. Prüfen Sie die Adresse.",
+    "zh-Hans": "无法连接到服务器。请检查地址。",
+    "comment": "Import from another app: error when the server does not answer."
+  },
+  "Migration_ServerBlocked": {
+    "en": "Your browser cannot reach this server. Use its https address, or import with rpm on your computer.",
+    "fr": "Votre navigateur ne peut pas joindre ce serveur. Utilisez son adresse https, ou importez avec rpm sur votre ordinateur.",
+    "es": "Tu navegador no puede acceder a este servidor. Usa su dirección https o importa con rpm en tu ordenador.",
+    "de": "Ihr Browser erreicht diesen Server nicht. Verwenden Sie seine https-Adresse oder importieren Sie mit rpm auf Ihrem Computer.",
+    "zh-Hans": "你的浏览器无法连接此服务器。请使用它的 https 地址，或在电脑上用 rpm 导入。",
+    "comment": "Import from another app, web app only: a page on https cannot reach a server on plain http."
+  },
+  "Migration_FileUnreadable": {
+    "en": "This file could not be read as a library file.",
+    "fr": "Ce fichier n'a pas pu être lu comme fichier de bibliothèque.",
+    "es": "Este archivo no se pudo leer como archivo de biblioteca.",
+    "de": "Diese Datei konnte nicht als Mediathekdatei gelesen werden.",
+    "zh-Hans": "无法将此文件读取为资料库文件。",
+    "comment": "Import from another app: error when the chosen file is not an iTunes library XML."
+  },
+  "Migration_ChooseMusicFolder": {
+    "en": "Choose the music folder",
+    "fr": "Choisir le dossier de musique",
+    "es": "Elegir la carpeta de música",
+    "de": "Musikordner wählen",
+    "zh-Hans": "选择音乐文件夹",
+    "comment": "Import from another app, web app only: button to pick the folder that holds the music the library file lists."
+  },
+  "Migration_MusicFolderHint": {
+    "en": "The browser cannot open the paths in the library file. Choose the folder that holds the music, and rpm finds each track in it.",
+    "fr": "Le navigateur ne peut pas ouvrir les chemins du fichier de bibliothèque. Choisissez le dossier qui contient la musique, et rpm y trouve chaque titre.",
+    "es": "El navegador no puede abrir las rutas del archivo de biblioteca. Elige la carpeta que contiene la música y rpm encontrará cada pista en ella.",
+    "de": "Der Browser kann die Pfade in der Mediathekdatei nicht öffnen. Wählen Sie den Ordner mit der Musik, und rpm findet darin jeden Titel.",
+    "zh-Hans": "浏览器无法打开资料库文件中的路径。请选择存放音乐的文件夹，rpm 会在其中找到每首曲目。",
+    "comment": "Import from another app, web app only: why the music folder is needed."
+  },
+  "Migration_Reading": {
+    "en": "Reading the library ({0} tracks found)",
+    "fr": "Lecture de la bibliothèque ({0} titres trouvés)",
+    "es": "Leyendo la biblioteca ({0} pistas encontradas)",
+    "de": "Mediathek wird gelesen ({0} Titel gefunden)",
+    "zh-Hans": "正在读取资料库（已找到 {0} 首曲目）",
+    "comment": "Import from another app: shown while the source library is read. {0} is a number."
+  },
+  "Migration_SummaryKicker": {
+    "en": "What was found",
+    "fr": "Ce qui a été trouvé",
+    "es": "Lo que se encontró",
+    "de": "Gefunden",
+    "zh-Hans": "找到的内容",
+    "comment": "Import from another app: heading of the summary."
+  },
+  "Migration_SummaryTracks": {
+    "en": "{0} tracks ({1})",
+    "fr": "{0} titres ({1})",
+    "es": "{0} pistas ({1})",
+    "de": "{0} Titel ({1})",
+    "zh-Hans": "{0} 首曲目（{1}）",
+    "comment": "Import from another app: summary line. {0} is a number, {1} a size such as 212 GB."
+  },
+  "Migration_SummaryPlaylists": {
+    "en": "{0} playlists",
+    "fr": "{0} playlists",
+    "es": "{0} listas",
+    "de": "{0} Playlists",
+    "zh-Hans": "{0} 个播放列表",
+    "comment": "Import from another app: summary line. {0} is a number."
+  },
+  "Migration_SummaryAlready": {
+    "en": "About {0} already in rpm",
+    "fr": "Environ {0} déjà dans rpm",
+    "es": "Unas {0} ya están en rpm",
+    "de": "Etwa {0} bereits in rpm",
+    "zh-Hans": "约 {0} 首已在 rpm 中",
+    "comment": "Import from another app: summary line, an estimate. {0} is a number."
+  },
+  "Migration_SummarySkipped": {
+    "en": "{0} items are not imported (streams, videos, podcasts, or files that are not on this computer)",
+    "fr": "{0} éléments ne sont pas importés (flux, vidéos, podcasts, ou fichiers absents de cet ordinateur)",
+    "es": "{0} elementos no se importan (streams, vídeos, podcasts o archivos que no están en este ordenador)",
+    "de": "{0} Elemente werden nicht importiert (Streams, Videos, Podcasts oder Dateien, die nicht auf diesem Computer liegen)",
+    "zh-Hans": "{0} 个项目不会导入（流媒体、视频、播客，或不在这台电脑上的文件）",
+    "comment": "Import from another app: summary line. {0} is a number."
+  },
+  "Migration_KeepsOriginalsFile": {
+    "en": "rpm copies your music and leaves the originals where they are. Nothing in your {0} library is changed or removed.",
+    "fr": "rpm copie votre musique et laisse les originaux à leur place. Rien n'est modifié ni supprimé dans votre bibliothèque {0}.",
+    "es": "rpm copia tu música y deja los originales donde están. No se cambia ni se elimina nada de tu biblioteca de {0}.",
+    "de": "rpm kopiert Ihre Musik und lässt die Originale, wo sie sind. In Ihrer {0}-Mediathek wird nichts geändert oder entfernt.",
+    "zh-Hans": "rpm 会复制你的音乐，原文件保留在原处。你的 {0} 资料库中不会有任何更改或删除。",
+    "comment": "Import from another app: shown on the summary and while importing from a library file. {0} is MusicBee or iTunes."
+  },
+  "Migration_KeepsOriginalsServer": {
+    "en": "rpm only reads from your {0} server. Nothing on it is changed or removed.",
+    "fr": "rpm ne fait que lire votre serveur {0}. Rien n'y est modifié ni supprimé.",
+    "es": "rpm solo lee de tu servidor {0}. No se cambia ni se elimina nada en él.",
+    "de": "rpm liest nur von Ihrem {0}-Server. Dort wird nichts geändert oder entfernt.",
+    "zh-Hans": "rpm 只读取你的 {0} 服务器，不会更改或删除上面的任何内容。",
+    "comment": "Import from another app: shown on the summary and while importing from a media server. {0} is Jellyfin, Plex or the server's name."
+  },
+  "Migration_KeepsOriginalsPlaylists": {
+    "en": "rpm copies the music and leaves the originals and the playlist files where they are.",
+    "fr": "rpm copie la musique et laisse les originaux et les fichiers de playlist à leur place.",
+    "es": "rpm copia la música y deja los originales y los archivos de lista donde están.",
+    "de": "rpm kopiert die Musik und lässt die Originale und die Playlist-Dateien, wo sie sind.",
+    "zh-Hans": "rpm 会复制音乐，原文件和播放列表文件保留在原处。",
+    "comment": "Import from another app: shown on the summary and while importing playlist files."
+  },
+  "Migration_WhereKicker": {
+    "en": "Where to",
+    "fr": "Destination",
+    "es": "Destino",
+    "de": "Wohin",
+    "zh-Hans": "导入到",
+    "comment": "Import from another app: heading above the choice of this computer or the cloud."
+  },
+  "Migration_ToThisComputer": {
+    "en": "This computer",
+    "fr": "Cet ordinateur",
+    "es": "Este ordenador",
+    "de": "Dieser Computer",
+    "zh-Hans": "这台电脑",
+    "comment": "Import from another app: destination choice."
+  },
+  "Migration_ToThisComputerHint": {
+    "en": "Files are saved in your rpm library folder",
+    "fr": "Les fichiers sont enregistrés dans votre dossier rpm",
+    "es": "Los archivos se guardan en tu carpeta de rpm",
+    "de": "Dateien werden in Ihrem rpm-Mediathekordner gespeichert",
+    "zh-Hans": "文件保存在你的 rpm 资料库文件夹中",
+    "comment": "Import from another app: line under 'This computer'."
+  },
+  "Migration_ToCloud": {
+    "en": "Cloud only",
+    "fr": "Cloud uniquement",
+    "es": "Solo en la nube",
+    "de": "Nur Cloud",
+    "zh-Hans": "仅云端",
+    "comment": "Import from another app: destination choice."
+  },
+  "Migration_ToCloudHint": {
+    "en": "Files go to your rpm cloud and are not kept on this computer",
+    "fr": "Les fichiers vont dans votre cloud rpm et ne restent pas sur cet ordinateur",
+    "es": "Los archivos van a tu nube de rpm y no se guardan en este ordenador",
+    "de": "Dateien gehen in Ihre rpm-Cloud und bleiben nicht auf diesem Computer",
+    "zh-Hans": "文件会存入你的 rpm 云端，不保留在这台电脑上",
+    "comment": "Import from another app: line under 'Cloud only'."
+  },
+  "Migration_SpaceDisk": {
+    "en": "Needs about {0}. {1} free on this disk.",
+    "fr": "Nécessite environ {0}. {1} libres sur ce disque.",
+    "es": "Necesita unos {0}. {1} libres en este disco.",
+    "de": "Benötigt etwa {0}. {1} frei auf diesem Laufwerk.",
+    "zh-Hans": "约需 {0}。此磁盘可用 {1}。",
+    "comment": "Import from another app: space line. {0} and {1} are sizes such as 12 GB."
+  },
+  "Migration_SpaceDiskShort": {
+    "en": "Not enough space on this disk: needs about {0}, {1} free.",
+    "fr": "Espace insuffisant sur ce disque : environ {0} nécessaires, {1} libres.",
+    "es": "No hay espacio suficiente en este disco: necesita unos {0}, {1} libres.",
+    "de": "Nicht genug Platz auf diesem Laufwerk: benötigt etwa {0}, {1} frei.",
+    "zh-Hans": "此磁盘空间不足：约需 {0}，可用 {1}。",
+    "comment": "Import from another app: shown instead of the Start button when the disk is too small. {0} and {1} are sizes."
+  },
+  "Migration_SpaceCloud": {
+    "en": "Needs about {0}. {1} free in your cloud storage.",
+    "fr": "Nécessite environ {0}. {1} libres dans votre stockage cloud.",
+    "es": "Necesita unos {0}. {1} libres en tu almacenamiento en la nube.",
+    "de": "Benötigt etwa {0}. {1} frei in Ihrem Cloud-Speicher.",
+    "zh-Hans": "约需 {0}。你的云存储可用 {1}。",
+    "comment": "Import from another app: space line for a cloud import. {0} and {1} are sizes."
+  },
+  "Migration_SpaceCloudShort": {
+    "en": "Needs about {0}, and your cloud storage has {1} free. Albums are imported until the space is used.",
+    "fr": "Nécessite environ {0}, et votre stockage cloud a {1} libres. Les albums sont importés jusqu'à ce que l'espace soit utilisé.",
+    "es": "Necesita unos {0} y tu almacenamiento en la nube tiene {1} libres. Los álbumes se importan hasta que se use el espacio.",
+    "de": "Benötigt etwa {0}, Ihr Cloud-Speicher hat {1} frei. Alben werden importiert, bis der Platz verbraucht ist.",
+    "zh-Hans": "约需 {0}，你的云存储可用 {1}。专辑会一直导入到空间用完为止。",
+    "comment": "Import from another app: space line when the cloud storage is too small. {0} and {1} are sizes."
+  },
+  "Migration_CloudSignInNeeded": {
+    "en": "Sign in to your rpm account to import to the cloud.",
+    "fr": "Connectez-vous à votre compte rpm pour importer dans le cloud.",
+    "es": "Inicia sesión en tu cuenta de rpm para importar a la nube.",
+    "de": "Melden Sie sich bei Ihrem rpm-Konto an, um in die Cloud zu importieren.",
+    "zh-Hans": "登录你的 rpm 帐户才能导入到云端。",
+    "comment": "Import from another app: shown under 'Cloud only' when not signed in."
+  },
+  "Migration_Start": {
+    "en": "Start import",
+    "fr": "Lancer l'import",
+    "es": "Iniciar importación",
+    "de": "Import starten",
+    "zh-Hans": "开始导入",
+    "comment": "Import from another app: button on the summary."
+  },
+  "Migration_StageReading": {
+    "en": "Reading the library",
+    "fr": "Lecture de la bibliothèque",
+    "es": "Leyendo la biblioteca",
+    "de": "Mediathek wird gelesen",
+    "zh-Hans": "正在读取资料库",
+    "comment": "Import from another app: progress stage."
+  },
+  "Migration_StageTracks": {
+    "en": "Importing tracks",
+    "fr": "Import des titres",
+    "es": "Importando pistas",
+    "de": "Titel werden importiert",
+    "zh-Hans": "正在导入曲目",
+    "comment": "Import from another app: progress stage."
+  },
+  "Migration_StagePlaylists": {
+    "en": "Adding playlists",
+    "fr": "Ajout des playlists",
+    "es": "Añadiendo listas",
+    "de": "Playlists werden hinzugefügt",
+    "zh-Hans": "正在添加播放列表",
+    "comment": "Import from another app: progress stage."
+  },
+  "Migration_StageFinishing": {
+    "en": "Finishing",
+    "fr": "Finalisation",
+    "es": "Terminando",
+    "de": "Wird abgeschlossen",
+    "zh-Hans": "正在完成",
+    "comment": "Import from another app: progress stage."
+  },
+  "Migration_ProgressTracks": {
+    "en": "{0} of {1} tracks, {2} of {3}",
+    "fr": "{0} sur {1} titres, {2} sur {3}",
+    "es": "{0} de {1} pistas, {2} de {3}",
+    "de": "{0} von {1} Titeln, {2} von {3}",
+    "zh-Hans": "{1} 首中的第 {0} 首，{3} 中的 {2}",
+    "comment": "Import from another app: progress line. {0} and {1} are numbers, {2} and {3} sizes such as 14.2 GB."
+  },
+  "Migration_ProgressCounts": {
+    "en": "Imported: {0}. Already in rpm: {1}. Not imported: {2}.",
+    "fr": "Importés : {0}. Déjà dans rpm : {1}. Non importés : {2}.",
+    "es": "Importadas: {0}. Ya en rpm: {1}. No importadas: {2}.",
+    "de": "Importiert: {0}. Bereits in rpm: {1}. Nicht importiert: {2}.",
+    "zh-Hans": "已导入：{0}。已在 rpm 中：{1}。未导入：{2}。",
+    "comment": "Import from another app: progress counts. Numbers."
+  },
+  "Migration_ProgressAlbum": {
+    "en": "Now: {0}",
+    "fr": "En cours : {0}",
+    "es": "Ahora: {0}",
+    "de": "Jetzt: {0}",
+    "zh-Hans": "当前：{0}",
+    "comment": "Import from another app: the album being imported. {0} is an album name."
+  },
+  "Migration_ProgressTimeLeft": {
+    "en": "About {0} left",
+    "fr": "Environ {0} restant",
+    "es": "Quedan unos {0}",
+    "de": "Noch etwa {0}",
+    "zh-Hans": "约剩 {0}",
+    "comment": "Import from another app: estimate. {0} is a duration such as 2 h 10 min."
+  },
+  "Migration_Pause": {
+    "en": "Pause",
+    "fr": "Pause",
+    "es": "Pausar",
+    "de": "Pausieren",
+    "zh-Hans": "暂停",
+    "comment": "Import from another app: button."
+  },
+  "Migration_Continue": {
+    "en": "Continue",
+    "fr": "Reprendre",
+    "es": "Continuar",
+    "de": "Fortsetzen",
+    "zh-Hans": "继续",
+    "comment": "Import from another app: button."
+  },
+  "Migration_Hide": {
+    "en": "Hide",
+    "fr": "Masquer",
+    "es": "Ocultar",
+    "de": "Ausblenden",
+    "zh-Hans": "隐藏",
+    "comment": "Import from another app: button that closes the window while the import goes on."
+  },
+  "Migration_Paused": {
+    "en": "Paused",
+    "fr": "En pause",
+    "es": "En pausa",
+    "de": "Pausiert",
+    "zh-Hans": "已暂停",
+    "comment": "Import from another app: state after Pause."
+  },
+  "Migration_StoppedSignIn": {
+    "en": "Stopped: the server asks you to sign in again.",
+    "fr": "Arrêté : le serveur demande de vous reconnecter.",
+    "es": "Detenido: el servidor pide que inicies sesión de nuevo.",
+    "de": "Angehalten: Der Server verlangt eine erneute Anmeldung.",
+    "zh-Hans": "已停止：服务器要求重新登录。",
+    "comment": "Import from another app: why the import stopped."
+  },
+  "Migration_StoppedDiskFull": {
+    "en": "Stopped: the disk is full.",
+    "fr": "Arrêté : le disque est plein.",
+    "es": "Detenido: el disco está lleno.",
+    "de": "Angehalten: Das Laufwerk ist voll.",
+    "zh-Hans": "已停止：磁盘已满。",
+    "comment": "Import from another app: why the import stopped."
+  },
+  "Migration_StoppedCloudFull": {
+    "en": "Stopped: your cloud storage is full.",
+    "fr": "Arrêté : votre stockage cloud est plein.",
+    "es": "Detenido: tu almacenamiento en la nube está lleno.",
+    "de": "Angehalten: Ihr Cloud-Speicher ist voll.",
+    "zh-Hans": "已停止：你的云存储已满。",
+    "comment": "Import from another app: why the import stopped."
+  },
+  "Migration_Status": {
+    "en": "Importing from {0}: {1} of {2}",
+    "fr": "Import depuis {0} : {1} sur {2}",
+    "es": "Importando desde {0}: {1} de {2}",
+    "de": "Import aus {0}: {1} von {2}",
+    "zh-Hans": "正在从 {0} 导入：{2} 首中的第 {1} 首",
+    "comment": "Status line while an import runs with its window hidden. {0} is the source, {1} and {2} numbers."
+  },
+  "Migration_Back": {
+    "en": "Back",
+    "fr": "Retour",
+    "es": "Atrás",
+    "de": "Zurück",
+    "zh-Hans": "返回",
+    "comment": "Import from another app: button back to the previous step."
+  },
+  "Migration_Close": {
+    "en": "Close",
+    "fr": "Fermer",
+    "es": "Cerrar",
+    "de": "Schließen",
+    "zh-Hans": "关闭",
+    "comment": "Import from another app: button."
+  },
+  "Migration_ReportTitle": {
+    "en": "Import from {0} finished",
+    "fr": "Import depuis {0} terminé",
+    "es": "Importación desde {0} terminada",
+    "de": "Import aus {0} abgeschlossen",
+    "zh-Hans": "从 {0} 导入已完成",
+    "comment": "Import from another app: heading of the report. {0} is the source."
+  },
+  "Migration_ReportCounts": {
+    "en": "{0} tracks. {1} imported, {2} already in rpm, {3} not imported.",
+    "fr": "{0} titres. {1} importés, {2} déjà dans rpm, {3} non importés.",
+    "es": "{0} pistas. {1} importadas, {2} ya en rpm, {3} no importadas.",
+    "de": "{0} Titel. {1} importiert, {2} bereits in rpm, {3} nicht importiert.",
+    "zh-Hans": "{0} 首曲目。已导入 {1} 首，{2} 首已在 rpm 中，{3} 首未导入。",
+    "comment": "Import from another app: report line. Numbers."
+  },
+  "Migration_ReportNotImported": {
+    "en": "Not imported",
+    "fr": "Non importés",
+    "es": "No importadas",
+    "de": "Nicht importiert",
+    "zh-Hans": "未导入",
+    "comment": "Import from another app: heading of the list of tracks that were not imported."
+  },
+  "Migration_ReportLowerQuality": {
+    "en": "rpm has a lower quality copy",
+    "fr": "rpm a une copie de moindre qualité",
+    "es": "rpm tiene una copia de menor calidad",
+    "de": "rpm hat eine Kopie in geringerer Qualität",
+    "zh-Hans": "rpm 中已有较低质量的版本",
+    "comment": "Import from another app: heading of the list of lossless files whose songs rpm has in a lossy format."
+  },
+  "Migration_ReportLowerQualityHint": {
+    "en": "rpm already had these songs in a lossy format. The lossless files are listed so you can import them yourself.",
+    "fr": "rpm avait déjà ces morceaux dans un format avec perte. Les fichiers sans perte sont listés pour que vous puissiez les importer vous-même.",
+    "es": "rpm ya tenía estas canciones en un formato con pérdida. Los archivos sin pérdida aparecen aquí para que puedas importarlos tú.",
+    "de": "rpm hatte diese Songs bereits in einem verlustbehafteten Format. Die verlustfreien Dateien sind aufgeführt, damit Sie sie selbst importieren können.",
+    "zh-Hans": "rpm 中已有这些歌曲的有损格式版本。这里列出无损文件，你可以自行导入。",
+    "comment": "Import from another app: explanation under the lower quality list."
+  },
+  "Migration_ReportPlaylists": {
+    "en": "{0} playlists added",
+    "fr": "{0} playlists ajoutées",
+    "es": "{0} listas añadidas",
+    "de": "{0} Playlists hinzugefügt",
+    "zh-Hans": "已添加 {0} 个播放列表",
+    "comment": "Import from another app: report line. {0} is a number."
+  },
+  "Migration_ReportPlaylistUnmatched": {
+    "en": "{0}: {1} entries not found",
+    "fr": "{0} : {1} éléments introuvables",
+    "es": "{0}: {1} elementos no encontrados",
+    "de": "{0}: {1} Einträge nicht gefunden",
+    "zh-Hans": "{0}：{1} 个条目未找到",
+    "comment": "Import from another app: report line for one playlist. {0} is its name, {1} a number."
+  },
+  "Migration_ReportSmart": {
+    "en": "{0} (a smart playlist, now a plain list)",
+    "fr": "{0} (playlist intelligente, désormais une liste simple)",
+    "es": "{0} (lista inteligente, ahora una lista normal)",
+    "de": "{0} (intelligente Playlist, jetzt eine normale Liste)",
+    "zh-Hans": "{0}（智能播放列表，现为普通列表）",
+    "comment": "Import from another app: report line. {0} is a playlist name."
+  },
+  "Migration_ReportSkipped": {
+    "en": "Not imported from the start",
+    "fr": "Non importés dès le départ",
+    "es": "No importados desde el principio",
+    "de": "Von Anfang an nicht importiert",
+    "zh-Hans": "一开始就未导入",
+    "comment": "Import from another app: heading of the items the source listed that are not music files."
+  },
+  "Migration_TryAgain": {
+    "en": "Try again",
+    "fr": "Réessayer",
+    "es": "Reintentar",
+    "de": "Erneut versuchen",
+    "zh-Hans": "重试",
+    "comment": "Import from another app: button that tries the tracks that were not imported again."
+  },
+  "Migration_ReasonFileNotFound": {
+    "en": "File not found",
+    "fr": "Fichier introuvable",
+    "es": "Archivo no encontrado",
+    "de": "Datei nicht gefunden",
+    "zh-Hans": "找不到文件",
+    "comment": "Import from another app: why a track was not imported."
+  },
+  "Migration_ReasonReadFailed": {
+    "en": "Could not be read",
+    "fr": "Lecture impossible",
+    "es": "No se pudo leer",
+    "de": "Konnte nicht gelesen werden",
+    "zh-Hans": "无法读取",
+    "comment": "Import from another app: why a track was not imported."
+  },
+  "Migration_ReasonDiskFull": {
+    "en": "The disk is full",
+    "fr": "Le disque est plein",
+    "es": "El disco está lleno",
+    "de": "Das Laufwerk ist voll",
+    "zh-Hans": "磁盘已满",
+    "comment": "Import from another app: why a track was not imported."
+  },
+  "Migration_ReasonCloudFull": {
+    "en": "Cloud storage full",
+    "fr": "Stockage cloud plein",
+    "es": "Almacenamiento en la nube lleno",
+    "de": "Cloud-Speicher voll",
+    "zh-Hans": "云存储已满",
+    "comment": "Import from another app: why a track was not imported."
+  },
+  "Migration_ReasonCouldNotCopy": {
+    "en": "Could not be copied",
+    "fr": "Copie impossible",
+    "es": "No se pudo copiar",
+    "de": "Konnte nicht kopiert werden",
+    "zh-Hans": "无法复制",
+    "comment": "Import from another app: why a track was not imported."
+  },
+  "Migration_ReasonRemoved": {
+    "en": "Removed from rpm during the import",
+    "fr": "Supprimé de rpm pendant l'import",
+    "es": "Eliminado de rpm durante la importación",
+    "de": "Während des Imports aus rpm entfernt",
+    "zh-Hans": "导入期间已从 rpm 中移除",
+    "comment": "Import from another app: why a track was not imported."
+  },
+  "Migration_ReasonLowerQualityInRpm": {
+    "en": "rpm has a lower quality copy",
+    "fr": "rpm a une copie de moindre qualité",
+    "es": "rpm tiene una copia de menor calidad",
+    "de": "rpm hat eine Kopie in geringerer Qualität",
+    "zh-Hans": "rpm 中已有较低质量的版本",
+    "comment": "Import from another app: note on a track rpm already had in a lossy format."
+  },
+  "Migration_SkipNotAFile": {
+    "en": "Not a file (a stream or a web address)",
+    "fr": "Pas un fichier (flux ou adresse web)",
+    "es": "No es un archivo (un stream o una dirección web)",
+    "de": "Keine Datei (Stream oder Webadresse)",
+    "zh-Hans": "不是文件（流媒体或网址）",
+    "comment": "Import from another app: why an item of the source was not imported."
+  },
+  "Migration_SkipNotOnThisComputer": {
+    "en": "Not on this computer",
+    "fr": "Absent de cet ordinateur",
+    "es": "No está en este ordenador",
+    "de": "Nicht auf diesem Computer",
+    "zh-Hans": "不在这台电脑上",
+    "comment": "Import from another app: why an item of the source was not imported (for example a track only in Apple Music's cloud)."
+  },
+  "Migration_SkipNotMusic": {
+    "en": "Not music (a podcast, audiobook or video)",
+    "fr": "Pas de la musique (podcast, livre audio ou vidéo)",
+    "es": "No es música (un podcast, audiolibro o vídeo)",
+    "de": "Keine Musik (Podcast, Hörbuch oder Video)",
+    "zh-Hans": "不是音乐（播客、有声书或视频）",
+    "comment": "Import from another app: why an item of the source was not imported."
   }
 }
