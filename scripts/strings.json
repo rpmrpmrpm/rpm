@@ -15854,6 +15854,14 @@
     "zh-Hans": "应用中的所有图标。",
     "comment": "About screen: what Font Awesome is used for."
   },
+  "Credits_AppMarks_Use": {
+    "en": "The marks on the buttons of the import from another app, to name those apps.",
+    "fr": "Les logos sur les boutons de l'importation depuis une autre application, pour nommer ces applications.",
+    "es": "Los logotipos en los botones de la importación desde otra aplicación, para nombrar esas aplicaciones.",
+    "de": "Die Logos auf den Schaltflächen beim Import aus einer anderen App, um diese Apps zu benennen.",
+    "zh-Hans": "从其他应用导入时按钮上的标志，用于指明这些应用。",
+    "comment": "About screen: what the marks of other music apps are used for."
+  },
   "Credits_OpenSans_Use": {
     "en": "The fallback face when a glyph is missing from the app's own type.",
     "fr": "La police de secours quand un glyphe manque dans les polices de l'application.",

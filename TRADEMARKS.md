@@ -25,3 +25,10 @@ A fork may not connect to the rpm server without permission. The server is a hos
 part of the open source code.
 
 Questions: open a discussion in the [`rpm`](https://github.com/rpmrpmrpm/rpm) repo.
+
+## Marks of other apps
+
+The import window shows the marks of MusicBee, Apple Music, Jellyfin, Plex and Navidrome, to name the
+apps it imports from. They are trademarks of their owners, not part of the licence of this repo, and
+their use does not mean that those projects support rpm. `scripts/brands/README.md` says where each
+one comes from.

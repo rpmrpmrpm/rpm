@@ -1220,6 +1220,19 @@
           "heads": [
             "desktop"
           ]
+        },
+        {
+          "id": "AppMarks",
+          "name": "MusicBee, Apple Music, Jellyfin, Plex, Navidrome",
+          "license": [
+            "CC0-1.0"
+          ],
+          "copyright": "Trademarks of their owners. Apple Music and Jellyfin drawings from Simple Icons.",
+          "url": "https://simpleicons.org",
+          "use": "Credits_AppMarks_Use",
+          "heads": [
+            "desktop"
+          ]
         }
       ]
     },
