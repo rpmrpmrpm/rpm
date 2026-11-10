@@ -21139,6 +21139,14 @@
     "zh-Hans": "一开始就未导入",
     "comment": "Import from another app: heading of the items the source listed that are not music files."
   },
+  "Migration_ReportMore": {
+    "en": "And {0} more.",
+    "fr": "Et {0} de plus.",
+    "es": "Y {0} más.",
+    "de": "Und {0} weitere.",
+    "zh-Hans": "还有 {0} 项。",
+    "comment": "Import from another app, report (web): under a list that shows its first lines, how many more there are."
+  },
   "Migration_TryAgain": {
     "en": "Try again",
     "fr": "Réessayer",
