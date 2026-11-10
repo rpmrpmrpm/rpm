@@ -20731,6 +20731,38 @@
     "zh-Hans": "{0} 个项目不会导入（流媒体、视频、播客，或不在这台电脑上的文件）",
     "comment": "Import from another app: summary line. {0} is a number."
   },
+  "Migration_UnfinishedNote": {
+    "en": "An earlier import of this library stopped at {0} of {1} tracks.",
+    "fr": "Une importation précédente de cette bibliothèque s'est arrêtée à {0} titres sur {1}.",
+    "es": "Una importación anterior de esta biblioteca se detuvo en {0} de {1} pistas.",
+    "de": "Ein früherer Import dieser Mediathek wurde bei {0} von {1} Titeln angehalten.",
+    "zh-Hans": "此前导入该资料库时在 {1} 首曲目中的第 {0} 首停止。",
+    "comment": "Import from another app, summary: an import of the same library did not finish. {0} tracks are through, of {1}. The person chooses Continue import or Start over."
+  },
+  "Migration_ContinueStopped": {
+    "en": "Continue import",
+    "fr": "Reprendre l'importation",
+    "es": "Continuar importación",
+    "de": "Import fortsetzen",
+    "zh-Hans": "继续导入",
+    "comment": "Import from another app, summary: button that continues an earlier import of the same library where it stopped."
+  },
+  "Migration_StartOver": {
+    "en": "Start over",
+    "fr": "Recommencer",
+    "es": "Empezar de nuevo",
+    "de": "Neu beginnen",
+    "zh-Hans": "重新开始",
+    "comment": "Import from another app, summary: button that checks every track of the library again instead of continuing."
+  },
+  "Migration_StartOverHint": {
+    "en": "Checks every track again. Tracks that are already in rpm are not imported twice.",
+    "fr": "Vérifie à nouveau chaque titre. Les titres déjà dans rpm ne sont pas importés deux fois.",
+    "es": "Vuelve a comprobar cada pista. Las pistas que ya están en rpm no se importan dos veces.",
+    "de": "Prüft jeden Titel erneut. Titel, die schon in rpm sind, werden nicht doppelt importiert.",
+    "zh-Hans": "重新检查每首曲目。已在 rpm 中的曲目不会重复导入。",
+    "comment": "Import from another app, summary: tooltip of the Start over button."
+  },
   "Migration_KeepsOriginalsFile": {
     "en": "rpm copies your music and leaves the originals where they are. Nothing in your {0} library is changed or removed.",
     "fr": "rpm copie votre musique et laisse les originaux à leur place. Rien n'est modifié ni supprimé dans votre bibliothèque {0}.",
@@ -20915,6 +20947,14 @@
     "zh-Hans": "约剩 {0}",
     "comment": "Import from another app: estimate. {0} is a duration such as 2 h 10 min."
   },
+  "Migration_ProgressUnderAMinute": {
+    "en": "Less than a minute left",
+    "fr": "Moins d'une minute restante",
+    "es": "Queda menos de un minuto",
+    "de": "Weniger als eine Minute übrig",
+    "zh-Hans": "剩余不到一分钟",
+    "comment": "Import from another app, progress: the estimated time left is under one minute."
+  },
   "Migration_Pause": {
     "en": "Pause",
     "fr": "Pause",
@@ -21066,6 +21106,14 @@
     "de": "{0}: {1} Einträge nicht gefunden",
     "zh-Hans": "{0}：{1} 个条目未找到",
     "comment": "Import from another app: report line for one playlist. {0} is its name, {1} a number."
+  },
+  "Migration_ReportPlaylistUnmatchedOne": {
+    "en": "{0}: 1 entry not found",
+    "fr": "{0} : 1 élément introuvable",
+    "es": "{0}: 1 elemento no encontrado",
+    "de": "{0}: 1 Eintrag nicht gefunden",
+    "zh-Hans": "{0}：1 个条目未找到",
+    "comment": "Import from another app, report: a playlist ({0} is its name) with one entry that matched no track."
   },
   "Migration_ReportSmart": {
     "en": "{0} (a smart playlist, now a plain list)",
