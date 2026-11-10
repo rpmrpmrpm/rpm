@@ -20587,6 +20587,14 @@
     "zh-Hans": "在你的网络中找到",
     "comment": "Import from another app, connect step (desktop): heading above the media servers found on the network. Clicking one fills in the server address."
   },
+  "Migration_NoServersFound": {
+    "en": "No servers found on your network. Type the address below.",
+    "fr": "Aucun serveur trouvé sur votre réseau. Saisissez l'adresse ci-dessous.",
+    "es": "No se encontraron servidores en tu red. Escribe la dirección abajo.",
+    "de": "Keine Server in Ihrem Netzwerk gefunden. Geben Sie die Adresse unten ein.",
+    "zh-Hans": "未在你的网络中找到服务器。请在下方输入地址。",
+    "comment": "Import from another app, connect step (desktop): the search for media servers on the local network found none."
+  },
   "Migration_FoundServer": {
     "en": "{0} ({1})",
     "fr": "{0} ({1})",
@@ -20618,6 +20626,14 @@
     "de": "Anmelden",
     "zh-Hans": "登录",
     "comment": "Import from another app: button that signs in to the media server."
+  },
+  "Migration_SigningIn": {
+    "en": "Signing in",
+    "fr": "Connexion",
+    "es": "Iniciando sesión",
+    "de": "Anmeldung läuft",
+    "zh-Hans": "正在登录",
+    "comment": "Import from another app (desktop): shown with a moving bar while the media server checks the user name and password."
   },
   "Migration_QuickConnect": {
     "en": "Use Quick Connect",
