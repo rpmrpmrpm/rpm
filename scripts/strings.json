@@ -3219,11 +3219,11 @@
     "zh-Hans": "rpm 存放音乐收藏的位置。"
   },
   "Settings_MusicFolderNotEmpty": {
-    "en": "This folder isn't empty. Pick an empty folder, or an existing rpm music folder to open it.",
-    "fr": "Ce dossier n'est pas vide. Choisissez un dossier vide, ou un dossier musical rpm existant pour l'ouvrir.",
-    "es": "Esta carpeta no está vacía. Elige una carpeta vacía, o una carpeta de música de rpm existente para abrirla.",
-    "de": "Dieser Ordner ist nicht leer. Wähle einen leeren Ordner, oder einen vorhandenen rpm-Musikordner, um ihn zu öffnen.",
-    "zh-Hans": "此文件夹不是空的。请选择一个空文件夹，或选择一个现有的 rpm 音乐文件夹以打开它。",
+    "en": "This folder holds other files. Pick an empty folder, a folder with music, or an existing rpm music folder.",
+    "fr": "Ce dossier contient d'autres fichiers. Choisissez un dossier vide, un dossier de musique ou un dossier musical rpm existant.",
+    "es": "Esta carpeta contiene otros archivos. Elige una carpeta vacía, una carpeta con música o una carpeta de música de rpm existente.",
+    "de": "Dieser Ordner enthält andere Dateien. Wähle einen leeren Ordner, einen Ordner mit Musik oder einen vorhandenen rpm Musikordner.",
+    "zh-Hans": "此文件夹包含其他文件。请选择空文件夹、含有音乐的文件夹或现有的 rpm 音乐文件夹。",
     "comment": "Settings, Music folder card: the chosen folder has files in it and no RPM mirror."
   },
   "Settings_MusicFolderOverlaps": {
@@ -3384,11 +3384,11 @@
     "zh-Hans": "这已经是一个 rpm 音乐文件夹，rpm 将直接打开它。"
   },
   "Setup_NotEmpty": {
-    "en": "This folder isn't empty. Pick an empty folder, or an existing rpm music folder to open it.",
-    "fr": "Ce dossier n'est pas vide. Choisissez un dossier vide, ou un dossier musical rpm existant pour l'ouvrir.",
-    "es": "Esta carpeta no está vacía. Elige una carpeta vacía, o una carpeta de música de rpm existente para abrirla.",
-    "de": "Dieser Ordner ist nicht leer. Wähle einen leeren Ordner, oder einen vorhandenen rpm-Musikordner, um ihn zu öffnen.",
-    "zh-Hans": "此文件夹不是空的。请选择一个空文件夹，或选择一个现有的 rpm 音乐文件夹以打开它。",
+    "en": "This folder holds other files. Pick an empty folder, a folder with music, or an existing rpm music folder.",
+    "fr": "Ce dossier contient d'autres fichiers. Choisissez un dossier vide, un dossier de musique ou un dossier musical rpm existant.",
+    "es": "Esta carpeta contiene otros archivos. Elige una carpeta vacía, una carpeta con música o una carpeta de música de rpm existente.",
+    "de": "Dieser Ordner enthält andere Dateien. Wähle einen leeren Ordner, einen Ordner mit Musik oder einen vorhandenen rpm Musikordner.",
+    "zh-Hans": "此文件夹包含其他文件。请选择空文件夹、含有音乐的文件夹或现有的 rpm 音乐文件夹。",
     "comment": "Shown under the folder picker when the chosen folder has visible content and no RPM mirror."
   },
   "Shell_Help": {
@@ -21506,5 +21506,149 @@
     "de": "{0} ist nicht erreichbar. Deine Bibliothek liegt darauf.",
     "zh-Hans": "{0} 无法连接。你的音乐库在它上面。",
     "comment": "Problem screen at launch: the library is on a NAS that could not be mounted. {0} is the NAS name."
+  },
+  "ExistingMusic_Title": {
+    "en": "Music already here",
+    "fr": "Musique déjà présente",
+    "es": "Ya hay música aquí",
+    "de": "Musik schon vorhanden",
+    "zh-Hans": "这里已有音乐",
+    "comment": "Existing music dialog: title. Shown when the chosen library folder already holds music."
+  },
+  "ExistingMusic_Body": {
+    "en": "{0} already holds music. How should rpm handle these files?",
+    "fr": "{0} contient déjà de la musique. Comment rpm doit-il gérer ces fichiers ?",
+    "es": "{0} ya contiene música. ¿Cómo debe tratar rpm estos archivos?",
+    "de": "{0} enthält bereits Musik. Wie soll rpm mit diesen Dateien umgehen?",
+    "zh-Hans": "{0} 中已有音乐。rpm 应如何处理这些文件？",
+    "comment": "Existing music dialog: body. {0} is the folder or NAS name."
+  },
+  "ExistingMusic_Keep": {
+    "en": "Keep the files as they are",
+    "fr": "Garder les fichiers tels quels",
+    "es": "Dejar los archivos como están",
+    "de": "Dateien so lassen, wie sie sind",
+    "zh-Hans": "保持文件原样",
+    "comment": "Existing music dialog: first choice."
+  },
+  "ExistingMusic_KeepBody": {
+    "en": "rpm reads your music where it is. It never renames, moves, retags or deletes these files. Changes you make in rpm are kept in rpm.",
+    "fr": "rpm lit votre musique là où elle se trouve. Il ne renomme, ne déplace, ne modifie les tags ni ne supprime jamais ces fichiers. Vos modifications dans rpm restent dans rpm.",
+    "es": "rpm lee tu música donde está. Nunca cambia el nombre, mueve, reetiqueta ni elimina estos archivos. Los cambios que hagas en rpm se guardan en rpm.",
+    "de": "rpm liest deine Musik dort, wo sie liegt. Es benennt diese Dateien nie um, verschiebt sie nicht, ändert keine Tags und löscht nichts. Deine Änderungen in rpm bleiben in rpm.",
+    "zh-Hans": "rpm 在原位置读取你的音乐，绝不重命名、移动、修改标签或删除这些文件。你在 rpm 中的更改保存在 rpm 中。",
+    "comment": "Existing music dialog: explanation under the first choice."
+  },
+  "ExistingMusic_Organise": {
+    "en": "Let rpm organise them",
+    "fr": "Laisser rpm les organiser",
+    "es": "Dejar que rpm los organice",
+    "de": "rpm ordnen lassen",
+    "zh-Hans": "让 rpm 整理",
+    "comment": "Existing music dialog: second choice. Also the button in Library settings for a kept library."
+  },
+  "ExistingMusic_OrganiseBody": {
+    "en": "rpm reads your music, then names and files it in its own folders, like everything you import. Tags you change are written into the files.",
+    "fr": "rpm lit votre musique, puis la nomme et la range dans ses propres dossiers, comme tout ce que vous importez. Les tags que vous modifiez sont écrits dans les fichiers.",
+    "es": "rpm lee tu música y después la nombra y la ordena en sus propias carpetas, como todo lo que importas. Las etiquetas que cambies se escriben en los archivos.",
+    "de": "rpm liest deine Musik und benennt und sortiert sie dann in eigene Ordner, wie alles, was du importierst. Geänderte Tags werden in die Dateien geschrieben.",
+    "zh-Hans": "rpm 读取你的音乐，然后像导入的所有内容一样命名并归入自己的文件夹。你修改的标签会写入文件。",
+    "comment": "Existing music dialog: explanation under the second choice."
+  },
+  "Setup_HasMusicKept": {
+    "en": "This folder holds music. rpm keeps the files as they are.",
+    "fr": "Ce dossier contient de la musique. rpm garde les fichiers tels quels.",
+    "es": "Esta carpeta contiene música. rpm deja los archivos como están.",
+    "de": "Dieser Ordner enthält Musik. rpm lässt die Dateien, wie sie sind.",
+    "zh-Hans": "此文件夹包含音乐。rpm 将保持文件原样。",
+    "comment": "Setup and Settings: status under a chosen folder with music, after Keep was chosen."
+  },
+  "Setup_HasMusicOrganised": {
+    "en": "This folder holds music. rpm will organise it.",
+    "fr": "Ce dossier contient de la musique. rpm va l'organiser.",
+    "es": "Esta carpeta contiene música. rpm la organizará.",
+    "de": "Dieser Ordner enthält Musik. rpm wird sie ordnen.",
+    "zh-Hans": "此文件夹包含音乐。rpm 将整理这些音乐。",
+    "comment": "Setup and Settings: status under a chosen folder with music, after Organise was chosen."
+  },
+  "Library_Organising": {
+    "en": "Organising your music: {0} of {1}",
+    "fr": "Organisation de votre musique : {0} sur {1}",
+    "es": "Organizando tu música: {0} de {1}",
+    "de": "Musik wird geordnet: {0} von {1}",
+    "zh-Hans": "正在整理你的音乐：第 {0} 首，共 {1} 首",
+    "comment": "Status bar while a folder adopted with Organise is re-filed."
+  },
+  "Library_Organised": {
+    "en": "Your music is organised ({0} files moved)",
+    "fr": "Votre musique est organisée ({0} fichiers déplacés)",
+    "es": "Tu música está organizada ({0} archivos movidos)",
+    "de": "Deine Musik ist geordnet ({0} Dateien verschoben)",
+    "zh-Hans": "你的音乐已整理完毕（移动了 {0} 个文件）",
+    "comment": "Status bar when that re-file has finished."
+  },
+  "Library_OrganiseStopped": {
+    "en": "Organising stopped. rpm finishes it the next time the library opens.",
+    "fr": "L'organisation s'est arrêtée. rpm la termine à la prochaine ouverture de la bibliothèque.",
+    "es": "La organización se detuvo. rpm la terminará la próxima vez que se abra la biblioteca.",
+    "de": "Das Ordnen wurde angehalten. rpm beendet es beim nächsten Öffnen der Bibliothek.",
+    "zh-Hans": "整理已停止。下次打开资料库时 rpm 会继续完成。",
+    "comment": "Status bar when that re-file failed part-way."
+  },
+  "Nas_ExistingMusicHint": {
+    "en": "{0} already holds music. Use it as your collection, as it is or organised by rpm.",
+    "fr": "{0} contient déjà de la musique. Utilisez-la comme collection, telle quelle ou organisée par rpm.",
+    "es": "{0} ya contiene música. Úsala como tu colección, tal como está u organizada por rpm.",
+    "de": "{0} enthält bereits Musik. Nutze sie als deine Sammlung, so wie sie ist oder von rpm geordnet.",
+    "zh-Hans": "{0} 中已有音乐。可将其作为你的收藏，保持原样或由 rpm 整理。",
+    "comment": "Setup and Library settings: line on a NAS row when the NAS folder already holds music. {0} is the NAS name."
+  },
+  "Nas_UseExistingMusic": {
+    "en": "The music already on {0}",
+    "fr": "La musique déjà sur {0}",
+    "es": "La música que ya está en {0}",
+    "de": "Die Musik auf {0}",
+    "zh-Hans": "{0} 上已有的音乐",
+    "comment": "NAS sign-in dialog: the choice that makes the NAS folder itself the library. {0} is the NAS name."
+  },
+  "Nas_UseMusic": {
+    "en": "Use the music on {0}",
+    "fr": "Utiliser la musique sur {0}",
+    "es": "Usar la música de {0}",
+    "de": "Musik auf {0} verwenden",
+    "zh-Hans": "使用 {0} 上的音乐",
+    "comment": "Library settings: button on a NAS row when the NAS folder already holds music. {0} is the NAS name."
+  },
+  "Settings_FilesKept": {
+    "en": "Files are kept as they are. rpm does not rename, move, retag or delete them.",
+    "fr": "Les fichiers sont gardés tels quels. rpm ne les renomme pas, ne les déplace pas, ne modifie pas leurs tags et ne les supprime pas.",
+    "es": "Los archivos se dejan como están. rpm no les cambia el nombre, no los mueve, no los reetiqueta ni los elimina.",
+    "de": "Die Dateien bleiben, wie sie sind. rpm benennt sie nicht um, verschiebt sie nicht, ändert keine Tags und löscht sie nicht.",
+    "zh-Hans": "文件保持原样。rpm 不会重命名、移动、修改标签或删除它们。",
+    "comment": "Library settings: line for a library whose files are kept as they are."
+  },
+  "Settings_OrganiseKeptConfirm": {
+    "en": "rpm will write its ids into these files, then rename and move them into its own folders. This cannot be undone.",
+    "fr": "rpm va écrire ses identifiants dans ces fichiers, puis les renommer et les déplacer dans ses propres dossiers. Cette action est irréversible.",
+    "es": "rpm escribirá sus identificadores en estos archivos y después les cambiará el nombre y los moverá a sus propias carpetas. No se puede deshacer.",
+    "de": "rpm schreibt seine IDs in diese Dateien und benennt sie dann um und verschiebt sie in eigene Ordner. Das lässt sich nicht rückgängig machen.",
+    "zh-Hans": "rpm 将把其 ID 写入这些文件，然后重命名并移入自己的文件夹。此操作无法撤销。",
+    "comment": "Library settings: confirmation shown after pressing Let rpm organise them for a kept library."
+  },
+  "Settings_OrganiseKeptConfirmButton": {
+    "en": "Organise files",
+    "fr": "Organiser les fichiers",
+    "es": "Organizar archivos",
+    "de": "Dateien ordnen",
+    "zh-Hans": "整理文件",
+    "comment": "Library settings: button that confirms organising a kept library."
+  },
+  "Kept_Unavailable": {
+    "en": "Files in this folder are kept as they are",
+    "fr": "Les fichiers de ce dossier sont gardés tels quels",
+    "es": "Los archivos de esta carpeta se dejan como están",
+    "de": "Die Dateien in diesem Ordner bleiben, wie sie sind",
+    "zh-Hans": "此文件夹中的文件保持原样",
+    "comment": "Tooltip on actions that would change files (Apply naming, Split album, Delete) in a library whose files are kept as they are."
   }
 }
