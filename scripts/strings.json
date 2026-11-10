@@ -20979,6 +20979,14 @@
     "zh-Hans": "已停止：你已退出登录，或云存储已关闭。",
     "comment": "Import from another app: why a cloud-only import stopped."
   },
+  "Migration_StoppedError": {
+    "en": "Stopped because of an error. Continue to try again.",
+    "fr": "Arrêté à cause d'une erreur. Continuez pour réessayer.",
+    "es": "Detenido por un error. Continúa para volver a intentarlo.",
+    "de": "Wegen eines Fehlers angehalten. Fortsetzen, um es erneut zu versuchen.",
+    "zh-Hans": "因出错而停止。继续即可重试。",
+    "comment": "Import from another app: the import stopped because of an unexpected error. Continue starts it again where it stopped."
+  },
   "Migration_Status": {
     "en": "Importing from {0}: {1} of {2}",
     "fr": "Import depuis {0} : {1} sur {2}",
