@@ -20571,6 +20571,30 @@
     "zh-Hans": "服务器地址",
     "comment": "Import from another app: label of the media server address box."
   },
+  "Migration_Searching": {
+    "en": "Looking for servers on your network",
+    "fr": "Recherche de serveurs sur votre réseau",
+    "es": "Buscando servidores en tu red",
+    "de": "Suche nach Servern in Ihrem Netzwerk",
+    "zh-Hans": "正在查找你网络中的服务器",
+    "comment": "Import from another app, connect step (desktop): shown while the app looks for media servers on the local network."
+  },
+  "Migration_FoundServers": {
+    "en": "Found on your network",
+    "fr": "Trouvés sur votre réseau",
+    "es": "Encontrados en tu red",
+    "de": "In Ihrem Netzwerk gefunden",
+    "zh-Hans": "在你的网络中找到",
+    "comment": "Import from another app, connect step (desktop): heading above the media servers found on the network. Clicking one fills in the server address."
+  },
+  "Migration_FoundServer": {
+    "en": "{0} ({1})",
+    "fr": "{0} ({1})",
+    "es": "{0} ({1})",
+    "de": "{0} ({1})",
+    "zh-Hans": "{0}（{1}）",
+    "comment": "Import from another app, connect step (desktop): a media server found on the network. {0} is its name, {1} its address."
+  },
   "Migration_UserName": {
     "en": "User name",
     "fr": "Nom d'utilisateur",
