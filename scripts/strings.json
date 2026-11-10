@@ -21650,5 +21650,13 @@
     "de": "Die Dateien in diesem Ordner bleiben, wie sie sind",
     "zh-Hans": "此文件夹中的文件保持原样",
     "comment": "Tooltip on actions that would change files (Apply naming, Split album, Delete) in a library whose files are kept as they are."
+  },
+  "Wizard_DoneAdopted": {
+    "en": "rpm reads your music in the background when the library opens. A large collection can take a few minutes.",
+    "fr": "rpm lit votre musique en arrière-plan à l'ouverture de la bibliothèque. Une grande collection peut prendre quelques minutes.",
+    "es": "rpm lee tu música en segundo plano cuando se abre la biblioteca. Una colección grande puede tardar unos minutos.",
+    "de": "rpm liest deine Musik im Hintergrund, wenn die Bibliothek geöffnet wird. Eine große Sammlung kann ein paar Minuten dauern.",
+    "zh-Hans": "打开资料库时，rpm 会在后台读取你的音乐。大型收藏可能需要几分钟。",
+    "comment": "Setup, last step: shown instead of the album count when the library is a folder of music the person already had."
   }
 }
