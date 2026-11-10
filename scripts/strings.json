@@ -20412,11 +20412,11 @@
     "comment": "Add music window: the tile that imports a library from another music app."
   },
   "AddMusic_OtherAppHint": {
-    "en": "MusicBee, iTunes, Jellyfin, Plex, Navidrome",
-    "fr": "MusicBee, iTunes, Jellyfin, Plex, Navidrome",
-    "es": "MusicBee, iTunes, Jellyfin, Plex, Navidrome",
-    "de": "MusicBee, iTunes, Jellyfin, Plex, Navidrome",
-    "zh-Hans": "MusicBee、iTunes、Jellyfin、Plex、Navidrome",
+    "en": "MusicBee, iTunes, Plex and more",
+    "fr": "MusicBee, iTunes, Plex et plus",
+    "es": "MusicBee, iTunes, Plex y más",
+    "de": "MusicBee, iTunes, Plex und mehr",
+    "zh-Hans": "MusicBee、iTunes、Plex 等",
     "comment": "Add music window: the line under 'From another app', naming the apps it can import from."
   },
   "Migration_Title": {
@@ -21146,5 +21146,29 @@
     "de": "Keine Musik (Podcast, Hörbuch oder Video)",
     "zh-Hans": "不是音乐（播客、有声书或视频）",
     "comment": "Import from another app: why an item of the source was not imported."
+  },
+  "Migration_SummaryTracksOne": {
+    "en": "1 track ({0})",
+    "fr": "1 titre ({0})",
+    "es": "1 pista ({0})",
+    "de": "1 Titel ({0})",
+    "zh-Hans": "1 首曲目（{0}）",
+    "comment": "Import from another app: summary line for one track. {0} is a size."
+  },
+  "Migration_SummaryPlaylistsOne": {
+    "en": "1 playlist",
+    "fr": "1 playlist",
+    "es": "1 lista",
+    "de": "1 Playlist",
+    "zh-Hans": "1 个播放列表",
+    "comment": "Import from another app: summary line for one playlist."
+  },
+  "Migration_ReportPlaylistsOne": {
+    "en": "1 playlist added",
+    "fr": "1 playlist ajoutée",
+    "es": "1 lista añadida",
+    "de": "1 Playlist hinzugefügt",
+    "zh-Hans": "已添加 1 个播放列表",
+    "comment": "Import from another app: report line for one playlist."
   }
 }
