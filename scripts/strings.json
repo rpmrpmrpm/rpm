@@ -13,7 +13,7 @@
     "es": "Por artista",
     "de": "Nach Interpret",
     "zh-Hans": "按艺人",
-    "comment": "Album wall sort order: by album artist, then album name."
+    "comment": "Album wall sort order, and iPhone library list view sort order: by album artist, then album name."
   },
   "AlbumSort_Album": {
     "en": "By album",
@@ -21,7 +21,7 @@
     "es": "Por álbum",
     "de": "Nach Album",
     "zh-Hans": "按专辑",
-    "comment": "Album wall sort order: by the record's own name."
+    "comment": "Album wall sort order, and iPhone library list view sort order: by the record's own name."
   },
   "AlbumSort_Added": {
     "en": "Recently added",
@@ -46,6 +46,14 @@
     "de": "Meistgespielt",
     "zh-Hans": "播放最多",
     "comment": "Album wall sort order: most listened to first."
+  },
+  "AlbumSort_Track": {
+    "en": "By song title",
+    "fr": "Par titre de morceau",
+    "es": "Por título de canción",
+    "de": "Nach Songtitel",
+    "zh-Hans": "按歌曲名",
+    "comment": "iPhone library list view sort order: every song as its own row, by its title."
   },
   "AlbumGrid_PlayAll": {
     "en": "Play album",
@@ -1971,7 +1979,7 @@
     "es": "Cuadrícula de álbumes",
     "de": "Albumraster",
     "zh-Hans": "专辑网格",
-    "comment": "Tooltip on the grid button of the library view switch (wall of album covers)."
+    "comment": "Tooltip on the grid button of the library view switch (wall of album covers), and the same choice in the iPhone library's view menu."
   },
   "Login_ActionRequired": {
     "en": "For this action you need to sign in to your rpm account.",
@@ -6743,7 +6751,7 @@
     "es": "Ordenar",
     "de": "Sortieren",
     "zh-Hans": "排序",
-    "comment": "iPhone library header button: choose the order the album wall is in."
+    "comment": "iPhone library header button: choose the order the album grid or the album list is in."
   },
   "Rpm_Library_View": {
     "en": "View",
@@ -6751,7 +6759,7 @@
     "es": "Vista",
     "de": "Ansicht",
     "zh-Hans": "视图",
-    "comment": "iPhone library header button: switch between the albums wall and the artists wall."
+    "comment": "iPhone library header button: switch between views, such as the album grid and the album list, or the playlists' covers and rows."
   },
   "Rpm_Playlist_PlayList": {
     "en": "Play list",
@@ -9335,7 +9343,8 @@
     "fr": "Liste d'albums",
     "es": "Lista de álbumes",
     "de": "Albumliste",
-    "zh-Hans": "专辑列表"
+    "zh-Hans": "专辑列表",
+    "comment": "Library view switch: the records as a list, each with its songs. Also the choice in the iPhone library's view menu."
   },
   "Library_ViewTable": {
     "en": "Data table",
