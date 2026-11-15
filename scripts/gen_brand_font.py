@@ -45,6 +45,7 @@ GLYPHS = [
     ("jellyfin", 0xE003, "jellyfin.svg"),
     ("plex", 0xE004, "plex.svg"),
     ("navidrome", 0xE005, "navidrome.svg"),
+    ("ibroadcast", 0xE006, "ibroadcast.svg"),
 ]
 
 # Font Awesome's proportions: the em is the full height of an icon, with an eighth of it below the
