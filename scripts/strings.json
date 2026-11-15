@@ -20620,6 +20620,14 @@
     "zh-Hans": "在 iBroadcast 回收站中",
     "comment": "Import from another app: why a skipped track is not imported; it is in the iBroadcast trash. Shown after the track name and a colon."
   },
+  "Migration_SkipIBroadcastList": {
+    "en": "A list iBroadcast fills by itself",
+    "fr": "Une liste qu'iBroadcast remplit lui-même",
+    "es": "Una lista que iBroadcast llena por sí mismo",
+    "de": "Eine Liste, die iBroadcast selbst füllt",
+    "zh-Hans": "由 iBroadcast 自动填充的列表",
+    "comment": "Import from another app: why a playlist is not imported; iBroadcast fills it by itself (such as its most recent uploads). Shown after the playlist name and a colon."
+  },
   "Migration_IBroadcastTagsFolder": {
     "en": "Tags",
     "fr": "Tags",
@@ -20941,11 +20949,11 @@
     "comment": "Import from another app: summary line. {0} is a number."
   },
   "Migration_SummarySkippedIBroadcast": {
-    "en": "{0} tracks are not imported (in the iBroadcast trash, or not a file rpm can read)",
-    "fr": "{0} morceaux ne sont pas importés (dans la corbeille d'iBroadcast, ou pas un fichier que rpm sait lire)",
-    "es": "{0} canciones no se importan (en la papelera de iBroadcast, o no son un archivo que rpm pueda leer)",
-    "de": "{0} Titel werden nicht importiert (im iBroadcast-Papierkorb oder keine Datei, die rpm lesen kann)",
-    "zh-Hans": "{0} 首曲目不会导入（在 iBroadcast 回收站中，或不是 rpm 能读取的文件）",
+    "en": "{0} items are not imported (in the iBroadcast trash, without a file, or lists iBroadcast fills by itself)",
+    "fr": "{0} éléments ne sont pas importés (dans la corbeille d'iBroadcast, sans fichier, ou listes qu'iBroadcast remplit lui-même)",
+    "es": "{0} elementos no se importan (en la papelera de iBroadcast, sin archivo, o listas que iBroadcast llena por sí mismo)",
+    "de": "{0} Elemente werden nicht importiert (im iBroadcast-Papierkorb, ohne Datei oder Listen, die iBroadcast selbst füllt)",
+    "zh-Hans": "{0} 个项目不会导入（在 iBroadcast 回收站中、没有文件，或由 iBroadcast 自动填充的列表）",
     "comment": "Import from another app: summary line for an iBroadcast library, in place of Migration_SummarySkipped. {0} is a number."
   },
   "Migration_SummaryOtherImports": {
