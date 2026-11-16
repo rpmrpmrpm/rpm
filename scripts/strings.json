@@ -8116,6 +8116,14 @@
     "zh-Hans": "阅读完整评论",
     "comment": "Phone profile page and Feed tab: link under a review card that opens the whole review."
   },
+  "Rpm_Profile_JustNow": {
+    "en": "just now",
+    "fr": "à l'instant",
+    "es": "ahora mismo",
+    "de": "gerade eben",
+    "zh-Hans": "刚刚",
+    "comment": "Phone profile page, threads and Feed tab: when a post, reply or review was written less than a minute ago, beside the author's name."
+  },
   "Rpm_Profile_Quoted": {
     "en": "“{0}”",
     "fr": "« {0} »",
