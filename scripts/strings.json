@@ -7276,6 +7276,22 @@
     "zh-Hans": "无法加载此个人主页。请检查网络连接后重试。",
     "comment": "Phone profile page: the page could not be read."
   },
+  "Rpm_Profile_ShowMoreReplies": {
+    "en": "Show {0} more replies",
+    "fr": "Afficher {0} réponses de plus",
+    "es": "Mostrar {0} respuestas más",
+    "de": "{0} weitere Antworten anzeigen",
+    "zh-Hans": "显示另外 {0} 条回复",
+    "comment": "Desktop post thread: a key under a reply six levels deep that opens the replies under it. {0} is how many."
+  },
+  "Rpm_Profile_ShowMoreRepliesOne": {
+    "en": "Show 1 more reply",
+    "fr": "Afficher 1 réponse de plus",
+    "es": "Mostrar 1 respuesta más",
+    "de": "1 weitere Antwort anzeigen",
+    "zh-Hans": "显示另外 1 条回复",
+    "comment": "Desktop post thread: the same key when one reply is hidden under it."
+  },
   "Rpm_Profile_SendFailed": {
     "en": "This could not be sent. Check your connection and try again.",
     "fr": "Impossible d'envoyer. Vérifiez votre connexion et réessayez.",
