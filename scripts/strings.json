@@ -7276,6 +7276,22 @@
     "zh-Hans": "无法加载此个人主页。请检查网络连接后重试。",
     "comment": "Phone profile page: the page could not be read."
   },
+  "Rpm_Profile_SendFailed": {
+    "en": "This could not be sent. Check your connection and try again.",
+    "fr": "Impossible d'envoyer. Vérifiez votre connexion et réessayez.",
+    "es": "No se pudo enviar. Comprueba tu conexión e inténtalo de nuevo.",
+    "de": "Das konnte nicht gesendet werden. Prüfe deine Verbindung und versuche es erneut.",
+    "zh-Hans": "无法发送。请检查网络连接后重试。",
+    "comment": "Desktop profile page and post thread: a post or reply could not be sent."
+  },
+  "Rpm_Profile_SaveFailed": {
+    "en": "Your changes could not be saved. Check your connection and try again.",
+    "fr": "Impossible d'enregistrer vos modifications. Vérifiez votre connexion et réessayez.",
+    "es": "No se pudieron guardar los cambios. Comprueba tu conexión e inténtalo de nuevo.",
+    "de": "Deine Änderungen konnten nicht gespeichert werden. Prüfe deine Verbindung und versuche es erneut.",
+    "zh-Hans": "无法保存你的更改。请检查网络连接后重试。",
+    "comment": "Desktop profile edit page: Save failed on the server or the connection."
+  },
   "Rpm_Profile_Menu": {
     "en": "Menu",
     "fr": "Menu",
