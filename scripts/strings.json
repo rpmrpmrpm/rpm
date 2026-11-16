@@ -2962,6 +2962,38 @@
     "zh-Hans": "在封面展示背后显示艺人照片。关闭后，rpm 不下载任何照片，改用专辑的颜色。",
     "comment": "Settings > Display: hint under the artist photo toggle."
   },
+  "Settings_DiscStandIn": {
+    "en": "Albums without disc art",
+    "fr": "Albums sans image de disque",
+    "es": "Álbumes sin imagen de disco",
+    "de": "Alben ohne Disc-Bild",
+    "zh-Hans": "没有唱片图的专辑",
+    "comment": "Settings > Display: label for the choice of what the record looks like when an album has no picture of its own disc."
+  },
+  "Settings_DiscStandInHint": {
+    "en": "Pick what spins when an album has no picture of its own disc yet: a vinyl record wearing the cover, or a plain CD.",
+    "fr": "Choisissez ce qui tourne quand un album n’a pas encore d’image de son disque : un vinyle habillé de la pochette, ou un CD tout simple.",
+    "es": "Elige qué gira cuando un álbum aún no tiene imagen de su disco: un vinilo con la carátula o un CD sencillo.",
+    "de": "Wähle, was sich dreht, wenn ein Album noch kein Bild seiner Disc hat: eine Schallplatte mit dem Cover oder eine schlichte CD.",
+    "zh-Hans": "专辑还没有唱片图时，选择转动的是什么：印着封面的黑胶唱片，或一张素面 CD。",
+    "comment": "Settings > Display: hint under the 'Albums without disc art' choice."
+  },
+  "Settings_DiscStandInVinyl": {
+    "en": "Vinyl record",
+    "fr": "Vinyle",
+    "es": "Vinilo",
+    "de": "Schallplatte",
+    "zh-Hans": "黑胶唱片",
+    "comment": "Settings > Display: 'Albums without disc art' option. The app's own drawn vinyl, with the album cover on its label. The default."
+  },
+  "Settings_DiscStandInCd": {
+    "en": "CD",
+    "fr": "CD",
+    "es": "CD",
+    "de": "CD",
+    "zh-Hans": "CD",
+    "comment": "Settings > Display: 'Albums without disc art' option. A plain silver CD with the rpm hub."
+  },
   "Settings_MultiDisc": {
     "en": "Multi-disc albums",
     "fr": "Albums multi-disques",
@@ -7115,6 +7147,982 @@
     "de": "Start",
     "zh-Hans": "主页",
     "comment": "Phone tab bar label for the home screen. The page itself uses Home_Heading, in lower case."
+  },
+  "Rpm_Settings_General": {
+    "en": "General",
+    "fr": "Général",
+    "es": "General",
+    "de": "Allgemein",
+    "zh-Hans": "通用",
+    "comment": "Phone settings page: tab with the app version, crash reports and the cover cache."
+  },
+  "Rpm_Settings_Appearance": {
+    "en": "Appearance",
+    "fr": "Apparence",
+    "es": "Apariencia",
+    "de": "Darstellung",
+    "zh-Hans": "外观",
+    "comment": "Phone settings page: tab with the background, night mode and the disc stand-in."
+  },
+  "Rpm_Settings_Account": {
+    "en": "My account",
+    "fr": "Mon compte",
+    "es": "Mi cuenta",
+    "de": "Mein Konto",
+    "zh-Hans": "我的账户",
+    "comment": "Phone settings page: tab with the account, cloud storage and the plan."
+  },
+  "Rpm_Profile_ListeningTo": {
+    "en": "{0} is listening to {1} by {2}",
+    "fr": "{0} écoute {1} de {2}",
+    "es": "{0} está escuchando {1} de {2}",
+    "de": "{0} hört gerade {1} von {2}",
+    "zh-Hans": "{0} 正在听 {2} 的《{1}》",
+    "comment": "Phone profile page: line under the name. {0} the person, {1} the song, {2} the artist."
+  },
+  "Rpm_Profile_MemberSince": {
+    "en": "Member since {0}",
+    "fr": "Membre depuis {0}",
+    "es": "Miembro desde {0}",
+    "de": "Mitglied seit {0}",
+    "zh-Hans": "{0} 加入",
+    "comment": "Phone profile page: when the account was made. {0} is a month and year."
+  },
+  "Rpm_Profile_PostPrompt": {
+    "en": "What's on your mind?",
+    "fr": "À quoi pensez-vous ?",
+    "es": "¿Qué estás pensando?",
+    "de": "Was gibt's Neues?",
+    "zh-Hans": "在想什么？",
+    "comment": "Phone profile page: placeholder in the box for a new post on your own page."
+  },
+  "Rpm_Profile_WithSong": {
+    "en": "Add the song I'm playing",
+    "fr": "Ajouter le morceau en cours",
+    "es": "Añadir la canción que suena",
+    "de": "Aktuellen Song hinzufügen",
+    "zh-Hans": "附上正在播放的歌曲",
+    "comment": "Phone profile page: switch under the post box that adds the current song to the post."
+  },
+  "Rpm_Profile_Reply": {
+    "en": "Reply",
+    "fr": "Répondre",
+    "es": "Responder",
+    "de": "Antworten",
+    "zh-Hans": "回复",
+    "comment": "Phone profile page: key under a post or reply."
+  },
+  "Rpm_Profile_RepliesOne": {
+    "en": "1 reply",
+    "fr": "1 réponse",
+    "es": "1 respuesta",
+    "de": "1 Antwort",
+    "zh-Hans": "1 条回复",
+    "comment": "Phone profile page: count of replies under a post, one."
+  },
+  "Rpm_Profile_Replies": {
+    "en": "{0} replies",
+    "fr": "{0} réponses",
+    "es": "{0} respuestas",
+    "de": "{0} Antworten",
+    "zh-Hans": "{0} 条回复",
+    "comment": "Phone profile page: count of replies under a post."
+  },
+  "Rpm_Profile_ReplyPrompt": {
+    "en": "Write a reply",
+    "fr": "Écrire une réponse",
+    "es": "Escribe una respuesta",
+    "de": "Antwort schreiben",
+    "zh-Hans": "写回复",
+    "comment": "Phone profile page: placeholder in the reply box."
+  },
+  "Rpm_Profile_ReplyDeleted": {
+    "en": "Deleted reply",
+    "fr": "Réponse supprimée",
+    "es": "Respuesta eliminada",
+    "de": "Gelöschte Antwort",
+    "zh-Hans": "回复已删除",
+    "comment": "Phone profile page: shown in place of a deleted reply that still has replies under it."
+  },
+  "Rpm_Profile_FeedEmptyOwn": {
+    "en": "Nothing here yet. Write your first post above.",
+    "fr": "Rien ici pour l’instant. Écrivez votre premier message ci-dessus.",
+    "es": "Aún no hay nada. Escribe tu primera publicación arriba.",
+    "de": "Noch nichts hier. Schreib oben deinen ersten Beitrag.",
+    "zh-Hans": "这里还什么都没有。在上方写下你的第一条动态。",
+    "comment": "Phone profile page: your own page with no posts or reviews."
+  },
+  "Rpm_Profile_FeedEmpty": {
+    "en": "No posts or reviews yet.",
+    "fr": "Aucun message ni avis pour l’instant.",
+    "es": "Aún no hay publicaciones ni reseñas.",
+    "de": "Noch keine Beiträge oder Rezensionen.",
+    "zh-Hans": "还没有动态或评论。",
+    "comment": "Phone profile page: someone else's page with no posts or reviews."
+  },
+  "Rpm_Profile_OpenAlbum": {
+    "en": "Open album",
+    "fr": "Ouvrir l’album",
+    "es": "Abrir álbum",
+    "de": "Album öffnen",
+    "zh-Hans": "打开专辑",
+    "comment": "Phone profile page: key on a review in the feed, shown when the album is in your collection."
+  },
+  "Rpm_Profile_Offline": {
+    "en": "This profile could not be loaded. Check your connection and try again.",
+    "fr": "Impossible de charger ce profil. Vérifiez votre connexion et réessayez.",
+    "es": "No se pudo cargar este perfil. Comprueba tu conexión e inténtalo de nuevo.",
+    "de": "Dieses Profil konnte nicht geladen werden. Prüfe deine Verbindung und versuche es erneut.",
+    "zh-Hans": "无法加载此个人主页。请检查网络连接后重试。",
+    "comment": "Phone profile page: the page could not be read."
+  },
+  "Rpm_Profile_Menu": {
+    "en": "Menu",
+    "fr": "Menu",
+    "es": "Menú",
+    "de": "Menü",
+    "zh-Hans": "菜单",
+    "comment": "Phone profile page: accessibility label of the round menu key at the top right."
+  },
+  "Rpm_Profile_Back": {
+    "en": "Back",
+    "fr": "Retour",
+    "es": "Atrás",
+    "de": "Zurück",
+    "zh-Hans": "返回",
+    "comment": "Phone profile page: accessibility label of the round back key at the top left of someone else's page."
+  },
+  "Rpm_Profile_EditPage": {
+    "en": "Edit page",
+    "fr": "Modifier la page",
+    "es": "Editar página",
+    "de": "Seite bearbeiten",
+    "zh-Hans": "编辑主页",
+    "comment": "Phone profile page: menu item that opens the name editor."
+  },
+  "Rpm_Profile_Name": {
+    "en": "Display name",
+    "fr": "Nom affiché",
+    "es": "Nombre visible",
+    "de": "Anzeigename",
+    "zh-Hans": "显示名称",
+    "comment": "Phone profile page: label of the name field on the edit page."
+  },
+  "Rpm_Profile_Save": {
+    "en": "Save",
+    "fr": "Enregistrer",
+    "es": "Guardar",
+    "de": "Speichern",
+    "zh-Hans": "保存",
+    "comment": "Phone profile page: key that saves the edit page."
+  },
+  "Rpm_Profile_ChangePhoto": {
+    "en": "Change profile photo",
+    "fr": "Changer la photo de profil",
+    "es": "Cambiar foto de perfil",
+    "de": "Profilfoto ändern",
+    "zh-Hans": "更换头像",
+    "comment": "Phone profile page: menu item."
+  },
+  "Rpm_Profile_RemovePhoto": {
+    "en": "Remove photo",
+    "fr": "Supprimer la photo",
+    "es": "Quitar foto",
+    "de": "Foto entfernen",
+    "zh-Hans": "移除头像",
+    "comment": "Phone profile page: menu item."
+  },
+  "Rpm_Profile_ChooseBanner": {
+    "en": "Choose banner",
+    "fr": "Choisir une bannière",
+    "es": "Elegir portada",
+    "de": "Banner wählen",
+    "zh-Hans": "选择横幅",
+    "comment": "Phone profile page: menu item that picks the wide picture at the top of the page."
+  },
+  "Rpm_Profile_RemoveBanner": {
+    "en": "Remove banner",
+    "fr": "Supprimer la bannière",
+    "es": "Quitar portada",
+    "de": "Banner entfernen",
+    "zh-Hans": "移除横幅",
+    "comment": "Phone profile page: menu item."
+  },
+  "Rpm_Profile_PictureFailed": {
+    "en": "The picture could not be uploaded. Try a different one.",
+    "fr": "Impossible d’envoyer l’image. Essayez-en une autre.",
+    "es": "No se pudo subir la imagen. Prueba con otra.",
+    "de": "Das Bild konnte nicht hochgeladen werden. Versuche ein anderes.",
+    "zh-Hans": "无法上传图片，请换一张试试。",
+    "comment": "Phone profile page: a photo or banner upload failed."
+  },
+  "Rpm_Profile_AddFriend": {
+    "en": "Add friend",
+    "fr": "Ajouter en ami",
+    "es": "Añadir amigo",
+    "de": "Als Freund hinzufügen",
+    "zh-Hans": "加为好友",
+    "comment": "Phone profile page: key under someone else's name."
+  },
+  "Rpm_Profile_Requested": {
+    "en": "Request sent",
+    "fr": "Demande envoyée",
+    "es": "Solicitud enviada",
+    "de": "Anfrage gesendet",
+    "zh-Hans": "已发送请求",
+    "comment": "Phone profile page: key under someone else's name after you asked to be friends."
+  },
+  "Rpm_Profile_CancelRequest": {
+    "en": "Cancel request",
+    "fr": "Annuler la demande",
+    "es": "Cancelar solicitud",
+    "de": "Anfrage zurückziehen",
+    "zh-Hans": "取消请求",
+    "comment": "Phone profile page: menu item while your friend request waits."
+  },
+  "Rpm_Profile_Accept": {
+    "en": "Accept",
+    "fr": "Accepter",
+    "es": "Aceptar",
+    "de": "Annehmen",
+    "zh-Hans": "接受",
+    "comment": "Phone profile page: key that accepts a friend request."
+  },
+  "Rpm_Profile_Decline": {
+    "en": "Decline",
+    "fr": "Refuser",
+    "es": "Rechazar",
+    "de": "Ablehnen",
+    "zh-Hans": "拒绝",
+    "comment": "Phone profile page: key that declines a friend request."
+  },
+  "Rpm_Profile_Friends": {
+    "en": "Friends",
+    "fr": "Amis",
+    "es": "Amigos",
+    "de": "Befreundet",
+    "zh-Hans": "好友",
+    "comment": "Phone profile page: key under the name of someone who is your friend."
+  },
+  "Rpm_Profile_RemoveFriend": {
+    "en": "Remove friend",
+    "fr": "Retirer des amis",
+    "es": "Eliminar amigo",
+    "de": "Freund entfernen",
+    "zh-Hans": "删除好友",
+    "comment": "Phone profile page: menu item."
+  },
+  "Rpm_Profile_Block": {
+    "en": "Block",
+    "fr": "Bloquer",
+    "es": "Bloquear",
+    "de": "Blockieren",
+    "zh-Hans": "屏蔽",
+    "comment": "Phone profile page: menu item and confirm key."
+  },
+  "Rpm_Profile_Unblock": {
+    "en": "Unblock",
+    "fr": "Débloquer",
+    "es": "Desbloquear",
+    "de": "Blockierung aufheben",
+    "zh-Hans": "取消屏蔽",
+    "comment": "Phone profile page: menu item and key on the page of someone you blocked."
+  },
+  "Rpm_Profile_BlockConfirm": {
+    "en": "Block {0}? You won't see each other's posts or replies, and any friendship between you ends.",
+    "fr": "Bloquer {0} ? Vous ne verrez plus les messages ni les réponses de l’autre, et toute amitié entre vous prend fin.",
+    "es": "¿Bloquear a {0}? No veréis las publicaciones ni las respuestas del otro, y cualquier amistad entre vosotros termina.",
+    "de": "{0} blockieren? Ihr seht eure Beiträge und Antworten nicht mehr, und eine Freundschaft zwischen euch endet.",
+    "zh-Hans": "屏蔽 {0}？你们将看不到对方的动态和回复，好友关系也会解除。",
+    "comment": "Phone profile page: question before blocking. {0} is the person's name."
+  },
+  "Rpm_Profile_Blocked": {
+    "en": "You blocked this person.",
+    "fr": "Vous avez bloqué cette personne.",
+    "es": "Has bloqueado a esta persona.",
+    "de": "Du hast diese Person blockiert.",
+    "zh-Hans": "你已屏蔽此人。",
+    "comment": "Phone profile page: shown in place of the feed on the page of someone you blocked."
+  },
+  "Rpm_Profile_DeletePost": {
+    "en": "Delete post",
+    "fr": "Supprimer le message",
+    "es": "Eliminar publicación",
+    "de": "Beitrag löschen",
+    "zh-Hans": "删除动态",
+    "comment": "Phone profile page: menu item on your own post."
+  },
+  "Rpm_Profile_DeleteReply": {
+    "en": "Delete reply",
+    "fr": "Supprimer la réponse",
+    "es": "Eliminar respuesta",
+    "de": "Antwort löschen",
+    "zh-Hans": "删除回复",
+    "comment": "Phone profile page: menu item on a reply you can delete."
+  },
+  "Rpm_Profile_ReportReply": {
+    "en": "Report this reply",
+    "fr": "Signaler cette réponse",
+    "es": "Denunciar esta respuesta",
+    "de": "Diese Antwort melden",
+    "zh-Hans": "举报此回复",
+    "comment": "Phone profile page: menu item on someone else's reply."
+  },
+  "Rpm_Profile_UnreadCount": {
+    "en": "{0} unread notifications",
+    "fr": "{0} notifications non lues",
+    "es": "{0} notificaciones sin leer",
+    "de": "{0} ungelesene Mitteilungen",
+    "zh-Hans": "{0} 条未读通知",
+    "comment": "Phone profile page: accessibility text for the badge on the menu key."
+  },
+  "Rpm_Notify_Title": {
+    "en": "Notifications",
+    "fr": "Notifications",
+    "es": "Notificaciones",
+    "de": "Mitteilungen",
+    "zh-Hans": "通知",
+    "comment": "Phone notifications page: title, and the menu item on your own page that opens it."
+  },
+  "Rpm_Notify_Empty": {
+    "en": "No notifications yet. Replies, votes and friend requests show up here.",
+    "fr": "Aucune notification pour l’instant. Les réponses, votes et demandes d’ami s’affichent ici.",
+    "es": "Aún no hay notificaciones. Aquí aparecen las respuestas, los votos y las solicitudes de amistad.",
+    "de": "Noch keine Mitteilungen. Antworten, Stimmen und Freundschaftsanfragen erscheinen hier.",
+    "zh-Hans": "还没有通知。回复、投票和好友请求会显示在这里。",
+    "comment": "Phone notifications page: empty list."
+  },
+  "Rpm_Notify_Reply": {
+    "en": "{0} replied to you",
+    "fr": "{0} vous a répondu",
+    "es": "{0} te ha respondido",
+    "de": "{0} hat dir geantwortet",
+    "zh-Hans": "{0} 回复了你",
+    "comment": "Phone notifications page: someone replied to your post or reply."
+  },
+  "Rpm_Notify_Vote": {
+    "en": "{0} voted on your post",
+    "fr": "{0} a voté pour votre message",
+    "es": "{0} ha votado tu publicación",
+    "de": "{0} hat über deinen Beitrag abgestimmt",
+    "zh-Hans": "{0} 给你的动态投了票",
+    "comment": "Phone notifications page: one vote on your post or reply."
+  },
+  "Rpm_Notify_Votes": {
+    "en": "{0} new votes on your post",
+    "fr": "{0} nouveaux votes sur votre message",
+    "es": "{0} votos nuevos en tu publicación",
+    "de": "{0} neue Stimmen zu deinem Beitrag",
+    "zh-Hans": "你的动态有 {0} 个新投票",
+    "comment": "Phone notifications page: several votes on one post or reply. {0} is the number."
+  },
+  "Rpm_Notify_FriendRequest": {
+    "en": "{0} wants to be friends",
+    "fr": "{0} veut devenir votre ami",
+    "es": "{0} quiere ser tu amigo",
+    "de": "{0} möchte mit dir befreundet sein",
+    "zh-Hans": "{0} 想加你为好友",
+    "comment": "Phone notifications page: a friend request, with Accept and Decline keys."
+  },
+  "Rpm_Notify_FriendAccepted": {
+    "en": "{0} accepted your friend request",
+    "fr": "{0} a accepté votre demande d’ami",
+    "es": "{0} ha aceptado tu solicitud de amistad",
+    "de": "{0} hat deine Freundschaftsanfrage angenommen",
+    "zh-Hans": "{0} 接受了你的好友请求",
+    "comment": "Phone notifications page: a request you sent was accepted."
+  },
+  "Rpm_Notify_FriendReview": {
+    "en": "{0} reviewed {1}",
+    "fr": "{0} a donné son avis sur {1}",
+    "es": "{0} ha reseñado {1}",
+    "de": "{0} hat {1} rezensiert",
+    "zh-Hans": "{0} 评论了《{1}》",
+    "comment": "Phone notifications page: a friend wrote a review. {1} is the album title."
+  },
+  "Rpm_Settings_ShareListening": {
+    "en": "Show what I'm listening to",
+    "fr": "Afficher ce que j’écoute",
+    "es": "Mostrar lo que escucho",
+    "de": "Zeigen, was ich höre",
+    "zh-Hans": "显示我正在听的歌",
+    "comment": "Phone settings, My account: switch."
+  },
+  "Rpm_Settings_ShareListeningHint": {
+    "en": "Your profile shows the song you're playing to anyone who opens it.",
+    "fr": "Votre profil affiche le morceau en cours à toute personne qui l’ouvre.",
+    "es": "Tu perfil muestra la canción que suena a cualquiera que lo abra.",
+    "de": "Dein Profil zeigt allen, die es öffnen, welchen Song du gerade spielst.",
+    "zh-Hans": "任何打开你主页的人都能看到你正在播放的歌曲。",
+    "comment": "Phone settings, My account: hint under the switch."
+  },
+  "Rpm_Profile_ChooseBackground": {
+    "en": "Choose background",
+    "fr": "Choisir un fond",
+    "es": "Elegir fondo",
+    "de": "Hintergrund wählen",
+    "zh-Hans": "选择背景",
+    "comment": "Phone profile page: menu item that picks what the page is drawn on, a colour or one of the app's backgrounds."
+  },
+  "Rpm_Profile_Colours": {
+    "en": "Colours",
+    "fr": "Couleurs",
+    "es": "Colores",
+    "de": "Farben",
+    "zh-Hans": "颜色",
+    "comment": "Phone profile page: heading over the solid colours in the background picker."
+  },
+  "Rpm_Profile_SampleNote": {
+    "en": "Sample posts. Profiles are not live yet.",
+    "fr": "Exemples de messages. Les profils ne sont pas encore en ligne.",
+    "es": "Publicaciones de ejemplo. Los perfiles aún no están activos.",
+    "de": "Beispielbeiträge. Profile sind noch nicht online.",
+    "zh-Hans": "示例动态。个人主页尚未上线。",
+    "comment": "Phone profile page: line above the feed in a test build when the server has no profile pages yet, so sample posts are shown."
+  },
+  "Rpm_Search_Recent": {
+    "en": "Recent searches",
+    "fr": "Recherches récentes",
+    "es": "Búsquedas recientes",
+    "de": "Letzte Suchen",
+    "zh-Hans": "最近搜索",
+    "comment": "Phone collection search: heading over the earlier searches, shown while the search box is empty."
+  },
+  "Rpm_Search_ClearRecent": {
+    "en": "Clear",
+    "fr": "Effacer",
+    "es": "Borrar",
+    "de": "Löschen",
+    "zh-Hans": "清除",
+    "comment": "Phone collection search: key beside 'Recent searches' that removes them all."
+  },
+  "Rpm_Search_Forget": {
+    "en": "Remove from recent searches",
+    "fr": "Retirer des recherches récentes",
+    "es": "Quitar de búsquedas recientes",
+    "de": "Aus letzten Suchen entfernen",
+    "zh-Hans": "从最近搜索中移除",
+    "comment": "Phone collection search: accessibility label of the cross on one earlier search."
+  },
+  "Rpm_Profile_Post": {
+    "en": "Post",
+    "fr": "Publier",
+    "es": "Publicar",
+    "de": "Posten",
+    "zh-Hans": "发布",
+    "comment": "Phone profile page: key beside the box for a new post."
+  },
+  "Rpm_Profile_NowPlaying": {
+    "en": "{0} by {1}",
+    "fr": "{0} de {1}",
+    "es": "{0} de {1}",
+    "de": "{0} von {1}",
+    "zh-Hans": "{1} 的《{0}》",
+    "comment": "Phone profile page: the bar under the name with what the person is playing. {0} the song, {1} the artist."
+  },
+  "Rpm_Profile_Likes": {
+    "en": "{0} likes",
+    "fr": "{0} j’aime",
+    "es": "{0} me gusta",
+    "de": "{0} Likes",
+    "zh-Hans": "{0} 个赞",
+    "comment": "Phone profile page: accessibility text of the thumbs-up count on a post or reply."
+  },
+  "Rpm_Profile_Dislikes": {
+    "en": "{0} dislikes",
+    "fr": "{0} je n’aime pas",
+    "es": "{0} no me gusta",
+    "de": "{0} Dislikes",
+    "zh-Hans": "{0} 个踩",
+    "comment": "Phone profile page: accessibility text of the thumbs-down count on a post or reply."
+  },
+  "Rpm_Badge_FirstSpin": {
+    "en": "First Spin",
+    "fr": "Premier tour",
+    "es": "Primera vuelta",
+    "de": "Erste Runde",
+    "zh-Hans": "初次转动",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_FirstSpin_Need": {
+    "en": "Add your first album",
+    "fr": "Ajoutez votre premier album",
+    "es": "Añade tu primer álbum",
+    "de": "Füge dein erstes Album hinzu",
+    "zh-Hans": "添加第一张专辑",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_CrateDigger": {
+    "en": "Crate Digger",
+    "fr": "Fouilleur de bacs",
+    "es": "Buscador de vinilos",
+    "de": "Plattenwühler",
+    "zh-Hans": "淘碟达人",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_CrateDigger_Need": {
+    "en": "Have 50 albums",
+    "fr": "Avoir 50 albums",
+    "es": "Tener 50 álbumes",
+    "de": "50 Alben haben",
+    "zh-Hans": "拥有 50 张专辑",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_RecordCollector": {
+    "en": "Record Collector",
+    "fr": "Collectionneur",
+    "es": "Coleccionista",
+    "de": "Plattensammler",
+    "zh-Hans": "唱片收藏家",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_RecordCollector_Need": {
+    "en": "Have 250 albums",
+    "fr": "Avoir 250 albums",
+    "es": "Tener 250 álbumes",
+    "de": "250 Alben haben",
+    "zh-Hans": "拥有 250 张专辑",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Connoisseur": {
+    "en": "Music Connoisseur",
+    "fr": "Fin connaisseur",
+    "es": "Melómano experto",
+    "de": "Musikkenner",
+    "zh-Hans": "音乐鉴赏家",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Connoisseur_Need": {
+    "en": "Have 1,000 albums",
+    "fr": "Avoir 1 000 albums",
+    "es": "Tener 1000 álbumes",
+    "de": "1.000 Alben haben",
+    "zh-Hans": "拥有 1,000 张专辑",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_LivingArchive": {
+    "en": "Living Archive",
+    "fr": "Archive vivante",
+    "es": "Archivo viviente",
+    "de": "Lebendes Archiv",
+    "zh-Hans": "活体档案馆",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_LivingArchive_Need": {
+    "en": "Have 2,500 albums",
+    "fr": "Avoir 2 500 albums",
+    "es": "Tener 2500 álbumes",
+    "de": "2.500 Alben haben",
+    "zh-Hans": "拥有 2,500 张专辑",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_MuseumCurator": {
+    "en": "Museum Curator",
+    "fr": "Conservateur de musée",
+    "es": "Curador de museo",
+    "de": "Museumskurator",
+    "zh-Hans": "博物馆馆长",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_MuseumCurator_Need": {
+    "en": "Have 5,000 albums",
+    "fr": "Avoir 5 000 albums",
+    "es": "Tener 5000 álbumes",
+    "de": "5.000 Alben haben",
+    "zh-Hans": "拥有 5,000 张专辑",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_TenThousand": {
+    "en": "Ten Thousand Songs",
+    "fr": "Dix mille chansons",
+    "es": "Diez mil canciones",
+    "de": "Zehntausend Songs",
+    "zh-Hans": "万首歌曲",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_TenThousand_Need": {
+    "en": "Have 10,000 tracks",
+    "fr": "Avoir 10 000 morceaux",
+    "es": "Tener 10 000 canciones",
+    "de": "10.000 Titel haben",
+    "zh-Hans": "拥有 10,000 首曲目",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Rock": {
+    "en": "Rock Solid",
+    "fr": "Solide comme le rock",
+    "es": "Roca firme",
+    "de": "Felsenfest",
+    "zh-Hans": "摇滚铁粉",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Rock_Need": {
+    "en": "Make a fifth of your albums rock, at least 25",
+    "fr": "Un cinquième de vos albums en rock, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea rock, al menos 25",
+    "de": "Ein Fünftel deiner Alben Rock, mindestens 25",
+    "zh-Hans": "五分之一的专辑是摇滚，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Jazz": {
+    "en": "Jazz Cat",
+    "fr": "Jazzeux",
+    "es": "Gato de jazz",
+    "de": "Jazzkatze",
+    "zh-Hans": "爵士猫",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Jazz_Need": {
+    "en": "Make a fifth of your albums jazz, at least 25",
+    "fr": "Un cinquième de vos albums en jazz, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea jazz, al menos 25",
+    "de": "Ein Fünftel deiner Alben Jazz, mindestens 25",
+    "zh-Hans": "五分之一的专辑是爵士，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Classical": {
+    "en": "Maestro",
+    "fr": "Maestro",
+    "es": "Maestro",
+    "de": "Maestro",
+    "zh-Hans": "大师",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Classical_Need": {
+    "en": "Make a fifth of your albums classical, at least 25",
+    "fr": "Un cinquième de vos albums en classique, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea clásica, al menos 25",
+    "de": "Ein Fünftel deiner Alben Klassik, mindestens 25",
+    "zh-Hans": "五分之一的专辑是古典，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_HipHop": {
+    "en": "Beat Head",
+    "fr": "Accro aux beats",
+    "es": "Cabeza de ritmo",
+    "de": "Beat-Kopf",
+    "zh-Hans": "节拍控",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_HipHop_Need": {
+    "en": "Make a fifth of your albums hip-hop, at least 25",
+    "fr": "Un cinquième de vos albums en hip-hop, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea hip-hop, al menos 25",
+    "de": "Ein Fünftel deiner Alben Hip-Hop, mindestens 25",
+    "zh-Hans": "五分之一的专辑是嘻哈，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Electronic": {
+    "en": "Synth Wizard",
+    "fr": "Sorcier du synthé",
+    "es": "Mago del sintetizador",
+    "de": "Synth-Zauberer",
+    "zh-Hans": "合成器巫师",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Electronic_Need": {
+    "en": "Make a fifth of your albums electronic, at least 25",
+    "fr": "Un cinquième de vos albums en électro, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea electrónica, al menos 25",
+    "de": "Ein Fünftel deiner Alben Elektronik, mindestens 25",
+    "zh-Hans": "五分之一的专辑是电子，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Metal": {
+    "en": "Headbanger",
+    "fr": "Headbanger",
+    "es": "Headbanger",
+    "de": "Headbanger",
+    "zh-Hans": "甩头族",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Metal_Need": {
+    "en": "Make a fifth of your albums metal, at least 25",
+    "fr": "Un cinquième de vos albums en métal, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea metal, al menos 25",
+    "de": "Ein Fünftel deiner Alben Metal, mindestens 25",
+    "zh-Hans": "五分之一的专辑是金属，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Pop": {
+    "en": "Pop Star",
+    "fr": "Pop star",
+    "es": "Estrella del pop",
+    "de": "Popstar",
+    "zh-Hans": "流行之星",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Pop_Need": {
+    "en": "Make a fifth of your albums pop, at least 25",
+    "fr": "Un cinquième de vos albums en pop, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea pop, al menos 25",
+    "de": "Ein Fünftel deiner Alben Pop, mindestens 25",
+    "zh-Hans": "五分之一的专辑是流行，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Soul": {
+    "en": "Soul Searcher",
+    "fr": "Âme soul",
+    "es": "Buscador de soul",
+    "de": "Soul-Seele",
+    "zh-Hans": "灵魂探索者",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Soul_Need": {
+    "en": "Make a fifth of your albums soul, R&B or funk, at least 25",
+    "fr": "Un cinquième de vos albums en soul, R&B ou funk, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea soul, R&B o funk, al menos 25",
+    "de": "Ein Fünftel deiner Alben Soul, R&B oder Funk, mindestens 25",
+    "zh-Hans": "五分之一的专辑是灵魂乐、R&B 或放克，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Folk": {
+    "en": "Folk Hero",
+    "fr": "Héros folk",
+    "es": "Héroe folk",
+    "de": "Folk-Held",
+    "zh-Hans": "民谣英雄",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Folk_Need": {
+    "en": "Make a fifth of your albums folk or country, at least 25",
+    "fr": "Un cinquième de vos albums en folk ou country, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea folk o country, al menos 25",
+    "de": "Ein Fünftel deiner Alben Folk oder Country, mindestens 25",
+    "zh-Hans": "五分之一的专辑是民谣或乡村，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Blues": {
+    "en": "Blue Note",
+    "fr": "Note bleue",
+    "es": "Nota azul",
+    "de": "Blue Note",
+    "zh-Hans": "蓝调音符",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Blues_Need": {
+    "en": "Make a fifth of your albums blues, at least 25",
+    "fr": "Un cinquième de vos albums en blues, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea blues, al menos 25",
+    "de": "Ein Fünftel deiner Alben Blues, mindestens 25",
+    "zh-Hans": "五分之一的专辑是蓝调，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Reggae": {
+    "en": "Island Time",
+    "fr": "À l'heure des îles",
+    "es": "Ritmo isleño",
+    "de": "Inselzeit",
+    "zh-Hans": "海岛时光",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Reggae_Need": {
+    "en": "Make a fifth of your albums reggae, at least 25",
+    "fr": "Un cinquième de vos albums en reggae, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea reggae, al menos 25",
+    "de": "Ein Fünftel deiner Alben Reggae, mindestens 25",
+    "zh-Hans": "五分之一的专辑是雷鬼，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Latin": {
+    "en": "Latin Heat",
+    "fr": "Chaleur latine",
+    "es": "Calor latino",
+    "de": "Latin-Feuer",
+    "zh-Hans": "拉丁热浪",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Latin_Need": {
+    "en": "Make a fifth of your albums Latin, at least 25",
+    "fr": "Un cinquième de vos albums en latino, au moins 25",
+    "es": "Que una quinta parte de tus álbumes sea latina, al menos 25",
+    "de": "Ein Fünftel deiner Alben Latin, mindestens 25",
+    "zh-Hans": "五分之一的专辑是拉丁，至少 25 张",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_GenreHopper": {
+    "en": "Genre Hopper",
+    "fr": "Touche-à-tout",
+    "es": "Saltagéneros",
+    "de": "Genre-Hopper",
+    "zh-Hans": "流派漫游者",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_GenreHopper_Need": {
+    "en": "Have 5 albums in each of 10 genres",
+    "fr": "Avoir 5 albums dans 10 genres",
+    "es": "Tener 5 álbumes en 10 géneros",
+    "de": "5 Alben in 10 Genres haben",
+    "zh-Hans": "在 10 个流派中各有 5 张专辑",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badge_Omnivore": {
+    "en": "Omnivore",
+    "fr": "Omnivore",
+    "es": "Omnívoro",
+    "de": "Allesfresser",
+    "zh-Hans": "杂食者",
+    "comment": "Phone profile badge name, shown in a coloured pill under the person's name. Short and playful."
+  },
+  "Rpm_Badge_Omnivore_Need": {
+    "en": "Have 5 albums in each of 20 genres",
+    "fr": "Avoir 5 albums dans 20 genres",
+    "es": "Tener 5 álbumes en 20 géneros",
+    "de": "5 Alben in 20 Genres haben",
+    "zh-Hans": "在 20 个流派中各有 5 张专辑",
+    "comment": "Phone badges page: what unlocks this badge, under a badge not yet unlocked."
+  },
+  "Rpm_Badges_Title": {
+    "en": "Badges",
+    "fr": "Badges",
+    "es": "Insignias",
+    "de": "Abzeichen",
+    "zh-Hans": "徽章",
+    "comment": "Phone profile page: menu item and title of the page where the person picks the badge under their name."
+  },
+  "Rpm_Badges_Colour": {
+    "en": "Colour",
+    "fr": "Couleur",
+    "es": "Color",
+    "de": "Farbe",
+    "zh-Hans": "颜色",
+    "comment": "Phone badges page: heading over the colours of the badge."
+  },
+  "Rpm_Badges_Unlocked": {
+    "en": "Unlocked",
+    "fr": "Débloqués",
+    "es": "Desbloqueadas",
+    "de": "Freigeschaltet",
+    "zh-Hans": "已解锁",
+    "comment": "Phone badges page: heading over the badges the person has."
+  },
+  "Rpm_Badges_Locked": {
+    "en": "Still to unlock",
+    "fr": "À débloquer",
+    "es": "Por desbloquear",
+    "de": "Noch freizuschalten",
+    "zh-Hans": "待解锁",
+    "comment": "Phone badges page: heading over the badges the person does not have yet."
+  },
+  "Rpm_Badges_NoBadge": {
+    "en": "No badge",
+    "fr": "Aucun badge",
+    "es": "Sin insignia",
+    "de": "Kein Abzeichen",
+    "zh-Hans": "不显示徽章",
+    "comment": "Phone badges page: choice that shows no badge under the name."
+  },
+  "Rpm_Notify_Badge": {
+    "en": "You unlocked the {0} badge",
+    "fr": "Vous avez débloqué le badge {0}",
+    "es": "Has desbloqueado la insignia {0}",
+    "de": "Du hast das Abzeichen {0} freigeschaltet",
+    "zh-Hans": "你解锁了徽章「{0}」",
+    "comment": "Phone notifications page: a badge was unlocked. {0} is the badge's name."
+  },
+  "Rpm_Profile_BannerPhoto": {
+    "en": "Choose a photo",
+    "fr": "Choisir une photo",
+    "es": "Elegir una foto",
+    "de": "Foto wählen",
+    "zh-Hans": "选择照片",
+    "comment": "Phone profile page: choice under Choose banner that picks a photo from the phone."
+  },
+  "Rpm_Profile_BannerPlaying": {
+    "en": "Artist image of what's playing",
+    "fr": "Image de l'artiste en cours d'écoute",
+    "es": "Imagen del artista que suena",
+    "de": "Bild des gerade gespielten Künstlers",
+    "zh-Hans": "正在播放的艺人图片",
+    "comment": "Phone profile page: choice under Choose banner. The banner then shows a photo of the artist the person is playing."
+  },
+  "Rpm_Tab_Feed": {
+    "en": "Feed",
+    "fr": "Fil",
+    "es": "Novedades",
+    "de": "Feed",
+    "zh-Hans": "动态",
+    "comment": "Phone tab bar label for everyone's posts, in place of Profile."
+  },
+  "Rpm_Feed_Empty": {
+    "en": "Nothing here yet. Posts from everyone show up here.",
+    "fr": "Rien ici pour l’instant. Les messages de tout le monde s’affichent ici.",
+    "es": "Aún no hay nada. Aquí aparecen las publicaciones de todos.",
+    "de": "Noch nichts hier. Beiträge von allen erscheinen hier.",
+    "zh-Hans": "这里还什么都没有。所有人的动态会显示在这里。",
+    "comment": "Phone Feed tab: no posts yet."
+  },
+  "Rpm_Feed_MyProfile": {
+    "en": "My profile",
+    "fr": "Mon profil",
+    "es": "Mi perfil",
+    "de": "Mein Profil",
+    "zh-Hans": "我的主页",
+    "comment": "Phone Feed tab: accessibility label of the key at the top right that opens the reader's own profile page."
+  },
+  "Rpm_Profile_UnsavedTitle": {
+    "en": "Apply your changes?",
+    "fr": "Appliquer vos modifications ?",
+    "es": "¿Aplicar tus cambios?",
+    "de": "Änderungen übernehmen?",
+    "zh-Hans": "应用你的更改？",
+    "comment": "Phone profile edit page: asked when the page is closed with changes not yet saved. The two answers are Rpm_Profile_ApplyChanges and Rpm_Profile_Discard."
+  },
+  "Rpm_Profile_ApplyChanges": {
+    "en": "Apply changes",
+    "fr": "Appliquer",
+    "es": "Aplicar cambios",
+    "de": "Übernehmen",
+    "zh-Hans": "应用更改",
+    "comment": "Phone profile edit page: answer that saves the changes and closes the page."
+  },
+  "Rpm_Profile_Discard": {
+    "en": "Discard",
+    "fr": "Ignorer",
+    "es": "Descartar",
+    "de": "Verwerfen",
+    "zh-Hans": "放弃",
+    "comment": "Phone profile edit page: answer that closes the page without saving the changes."
+  },
+  "Rpm_Profile_PhotoTitle": {
+    "en": "Profile photo",
+    "fr": "Photo de profil",
+    "es": "Foto de perfil",
+    "de": "Profilbild",
+    "zh-Hans": "头像",
+    "comment": "Phone profile edit page: heading of the card with the profile photo."
+  },
+  "Rpm_Profile_BannerTitle": {
+    "en": "Banner",
+    "fr": "Bannière",
+    "es": "Banner",
+    "de": "Banner",
+    "zh-Hans": "横幅",
+    "comment": "Phone profile edit page: heading of the card with the picture across the top of the page."
+  },
+  "Rpm_Profile_BannerOwn": {
+    "en": "Your own photo",
+    "fr": "Votre propre photo",
+    "es": "Tu propia foto",
+    "de": "Dein eigenes Foto",
+    "zh-Hans": "你自己的照片",
+    "comment": "Phone profile edit page: choice in the Banner card for a photo the person picks, beside Rpm_Profile_BannerPlaying."
+  },
+  "Rpm_Profile_ReadReview": {
+    "en": "Read full review",
+    "fr": "Lire la critique",
+    "es": "Leer la reseña completa",
+    "de": "Ganze Rezension lesen",
+    "zh-Hans": "阅读完整评论",
+    "comment": "Phone profile page and Feed tab: link under a review card that opens the whole review."
+  },
+  "Rpm_Profile_Quoted": {
+    "en": "“{0}”",
+    "fr": "« {0} »",
+    "es": "«{0}»",
+    "de": "„{0}“",
+    "zh-Hans": "“{0}”",
+    "comment": "Phone profile page and Feed tab: a review's text in quotation marks. {0} is the text. Use the language's own quotation marks."
   },
   "Rpm_Profile_Subtitle": {
     "en": "Your account, your storage, and how the app behaves.",
