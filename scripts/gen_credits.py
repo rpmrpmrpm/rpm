@@ -7,7 +7,7 @@ What it writes
     RPM.Desktop/Assets/Licenses/*.txt                       the licence texts it shows
     RPM.iOS/Modules/RPMKit/Sources/RPMKit/CreditsData.swift the iPhone's list
     RPM.iOS/Modules/RPMKit/Sources/RPMKit/Licenses/*.txt    the licence texts it shows
-    RPM.Android/phone/src/main/java/com/rpm/player/phone/profile/CreditsData.kt
+    RPM.Android/phone/src/main/java/com/rpm/player/phone/settings/CreditsData.kt
                                                             the Android phone's list
     RPM.Android/phone/src/main/assets/credits/*.txt         the licence texts it shows
     rpm.Api/Views/Site/Credits.cshtml                       rpmrpmrpm.com/credits, every head's entries
@@ -90,7 +90,7 @@ BUILD_SCRIPT = workspace.path("scripts", "build-ffmpeg.sh")
 # the table can be written there without touching the shared checkout.
 ANDROID = os.environ.get("RPM_ANDROID") or workspace.path("RPM.Android")
 KT_OUT = os.path.join(
-    ANDROID, "phone", "src", "main", "java", "com", "rpm", "player", "phone", "profile", "CreditsData.kt")
+    ANDROID, "phone", "src", "main", "java", "com", "rpm", "player", "phone", "settings", "CreditsData.kt")
 KT_LICENSES = os.path.join(ANDROID, "phone", "src", "main", "assets", "credits")
 # Where the Android phone carries the photographs, as the scripts that copy them write them.
 ANDROID_GENRE_PHOTOS = os.path.join(ANDROID, "phone", "src", "main", "assets", "genre-photos")
@@ -727,7 +727,7 @@ def write_kotlin(credits: dict, sections: list[dict]) -> None:
     lines = [
         BANNER,
         "",
-        "package com.rpm.player.phone.profile",
+        "package com.rpm.player.phone.settings",
         "",
         "import com.rpm.player.core.R",
         "",
