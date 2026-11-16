@@ -10455,6 +10455,14 @@
     "zh-Hans": "导入",
     "comment": "Heading of the import queue pane; the folder being imported runs underneath."
   },
+  "Queue_Close": {
+    "en": "Close",
+    "fr": "Fermer",
+    "es": "Cerrar",
+    "de": "Schließen",
+    "zh-Hans": "关闭",
+    "comment": "Tooltip and accessible name of the X at the top right of the import pane. It closes the pane and shows what was there before; the queue is kept."
+  },
   "Queue_ImportAction": {
     "en": "Import",
     "fr": "Importer",
