@@ -12751,6 +12751,22 @@
     "zh-Hans": "仅显示收藏的专辑",
     "comment": "Tooltip on the heart toggle in the library header that filters the album wall and list."
   },
+  "Artists_FavoritesOnly": {
+    "en": "Favourite artists only",
+    "fr": "Artistes favoris uniquement",
+    "es": "Solo artistas favoritos",
+    "de": "Nur Lieblingskünstler",
+    "zh-Hans": "仅显示收藏的艺人",
+    "comment": "Tooltip on the heart toggle in the artists wall's header: it narrows the wall to the artists with a hearted record or song."
+  },
+  "Library_CardSize": {
+    "en": "Card size",
+    "fr": "Taille des cartes",
+    "es": "Tamaño de las tarjetas",
+    "de": "Kartengröße",
+    "zh-Hans": "卡片大小",
+    "comment": "Tooltip on the size slider in the artists and genres walls' headers."
+  },
   "Playlists_FavoriteTracks": {
     "en": "Favourite tracks",
     "fr": "Titres favoris",
