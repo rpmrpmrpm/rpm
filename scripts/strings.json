@@ -8060,6 +8060,14 @@
     "zh-Hans": "我的主页",
     "comment": "Phone Feed tab: accessibility label of the key at the top right that opens the reader's own profile page."
   },
+  "Rpm_Profile_Heading": {
+    "en": "Profile",
+    "fr": "Profil",
+    "es": "Perfil",
+    "de": "Profil",
+    "zh-Hans": "主页",
+    "comment": "Desktop Feed pane: the large heading over a person's page and over the edit page, in place of Feed."
+  },
   "Rpm_Profile_UnsavedTitle": {
     "en": "Apply your changes?",
     "fr": "Appliquer vos modifications ?",
