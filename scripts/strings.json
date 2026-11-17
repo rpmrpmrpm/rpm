@@ -11967,6 +11967,38 @@
     "zh-Hans": "避免在艺人背景图中裁切到人脸",
     "comment": "Preflight purpose line for the face-detection model."
   },
+  "Preflight_FaultNotSet": {
+    "en": "not set",
+    "fr": "non défini",
+    "es": "sin definir",
+    "de": "nicht gesetzt",
+    "zh-Hans": "未设置",
+    "comment": "Preflight fault: a value this build of rpm was made without, such as its API key."
+  },
+  "Preflight_BuildIntro": {
+    "en": "This copy of rpm was built without a setting it needs, so it has stopped rather than run without it.",
+    "fr": "Cette copie de rpm a été compilée sans un réglage nécessaire. rpm s'est donc arrêté au lieu de fonctionner sans.",
+    "es": "Esta copia de rpm se compiló sin un ajuste que necesita, así que se ha detenido en lugar de funcionar sin él.",
+    "de": "Diese Kopie von rpm wurde ohne eine benötigte Einstellung erstellt. rpm hat deshalb angehalten, statt ohne sie zu laufen.",
+    "zh-Hans": "此 rpm 副本在构建时缺少一项必需的设置，因此已停止运行，而不是在缺少该设置的情况下运行。",
+    "comment": "Sentence under the preflight heading when only build settings failed (a build from source without its API key). Replaces Preflight_Intro, which talks about the installation."
+  },
+  "Preflight_AppKey": {
+    "en": "Connects rpm to its online service: album and artist details, artwork, lyrics, radio and crash reports",
+    "fr": "Connecte rpm à son service en ligne : infos sur les albums et les artistes, pochettes, paroles, radio et rapports de plantage",
+    "es": "Conecta rpm con su servicio en línea: datos de álbumes y artistas, carátulas, letras, radio e informes de fallos",
+    "de": "Verbindet rpm mit seinem Onlinedienst: Album- und Künstlerinfos, Cover, Songtexte, Radio und Absturzberichte",
+    "zh-Hans": "将 rpm 连接到其在线服务：专辑和艺人信息、封面、歌词、电台和崩溃报告",
+    "comment": "Preflight purpose line for the rpm API key (RPM_APP_KEY) compiled into the build."
+  },
+  "Preflight_AppKeyFix": {
+    "en": "Set RPM_APP_KEY to your developer key from rpmrpmrpm.com/developer, then build rpm again.",
+    "fr": "Définissez RPM_APP_KEY avec votre clé de développeur de rpmrpmrpm.com/developer, puis recompilez rpm.",
+    "es": "Define RPM_APP_KEY con tu clave de desarrollador de rpmrpmrpm.com/developer y vuelve a compilar rpm.",
+    "de": "Setzen Sie RPM_APP_KEY auf Ihren Entwicklerschlüssel von rpmrpmrpm.com/developer und erstellen Sie rpm neu.",
+    "zh-Hans": "将 RPM_APP_KEY 设置为你在 rpmrpmrpm.com/developer 获取的开发者密钥，然后重新构建 rpm。",
+    "comment": "Preflight line under the API key row: how a developer building rpm from source sets the key. RPM_APP_KEY and the address stay as they are."
+  },
   "Recognize_SourceManual": {
     "en": "edited manually",
     "fr": "modifié manuellement",
@@ -15254,6 +15286,38 @@
     "de": "Cover werden auf diesem Telefon behalten, damit sie sofort erscheinen. Sie werden bei Bedarf erneut geladen.",
     "zh-Hans": "封面保存在这台手机上，因此会立即显示。需要时会重新下载。",
     "comment": "Explains the artwork cache on the iPhone profile, under its size."
+  },
+  "Rpm_Profile_ShowMoreReplies": {
+    "en": "Show {0} more replies",
+    "fr": "Afficher {0} réponses de plus",
+    "es": "Mostrar {0} respuestas más",
+    "de": "{0} weitere Antworten anzeigen",
+    "zh-Hans": "显示另外 {0} 条回复",
+    "comment": "Desktop post thread: a key under a reply six levels deep that opens the replies under it. {0} is how many."
+  },
+  "Rpm_Profile_ShowMoreRepliesOne": {
+    "en": "Show 1 more reply",
+    "fr": "Afficher 1 réponse de plus",
+    "es": "Mostrar 1 respuesta más",
+    "de": "1 weitere Antwort anzeigen",
+    "zh-Hans": "显示另外 1 条回复",
+    "comment": "Desktop post thread: the same key when one reply is hidden under it."
+  },
+  "Rpm_Profile_SendFailed": {
+    "en": "This could not be sent. Check your connection and try again.",
+    "fr": "Impossible d'envoyer. Vérifiez votre connexion et réessayez.",
+    "es": "No se pudo enviar. Comprueba tu conexión e inténtalo de nuevo.",
+    "de": "Das konnte nicht gesendet werden. Prüfe deine Verbindung und versuche es erneut.",
+    "zh-Hans": "无法发送。请检查网络连接后重试。",
+    "comment": "Desktop profile page and post thread: a post or reply could not be sent."
+  },
+  "Rpm_Profile_SaveFailed": {
+    "en": "Your changes could not be saved. Check your connection and try again.",
+    "fr": "Impossible d'enregistrer vos modifications. Vérifiez votre connexion et réessayez.",
+    "es": "No se pudieron guardar los cambios. Comprueba tu conexión e inténtalo de nuevo.",
+    "de": "Deine Änderungen konnten nicht gespeichert werden. Prüfe deine Verbindung und versuche es erneut.",
+    "zh-Hans": "无法保存你的更改。请检查网络连接后重试。",
+    "comment": "Desktop profile edit page: Save failed on the server or the connection."
   },
   "Rpm_Queue_ToComeOne": {
     "en": "1 track to come",

@@ -49,8 +49,11 @@ can be revoked, and requests made with it count against your account. Then:
 - **Android:** set `rpm.appKey` in `~/.gradle/gradle.properties` (outside the repo), or
   `RPM_APP_KEY` in your environment.
 
-Without a key the apps still build and run: the local library, playback and casting work, and the
-pages that need the API stay empty. Never commit a key.
+The desktop app does not open without a key. It shows a screen that names `RPM_APP_KEY` and says how
+to set it, because without the key the rpm service refuses album and artist details, artwork, lyrics,
+radio and crash reports. A Debug build opens anyway with `RPM_SKIP_PREFLIGHT=1`. The phone and TV apps
+still build and run without a key: the local library, playback and casting work, and the pages that
+need the API stay empty. Never commit a key.
 
 ## Pull requests
 
