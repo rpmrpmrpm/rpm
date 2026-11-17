@@ -8486,12 +8486,93 @@
     "de": "Cloud",
     "zh-Hans": "云端"
   },
-  "CloudChip_StageWaiting": {
-    "en": "Waiting",
-    "fr": "En attente",
-    "es": "En espera",
-    "de": "Wartet",
-    "zh-Hans": "等待中"
+  "CloudChip_CountUpload": {
+    "en": "{0} of {1} tracks uploaded",
+    "fr": "Pistes envoyées : {0} sur {1}",
+    "es": "{0} de {1} pistas subidas",
+    "de": "{0} von {1} Titeln hochgeladen",
+    "zh-Hans": "已上传 {0} / {1} 首",
+    "comment": "Cloud chip flyout, line above the bar for the whole run: tracks that went through, out of the total. Upload run."
+  },
+  "CloudChip_CountUploadOne": {
+    "en": "{0} of {1} track uploaded",
+    "fr": "Piste envoyée : {0} sur {1}",
+    "es": "{0} de {1} pista subida",
+    "de": "{0} von {1} Titel hochgeladen",
+    "zh-Hans": "已上传 {0} / {1} 首",
+    "comment": "Cloud chip flyout, line above the bar for the whole run: tracks that went through, out of the total. Upload run of one track ({1} is 1)."
+  },
+  "CloudChip_CountRestore": {
+    "en": "{0} of {1} tracks downloaded",
+    "fr": "Pistes téléchargées : {0} sur {1}",
+    "es": "{0} de {1} pistas descargadas",
+    "de": "{0} von {1} Titeln heruntergeladen",
+    "zh-Hans": "已下载 {0} / {1} 首",
+    "comment": "Cloud chip flyout, line above the bar for the whole run: tracks that went through, out of the total. Download run."
+  },
+  "CloudChip_CountRestoreOne": {
+    "en": "{0} of {1} track downloaded",
+    "fr": "Piste téléchargée : {0} sur {1}",
+    "es": "{0} de {1} pista descargada",
+    "de": "{0} von {1} Titel heruntergeladen",
+    "zh-Hans": "已下载 {0} / {1} 首",
+    "comment": "Cloud chip flyout, line above the bar for the whole run: tracks that went through, out of the total. Download of one track ({1} is 1)."
+  },
+  "CloudChip_CountRemove": {
+    "en": "{0} of {1} tracks removed from the cloud",
+    "fr": "Pistes retirées du cloud : {0} sur {1}",
+    "es": "{0} de {1} pistas quitadas de la nube",
+    "de": "{0} von {1} Titeln aus der Cloud entfernt",
+    "zh-Hans": "已从云端移除 {0} / {1} 首",
+    "comment": "Cloud chip flyout, line above the bar for the whole run: tracks that went through, out of the total. Removal from the cloud."
+  },
+  "CloudChip_CountRemoveOne": {
+    "en": "{0} of {1} track removed from the cloud",
+    "fr": "Piste retirée du cloud : {0} sur {1}",
+    "es": "{0} de {1} pista quitada de la nube",
+    "de": "{0} von {1} Titel aus der Cloud entfernt",
+    "zh-Hans": "已从云端移除 {0} / {1} 首",
+    "comment": "Cloud chip flyout, line above the bar for the whole run: tracks that went through, out of the total. Removal of one track ({1} is 1)."
+  },
+  "CloudChip_CountDone": {
+    "en": "{0} of {1} tracks done",
+    "fr": "Pistes terminées : {0} sur {1}",
+    "es": "{0} de {1} pistas listas",
+    "de": "{0} von {1} Titeln fertig",
+    "zh-Hans": "已完成 {0} / {1} 首",
+    "comment": "Cloud chip flyout, line above the bar for the whole run: tracks that went through, out of the total. Run that mixes uploads and removals."
+  },
+  "CloudChip_CountDoneOne": {
+    "en": "{0} of {1} track done",
+    "fr": "Piste terminée : {0} sur {1}",
+    "es": "{0} de {1} pista lista",
+    "de": "{0} von {1} Titel fertig",
+    "zh-Hans": "已完成 {0} / {1} 首",
+    "comment": "Cloud chip flyout, line above the bar for the whole run: tracks that went through, out of the total. Mixed run of one track ({1} is 1)."
+  },
+  "CloudChip_CountPaused": {
+    "en": "{0} (paused)",
+    "fr": "{0} (en pause)",
+    "es": "{0} (en pausa)",
+    "de": "{0} (pausiert)",
+    "zh-Hans": "{0}（已暂停）",
+    "comment": "Cloud chip flyout, count line after the user pauses a run. {0} is the count, for example \"12 of 200 tracks uploaded\"."
+  },
+  "CloudChip_FailedCount": {
+    "en": "{0} failed. Open cloud settings to see why.",
+    "fr": "Échecs : {0}. Ouvrez les réglages du cloud pour voir pourquoi.",
+    "es": "Con errores: {0}. Abre los ajustes de la nube para ver por qué.",
+    "de": "Fehlgeschlagen: {0}. Öffnen Sie die Cloud-Einstellungen, um zu sehen, warum.",
+    "zh-Hans": "{0} 首失败。打开云端设置查看原因。",
+    "comment": "Cloud chip flyout, red link under the bar, shown only when tracks failed. {0} is how many. Opens the error list in cloud settings."
+  },
+  "CloudChip_InProgress": {
+    "en": "In progress",
+    "fr": "En cours",
+    "es": "En curso",
+    "de": "In Bearbeitung",
+    "zh-Hans": "进行中",
+    "comment": "Cloud chip flyout, heading above the tracks that are being uploaded or downloaded now."
   },
   "CloudChip_StageTranscoding": {
     "en": "Transcoding",
@@ -8549,27 +8630,6 @@
     "de": "Download fehlgeschlagen",
     "zh-Hans": "下载失败"
   },
-  "CloudChip_SummaryRunning": {
-    "en": "{0} of {1} tracks done",
-    "fr": "{0} pistes sur {1} terminées",
-    "es": "{0} de {1} pistas listas",
-    "de": "{0} von {1} Titeln fertig",
-    "zh-Hans": "已完成 {0} / {1} 首"
-  },
-  "CloudChip_SummaryDone": {
-    "en": "{0} tracks done.",
-    "fr": "{0} pistes terminées.",
-    "es": "{0} pistas listas.",
-    "de": "{0} Titel fertig.",
-    "zh-Hans": "已完成 {0} 首。"
-  },
-  "CloudChip_SummaryFailed": {
-    "en": "{0} of {1} tracks failed.",
-    "fr": "{0} pistes sur {1} ont échoué.",
-    "es": "{0} de {1} pistas fallaron.",
-    "de": "{0} von {1} Titeln fehlgeschlagen.",
-    "zh-Hans": "{1} 首中有 {0} 首失败。"
-  },
   "CloudChip_Pause": {
     "en": "Pause",
     "fr": "Pause",
@@ -8590,14 +8650,6 @@
     "es": "Descartar",
     "de": "Ausblenden",
     "zh-Hans": "关闭"
-  },
-  "CloudChip_SummaryPaused": {
-    "en": "{0} of {1} tracks done (paused)",
-    "fr": "{0} pistes sur {1} terminées (en pause)",
-    "es": "{0} de {1} pistas listas (en pausa)",
-    "de": "{0} von {1} Titeln fertig (pausiert)",
-    "zh-Hans": "已完成 {0} / {1} 首（已暂停）",
-    "comment": "Cloud chip flyout header after the user pauses an upload run, with the tracks finished and the total expected."
   },
   "CloudChip_Paused": {
     "en": "Paused",
@@ -11390,14 +11442,6 @@
     "de": "Der Bericht konnte nicht gesendet werden. Versuch es bitte etwas später noch einmal.",
     "zh-Hans": "报告没能发出。请稍后再试。",
     "comment": "Cloud settings: shown when sending the error report was refused."
-  },
-  "CloudChip_ErrorsHint": {
-    "en": "Some tracks could not be synced. Open cloud settings to see why.",
-    "fr": "Certaines pistes n'ont pas pu être synchronisées. Ouvrez les réglages du cloud pour voir pourquoi.",
-    "es": "Algunas pistas no se pudieron sincronizar. Abre los ajustes de la nube para ver por qué.",
-    "de": "Einige Titel konnten nicht synchronisiert werden. Öffnen Sie die Cloud-Einstellungen, um zu sehen, warum.",
-    "zh-Hans": "部分曲目未能同步。打开云端设置查看原因。",
-    "comment": "Cloud chip flyout: link to the error list in cloud settings."
   },
   "LeftNav_TrackInfo": {
     "en": "Track info",
