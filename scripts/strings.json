@@ -14355,45 +14355,141 @@
     "zh-Hans": "古典",
     "comment": "Generated playlist holding the collection's classical music, in album and track order."
   },
+  "Playlists_Melancholy": {
+    "en": "Melancholy",
+    "fr": "Mélancolie",
+    "es": "Melancolía",
+    "de": "Melancholie",
+    "zh-Hans": "忧郁",
+    "comment": "Name of the generated playlist of the saddest, most melancholy songs of each genre."
+  },
+  "Playlists_Happy": {
+    "en": "Feel Good",
+    "fr": "Bonne humeur",
+    "es": "Buen rollo",
+    "de": "Gute Laune",
+    "zh-Hans": "好心情",
+    "comment": "Name of the generated playlist of the happiest, most upbeat songs of each genre."
+  },
+  "Playlists_Angry": {
+    "en": "Rage",
+    "fr": "Rage",
+    "es": "Furia",
+    "de": "Wut",
+    "zh-Hans": "怒火",
+    "comment": "Name of the generated playlist of the angriest, most aggressive songs of each genre."
+  },
+  "Playlists_Romantic": {
+    "en": "Date Night",
+    "fr": "Soirée en amoureux",
+    "es": "Noche de cita",
+    "de": "Date Night",
+    "zh-Hans": "约会之夜",
+    "comment": "Name of the generated playlist of tender, romantic love songs from each genre."
+  },
+  "Playlists_Zen": {
+    "en": "Zen",
+    "fr": "Zen",
+    "es": "Zen",
+    "de": "Zen",
+    "zh-Hans": "禅",
+    "comment": "Name of the generated playlist of still ambient and new age music, for meditating or unwinding."
+  },
+  "Playlists_NewYearsEve": {
+    "en": "New Year's Eve",
+    "fr": "Réveillon du Nouvel An",
+    "es": "Nochevieja",
+    "de": "Silvester",
+    "zh-Hans": "跨年夜",
+    "comment": "Name of the generated playlist for New Year's Eve: songs about the new year, then party songs. Shown only around 31 December."
+  },
   "Playlists_BlurbCalm": {
-    "en": "The low end of your {0}. Take a moment to relax.",
-    "fr": "Le côté tranquille de votre {0}. Prenez un moment pour souffler.",
-    "es": "El lado tranquilo de tu {0}. Tómate un momento para relajarte.",
-    "de": "Die ruhige Seite deiner Sammlung: {0}. Nimm dir einen Moment zum Entspannen.",
-    "zh-Hans": "你收藏中安静的一面：{0}。放松一下吧。",
-    "comment": "Description under a mood playlist name. {0} is a list of genres, like 'rock, pop and jazz'."
+    "en": "Kick back with the softest side of your {0}. No rush, no noise, just you and the music.",
+    "fr": "Détendez-vous avec le côté le plus doux de votre {0}. Pas de stress, pas de bruit, juste vous et la musique.",
+    "es": "Relájate con el lado más suave de tu {0}. Sin prisas ni ruido, solo tú y la música.",
+    "de": "Lehn dich zurück mit der sanftesten Seite deiner Sammlung: {0}. Keine Eile, kein Lärm, nur du und die Musik.",
+    "zh-Hans": "放松一下，听听你收藏中最柔和的{0}。不赶时间，没有喧闹，只有你和音乐。",
+    "comment": "Description under the Chill playlist name. {0} is a list of genres, like 'rock, pop and jazz'."
   },
   "Playlists_BlurbEnergetic": {
-    "en": "The {0} to get you amped up!",
-    "fr": "Votre {0}, à fond !",
-    "es": "¡Tu {0} a tope!",
-    "de": "Dein {0}, voll aufgedreht!",
-    "zh-Hans": "让你热血沸腾的{0}！",
-    "comment": "Description under a mood playlist name. {0} is a list of genres."
+    "en": "Volume up! The loudest, liveliest {0} you own, for when you need that extra push.",
+    "fr": "Montez le son ! Le plus fort et le plus vivant de votre {0}, pour quand il vous faut un coup de boost.",
+    "es": "¡Sube el volumen! Lo más potente y enérgico de tu {0}, para cuando necesitas un empujón extra.",
+    "de": "Lauter! Das Lauteste und Wildeste aus deiner Sammlung: {0}. Für den Moment, in dem du einen Extra-Schub brauchst.",
+    "zh-Hans": "调大音量！你收藏中最响亮、最有活力的{0}，在你需要一点额外动力的时候。",
+    "comment": "Description under the Adrenaline playlist name. {0} is a list of genres, like 'rock, pop and jazz'."
   },
   "Playlists_BlurbDanceable": {
-    "en": "The {0} to keep the party going.",
-    "fr": "Votre {0} pour faire durer la fête.",
-    "es": "Tu {0} para que la fiesta no pare.",
-    "de": "Dein {0}, damit die Party weiterläuft.",
-    "zh-Hans": "让派对继续下去的{0}。",
-    "comment": "Description under a mood playlist name. {0} is a list of genres."
+    "en": "Steady beats and big grooves from your {0}. Clear some space, this one's made for moving!",
+    "fr": "Des rythmes réguliers et de gros grooves tirés de votre {0}. Faites de la place, ici on danse !",
+    "es": "Ritmos constantes y grandes grooves de tu {0}. ¡Haz sitio, esta lista está hecha para bailar!",
+    "de": "Gleichmäßige Beats und dicke Grooves aus deiner Sammlung: {0}. Mach Platz, hier wird getanzt!",
+    "zh-Hans": "来自你{0}的稳定节拍与律动。腾出点空间，这份歌单就是为舞动而生！",
+    "comment": "Description under the Dancefloor playlist name. {0} is a list of genres, like 'rock, pop and jazz'."
   },
   "Playlists_BlurbFocus": {
-    "en": "The {0} to help you focus when you need it.",
-    "fr": "Votre {0} pour rester concentré quand il le faut.",
-    "es": "Tu {0} para concentrarte cuando hace falta.",
-    "de": "Dein {0} zum Konzentrieren, wenn du es brauchst.",
-    "zh-Hans": "需要专注时听的{0}。",
-    "comment": "Description under a mood playlist name. {0} is a list of genres."
+    "en": "Even, unhurried {0} that stays out of your way, so you can get your head down and get things done.",
+    "fr": "Le côté posé et régulier de votre {0}, qui reste discret pour que vous puissiez vous plonger dans ce que vous faites.",
+    "es": "El lado tranquilo y constante de tu {0}, que no te distrae para que puedas concentrarte y avanzar.",
+    "de": "Ruhige, gleichmäßige Musik aus deiner Sammlung: {0}. Sie bleibt im Hintergrund, damit du dich reinhängen und Dinge erledigen kannst.",
+    "zh-Hans": "平稳、从容的{0}，不会打扰你，让你专心把事情做完。",
+    "comment": "Description under the Focus playlist name. {0} is a list of genres, like 'rock, pop and jazz'."
   },
   "Playlists_BlurbSleep": {
-    "en": "Perfect music for the small hours.",
-    "fr": "La musique idéale pour le milieu de la nuit.",
-    "es": "La música ideal para la madrugada.",
-    "de": "Die ideale Musik für die frühen Morgenstunden.",
-    "zh-Hans": "适合深夜时分的音乐。",
-    "comment": "Description under the sleep playlist name. It names no genres because the list is not cut by genre."
+    "en": "Quiet, gentle and soft, for the end of the day. Put it on, dim the lights and drift off.",
+    "fr": "Calme, douce et feutrée, pour la fin de la journée. Lancez-la, baissez la lumière et laissez-vous glisser dans le sommeil.",
+    "es": "Tranquila, suave y delicada, para el final del día. Ponla, baja las luces y déjate llevar.",
+    "de": "Leise, sanft und ruhig, für das Ende des Tages. Einschalten, Licht dimmen und wegdösen.",
+    "zh-Hans": "安静而温柔，献给一天的尾声。播放它，调暗灯光，慢慢入睡。",
+    "comment": "Description under the Lights out playlist name. It names no genres because the list is not cut by genre."
+  },
+  "Playlists_BlurbMelancholy": {
+    "en": "The saddest side of your {0}, for the grey days. When you just want to feel it for a while, these songs get it.",
+    "fr": "Le côté le plus mélancolique de votre {0}, pour les jours gris. Quand vous avez juste besoin de ressentir les choses, ces chansons vous comprennent.",
+    "es": "El lado más melancólico de tu {0}, para los días grises. Cuando solo quieres sentirlo un rato, estas canciones te entienden.",
+    "de": "Die melancholische Seite deiner Sammlung: {0}. Für die grauen Tage, wenn du einfach mal fühlen willst. Diese Songs verstehen dich.",
+    "zh-Hans": "你收藏中最忧郁的{0}，献给阴沉的日子。当你只想好好感受一下时，这些歌懂你。",
+    "comment": "Description under the Melancholy playlist name. {0} is a list of genres, like 'rock, pop and jazz'."
+  },
+  "Playlists_BlurbHappy": {
+    "en": "A big dose of sunshine from your {0}. Press play and try not to smile!",
+    "fr": "Une bonne dose de soleil tirée de votre {0}. Lancez la lecture et essayez de ne pas sourire !",
+    "es": "Una buena dosis de sol de tu {0}. ¡Dale al play e intenta no sonreír!",
+    "de": "Eine große Portion Sonnenschein aus deiner Sammlung: {0}. Drück auf Play und versuch, nicht zu lächeln!",
+    "zh-Hans": "来自你{0}的满满阳光。按下播放，看看你能不能忍住不笑！",
+    "comment": "Description under the Feel Good playlist name. {0} is a list of genres, like 'rock, pop and jazz'."
+  },
+  "Playlists_BlurbAngry": {
+    "en": "The angriest {0} you own. Turn it up, let it all out, and feel a whole lot better after!",
+    "fr": "Le plus rageur de votre {0}. Montez le son, lâchez tout, et vous vous sentirez bien mieux après !",
+    "es": "Lo más rabioso de tu {0}. Súbelo, suéltalo todo y verás qué bien te sientes después.",
+    "de": "Das Wütendste aus deiner Sammlung: {0}. Dreh auf, lass alles raus, und danach geht's dir viel besser!",
+    "zh-Hans": "你收藏中最愤怒的{0}。调大音量，尽情发泄，之后你会感觉好很多！",
+    "comment": "Description under the Rage playlist name. {0} is a list of genres, like 'rock, pop and jazz'."
+  },
+  "Playlists_BlurbRomantic": {
+    "en": "Tender, warm {0} for two. Light a candle, pour a glass and let the music set the mood.",
+    "fr": "Le côté tendre et chaleureux de votre {0}, pour deux. Allumez une bougie, servez un verre et laissez la musique créer l'ambiance.",
+    "es": "Lo más tierno y cálido de tu {0}, para dos. Enciende una vela, sirve una copa y deja que la música ponga el ambiente.",
+    "de": "Zärtliche, warme Musik aus deiner Sammlung: {0}, für zwei. Zünde eine Kerze an, schenk ein Glas ein und lass die Musik die Stimmung machen.",
+    "zh-Hans": "来自你{0}的温柔与温暖，专属两个人。点上蜡烛，倒一杯酒，让音乐营造氛围。",
+    "comment": "Description under the Date Night playlist name. {0} is a list of genres, like 'rock, pop and jazz'."
+  },
+  "Playlists_BlurbZen": {
+    "en": "Ambient and new age to breathe out to. Slow down, close your eyes and let the calm take over.",
+    "fr": "De l'ambient et du new age pour souffler. Ralentissez, fermez les yeux et laissez le calme vous envahir.",
+    "es": "Ambient y new age para respirar hondo. Baja el ritmo, cierra los ojos y deja que la calma te envuelva.",
+    "de": "Ambient und New Age zum Durchatmen. Werd langsamer, schließ die Augen und lass die Ruhe übernehmen.",
+    "zh-Hans": "适合深呼吸的氛围与新世纪音乐。放慢脚步，闭上眼睛，让平静将你包围。",
+    "comment": "Description under the Zen playlist name. It names no genres: the list is ambient and new age records only."
+  },
+  "Playlists_BlurbNewYearsEve": {
+    "en": "The countdown is on! Songs to see out the old year and party into the new one.",
+    "fr": "Le compte à rebours a commencé ! Des chansons pour dire au revoir à l'année qui s'achève et fêter la nouvelle.",
+    "es": "¡Empieza la cuenta atrás! Canciones para despedir el año y entrar de fiesta en el nuevo.",
+    "de": "Der Countdown läuft! Songs, um das alte Jahr zu verabschieden und ins neue reinzufeiern.",
+    "zh-Hans": "倒计时开始啦！用这些歌送走旧年，狂欢迎接新年。",
+    "comment": "Description under the New Year's Eve playlist name. It names no genres: the list is an occasion, not a cut by genre."
   },
   "Playlists_GenreAnd": {
     "en": "{0} and {1}",
@@ -15370,38 +15466,6 @@
     "de": "Cover werden auf diesem Telefon behalten, damit sie sofort erscheinen. Sie werden bei Bedarf erneut geladen.",
     "zh-Hans": "封面保存在这台手机上，因此会立即显示。需要时会重新下载。",
     "comment": "Explains the artwork cache on the iPhone profile, under its size."
-  },
-  "Rpm_Profile_ShowMoreReplies": {
-    "en": "Show {0} more replies",
-    "fr": "Afficher {0} réponses de plus",
-    "es": "Mostrar {0} respuestas más",
-    "de": "{0} weitere Antworten anzeigen",
-    "zh-Hans": "显示另外 {0} 条回复",
-    "comment": "Desktop post thread: a key under a reply six levels deep that opens the replies under it. {0} is how many."
-  },
-  "Rpm_Profile_ShowMoreRepliesOne": {
-    "en": "Show 1 more reply",
-    "fr": "Afficher 1 réponse de plus",
-    "es": "Mostrar 1 respuesta más",
-    "de": "1 weitere Antwort anzeigen",
-    "zh-Hans": "显示另外 1 条回复",
-    "comment": "Desktop post thread: the same key when one reply is hidden under it."
-  },
-  "Rpm_Profile_SendFailed": {
-    "en": "This could not be sent. Check your connection and try again.",
-    "fr": "Impossible d'envoyer. Vérifiez votre connexion et réessayez.",
-    "es": "No se pudo enviar. Comprueba tu conexión e inténtalo de nuevo.",
-    "de": "Das konnte nicht gesendet werden. Prüfe deine Verbindung und versuche es erneut.",
-    "zh-Hans": "无法发送。请检查网络连接后重试。",
-    "comment": "Desktop profile page and post thread: a post or reply could not be sent."
-  },
-  "Rpm_Profile_SaveFailed": {
-    "en": "Your changes could not be saved. Check your connection and try again.",
-    "fr": "Impossible d'enregistrer vos modifications. Vérifiez votre connexion et réessayez.",
-    "es": "No se pudieron guardar los cambios. Comprueba tu conexión e inténtalo de nuevo.",
-    "de": "Deine Änderungen konnten nicht gespeichert werden. Prüfe deine Verbindung und versuche es erneut.",
-    "zh-Hans": "无法保存你的更改。请检查网络连接后重试。",
-    "comment": "Desktop profile edit page: Save failed on the server or the connection."
   },
   "Rpm_Queue_ToComeOne": {
     "en": "1 track to come",
