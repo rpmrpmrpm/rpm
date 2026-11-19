@@ -17123,6 +17123,14 @@
     "zh-Hans": "将歌词中的每个词定位到时间轴上。",
     "comment": "About screen: what the wav2vec 2.0 model is used for."
   },
+  "Credits_Clap_Use": {
+    "en": "Hears how each record feels, so it lands in the right mood lists.",
+    "fr": "Écoute l'humeur de chaque titre pour le ranger dans les bonnes listes d'ambiance.",
+    "es": "Escucha cómo se siente cada tema para que acabe en las listas de ambiente adecuadas.",
+    "de": "Hört, wie sich jeder Titel anfühlt, damit er in den passenden Stimmungslisten landet.",
+    "zh-Hans": "聆听每首歌的情绪，把它放进合适的心情歌单。",
+    "comment": "About screen: what the CLAP model is used for."
+  },
   "Credits_U2Net_Use": {
     "en": "Finds the subject of a cover, so the backdrop crop keeps it.",
     "fr": "Repère le sujet d'une pochette, pour que le recadrage du fond le conserve.",

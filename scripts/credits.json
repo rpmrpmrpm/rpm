@@ -1106,6 +1106,18 @@
           ]
         },
         {
+          "id": "Clap",
+          "name": "CLAP (LAION, music and speech)",
+          "license": [
+            "Apache-2.0"
+          ],
+          "url": "https://huggingface.co/laion/larger_clap_music_and_speech",
+          "use": "Credits_Clap_Use",
+          "heads": [
+            "desktop"
+          ]
+        },
+        {
           "id": "U2Net",
           "name": "U^2-Net",
           "license": [
