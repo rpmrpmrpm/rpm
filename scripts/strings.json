@@ -14403,6 +14403,14 @@
     "zh-Hans": "跨年夜",
     "comment": "Name of the generated playlist for New Year's Eve: songs about the new year, then party songs. Shown only around 31 December."
   },
+  "Playlists_Christmas": {
+    "en": "Merry Christmas",
+    "fr": "Joyeux Noël",
+    "es": "Feliz Navidad",
+    "de": "Frohe Weihnachten",
+    "zh-Hans": "圣诞快乐",
+    "comment": "Name of the generated playlist of Christmas songs. Shown only from late November to 26 December."
+  },
   "Playlists_BlurbCalm": {
     "en": "Kick back with the softest side of your {0}. No rush, no noise, just you and the music.",
     "fr": "Détendez-vous avec le côté le plus doux de votre {0}. Pas de stress, pas de bruit, juste vous et la musique.",
@@ -14490,6 +14498,14 @@
     "de": "Der Countdown läuft! Songs, um das alte Jahr zu verabschieden und ins neue reinzufeiern.",
     "zh-Hans": "倒计时开始啦！用这些歌送走旧年，狂欢迎接新年。",
     "comment": "Description under the New Year's Eve playlist name. It names no genres: the list is an occasion, not a cut by genre."
+  },
+  "Playlists_BlurbChristmas": {
+    "en": "Your Christmas favourites, all in one place. Light up the tree, pour something warm and sing along!",
+    "fr": "Toutes vos chansons de Noël au même endroit. Allumez le sapin, servez-vous quelque chose de chaud et chantez à tue-tête !",
+    "es": "Todas tus canciones de Navidad en un solo lugar. Enciende el árbol, sírvete algo calentito y ¡a cantar!",
+    "de": "All deine Weihnachtslieder an einem Ort. Mach den Baum an, gönn dir was Warmes und sing mit!",
+    "zh-Hans": "你的圣诞歌曲全在这里。点亮圣诞树，倒杯热饮，一起唱起来吧！",
+    "comment": "Description under the Merry Christmas playlist name. It names no genres: the list is an occasion, not a cut by genre."
   },
   "Playlists_GenreAnd": {
     "en": "{0} and {1}",
