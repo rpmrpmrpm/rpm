@@ -4609,14 +4609,6 @@
     "zh-Hans": "添加文件夹、抓取 CD 或录制唱片一面：文件会先出现在这里供你检查，然后再加入音乐收藏。",
     "comment": "Import pane empty state, under Queue_EmptyTitle."
   },
-  "Deck_PaneTip": {
-    "en": "Show or hide the side pane",
-    "fr": "Afficher ou masquer le volet latéral",
-    "es": "Mostrar u ocultar el panel lateral",
-    "de": "Seitenbereich ein- oder ausblenden",
-    "zh-Hans": "显示或隐藏侧栏",
-    "comment": "Tooltip for the deck's pane pill."
-  },
   "Playlists_NowPlaying": {
     "en": "Now playing",
     "fr": "En lecture",
@@ -7635,6 +7627,14 @@
     "de": "Aus letzten Suchen entfernen",
     "zh-Hans": "从最近搜索中移除",
     "comment": "Phone collection search: accessibility label of the cross on one earlier search."
+  },
+  "Rpm_Search_Library": {
+    "en": "Search your library",
+    "fr": "Rechercher dans votre bibliothèque",
+    "es": "Buscar en tu biblioteca",
+    "de": "In deiner Mediathek suchen",
+    "zh-Hans": "搜索你的音乐库",
+    "comment": "Placeholder in the search bar that Cmd+F or Ctrl+F opens over the whole window, and the tooltip of the search key beside Home that opens it, on the desktop and in the web app."
   },
   "Rpm_Profile_Post": {
     "en": "Post",
