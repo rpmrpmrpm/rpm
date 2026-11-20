@@ -23095,5 +23095,261 @@
     "de": "rpm liest deine Musik im Hintergrund, wenn die Bibliothek geöffnet wird. Eine große Sammlung kann ein paar Minuten dauern.",
     "zh-Hans": "打开资料库时，rpm 会在后台读取你的音乐。大型收藏可能需要几分钟。",
     "comment": "Setup, last step: shown instead of the album count when the library is a folder of music the person already had."
+  },
+  "Settings_BackgroundAero": {
+    "en": "Aero",
+    "fr": "Aero",
+    "es": "Aero",
+    "de": "Aero",
+    "zh-Hans": "Aero",
+    "comment": "Phone backdrop tile: folds of warm copper light on black, with a fine grain. A name, so untranslated."
+  },
+  "Settings_StartupSound": {
+    "en": "Play the opening sound",
+    "fr": "Jouer le son d’ouverture",
+    "es": "Reproducir el sonido de inicio",
+    "de": "Eröffnungsklang abspielen",
+    "zh-Hans": "播放开场音效",
+    "comment": "Phone settings, General: switch for the short sound rpm plays when it opens."
+  },
+  "Settings_StartupSoundHint": {
+    "en": "A short chime when rpm opens. It stops as soon as your music starts.",
+    "fr": "Un court carillon à l’ouverture de rpm. Il s’arrête dès que votre musique démarre.",
+    "es": "Un breve sonido al abrir rpm. Se detiene en cuanto empieza tu música.",
+    "de": "Ein kurzer Klang, wenn rpm startet. Er verstummt, sobald deine Musik beginnt.",
+    "zh-Hans": "打开 rpm 时播放的简短音效。音乐一开始就会停止。",
+    "comment": "Phone settings, General: the line under the opening sound switch."
+  },
+  "Home_AddToQuick": {
+    "en": "Add to Quick selection",
+    "fr": "Ajouter à la sélection rapide",
+    "es": "Añadir a la selección rápida",
+    "de": "Zur Schnellauswahl hinzufügen",
+    "zh-Hans": "添加到快速选择",
+    "comment": "Long-press menu on a song, record or playlist (phone): puts it in home's Quick selection, after the suggested mixtapes. 'Quick selection' is the Home_QuickPicks heading."
+  },
+  "Home_RemoveFromQuick": {
+    "en": "Remove from Quick selection",
+    "fr": "Retirer de la sélection rapide",
+    "es": "Quitar de la selección rápida",
+    "de": "Aus der Schnellauswahl entfernen",
+    "zh-Hans": "从快速选择中移除",
+    "comment": "Long-press menu on something the user added to home's Quick selection (phone): takes it out again."
+  },
+  "Playlists_Pin": {
+    "en": "Pin to the top",
+    "fr": "Épingler en haut",
+    "es": "Fijar arriba",
+    "de": "Oben anheften",
+    "zh-Hans": "置顶",
+    "comment": "Long-press menu and page menu on a playlist (phone): keeps it at the top of the Playlists view, under Recently played."
+  },
+  "Playlists_Unpin": {
+    "en": "Unpin",
+    "fr": "Détacher",
+    "es": "Dejar de fijar",
+    "de": "Lösen",
+    "zh-Hans": "取消置顶",
+    "comment": "Long-press menu and page menu on a pinned playlist (phone): it goes back to its own place in the Playlists view."
+  },
+  "Settings_ArticleLanguage": {
+    "en": "Artist and album descriptions",
+    "fr": "Descriptions des artistes et des albums",
+    "es": "Descripciones de artistas y álbumes",
+    "de": "Beschreibungen von Künstlern und Alben",
+    "zh-Hans": "艺人和专辑介绍",
+    "comment": "Phone settings, General: heading over the choice of language for the Wikipedia texts on artist and record pages."
+  },
+  "Settings_ArticleLanguageHint": {
+    "en": "The language the stories about your artists and records are read in. Where there’s none in that language, you get the English one.",
+    "fr": "La langue des textes sur vos artistes et vos albums. S’il n’en existe pas dans cette langue, vous obtenez la version anglaise.",
+    "es": "El idioma de los textos sobre tus artistas y álbumes. Si no hay ninguno en ese idioma, verás el inglés.",
+    "de": "Die Sprache der Texte über deine Künstler und Alben. Gibt es keinen in dieser Sprache, bekommst du den englischen.",
+    "zh-Hans": "艺人和专辑介绍所用的语言。如果没有该语言的版本，就显示英文版。",
+    "comment": "Phone settings, General: the line under the description language choice."
+  },
+  "Settings_ArticleLanguagePhone": {
+    "en": "Same as your phone ({0})",
+    "fr": "Comme votre téléphone ({0})",
+    "es": "Igual que tu teléfono ({0})",
+    "de": "Wie dein Telefon ({0})",
+    "zh-Hans": "与手机相同（{0}）",
+    "comment": "Phone settings: the first choice of description language, the phone's own. {0} is that language's name in itself, e.g. 'Nederlands'."
+  },
+  "Settings_PlayerBars": {
+    "en": "Moving bars in the player",
+    "fr": "Barres animées dans le lecteur",
+    "es": "Barras animadas en el reproductor",
+    "de": "Animierte Balken im Player",
+    "zh-Hans": "播放器中的动态频谱条",
+    "comment": "Phone settings, Appearance: switch for the spectrum bars that move with the music beside the cover in the player."
+  },
+  "Settings_PlayerBarsHint": {
+    "en": "The bars beside the cover that move with the music.",
+    "fr": "Les barres à côté de la pochette qui bougent avec la musique.",
+    "es": "Las barras junto a la portada que se mueven con la música.",
+    "de": "Die Balken neben dem Cover, die sich mit der Musik bewegen.",
+    "zh-Hans": "封面两侧随音乐跳动的频谱条。",
+    "comment": "Phone settings, Appearance: the line under the moving bars switch."
+  },
+  "Coach_Phone_Home": {
+    "en": "This is home! What you played last, what to play next and what was added lately, all in one place. Hold a song, a record or a playlist for more.",
+    "fr": "Voici l’accueil ! Ce que vous avez écouté en dernier, quoi écouter ensuite et les derniers ajouts, tout au même endroit. Maintenez un titre, un album ou une liste pour en voir plus.",
+    "es": "¡Este es el inicio! Lo último que escuchaste, qué escuchar ahora y lo que añadiste hace poco, todo en un solo lugar. Mantén pulsada una canción, un álbum o una lista para ver más.",
+    "de": "Das ist dein Start! Was du zuletzt gehört hast, was du als Nächstes hören kannst und was neu dazugekommen ist, alles an einem Ort. Halte einen Song, ein Album oder eine Playlist gedrückt, um mehr zu sehen.",
+    "zh-Hans": "这里是主页！最近播放、接下来听什么和最新添加，全都在这里。长按歌曲、专辑或播放列表可查看更多。",
+    "comment": "Phone first-run hint pointing at the Home tab."
+  },
+  "Coach_Phone_Collection": {
+    "en": "Browse your collection your way! Albums, artists, playlists and genres are all here, a tap apart.",
+    "fr": "Parcourez votre collection à votre façon ! Albums, artistes, listes et genres sont tous ici, à portée de doigt.",
+    "es": "¡Explora tu colección a tu manera! Álbumes, artistas, listas y géneros están todos aquí, a un toque.",
+    "de": "Durchstöbere deine Sammlung, wie du willst! Alben, Künstler, Playlists und Genres sind alle hier, nur einen Tipp entfernt.",
+    "zh-Hans": "按你的方式浏览收藏！专辑、艺人、播放列表和流派都在这里，一点即达。",
+    "comment": "Phone first-run hint pointing at the Collection tab. Starts like Coach_Views on the desktop."
+  },
+  "Coach_Phone_Radio": {
+    "en": "Fancy something new? Listen to the radio, with stations from all over the world right here.",
+    "fr": "Envie de nouveauté ? Écoutez la radio, avec des stations du monde entier, juste ici.",
+    "es": "¿Te apetece algo nuevo? Escucha la radio, con emisoras de todo el mundo aquí mismo.",
+    "de": "Lust auf etwas Neues? Hör Radio, mit Sendern aus aller Welt, genau hier.",
+    "zh-Hans": "想听点新的？这里有来自世界各地的电台。",
+    "comment": "Phone first-run hint pointing at the Radio tab (internet radio)."
+  },
+  "Coach_Phone_Feed": {
+    "en": "See what other collectors are playing and reviewing, and share your own finds.",
+    "fr": "Découvrez ce que les autres collectionneurs écoutent et critiquent, et partagez vos propres trouvailles.",
+    "es": "Mira lo que otros coleccionistas escuchan y reseñan, y comparte tus propios hallazgos.",
+    "de": "Sieh dir an, was andere Sammler hören und bewerten, und teile deine eigenen Funde.",
+    "zh-Hans": "看看其他收藏者在听什么、评什么，也分享你自己的发现。",
+    "comment": "Phone first-run hint pointing at the Feed tab (posts and reviews by rpm users)."
+  },
+  "Coach_Phone_Settings": {
+    "en": "Make rpm your own! Pick a background, choose your sound quality and manage your downloads in Settings.",
+    "fr": "Faites de rpm le vôtre ! Choisissez un arrière-plan, la qualité du son et gérez vos téléchargements dans les Réglages.",
+    "es": "¡Haz rpm tuyo! Elige un fondo, la calidad de sonido y gestiona tus descargas en Ajustes.",
+    "de": "Mach rpm zu deinem! Wähle einen Hintergrund und die Klangqualität und verwalte deine Downloads in den Einstellungen.",
+    "zh-Hans": "让 rpm 成为你的专属！在设置中选择背景和音质，并管理下载。",
+    "comment": "Phone first-run hint pointing at the Settings tab. Starts like Wizard_LookTitle."
+  },
+  "Coach_Phone_MiniPlayer": {
+    "en": "Whatever’s playing sits right here. Give it a tap to open the player.",
+    "fr": "Ce qui joue se trouve juste ici. Touchez-le pour ouvrir le lecteur.",
+    "es": "Lo que suena está justo aquí. Tócalo para abrir el reproductor.",
+    "de": "Was gerade läuft, findest du genau hier. Tipp darauf, um den Player zu öffnen.",
+    "zh-Hans": "正在播放的内容就在这里。轻点即可打开播放器。",
+    "comment": "Phone first-run hint pointing at the mini player above the tabs."
+  },
+  "Coach_Phone_DoneBody": {
+    "en": "You know your way around rpm now. Play, explore and make your collection your own. Have fun collecting!",
+    "fr": "Vous connaissez maintenant rpm sur le bout des doigts. Écoutez, explorez et faites de votre collection la vôtre. Amusez-vous bien !",
+    "es": "Ya conoces rpm al dedillo. Escucha, explora y haz tuya tu colección. ¡Disfruta coleccionando!",
+    "de": "Jetzt kennst du dich in rpm aus. Hör, entdecke und mach deine Sammlung zu deiner. Viel Spaß beim Sammeln!",
+    "zh-Hans": "现在你已经熟悉 rpm 了。尽情播放、探索，打造属于你的收藏。收藏愉快！",
+    "comment": "Phone: the card that ends the first-run tour, under Coach_DoneTitle. The phone's Coach_DoneBody, without ripping and recording."
+  },
+  "Settings_Phone_HintsHint": {
+    "en": "The little hints that show you around the app and the player. Each one pops up once, then leaves you be.",
+    "fr": "Les petites astuces qui vous font découvrir l’app et le lecteur. Chacune apparaît une fois, puis vous laisse tranquille.",
+    "es": "Los pequeños consejos que te enseñan la app y el reproductor. Cada uno aparece una vez y luego te deja tranquilo.",
+    "de": "Die kleinen Hinweise, die dir die App und den Player zeigen. Jeder erscheint einmal und lässt dich dann in Ruhe.",
+    "zh-Hans": "带你熟悉应用和播放器的小提示。每条只出现一次，之后不再打扰。",
+    "comment": "Phone settings: the line under the button that shows the first-run hints again. The phone's Settings_HintsHint."
+  },
+  "Coach_Player_Cover": {
+    "en": "This is your record! Swipe it left or right to skip to the next song or go back.",
+    "fr": "Voici votre disque ! Faites-le glisser à gauche ou à droite pour passer au titre suivant ou revenir en arrière.",
+    "es": "¡Este es tu disco! Deslízalo a la izquierda o a la derecha para pasar a la siguiente canción o volver atrás.",
+    "de": "Das ist deine Platte! Wisch nach links oder rechts, um zum nächsten Song zu springen oder zurückzugehen.",
+    "zh-Hans": "这是你的唱片！左右滑动可切到下一首或返回上一首。",
+    "comment": "Phone first-run hint in the player, pointing at the cover."
+  },
+  "Coach_Player_Heart": {
+    "en": "Love this one? Give the heart a tap and it’s in your favourite tracks.",
+    "fr": "Vous l’adorez ? Touchez le cœur et le voilà dans vos titres favoris.",
+    "es": "¿Te encanta? Toca el corazón y estará en tus canciones favoritas.",
+    "de": "Du liebst den Song? Tipp aufs Herz, und er ist bei deinen Lieblingssongs.",
+    "zh-Hans": "喜欢这首？点一下爱心，它就会进入你的收藏曲目。",
+    "comment": "Phone first-run hint in the player, pointing at the heart beside the title."
+  },
+  "Coach_Player_Lyrics": {
+    "en": "Want to sing along? Tap here to see the lyrics as they’re sung.",
+    "fr": "Envie de chanter ? Touchez ici pour voir les paroles au fil de la chanson.",
+    "es": "¿Quieres cantar? Toca aquí para ver la letra mientras suena.",
+    "de": "Lust mitzusingen? Tipp hier, um den Text mitzulesen, während er gesungen wird.",
+    "zh-Hans": "想跟着唱？点这里，歌词会随演唱同步显示。",
+    "comment": "Phone first-run hint in the player, pointing at the lyrics key."
+  },
+  "Coach_Player_Queue": {
+    "en": "Here’s what’s coming up next. Rearrange it any time you like.",
+    "fr": "Voici ce qui arrive ensuite. Réorganisez-le quand vous voulez.",
+    "es": "Esto es lo que viene a continuación. Reordénalo cuando quieras.",
+    "de": "Hier siehst du, was als Nächstes kommt. Ordne es um, wann immer du willst.",
+    "zh-Hans": "这里是接下来要播放的内容，随时可以调整顺序。",
+    "comment": "Phone first-run hint in the player, pointing at the queue key."
+  },
+  "Coach_Player_Menu": {
+    "en": "Set a sleep timer, add the song to a playlist, or jump to the album or the artist from here.",
+    "fr": "Réglez une minuterie de sommeil, ajoutez le titre à une liste, ou allez à l’album ou à l’artiste depuis ici.",
+    "es": "Pon un temporizador, añade la canción a una lista o ve al álbum o al artista desde aquí.",
+    "de": "Stell einen Sleep-Timer, füge den Song einer Playlist hinzu oder spring von hier zum Album oder zum Künstler.",
+    "zh-Hans": "在这里设置睡眠定时、把歌曲加入播放列表，或跳转到专辑和艺人。",
+    "comment": "Phone first-run hint in the player, pointing at the menu key in the row under the transport."
+  },
+  "Coach_Player_Speakers": {
+    "en": "Play on another speaker, like your TV, right from here.",
+    "fr": "Écoutez sur une autre enceinte, comme votre télé, directement d’ici.",
+    "es": "Reproduce en otro altavoz, como tu tele, desde aquí mismo.",
+    "de": "Spiel auf einem anderen Lautsprecher, zum Beispiel deinem Fernseher, direkt von hier.",
+    "zh-Hans": "直接在这里切换到其他扬声器播放，比如你的电视。",
+    "comment": "Phone first-run hint in the player, pointing at the speaker key at the top right."
+  },
+  "Coach_Player_Grip": {
+    "en": "Done? Pull this down to tuck the player away. And turn your phone on its side for the visualizer!",
+    "fr": "Terminé ? Tirez ceci vers le bas pour ranger le lecteur. Et tournez votre téléphone sur le côté pour le visualiseur !",
+    "es": "¿Listo? Desliza esto hacia abajo para guardar el reproductor. ¡Y gira el teléfono de lado para ver el visualizador!",
+    "de": "Fertig? Zieh das nach unten, um den Player wegzuräumen. Und dreh dein Telefon zur Seite für den Visualizer!",
+    "zh-Hans": "好了？向下拉这里即可收起播放器。把手机横过来还能看到可视化效果！",
+    "comment": "Phone first-run hint in the player, pointing at the grip at the top. The last of the player's hints."
+  },
+  "Wizard_Phone_LookHint": {
+    "en": "Pick the picture behind the whole app. You can change it any time in Settings.",
+    "fr": "Choisissez l’image derrière toute l’app. Vous pourrez la changer à tout moment dans les Réglages.",
+    "es": "Elige la imagen que va detrás de toda la app. Puedes cambiarla cuando quieras en Ajustes.",
+    "de": "Wähle das Bild hinter der ganzen App. Du kannst es jederzeit in den Einstellungen ändern.",
+    "zh-Hans": "选择整个应用的背景图片。之后可随时在设置中更改。",
+    "comment": "Phone welcome, the look step: the line under Wizard_LookTitle, over the backdrop tiles. The phone's Wizard_LookBackgroundHint."
+  },
+  "Wizard_Phone_PlayerTitle": {
+    "en": "Let’s take it for a spin!",
+    "fr": "Faisons un tour !",
+    "es": "¡Vamos a darle una vuelta!",
+    "de": "Lass uns eine Runde drehen!",
+    "zh-Hans": "来试一试吧！",
+    "comment": "Phone welcome, the player step: heading. A pun on a record spinning is welcome where the language has one."
+  },
+  "Wizard_Phone_PlayerBody": {
+    "en": "Here’s a song from your collection. Press play, and we’ll show you around the player while it plays.",
+    "fr": "Voici un titre de votre collection. Appuyez sur lecture, et on vous fait visiter le lecteur pendant qu’il joue.",
+    "es": "Aquí tienes una canción de tu colección. Pulsa reproducir y te enseñamos el reproductor mientras suena.",
+    "de": "Hier ist ein Song aus deiner Sammlung. Drück auf Play, und wir zeigen dir den Player, während er läuft.",
+    "zh-Hans": "这是你收藏中的一首歌。点播放，我们会边放边带你熟悉播放器。",
+    "comment": "Phone welcome, the player step: the line under the heading, over the chosen song."
+  },
+  "Wizard_Phone_PlayerGo": {
+    "en": "Play and show me around",
+    "fr": "Lire et me faire visiter",
+    "es": "Reproducir y enséñame",
+    "de": "Abspielen und herumführen",
+    "zh-Hans": "播放并带我看看",
+    "comment": "Phone welcome, the player step: the button that plays the song and opens the player with its hints."
+  },
+  "Wizard_Phone_LayoutBody": {
+    "en": "Pick how your albums open in the collection. You can switch any time, at the top of the collection.",
+    "fr": "Choisissez comment vos albums s’affichent dans la collection. Vous pouvez changer à tout moment, en haut de la collection.",
+    "es": "Elige cómo se muestran tus álbumes en la colección. Puedes cambiarlo cuando quieras, arriba en la colección.",
+    "de": "Wähle, wie deine Alben in der Sammlung erscheinen. Du kannst jederzeit oben in der Sammlung umschalten.",
+    "zh-Hans": "选择专辑在收藏中的显示方式。随时可以在收藏页面顶部切换。",
+    "comment": "Phone welcome, the layout step: the line under Wizard_LayoutTitle. The phone's Wizard_LayoutBody, with two choices."
   }
 }
