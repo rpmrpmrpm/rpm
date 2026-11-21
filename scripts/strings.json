@@ -10945,7 +10945,7 @@
     "es": "Discos completados desde el catálogo: {0}",
     "de": "Aus dem Katalog ergänzte Platten: {0}",
     "zh-Hans": "已从目录补全的唱片：{0}",
-    "comment": "Import queue status line after the background catalogue fill; {0} is how many records got a genre, subgenre or year."
+    "comment": "Import queue status line after the background catalogue fill; {0} is how many records got a genre, subgenre, year or explicit marks."
   },
   "QueueDup_InLibrary": {
     "en": "The collection already holds this track, in a copy at least as good.",
@@ -13532,19 +13532,19 @@
     "comment": "Settings hint under the required tags checkboxes."
   },
   "Settings_CatalogueFill": {
-    "en": "Fill in missing genre and year when music is added",
-    "fr": "Compléter le genre et l'année manquants lors de l'ajout de musique",
-    "es": "Completar el género y el año que falten al añadir música",
-    "de": "Fehlendes Genre und Jahr beim Hinzufügen von Musik ergänzen",
-    "zh-Hans": "添加音乐时补全缺失的流派和年份",
-    "comment": "Settings > Collection, required tags card: toggle that looks each added record up in the catalogue and fills blank genre, subgenre and year in the import queue."
+    "en": "Fill in what’s missing when music is added",
+    "fr": "Compléter ce qui manque lors de l’ajout de musique",
+    "es": "Completar lo que falte al añadir música",
+    "de": "Fehlendes beim Hinzufügen von Musik ergänzen",
+    "zh-Hans": "添加音乐时补全缺失的内容",
+    "comment": "Settings > Collection, required tags card: toggle that looks each added record up in the catalogue, fills blank genre, subgenre and year in the import queue, marks explicit songs and finds a picture of the disc."
   },
   "Settings_CatalogueFillHint": {
-    "en": "rpm looks each record up in its catalogue and fills in the genre, subgenre and year wherever they’re blank or not on rpm’s genre list. Anything you’ve already set stays put, and nothing is written to your files until you import.",
-    "fr": "rpm cherche chaque disque dans son catalogue et complète le genre, le sous-genre et l’année quand ils sont vides ou absents de la liste des genres de rpm. Ce que vous avez déjà renseigné ne bouge pas, et rien n’est écrit dans vos fichiers avant l’importation.",
-    "es": "rpm busca cada disco en su catálogo y rellena el género, el subgénero y el año cuando están vacíos o no figuran en la lista de géneros de rpm. Lo que ya hayas puesto se queda como está, y no se escribe nada en tus archivos hasta que importes.",
-    "de": "rpm schlägt jede Platte in seinem Katalog nach und ergänzt Genre, Subgenre und Jahr, wo sie leer sind oder nicht auf der Genreliste von rpm stehen. Was du schon eingetragen hast, bleibt, und in deine Dateien wird erst beim Import etwas geschrieben.",
-    "zh-Hans": "rpm 会在目录中查找每张唱片，在流派、子流派和年份为空或不在 rpm 流派列表中时补上。你已经填好的内容保持不变，导入之前也不会写入你的文件。",
+    "en": "rpm looks each record up in its catalogue and fills in the genre, subgenre and year wherever they’re blank or not on rpm’s genre list. It also marks the songs with explicit lyrics, and finds a picture of the disc when your files didn’t come with one. Anything you’ve already set stays put, and nothing is written to your files until you import.",
+    "fr": "rpm cherche chaque disque dans son catalogue et complète le genre, le sous-genre et l’année quand ils sont vides ou absents de la liste des genres de rpm. Il signale aussi les morceaux aux paroles explicites, et trouve une image du disque quand vos fichiers n’en ont pas. Ce que vous avez déjà renseigné ne bouge pas, et rien n’est écrit dans vos fichiers avant l’importation.",
+    "es": "rpm busca cada disco en su catálogo y rellena el género, el subgénero y el año cuando están vacíos o no figuran en la lista de géneros de rpm. También marca las canciones con letras explícitas, y busca una imagen del disco cuando tus archivos no traen ninguna. Lo que ya hayas puesto se queda como está, y no se escribe nada en tus archivos hasta que importes.",
+    "de": "rpm schlägt jede Platte in seinem Katalog nach und ergänzt Genre, Subgenre und Jahr, wo sie leer sind oder nicht auf der Genreliste von rpm stehen. Außerdem markiert es Titel mit expliziten Texten und sucht ein Bild der Disc, wenn deine Dateien keins mitbringen. Was du schon eingetragen hast, bleibt, und in deine Dateien wird erst beim Import etwas geschrieben.",
+    "zh-Hans": "rpm 会在目录中查找每张唱片，在流派、子流派和年份为空或不在 rpm 流派列表中时补上。它还会标出歌词露骨的歌曲，并在你的文件没有附带碟片图片时为你找一张。你已经填好的内容保持不变，导入之前也不会写入你的文件。",
     "comment": "Settings hint under the catalogue fill toggle."
   },
   "Queue_ChipDuplicates": {
@@ -14090,6 +14090,46 @@
     "de": "Disc",
     "zh-Hans": "唱片",
     "comment": "Button under one of the two picture wells in the import tag panel: which picture it changes."
+  },
+  "Queue_ArtInFiles": {
+    "en": "In the files",
+    "fr": "Dans les fichiers",
+    "es": "En los archivos",
+    "de": "In den Dateien",
+    "zh-Hans": "在文件中",
+    "comment": "Caption under a picture well (cover or disc) in the import queue's tag panel: where the record's picture is. The picture is inside the music files."
+  },
+  "Queue_ArtInFolder": {
+    "en": "In the folder",
+    "fr": "Dans le dossier",
+    "es": "En la carpeta",
+    "de": "Im Ordner",
+    "zh-Hans": "在文件夹中",
+    "comment": "Caption under a picture well (cover or disc) in the import queue's tag panel: where the record's picture is. The picture is an image file beside the music files."
+  },
+  "Queue_ArtFoundOnline": {
+    "en": "Found online",
+    "fr": "Trouvée en ligne",
+    "es": "Encontrada en internet",
+    "de": "Online gefunden",
+    "zh-Hans": "已在线找到",
+    "comment": "Caption under a picture well (cover or disc) in the import queue's tag panel: where the record's picture is. rpm found the picture online by itself. 'Picture' is the implied subject (feminine in French and Spanish)."
+  },
+  "Queue_ArtPicked": {
+    "en": "Picked by you",
+    "fr": "Choisie par vous",
+    "es": "Elegida por ti",
+    "de": "Von dir gewählt",
+    "zh-Hans": "由你选择",
+    "comment": "Caption under a picture well (cover or disc) in the import queue's tag panel: where the record's picture is. The person chose this picture in rpm. 'Picture' is the implied subject (feminine in French and Spanish)."
+  },
+  "Queue_ArtNone": {
+    "en": "None yet",
+    "fr": "Aucune pour l’instant",
+    "es": "Ninguna todavía",
+    "de": "Noch keins",
+    "zh-Hans": "暂无",
+    "comment": "Caption under a picture well (cover or disc) in the import queue's tag panel: where the record's picture is. The record has no such picture yet. 'Picture' is the implied subject (feminine in French and Spanish, 'Bild' in German)."
   },
   "Viz_AlignOff": {
     "en": "Follow words by ear",
