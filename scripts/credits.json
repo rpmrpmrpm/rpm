@@ -1276,7 +1276,8 @@
           "url": "https://musopen.org",
           "use": "Credits_Musopen_Use",
           "heads": [
-            "desktop"
+            "desktop",
+            "android"
           ]
         }
       ]
