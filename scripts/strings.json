@@ -3258,6 +3258,94 @@
     "de": "Wo rpm deine Sammlung ablegt.",
     "zh-Hans": "rpm 存放音乐收藏的位置。"
   },
+  "Settings_Database": {
+    "en": "Collection database",
+    "fr": "Base de données de la collection",
+    "es": "Base de datos de la colección",
+    "de": "Datenbank der Sammlung",
+    "zh-Hans": "音乐收藏数据库",
+    "comment": "Settings > Collection: title of the card that says where the collection database is kept. Also a jump link at the top of the page."
+  },
+  "Settings_DatabaseHint": {
+    "en": "rpm keeps everything it knows about your music in one database: your playlists, plays and favourites, and all it has learned about each track. Normally it lives in your music folder, right beside your music.",
+    "fr": "rpm garde tout ce qu’il sait de votre musique dans une seule base de données : vos playlists, vos écoutes, vos favoris et tout ce qu’il a appris sur chaque piste. D’habitude, elle se trouve dans votre dossier musical, juste à côté de votre musique.",
+    "es": "rpm guarda todo lo que sabe de tu música en una sola base de datos: tus listas, tus escuchas y tus favoritos, y todo lo que ha aprendido de cada pista. Normalmente está en tu carpeta de música, justo al lado de tu música.",
+    "de": "rpm speichert alles, was es über deine Musik weiß, in einer Datenbank: deine Playlists, Wiedergaben und Favoriten und alles, was es über jeden Titel gelernt hat. Normalerweise liegt sie in deinem Musikordner, direkt neben deiner Musik.",
+    "zh-Hans": "rpm 把它对你音乐的所有了解都存放在一个数据库里：你的播放列表、播放记录和收藏，以及它对每首曲目学到的一切。通常它就放在你的音乐文件夹里，紧挨着你的音乐。",
+    "comment": "Settings > Collection: hint under the collection database card's title."
+  },
+  "Settings_DatabaseOffDisk": {
+    "en": "Keep the database on a faster disk",
+    "fr": "Garder la base de données sur un disque plus rapide",
+    "es": "Guardar la base de datos en un disco más rápido",
+    "de": "Datenbank auf einem schnelleren Laufwerk speichern",
+    "zh-Hans": "把数据库放在更快的磁盘上",
+    "comment": "Settings > Collection: switch that keeps the collection database in the folder below instead of in the music folder."
+  },
+  "Settings_DatabaseOffDiskHint": {
+    "en": "Is your music on a slower disk? Keep the database in the folder below and rpm starts and scrolls much faster. Your music stays right where it is, only the database moves. Collections on a network always keep theirs in this folder.",
+    "fr": "Votre musique est sur un disque plus lent ? Gardez la base de données dans le dossier ci-dessous, et rpm démarre et défile bien plus vite. Votre musique reste exactement où elle est, seule la base de données change de place. Les collections sur un réseau gardent toujours la leur dans ce dossier.",
+    "es": "¿Tu música está en un disco más lento? Guarda la base de datos en la carpeta de abajo y rpm arrancará y se desplazará mucho más rápido. Tu música se queda justo donde está, solo se mueve la base de datos. Las colecciones en red siempre guardan la suya en esta carpeta.",
+    "de": "Liegt deine Musik auf einem langsameren Laufwerk? Speichere die Datenbank im Ordner unten, dann startet und scrollt rpm viel schneller. Deine Musik bleibt genau, wo sie ist, nur die Datenbank zieht um. Sammlungen im Netzwerk speichern ihre immer in diesem Ordner.",
+    "zh-Hans": "你的音乐在较慢的磁盘上吗？把数据库放在下面的文件夹里，rpm 启动和滚动都会快很多。你的音乐原地不动，只有数据库会搬走。网络上的音乐收藏总是把数据库放在这个文件夹里。",
+    "comment": "Settings > Collection: hint under the switch that keeps the collection database on a faster disk."
+  },
+  "Settings_DatabaseFolder": {
+    "en": "Database folder",
+    "fr": "Dossier de la base de données",
+    "es": "Carpeta de la base de datos",
+    "de": "Datenbankordner",
+    "zh-Hans": "数据库文件夹",
+    "comment": "Settings > Collection: label over the folder where collection databases are kept when they are not in the music folder."
+  },
+  "Settings_DatabaseFolderDefault": {
+    "en": "Use the default",
+    "fr": "Utiliser l’emplacement par défaut",
+    "es": "Usar la predeterminada",
+    "de": "Standard verwenden",
+    "zh-Hans": "使用默认位置",
+    "comment": "Settings > Collection: button that puts the database folder back to the app's own folder. Shown only when another folder was chosen."
+  },
+  "Settings_DatabaseNow": {
+    "en": "Right now your database is here: {0}",
+    "fr": "En ce moment, votre base de données est ici : {0}",
+    "es": "Ahora mismo tu base de datos está aquí: {0}",
+    "de": "Gerade liegt deine Datenbank hier: {0}",
+    "zh-Hans": "你的数据库目前在这里：{0}",
+    "comment": "Settings > Collection: line in the collection database card. {0} is the full path of the database file the app has open."
+  },
+  "Settings_DatabaseNextStart": {
+    "en": "All set! This takes effect the next time you start rpm. When your database moves, rpm keeps the old copy too, renamed, just in case.",
+    "fr": "C’est noté ! Le changement s’applique au prochain démarrage de rpm. Quand votre base de données change de place, rpm garde aussi l’ancienne copie, renommée, au cas où.",
+    "es": "¡Listo! El cambio se aplica la próxima vez que abras rpm. Cuando tu base de datos se mueve, rpm guarda también la copia antigua, con otro nombre, por si acaso.",
+    "de": "Alles klar! Das gilt ab dem nächsten Start von rpm. Wenn deine Datenbank umzieht, behält rpm die alte Kopie umbenannt, nur für alle Fälle.",
+    "zh-Hans": "搞定！下次启动 rpm 时生效。数据库搬家时，rpm 也会把旧副本改名保留，以防万一。",
+    "comment": "Settings > Collection: shown after the switch or the database folder changes. The move happens when the app next opens the collection."
+  },
+  "Settings_DatabaseSpinning": {
+    "en": "Your music is on a spinning hard disk, and that can make rpm slow to start. This computer also has a fast SSD, so keeping the database there could make a real difference. Want to try it?",
+    "fr": "Votre musique est sur un disque dur mécanique, ce qui peut ralentir le démarrage de rpm. Cet ordinateur a aussi un SSD rapide : y garder la base de données pourrait vraiment changer les choses. Vous voulez essayer ?",
+    "es": "Tu música está en un disco duro mecánico, y eso puede hacer que rpm tarde en arrancar. Este ordenador también tiene un SSD rápido, así que guardar ahí la base de datos podría notarse de verdad. ¿Quieres probarlo?",
+    "de": "Deine Musik liegt auf einer Festplatte mit drehenden Scheiben, und das kann den Start von rpm bremsen. Dieser Computer hat auch eine schnelle SSD, die Datenbank dort zu speichern, könnte richtig viel bringen. Willst du es ausprobieren?",
+    "zh-Hans": "你的音乐在机械硬盘上，这可能让 rpm 启动很慢。这台电脑还有一块快速的 SSD，把数据库放在那里可能会有明显的改善。要试试吗？",
+    "comment": "Settings > Collection: one-time note in the collection database card when the music folder is on a spinning disk and the database folder is on an SSD."
+  },
+  "Settings_DatabaseSpinningYes": {
+    "en": "Yes, move it",
+    "fr": "Oui, déplacer",
+    "es": "Sí, muévela",
+    "de": "Ja, verschieben",
+    "zh-Hans": "好，搬过去",
+    "comment": "Settings > Collection: button on the spinning-disk note. Turns the faster-disk switch on."
+  },
+  "Settings_DatabaseSpinningNo": {
+    "en": "No thanks",
+    "fr": "Non merci",
+    "es": "No, gracias",
+    "de": "Nein danke",
+    "zh-Hans": "不用了",
+    "comment": "Settings > Collection: button on the spinning-disk note. Closes the note for good."
+  },
   "Settings_MusicFolderNotEmpty": {
     "en": "This folder holds other files. Pick an empty folder, a folder with music, or an existing rpm music folder.",
     "fr": "Ce dossier contient d'autres fichiers. Choisissez un dossier vide, un dossier de musique ou un dossier musical rpm existant.",
