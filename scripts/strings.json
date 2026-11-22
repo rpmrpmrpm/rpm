@@ -10948,12 +10948,20 @@
     "comment": "Import queue status line after the background catalogue fill; {0} is how many records got a genre, subgenre, year or explicit marks."
   },
   "Queue_TagStageCaption": {
-    "en": "Now for your tags! We’re fetching the genres, subgenres, years, explicit marks and disc pictures from the catalogue.",
-    "fr": "Place à vos tags ! Nous récupérons les genres, sous-genres, années, mentions explicites et images de disque dans le catalogue.",
-    "es": "¡Ahora, tus etiquetas! Estamos trayendo del catálogo los géneros, subgéneros, años, marcas de contenido explícito e imágenes de disco.",
-    "de": "Jetzt kommen deine Tags! Wir holen Genres, Subgenres, Jahre, Explicit-Markierungen und Disc-Bilder aus dem Katalog.",
-    "zh-Hans": "接下来是你的标签！我们正在从目录获取流派、子流派、年份、露骨内容标记和碟片图片。",
-    "comment": "Line above the progress bar in the import queue's tag stage, shown right after music is added: rpm fills in what the new records lack from its catalogue before the queue opens for editing."
+    "en": "Fetching album information",
+    "fr": "Récupération des informations sur les albums",
+    "es": "Obteniendo la información de los álbumes",
+    "de": "Albuminformationen werden abgerufen",
+    "zh-Hans": "正在获取专辑信息",
+    "comment": "Line above the progress bar in the import queue's tag stage, shown right after music is added: rpm fills in genres, subgenres, years, explicit marks and disc pictures from its catalogue before the queue opens for editing."
+  },
+  "Queue_ScanCaption": {
+    "en": "Importing files",
+    "fr": "Importation des fichiers",
+    "es": "Importando archivos",
+    "de": "Dateien werden importiert",
+    "zh-Hans": "正在导入文件",
+    "comment": "Line above the progress bar in the import queue while added music is being read in, before the tag stage."
   },
   "Queue_TagStageAlbum": {
     "en": "Album {0} of {1}: {2} – {3}",
