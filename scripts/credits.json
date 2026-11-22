@@ -1277,6 +1277,7 @@
           "use": "Credits_Musopen_Use",
           "heads": [
             "desktop",
+            "iphone",
             "android"
           ]
         }
