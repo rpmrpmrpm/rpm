@@ -23550,7 +23550,7 @@
     "es": "Abrir el sintonizador",
     "de": "Tuner öffnen",
     "zh-Hans": "打开调谐器",
-    "comment": "Wide button on the phone's radio home, under the banner. Opens the tuner page with the dial and the full station list."
+    "comment": "Spoken label of the round key at the top right of the phone's radio home. Opens the tuner page with the dial, the search field and the full station list."
   },
   "Radio_TunerTitle": {
     "en": "Tuner",
