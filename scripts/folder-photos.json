@@ -1,0 +1,190 @@
+{
+  "$comment": [
+    "One photograph for each of the app's own playlist folders on the phones: the folder of the moods, the",
+    "folder of the decades, and one folder per mood. Each is shown behind the folder frame, washed in the",
+    "folder's colour, with the folder's name in the frame's bottom bar.",
+    "",
+    "THEY ARE NOT THE LISTS' PHOTOGRAPHS. A folder holds lists that wear the photographs in",
+    "playlist-photos.json, so a folder shows a picture of its own and reads as a folder and not as one more",
+    "list. None of these ids is in playlist-photos.json.",
+    "",
+    "The rules of playlist-photos.json apply here too: the ids are pinned and fetched without a key when",
+    "a source is pinned; every one is under the Pexels License; no person is in any of them, each was",
+    "looked at before it was kept; they are cut to a centred square at `edge` pixels.",
+    "",
+    "'folder' is the key the apps look a folder up by: 'moods', 'decades', or 'mood:' and the mood's kind",
+    "as the computer spells it. 'name' is the folder's English name for the credit line on the About screen.",
+    "",
+    "Run: python scripts/gen_folder_photos.py. It writes the files and the tables into the iPhone and",
+    "Android apps; gen_credits.py credits the photographers."
+  ],
+  "edge": 640,
+  "quality": 92,
+  "photos": [
+    {
+      "folder": "moods",
+      "name": "Moods",
+      "file": "folder-moods.jpg",
+      "query": "colorful neon light abstract",
+      "id": 37897851,
+      "alt": "Colorful light painting with intertwining neon trails on a black backdrop.",
+      "by": "Fabrizzio Alo",
+      "page": "https://www.pexels.com/photo/vibrant-light-trails-on-a-dark-background-37897851/",
+      "source": "https://images.pexels.com/photos/37897851/pexels-photo-37897851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "decades",
+      "name": "Decades",
+      "file": "folder-decades.jpg",
+      "query": "vintage jukebox",
+      "id": 9163315,
+      "alt": "A vibrant display of diverse vintage radios on shelves. Perfect for retro aesthetics.",
+      "by": "Deb",
+      "page": "https://www.pexels.com/photo/shelves-with-vintage-radios-9163315/",
+      "source": "https://images.pexels.com/photos/9163315/pexels-photo-9163315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Calm",
+      "name": "Chill",
+      "file": "folder-calm.jpg",
+      "query": "misty lake morning",
+      "id": 9188417,
+      "alt": "Tranquil scene of a lake reflecting trees in Ussadye, Russia, at sunrise. Perfect natural harmony.",
+      "by": "Artem Zykin",
+      "page": "https://www.pexels.com/photo/green-trees-beside-lake-9188417/",
+      "source": "https://images.pexels.com/photos/9188417/pexels-photo-9188417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Energetic",
+      "name": "Adrenaline",
+      "file": "folder-energetic.jpg",
+      "query": "lightning night sky",
+      "id": 37004050,
+      "alt": "Dramatic lightning bolts illuminate the night sky over Tocantins, Brazil. Perfect for weather and nature themes.",
+      "by": "Gleive Marcio Rodrigues de Souza",
+      "page": "https://www.pexels.com/photo/captivating-lightning-storm-over-tocantins-37004050/",
+      "source": "https://images.pexels.com/photos/37004050/pexels-photo-37004050.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Danceable",
+      "name": "Dancefloor",
+      "file": "folder-danceable.jpg",
+      "query": "disco ball",
+      "id": 11985088,
+      "alt": "A heart-shaped disco ball hanging from a metal frame against a clear blue sky.",
+      "by": "Ann Zzz",
+      "page": "https://www.pexels.com/photo/silver-ball-hanging-on-brown-metal-frame-11985088/",
+      "source": "https://images.pexels.com/photos/11985088/pexels-photo-11985088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Focus",
+      "name": "Focus",
+      "file": "folder-focus.jpg",
+      "query": "desk lamp books night",
+      "id": 31410610,
+      "alt": "A modern wooden desk lamp on an oak table with a blurred background plant. Perfect for office decor.",
+      "by": "Pușcaș Adryan",
+      "page": "https://www.pexels.com/photo/stylish-wooden-desk-lamp-on-oak-table-31410610/",
+      "source": "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Classical",
+      "name": "Classical",
+      "file": "folder-classical.jpg",
+      "query": "grand piano keys",
+      "id": 36942250,
+      "alt": "A grand piano sits in a serene forest, creating a surreal and enchanting atmosphere.",
+      "by": "Pușcaș Adryan",
+      "page": "https://www.pexels.com/photo/black-grand-piano-in-mystical-forest-setting-36942250/",
+      "source": "https://images.pexels.com/photos/36942250/pexels-photo-36942250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Sleep",
+      "name": "Lights out",
+      "file": "folder-sleep.jpg",
+      "query": "full moon clouds",
+      "id": 28284726,
+      "alt": "Black and white image of the full moon showcasing detailed craters, captured over Varanasi.",
+      "by": "Arto Suraj",
+      "page": "https://www.pexels.com/photo/full-moon-28284726/",
+      "source": "https://images.pexels.com/photos/28284726/pexels-photo-28284726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Melancholy",
+      "name": "Melancholy",
+      "file": "folder-melancholy.jpg",
+      "query": "foggy forest",
+      "id": 6103064,
+      "alt": "Serene misty forest landscape in Austria, capturing the tranquility of fog-covered trees and natural beauty.",
+      "by": "Carsten Ruthemann",
+      "page": "https://www.pexels.com/photo/trees-in-the-forest-6103064/",
+      "source": "https://images.pexels.com/photos/6103064/pexels-photo-6103064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Happy",
+      "name": "Feel Good",
+      "file": "folder-happy.jpg",
+      "query": "colorful balloons sky",
+      "id": 574282,
+      "alt": "Vibrant balloons floating against a serene blue sky, perfect for celebrations.",
+      "by": "Tirachard Kumtanom",
+      "page": "https://www.pexels.com/photo/assorted-color-aired-balloons-under-blue-sky-574282/",
+      "source": "https://images.pexels.com/photos/574282/pexels-photo-574282.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Angry",
+      "name": "Rage",
+      "file": "folder-angry.jpg",
+      "query": "volcano lava",
+      "id": 8863347,
+      "alt": "Close-up of glowing embers and ashes from a campfire. Perfect for fire-themed visuals.",
+      "by": "Amed Yousif",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-burning-coals-8863347/",
+      "source": "https://images.pexels.com/photos/8863347/pexels-photo-8863347.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Romantic",
+      "name": "Date Night",
+      "file": "folder-romantic.jpg",
+      "query": "candles roses",
+      "id": 18353277,
+      "alt": "A sparkling pink champagne glass surrounded by vibrant pink roses, ideal for celebrations.",
+      "by": "Studio Naae",
+      "page": "https://www.pexels.com/photo/a-bunch-of-pink-roses-and-a-glass-with-drink-18353277/",
+      "source": "https://images.pexels.com/photos/18353277/pexels-photo-18353277.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Zen",
+      "name": "Zen",
+      "file": "folder-zen.jpg",
+      "query": "bamboo forest",
+      "id": 5999382,
+      "alt": "Scenic bamboo forest path in natural sunlight, offering a serene and tranquil escape into nature.",
+      "by": "Dylan Nguyen",
+      "page": "https://www.pexels.com/photo/gray-pathway-in-between-green-trees-5999382/",
+      "source": "https://images.pexels.com/photos/5999382/pexels-photo-5999382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:NewYearsEve",
+      "name": "New Year's Eve",
+      "file": "folder-newyearseve.jpg",
+      "query": "sparkler",
+      "id": 34416989,
+      "alt": "Vibrant sparkler illuminating the darkness, ideal for festive or celebratory themes.",
+      "by": "Marije Kouyzer",
+      "page": "https://www.pexels.com/photo/close-up-of-sparkler-with-bright-sparks-at-night-34416989/",
+      "source": "https://images.pexels.com/photos/34416989/pexels-photo-34416989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "folder": "mood:Christmas",
+      "name": "Merry Christmas",
+      "file": "folder-christmas.jpg",
+      "query": "christmas lights bokeh",
+      "id": 10550507,
+      "alt": "Festive setup with red toy car, gingerbread man, and cinnamon sticks, perfect for holiday decor inspiration.",
+      "by": "Andrea Imre",
+      "page": "https://www.pexels.com/photo/photo-of-a-gingerbread-man-near-a-toy-car-10550507/",
+      "source": "https://images.pexels.com/photos/10550507/pexels-photo-10550507.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    }
+  ]
+}

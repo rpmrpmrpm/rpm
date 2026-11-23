@@ -65,6 +65,7 @@ STRINGS = workspace.path("scripts", "strings.json")
 WORDMARKS = workspace.path("scripts", "wordmarks.json")
 PHOTOS = workspace.path("scripts", "genre-photos.json")
 LIST_PHOTOS = workspace.path("scripts", "playlist-photos.json")
+FOLDER_PHOTOS = workspace.path("scripts", "folder-photos.json")
 BACKDROP_PHOTOS = workspace.path("scripts", "backdrop-photos.json")
 LICENSES = workspace.path("scripts", "licenses")
 TOOL_VERSIONS = workspace.path("scripts", "tool-versions.txt")
@@ -95,6 +96,7 @@ KT_LICENSES = os.path.join(ANDROID, "phone", "src", "main", "assets", "credits")
 # Where the Android phone carries the photographs, as the scripts that copy them write them.
 ANDROID_GENRE_PHOTOS = os.path.join(ANDROID, "phone", "src", "main", "assets", "genre-photos")
 ANDROID_LIST_PHOTOS = os.path.join(ANDROID, "core", "src", "main", "assets", "playlist-photos")
+ANDROID_FOLDER_PHOTOS = os.path.join(ANDROID, "core", "src", "main", "assets", "folder-photos")
 ANDROID_BACKDROPS = os.path.join(ANDROID, "phone", "src", "main", "res", "drawable-nodpi")
 # The script that builds the FFmpeg libraries the Android app's FFmpeg decoder links. It is in
 # rpm-android's scripts folder, beside RPM.Android.
@@ -231,6 +233,9 @@ def photo_entries() -> list[dict]:
     gen_playlist_photos_phone.py and the Android apps' by gen_playlist_photos_tv.py, so every
     About screen lists them.
 
+    The folder photographs (scripts/folder-photos.json) are on the phones only, behind the frame of
+    the app's own playlist folders.
+
     The Pexels licence does not require credit. Credit is given anyway, by the photographer's name,
     because a person took each picture.
 
@@ -245,6 +250,7 @@ def photo_entries() -> list[dict]:
     entries = []
     genre_files = android_photos(ANDROID_GENRE_PHOTOS)
     list_files = android_photos(ANDROID_LIST_PHOTOS)
+    folder_files = android_photos(ANDROID_FOLDER_PHOTOS)
     backdrop_files = android_photos(ANDROID_BACKDROPS)
 
     def heads(*base: str, android: bool) -> list[str]:
@@ -275,6 +281,20 @@ def photo_entries() -> list[dict]:
             "heads": heads("desktop", "iphone", android=photo["file"] in list_files),
         })
 
+    # The folder photographs stand behind the frame of the app's own playlist folders. Only the
+    # phones have those folders, so the desktop does not ship or credit them.
+    named_folders = set()
+    for photo in load(FOLDER_PHOTOS)["photos"]:
+        named_folders.add(photo["file"])
+        entries.append({
+            "id": "FolderPhoto" + re.sub(r"[^A-Za-z0-9]", "", photo["file"]),
+            "name": photo.get("by") or "Unknown",
+            "detail": photo["name"] + " (folder)",
+            "license": ["Pexels"],
+            "url": photo.get("page", ""),
+            "heads": heads("iphone", android=photo["file"] in folder_files),
+        })
+
     # The Android phone carries the Sheet music backdrop, cut from this photograph by
     # make_sheet_music.py. The iPhone carries the same cut, but its list does not credit it yet:
     # crediting it there changes the iPhone's table, and that is a change of its own.
@@ -289,7 +309,8 @@ def photo_entries() -> list[dict]:
             "heads": heads("desktop", android=resource in backdrop_files),
         })
 
-    unnamed = sorted(genre_files - named_genres) + sorted(list_files - named_lists)
+    unnamed = (sorted(genre_files - named_genres) + sorted(list_files - named_lists)
+               + sorted(folder_files - named_folders))
     if unnamed:
         for name in unnamed:
             print(f"gen_credits: the Android app carries the photograph {name}, which no table names",
