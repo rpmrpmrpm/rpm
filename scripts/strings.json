@@ -23408,6 +23408,46 @@
     "zh-Hans": "与背景相配",
     "comment": "Phone settings: what VoiceOver/TalkBack reads for the first colour bubble under Settings_Colour, which gives the buttons and cards the colour of the chosen background, like a theme."
   },
+  "Settings_LandscapePlayer": {
+    "en": "Player on its side",
+    "fr": "Lecteur à l’horizontale",
+    "es": "Reproductor en horizontal",
+    "de": "Player im Querformat",
+    "zh-Hans": "横屏播放器",
+    "comment": "Phone settings, Appearance: the title of the card that chooses how the player looks when the phone is turned on its side (landscape)."
+  },
+  "Settings_LandscapePlayerHint": {
+    "en": "How the player looks when you turn your phone on its side.",
+    "fr": "L’apparence du lecteur quand vous tournez votre téléphone à l’horizontale.",
+    "es": "Cómo se ve el reproductor cuando giras el teléfono en horizontal.",
+    "de": "So sieht der Player aus, wenn du dein Handy quer hältst.",
+    "zh-Hans": "手机横放时播放器的样子。",
+    "comment": "Phone settings, under Settings_LandscapePlayer: one line that says what the choice is for."
+  },
+  "Settings_LandscapeClassic": {
+    "en": "Classic",
+    "fr": "Classique",
+    "es": "Clásico",
+    "de": "Klassisch",
+    "zh-Hans": "经典",
+    "comment": "Phone settings, Settings_LandscapePlayer: the choice that keeps the full-screen stage with its visualisers."
+  },
+  "Settings_LandscapeModern": {
+    "en": "Modern",
+    "fr": "Moderne",
+    "es": "Moderno",
+    "de": "Modern",
+    "zh-Hans": "现代",
+    "comment": "Phone settings, Settings_LandscapePlayer: the choice that shows the cover on the left and the title, progress and keys on the right, over the moving room."
+  },
+  "Rpm_Stage_Room": {
+    "en": "Lava",
+    "fr": "Lava",
+    "es": "Lava",
+    "de": "Lava",
+    "zh-Hans": "Lava",
+    "comment": "Phone player on its side: the name of the visualiser that is the app's own moving room of coloured blobs (metaballs), as Tv_RoomStyleLava names it on the TV."
+  },
   "Playlists_RowFolder": {
     "en": "Folder",
     "fr": "Dossier",
