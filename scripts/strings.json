@@ -18491,6 +18491,46 @@
     "zh-Hans": "要从 iPhone 移除这张专辑吗？它仍会保留在你的云端音乐库中。",
     "comment": "Title of the dialog that removes one downloaded album from the iPhone."
   },
+  "Rpm_Download_StopPlaylistQuestion": {
+    "en": "Stop downloading this playlist?",
+    "fr": "Arrêter le téléchargement de cette playlist ?",
+    "es": "¿Dejar de descargar esta lista de reproducción?",
+    "de": "Download dieser Playlist stoppen?",
+    "zh-Hans": "要停止下载此播放列表吗？",
+    "comment": "iPhone: title of the dialog that stops a playlist download."
+  },
+  "Rpm_Download_RemovePlaylistQuestion": {
+    "en": "Remove this playlist from your iPhone? It stays in your cloud library.",
+    "fr": "Retirer cette playlist de votre iPhone ? Elle reste dans votre bibliothèque cloud.",
+    "es": "¿Quitar esta lista de reproducción de tu iPhone? Seguirá en tu biblioteca en la nube.",
+    "de": "Diese Playlist von deinem iPhone entfernen? Sie bleibt in deiner Cloud-Mediathek.",
+    "zh-Hans": "要从 iPhone 中移除此播放列表吗？它仍保留在你的云端资料库中。",
+    "comment": "iPhone: title of the dialog that removes one downloaded playlist from the phone. Songs that a downloaded album also holds stay on the phone."
+  },
+  "Rpm_Downloads_SummaryOnePlaylist": {
+    "en": "1 playlist ({0})",
+    "fr": "1 playlist ({0})",
+    "es": "1 lista de reproducción ({0})",
+    "de": "1 Playlist ({0})",
+    "zh-Hans": "1 个播放列表（{0}）",
+    "comment": "iPhone downloads, when the only download is one playlist, with the space it uses, e.g. '1 playlist (240 MB)'. {0} = the size."
+  },
+  "Rpm_Downloads_SummaryMixed": {
+    "en": "{0} downloads ({1})",
+    "fr": "{0} téléchargements ({1})",
+    "es": "{0} descargas ({1})",
+    "de": "{0} Downloads ({1})",
+    "zh-Hans": "{0} 项下载（{1}）",
+    "comment": "iPhone downloads, when playlists are among them: how many albums and playlists in all, then the space they use, e.g. '14 downloads (3.2 GB)'. {0} = count, {1} = size."
+  },
+  "Rpm_Downloads_RemoveMixedQuestion": {
+    "en": "Remove {0} downloads from your iPhone? They stay in your cloud library.",
+    "fr": "Retirer {0} téléchargements de votre iPhone ? Ils restent dans votre bibliothèque cloud.",
+    "es": "¿Quitar {0} descargas de tu iPhone? Seguirán en tu biblioteca en la nube.",
+    "de": "{0} Downloads von deinem iPhone entfernen? Sie bleiben in deiner Cloud-Mediathek.",
+    "zh-Hans": "要从 iPhone 中移除 {0} 项下载吗？它们仍保留在你的云端资料库中。",
+    "comment": "iPhone: title of the dialog that removes several downloads from the phone when playlists are among them. {0} = how many."
+  },
   "Phone_Download_RemoveQuestion": {
     "en": "Remove this album from your phone? It stays in your cloud library.",
     "fr": "Supprimer cet album de votre téléphone ? Il reste dans votre bibliothèque cloud.",
