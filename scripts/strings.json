@@ -18539,6 +18539,22 @@
     "zh-Hans": "要从手机移除这张专辑吗？它仍会保留在你的云端音乐库中。",
     "comment": "Android phone: title of the dialog that removes one downloaded album from the phone. Rpm_Download_RemoveQuestion says iPhone."
   },
+  "Phone_Download_RemovePlaylistQuestion": {
+    "en": "Remove this playlist from your phone? It stays in your cloud library.",
+    "fr": "Retirer cette playlist de votre téléphone ? Elle reste dans votre bibliothèque cloud.",
+    "es": "¿Quitar esta lista de reproducción de tu teléfono? Seguirá en tu biblioteca en la nube.",
+    "de": "Diese Playlist vom Handy entfernen? Sie bleibt in deiner Cloud-Mediathek.",
+    "zh-Hans": "要从手机移除此播放列表吗？它仍保留在你的云端资料库中。",
+    "comment": "Android phone: title of the dialog that removes one downloaded playlist from the phone. Songs that a downloaded album also holds stay on the phone. Rpm_Download_RemovePlaylistQuestion says iPhone."
+  },
+  "Phone_Downloads_RemoveMixedQuestion": {
+    "en": "Remove {0} downloads from your phone? They stay in your cloud library.",
+    "fr": "Retirer {0} téléchargements de votre téléphone ? Ils restent dans votre bibliothèque cloud.",
+    "es": "¿Quitar {0} descargas de tu teléfono? Seguirán en tu biblioteca en la nube.",
+    "de": "{0} Downloads vom Handy entfernen? Sie bleiben in deiner Cloud-Mediathek.",
+    "zh-Hans": "要从手机移除 {0} 项下载吗？它们仍保留在你的云端资料库中。",
+    "comment": "Android phone: title of the dialog that removes several downloads from the phone when playlists are among them. {0} = how many. Rpm_Downloads_RemoveMixedQuestion says iPhone."
+  },
   "Rpm_Downloads_Title": {
     "en": "Downloads",
     "fr": "Téléchargements",
