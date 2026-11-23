@@ -23400,6 +23400,14 @@
     "zh-Hans": "无颜色",
     "comment": "iPhone settings: what VoiceOver reads for the first colour bubble under Settings_Colour, which keeps the app's own white glass."
   },
+  "Settings_ColourTheme": {
+    "en": "Match the background",
+    "fr": "Assortie à l’arrière-plan",
+    "es": "A juego con el fondo",
+    "de": "Passend zum Hintergrund",
+    "zh-Hans": "与背景相配",
+    "comment": "Phone settings: what VoiceOver/TalkBack reads for the first colour bubble under Settings_Colour, which gives the buttons and cards the colour of the chosen background, like a theme."
+  },
   "Settings_CoverCorners": {
     "en": "Cover corners",
     "fr": "Coins des pochettes",
