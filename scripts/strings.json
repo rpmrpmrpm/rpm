@@ -12673,7 +12673,7 @@
     "es": "Ahora no",
     "de": "Jetzt nicht",
     "zh-Hans": "暂不",
-    "comment": "Storage-full window: closes it without doing anything."
+    "comment": "Storage-full window: closes it without doing anything. Also the phone welcome's support step: goes on without becoming a supporter."
   },
   "Supporters_Title": {
     "en": "Supporters only",
@@ -17945,7 +17945,7 @@
     "es": "Considera apoyar a rpm",
     "de": "Bitte erwäge, rpm zu unterstützen",
     "zh-Hans": "请考虑支持 rpm",
-    "comment": "Setup wizard step 3, heading over the supporter pitch."
+    "comment": "Setup wizard step 3, heading over the supporter pitch. Also the heading of the phone welcome's support step."
   },
   "Wizard_SupportPitch": {
     "en": "rpm is made by a small team of people who love music, and who believe in collecting and owning your own. Supporters help keep it going: they cover the hosting costs and help us build new features.",
@@ -17953,7 +17953,7 @@
     "es": "rpm lo hace un pequeño equipo de personas que aman la música y creen en coleccionar y tener tu propia música. Los supporters ayudan a que siga adelante: cubren los gastos de alojamiento y nos ayudan a crear nuevas funciones.",
     "de": "rpm wird von einem kleinen Team gemacht, das Musik liebt und daran glaubt, die eigene Musik zu sammeln und zu besitzen. Supporter halten es am Laufen: Sie decken die Hostingkosten und helfen uns, neue Funktionen zu bauen.",
     "zh-Hans": "rpm 由一个热爱音乐的小团队打造，我们相信收藏并拥有属于自己的音乐。支持者让 rpm 得以持续：他们承担托管费用，并帮助我们开发新功能。",
-    "comment": "Setup wizard step 3, the supporter pitch."
+    "comment": "Setup wizard step 3, the supporter pitch. Also the line under the heading of the phone welcome's support step."
   },
   "Wizard_Finish": {
     "en": "Open my collection",
