@@ -72,6 +72,8 @@ TOOL_VERSIONS = workspace.path("scripts", "tool-versions.txt")
 
 CS_OUT = workspace.path("RPM.Desktop", "Presentation", "About", "Credits.Data.cs")
 CS_LICENSES = workspace.path("RPM.Desktop", "Assets", "Licenses")
+# Where the desktop carries the folder photographs, as gen_folder_photos.py writes them.
+CS_FOLDER_PHOTOS = workspace.path("RPM.Desktop", "Assets", "FolderPhotos")
 SWIFT_OUT = workspace.path(
     "RPM.iOS", "Modules", "RPMKit", "Sources", "RPMKit", "CreditsData.swift")
 SWIFT_LICENSES = workspace.path(
@@ -214,7 +216,8 @@ def genre_photo_name(genre: str) -> str:
 
 
 def android_photos(folder: str) -> set[str]:
-    """The photographs in one of the Android app's folders, or an empty set when it is not there."""
+    """The photographs in one of an app's folders (the Android app's or the desktop's), or an empty
+    set when it is not there."""
     if not os.path.isdir(folder):
         return set()
     return {name for name in os.listdir(folder) if name.endswith(".jpg")}
@@ -233,8 +236,9 @@ def photo_entries() -> list[dict]:
     gen_playlist_photos_phone.py and the Android apps' by gen_playlist_photos_tv.py, so every
     About screen lists them.
 
-    The folder photographs (scripts/folder-photos.json) are on the phones only, behind the frame of
-    the app's own playlist folders.
+    The folder photographs (scripts/folder-photos.json) stand behind the frame of the app's own
+    playlist folders. The desktop and the Android phone are credited with the ones whose files they
+    carry (gen_folder_photos.py writes them), and the iPhone with all of them.
 
     The Pexels licence does not require credit. Credit is given anyway, by the photographer's name,
     because a person took each picture.
@@ -281,8 +285,9 @@ def photo_entries() -> list[dict]:
             "heads": heads("desktop", "iphone", android=photo["file"] in list_files),
         })
 
-    # The folder photographs stand behind the frame of the app's own playlist folders. Only the
-    # phones have those folders, so the desktop does not ship or credit them.
+    # The folder photographs stand behind the frame of the app's own playlist folders. The desktop
+    # is credited with the ones it carries, as the Android phone is.
+    desktop_folder_files = android_photos(CS_FOLDER_PHOTOS)
     named_folders = set()
     for photo in load(FOLDER_PHOTOS)["photos"]:
         named_folders.add(photo["file"])
@@ -292,7 +297,8 @@ def photo_entries() -> list[dict]:
             "detail": photo["name"] + " (folder)",
             "license": ["Pexels"],
             "url": photo.get("page", ""),
-            "heads": heads("iphone", android=photo["file"] in folder_files),
+            "heads": (["desktop"] if photo["file"] in desktop_folder_files else [])
+                     + heads("iphone", android=photo["file"] in folder_files),
         })
 
     # The Android phone carries the Sheet music backdrop, cut from this photograph by
