@@ -12707,6 +12707,14 @@
     "zh-Hans": "卡拉 OK 模式仅向 rpm 的支持者提供。欢迎支持 rpm。",
     "comment": "Supporters-only window: shown when word by word lyric timing is switched on by an account that is not a supporter. On the iPhone app, the line under the greyed-out karaoke switch on the Profile page."
   },
+  "Supporters_Colour": {
+    "en": "Colours for buttons and cards are available to supporters of rpm only. Please consider supporting rpm.",
+    "fr": "Les couleurs des boutons et des cartes sont réservées aux soutiens de rpm. Merci d'envisager de soutenir rpm.",
+    "es": "Los colores de botones y tarjetas están disponibles solo para colaboradores de rpm. Considera apoyar a rpm.",
+    "de": "Farben für Schaltflächen und Karten stehen nur Unterstützern von rpm zur Verfügung. Bitte unterstütze rpm.",
+    "zh-Hans": "按钮和卡片的颜色仅向 rpm 的支持者提供。欢迎支持 rpm。",
+    "comment": "iPhone and Android phone settings, Appearance, and the welcome's look step: the line under the greyed-out colour bubbles (Settings_Colour) for an account that is not a supporter."
+  },
   "Cloud_BecomeSupporter": {
     "en": "Become a supporter",
     "fr": "Devenir soutien",
