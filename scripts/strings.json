@@ -23502,7 +23502,7 @@
     "es": "Sin color",
     "de": "Keine Farbe",
     "zh-Hans": "无颜色",
-    "comment": "iPhone settings: what VoiceOver reads for the first colour bubble under Settings_Colour, which keeps the app's own white glass."
+    "comment": "Phone settings: what VoiceOver/TalkBack reads for the first colour bubble under Settings_Colour, which keeps the app's own white glass. This is the default."
   },
   "Settings_ColourTheme": {
     "en": "Match the background",
@@ -23510,7 +23510,7 @@
     "es": "A juego con el fondo",
     "de": "Passend zum Hintergrund",
     "zh-Hans": "与背景相配",
-    "comment": "Phone settings: what VoiceOver/TalkBack reads for the first colour bubble under Settings_Colour, which gives the buttons and cards the colour of the chosen background, like a theme."
+    "comment": "Phone settings: what VoiceOver/TalkBack reads for the second colour bubble under Settings_Colour, which gives the buttons and cards the colour of the chosen background, like a theme."
   },
   "Settings_LandscapePlayer": {
     "en": "Player on its side",
