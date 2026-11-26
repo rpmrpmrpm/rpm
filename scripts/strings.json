@@ -2064,7 +2064,7 @@
     "es": "¿Olvidaste tu contraseña?",
     "de": "Passwort vergessen?",
     "zh-Hans": "忘记密码？",
-    "comment": "Sign-in dialog: link under the password field. Opens rpmrpmrpm.com/forgot-password in the browser."
+    "comment": "Sign-in screens: the link to reset a forgotten password. The desktop opens rpmrpmrpm.com/forgot-password in the browser, the phones open a reset card on the sign-in screen, and the TVs show a QR code to the same page."
   },
   "Login_ForgotNoBrowser": {
     "en": "Your browser could not be opened. To reset your password, go to rpmrpmrpm.com/forgot-password.",
@@ -2073,6 +2073,110 @@
     "de": "Dein Browser konnte nicht geöffnet werden. Um dein Passwort zurückzusetzen, gehe zu rpmrpmrpm.com/forgot-password.",
     "zh-Hans": "无法打开浏览器。要重置密码，请前往 rpmrpmrpm.com/forgot-password。",
     "comment": "Sign-in dialog error: 'Forgot password?' was clicked and the system would not open a browser."
+  },
+  "Reset_Title": {
+    "en": "Reset your password",
+    "fr": "Réinitialiser votre mot de passe",
+    "es": "Restablece tu contraseña",
+    "de": "Passwort zurücksetzen",
+    "zh-Hans": "重置密码",
+    "comment": "Phone sign-in screen, the password reset card: its heading. Opened by \"Forgot password?\" (Login_Forgot)."
+  },
+  "Reset_Subtitle": {
+    "en": "No worries! Type in your email and we'll send you a code to choose a new password.",
+    "fr": "Pas de souci ! Saisissez votre adresse e-mail et nous vous enverrons un code pour choisir un nouveau mot de passe.",
+    "es": "¡No pasa nada! Escribe tu correo y te enviaremos un código para elegir una contraseña nueva.",
+    "de": "Kein Problem! Gib deine E-Mail-Adresse ein, und wir schicken dir einen Code, mit dem du ein neues Passwort wählst.",
+    "zh-Hans": "别担心！输入你的邮箱，我们会发送一个验证码，让你设置新密码。",
+    "comment": "Phone password reset card, first step: under the heading, above the email field."
+  },
+  "Reset_Send": {
+    "en": "Send code",
+    "fr": "Envoyer le code",
+    "es": "Enviar código",
+    "de": "Code senden",
+    "zh-Hans": "发送验证码",
+    "comment": "Phone password reset card, first step: the button that emails the reset code."
+  },
+  "Reset_CodeSent": {
+    "en": "We've sent a six-digit code to {0}. Type it in with your new password.",
+    "fr": "Nous avons envoyé un code à six chiffres à {0}. Saisissez-le avec votre nouveau mot de passe.",
+    "es": "Hemos enviado un código de seis dígitos a {0}. Escríbelo junto con tu contraseña nueva.",
+    "de": "Wir haben einen sechsstelligen Code an {0} geschickt. Gib ihn zusammen mit deinem neuen Passwort ein.",
+    "zh-Hans": "我们已向 {0} 发送了六位数验证码。请输入验证码和新密码。",
+    "comment": "Phone password reset card, second step: above the code and new password fields. {0} is the email address."
+  },
+  "Reset_NewPassword": {
+    "en": "New password",
+    "fr": "Nouveau mot de passe",
+    "es": "Contraseña nueva",
+    "de": "Neues Passwort",
+    "zh-Hans": "新密码",
+    "comment": "Phone password reset card, second step: placeholder of the new password field."
+  },
+  "Reset_Save": {
+    "en": "Set new password",
+    "fr": "Définir le mot de passe",
+    "es": "Guardar contraseña",
+    "de": "Passwort festlegen",
+    "zh-Hans": "设置新密码",
+    "comment": "Phone password reset card, second step: the button that changes the password."
+  },
+  "Reset_Done": {
+    "en": "All set! Your new password works now. Sign in with it.",
+    "fr": "C'est fait ! Votre nouveau mot de passe est prêt. Connectez-vous avec.",
+    "es": "¡Listo! Tu contraseña nueva ya funciona. Inicia sesión con ella.",
+    "de": "Fertig! Dein neues Passwort gilt ab sofort. Melde dich damit an.",
+    "zh-Hans": "完成！新密码已生效，请用它登录。",
+    "comment": "Phone sign-in screen: shown on the sign-in card after the password was changed, when signing in with it did not happen by itself."
+  },
+  "Reset_NeedEmail": {
+    "en": "Type in the email of your rpm account.",
+    "fr": "Saisissez l'adresse e-mail de votre compte rpm.",
+    "es": "Escribe el correo de tu cuenta de rpm.",
+    "de": "Gib die E-Mail-Adresse deines rpm-Kontos ein.",
+    "zh-Hans": "请输入你的 rpm 账户邮箱。",
+    "comment": "Phone password reset card, first step: Send code was pressed with no email typed in."
+  },
+  "Reset_NeedFields": {
+    "en": "Type in the code and your new password.",
+    "fr": "Saisissez le code et votre nouveau mot de passe.",
+    "es": "Escribe el código y tu contraseña nueva.",
+    "de": "Gib den Code und dein neues Passwort ein.",
+    "zh-Hans": "请输入验证码和新密码。",
+    "comment": "Phone password reset card, second step: Set new password was pressed with a field empty."
+  },
+  "Reset_CodeExpired": {
+    "en": "That code has expired. Ask for a new one below.",
+    "fr": "Ce code a expiré. Demandez-en un nouveau ci-dessous.",
+    "es": "Ese código ha caducado. Pide uno nuevo abajo.",
+    "de": "Dieser Code ist abgelaufen. Fordere unten einen neuen an.",
+    "zh-Hans": "验证码已过期。请在下方重新获取。",
+    "comment": "Phone password reset card, second step: the code was too old. \"Below\" is the Send a new code button (SignUp_Resend)."
+  },
+  "Reset_SendFailed": {
+    "en": "Couldn't send the email. Please try again in a minute.",
+    "fr": "Impossible d'envoyer l'e-mail. Réessayez dans une minute.",
+    "es": "No se pudo enviar el correo. Inténtalo de nuevo en un minuto.",
+    "de": "Die E-Mail konnte nicht gesendet werden. Versuch es in einer Minute noch einmal.",
+    "zh-Hans": "无法发送邮件，请一分钟后再试。",
+    "comment": "Phone password reset card: the reset email could not be sent."
+  },
+  "Reset_Failed": {
+    "en": "Couldn't change your password. Please try again.",
+    "fr": "Impossible de changer votre mot de passe. Veuillez réessayer.",
+    "es": "No se pudo cambiar la contraseña. Inténtalo de nuevo.",
+    "de": "Dein Passwort konnte nicht geändert werden. Bitte versuch es noch einmal.",
+    "zh-Hans": "无法更改密码，请重试。",
+    "comment": "Phone password reset card, second step: the password could not be changed for another reason."
+  },
+  "Tv_SignIn_ForgotScan": {
+    "en": "Scan the code with your phone's camera and choose a new password on your phone.",
+    "fr": "Scannez le code avec l'appareil photo de votre téléphone et choisissez un nouveau mot de passe sur votre téléphone.",
+    "es": "Escanea el código con la cámara del teléfono y elige una contraseña nueva en el teléfono.",
+    "de": "Scanne den Code mit der Kamera deines Telefons und wähle auf dem Telefon ein neues Passwort.",
+    "zh-Hans": "用手机相机扫描此代码，然后在手机上设置新密码。",
+    "comment": "Under the QR code in the TV sign-in pop-up for \"Forgot password?\". The code opens rpmrpmrpm.com/forgot-password."
   },
   "Login_Google": {
     "en": "Google",
