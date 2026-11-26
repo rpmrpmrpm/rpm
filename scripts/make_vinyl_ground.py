@@ -36,9 +36,12 @@ can cast shadows onto a second surface, and the result is correct at any point w
     not a matter of taste: see the note above KEY_POS.
 
 The tones at the end are matched to the header's brightness and spread and given a duotone, so the
-phone's background and the desktop's dialogs are the same material. Two things may differ from it:
-the top of the tonal range, where the bulb is visible and not the vinyl (see the note on
-`warmth`), and the supporter's pressing, which returns more light than carbon black (see PRESSINGS).
+phone's background and the desktop's dialogs are the same material at the same brightness. The
+colour is the pressing's own: the blue pressing is the app's blue, #2563EB, the colour the glass and
+the buttons take on this background, and the desktop header keeps the palette's Azure (see
+APP_SHADOW). Two more things may differ from the header: the top of the tonal range, where the bulb
+is visible and not the vinyl (see the note on `warmth`), and the supporter's pressing, which returns
+more light than carbon black (see PRESSINGS).
 
 Usage: python3 scripts/make_vinyl_ground.py [blue] [gold]
 
@@ -53,10 +56,10 @@ from PIL import Image, ImageFilter
 
 HERE = os.path.dirname(__file__)
 
-# The two apps that use this picture. The Uno phone app reads it from its own Assets folder and the
-# Swift app reads it from the RPMUI package's resources. Both must be the same file, so the script
-# writes both and nobody has to copy it by hand.
-UNO = workspace.path("RPM.Mobile", "Assets")
+# The two apps that use this picture. The Android phone app reads it from its drawables and the Swift
+# app reads it from the RPMUI package's resources. Both must be the same picture, so the script writes
+# both and nobody has to copy it by hand. Android names resources with underscores (see `file_name`).
+ANDROID = workspace.path("RPM.Android", "phone", "src", "main", "res", "drawable-nodpi")
 SWIFT = workspace.path("RPM.iOS", "Modules", "RPMUI", "Sources", "RPMUI", "Resources")
 
 # The tallest phone Apple ships (iPhone 16 Pro Max, 3x). UniformToFill crops the rest.
@@ -70,10 +73,16 @@ SS = 2
 # shader holds a couple of dozen arrays at once, which needs gigabytes if done in one pass.
 STRIP = 384
 
-# The duotone of the desktop header. It is kept apart from the pressings below because it is not a
-# choice: the header and the phone's background are the same material and must keep the same colour.
+# The duotone of the desktop header (make_header_vinyl.py), in the palette's Azure, #0371D0.
 HEADER_SHADOW = (3, 16, 30)
 HEADER_HIGH = (73, 153, 221)
+
+# The duotone of the phone's blue pressing: the app's blue, #2563EB, which is the colour of the glass,
+# the buttons and the switches on this background (GlassColour.theme on iPhone, AppColour on Android).
+# The two ends are the header's ends moved to that hue, at the same brightness and saturation, so the
+# picture is exactly as dark and as rich as the header and only its blue differs.
+APP_SHADOW = (4, 14, 38)
+APP_HIGH = (94, 144, 254)
 
 # The brightness and spread (0-255, before the duotone) that both pictures are matched to. They set
 # how dark the flat areas are and how far the sheen reaches.
@@ -225,7 +234,7 @@ SKY_SPEC = 2.6
 # The aim is the warm white of a bulb and not the yellow of a candle, so the temperatures are around
 # a halogen lamp: warm enough to look warm against the blue, but nowhere near amber.
 #
-# The sky is the opposite end: the app's own azure, which is also the colour the material is
+# The sky is the opposite end: the pressing's own blue, which is also the colour the material is
 # duotoned to. A warm key against a cool ambient is the oldest lighting set-up, and it is why a
 # highlight can look warm on a surface that is blue everywhere else.
 #
@@ -253,8 +262,8 @@ SKY_SPEC = 2.6
 # This is a decision and not a physical fact. A black record is almost entirely surface reflection,
 # because almost no light goes into the vinyl and comes back out. The physically honest result is a
 # grey record with warm highlights, and that is what the render gives: the blue disappears from the
-# picture. The blue is required, because it makes this the same material as the desktop's dialog
-# headers.
+# picture. The blue is required: it is the app's colour, and the glass on this background is the
+# same blue.
 #
 # So the lamp gets the top of the range and the material keeps the rest. This is also what the eye
 # expects: a highlight is where a light source is seen almost directly, and the rest of a lit
@@ -302,8 +311,8 @@ AO_REACH = 5.0
 #   name, heads     the file name suffix and the apps the file is written to.
 BLUE = dict(
     name="",
-    shadow=HEADER_SHADOW,
-    high=HEADER_HIGH,
+    shadow=APP_SHADOW,
+    high=APP_HIGH,
     # Black vinyl is a dielectric: what comes off the surface is the colour of the bulb, not of the record.
     warmth=0.92,
     # The header's own brightness and spread, which this picture is matched to.
@@ -311,12 +320,12 @@ BLUE = dict(
     # A domestic bulb, and no lower: vinyl turns amber below this.
     key=4000,
     fill=3600,
-    # The app's azure. A warm key against a cool ambient is the oldest lighting set-up.
-    sky=HEADER_HIGH,
+    # The app's blue. A warm key against a cool ambient is the oldest lighting set-up.
+    sky=APP_HIGH,
     # How blue the ambient may be, from neutral at 0 to the full azure at 1. At 1, the shadows have
     # no red left and the darks go flat.
     sky_tint=0.34,
-    heads=(UNO, SWIFT),
+    heads=(ANDROID, SWIFT),
 )
 
 # The supporter's background. It follows the same reasoning as the desktop's gold table
@@ -359,9 +368,7 @@ GOLD = dict(
     # carries the sweep up into gold. Raising both together only made a lighter picture, not a
     # brighter metal.
     lift=(1.25, 1.50),
-    # The Swift app only: it is the only one with a supporter background so far, and an 800 kB
-    # picture that nothing reads is 800 kB added to a download.
-    heads=(SWIFT,),
+    heads=(ANDROID, SWIFT),
 )
 
 PRESSINGS = {"blue": BLUE, "gold": GOLD}
@@ -797,9 +804,16 @@ def main():
     out = finish(body, sheen, HEADER_MEAN, HEADER_SPREAD)
 
     for head in P["heads"]:
-        path = os.path.join(head, f"background-vinyl{P['name']}.jpg")
+        path = os.path.join(head, file_name(head))
         out.save(path, quality=86, optimize=True)
         print("wrote", os.path.normpath(path), out.size, f"{os.path.getsize(path)/1024:.0f} KB")
+
+
+def file_name(head):
+    """The picture's file name in one app: background-vinyl.jpg, and background_vinyl.jpg on Android,
+    where a resource name may not hold a hyphen."""
+    name = f"background-vinyl{P['name']}.jpg"
+    return name.replace("-", "_") if head == ANDROID else name
 
 
 def finish(body, sheen, mean, spread):

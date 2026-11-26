@@ -57,7 +57,8 @@ def main():
     ground.KEY_POS = KEY_POS
     ground.FILL_POS = FILL_POS
     ground.FALLOFF_REF = FALLOFF_REF
-    ground.P = ground.BLUE
+    # The blue pressing's lamps and room, in the header's own Azure duotone.
+    ground.P = dict(ground.BLUE, shadow=ground.HEADER_SHADOW, high=ground.HEADER_HIGH, sky=ground.HEADER_HIGH)
 
     body, sheen = ground.render(W * SS, H * SS, SS)
     body = ground.shrink(ground.tonemap(body), "L")
