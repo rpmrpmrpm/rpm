@@ -8523,6 +8523,14 @@
     "de": "Wiedergabe",
     "zh-Hans": "播放"
   },
+  "Rpm_Profile_PlaybackQuality": {
+    "en": "Playback quality",
+    "fr": "Qualité de lecture",
+    "es": "Calidad de reproducción",
+    "de": "Wiedergabequalität",
+    "zh-Hans": "播放音质",
+    "comment": "iPhone and Android phone settings, Playback tab: heading of the card with the streaming quality pickers (Rpm_Profile_QualityWifi, Rpm_Profile_QualityCellular). The tab itself is Rpm_Profile_Playback."
+  },
   "Rpm_Profile_QualityDetail": {
     "en": "The original is exactly as it was uploaded. A lower bitrate uses less data and less space on your phone.",
     "fr": "L'original est exactement tel qu'il a été téléversé. Un débit plus faible consomme moins de données et moins d'espace sur votre téléphone.",
@@ -8592,12 +8600,12 @@
     "zh-Hans": "移动网络下"
   },
   "Rpm_Profile_QualityDownload": {
-    "en": "For downloads",
-    "fr": "Pour les téléchargements",
-    "es": "Para descargas",
-    "de": "Für Downloads",
-    "zh-Hans": "下载时",
-    "comment": "iPhone settings, Playback card: label of the third quality picker, the bitrate albums are downloaded at. Sits under Rpm_Profile_QualityCellular."
+    "en": "Download quality",
+    "fr": "Qualité des téléchargements",
+    "es": "Calidad de descarga",
+    "de": "Download-Qualität",
+    "zh-Hans": "下载音质",
+    "comment": "iPhone and Android phone settings: label of the quality picker for the bitrate albums are downloaded at."
   },
   "Rpm_Profile_QualityDownloadDetail": {
     "en": "Applies to new downloads. Albums already on your phone keep their bitrate. A bitrate that is not ready yet is prepared first, then downloaded.",
@@ -10213,6 +10221,14 @@
     "de": "Equalizer ein",
     "zh-Hans": "启用均衡器",
     "comment": "Settings, Sound: the equalizer's on/off switch."
+  },
+  "Settings_EqClipWarning": {
+    "en": "Keeping the equalizer on this adjustment might damage hearing or speakers.",
+    "fr": "Garder l'égaliseur sur ce réglage peut abîmer votre audition ou vos haut-parleurs.",
+    "es": "Mantener el ecualizador con este ajuste puede dañar el oído o los altavoces.",
+    "de": "Diese Equalizer-Einstellung beizubehalten kann dein Gehör oder deine Lautsprecher schädigen.",
+    "zh-Hans": "保持当前均衡器设置可能会损伤听力或扬声器。",
+    "comment": "Settings, equalizer: red warning under the sliders while the preamp and the bands together push the sound past full scale, so it clips."
   },
   "Settings_EqPreset": {
     "en": "Preset",
@@ -12778,6 +12794,22 @@
     "de": "Jetzt nicht",
     "zh-Hans": "暂不",
     "comment": "Storage-full window: closes it without doing anything. Also the phone welcome's support step: goes on without becoming a supporter."
+  },
+  "Supporter_NudgeTitle": {
+    "en": "Enjoying rpm?",
+    "fr": "Vous aimez rpm ?",
+    "es": "¿Te gusta rpm?",
+    "de": "Gefällt dir rpm?",
+    "zh-Hans": "喜欢 rpm 吗？",
+    "comment": "Phones: title of the small pop-up that asks a listener who is not a supporter to consider becoming one. Shown once every 50 launches. Its buttons are Cloud_BecomeSupporter and Supporter_Later."
+  },
+  "Supporter_NudgeBody": {
+    "en": "Supporters keep rpm running and growing. If it's part of your days, please consider becoming one!",
+    "fr": "Ce sont les soutiens qui font vivre et grandir rpm. S'il fait partie de votre quotidien, pensez à en devenir un !",
+    "es": "Los colaboradores mantienen rpm en marcha y creciendo. Si forma parte de tu día a día, ¡piensa en hacerte colaborador!",
+    "de": "Unterstützer halten rpm am Laufen und lassen es wachsen. Wenn rpm zu deinem Alltag gehört, werde doch auch einer!",
+    "zh-Hans": "支持者让 rpm 持续运行、不断成长。如果 rpm 已融入你的日常，不妨考虑成为支持者！",
+    "comment": "Phones: the line in the pop-up under Supporter_NudgeTitle."
   },
   "Supporters_Title": {
     "en": "Supporters only",
